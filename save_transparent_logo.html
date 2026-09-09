@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Glitch — Transparent Logo Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .checkerboard {
+      background-color: #1a1a24;
+      background-image: 
+        linear-gradient(45deg, #262636 25%, transparent 25%), 
+        linear-gradient(-45deg, #262636 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #262636 75%), 
+        linear-gradient(-45deg, transparent 75%, #262636 75%);
+      background-size: 24px 24px;
+      background-position: 0 0, 0 12px, 12px -12px, -12px 0px;
+    }
+  </style>
+</head>
+<body class="bg-[#0a0f16] text-white min-h-screen flex flex-col items-center justify-center p-6">
+  <div class="max-w-3xl w-full bg-[#111827] border border-white/10 rounded-2xl p-8 shadow-2xl text-center space-y-6">
+    <h1 class="text-3xl font-bold tracking-tight">The Glitch — Logo Transparency Tool</h1>
+    <p class="text-neutral-400 text-sm max-w-xl mx-auto">
+      This utility converts the official <code class="text-cyan-400">assets/logo.png</code> into a studio-grade transparent PNG by cleanly extracting the black background into a true alpha channel with anti-aliased neon glow.
+    </p>
+
+    <!-- Side by Side Display -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+      <!-- Original with black background -->
+      <div class="bg-black/60 border border-white/10 rounded-xl p-4 flex flex-col items-center">
+        <span class="text-xs uppercase tracking-widest text-neutral-400 font-semibold mb-3">Original Logo (With Black BG)</span>
+        <div class="w-full h-64 flex items-center justify-center bg-black rounded-lg overflow-hidden">
+          <img id="originalImg" src="assets/logo.png" alt="Original Logo" class="max-h-56 max-w-full object-contain" />
+        </div>
+      </div>
+
+      <!-- Processed Transparent on Checkerboard -->
+      <div class="bg-black/60 border border-cyan-500/30 rounded-xl p-4 flex flex-col items-center relative overflow-hidden">
+        <div class="absolute top-2 right-2 bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">
+          100% Transparent
+        </div>
+        <span class="text-xs uppercase tracking-widest text-cyan-400 font-semibold mb-3">Transparent Result (On Checkerboard)</span>
+        <div class="w-full h-64 flex items-center justify-center checkerboard rounded-lg overflow-hidden">
+          <canvas id="outputCanvas" class="max-h-56 max-w-full object-contain"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download CTA Button -->
+    <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <button id="downloadBtn" onclick="downloadLogo()"
+        class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-cyan-400 hover:bg-cyan-300 text-neutral-950 font-bold text-sm tracking-wide transition shadow-lg shadow-cyan-500/25 active:scale-95">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+        </svg>
+        <span>Download Transparent logo.png</span>
+      </button>
+
+      <a href="index.html"
+        class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full border border-white/20 hover:bg-white/10 text-white text-sm font-semibold transition">
+        <span>Back to Website &rarr;</span>
+      </a>
+    </div>
+    
+    <p class="text-xs text-neutral-500">
+      Tip: After downloading, move the downloaded <code class="text-neutral-300">logo.png</code> into the <code class="text-neutral-300">theglitch/assets/</code> folder to overwrite the black background file permanently.
+    </p>
+  </div>
+
+  <script>
+    let transparentDataUrl = null;
+
+    function processLogo() {
+      const img = document.getElementById('originalImg');
+      if (!img.complete) {
+        img.onload = processLogo;
+        return;
+      }
+
+      const canvas = document.getElementById('outputCanvas');
+      canvas.width = img.naturalWidth || 700;
+      canvas.height = img.naturalHeight || 630;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+
+      try {
+        const idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = idata.data;
+        const threshold = 14;
+
+        for (let i = 0; i < data.length; i += 4) {
+          const r = data[i];
+          const g = data[i + 1];
+          const b = data[i + 2];
+          const maxVal = Math.max(r, g, b);
+
+          if (maxVal <= threshold) {
+            data[i + 3] = 0; // 100% transparent
+          } else {
+            const ratio = (maxVal - threshold) / (255 - threshold);
+            const alpha = Math.min(255, Math.round(Math.pow(ratio, 0.75) * 255));
+            data[i + 3] = alpha;
+
+            // Boost color slightly to eliminate dark halos
+            const colorScale = Math.min(2.0, 1.0 / Math.max(0.2, ratio));
+            data[i] = Math.min(255, Math.round(r * colorScale));
+            data[i + 1] = Math.min(255, Math.round(g * colorScale));
+            data[i + 2] = Math.min(255, Math.round(b * colorScale));
+          }
+        }
+
+        ctx.putImageData(idata, 0, 0);
+        transparentDataUrl = canvas.toDataURL('image/png');
+      } catch (err) {
+        console.error("Canvas processing error:", err);
+      }
+    }
+
+    function downloadLogo() {
+      if (!transparentDataUrl) {
+        const canvas = document.getElementById('outputCanvas');
+        transparentDataUrl = canvas.toDataURL('image/png');
+      }
+      const a = document.createElement('a');
+      a.href = transparentDataUrl;
+      a.download = 'logo.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+
+    window.addEventListener('load', processLogo);
+  </script>
+</body>
+</html>
