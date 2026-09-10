@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -6,15 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Pubs &amp; Bars — THE GLITCH | Manchester City Centre &amp; Northern Quarter</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
-  <meta name="description"
-    content="Discover The Glitch's two iconic Manchester pubs: Pub 01 in City Centre for craft beer &amp; smash burgers, and Pub 02 in Northern Quarter for bohemian cocktail lounge vibes, wood-fired pizza &amp; heated rooftop terrace." />
+  <meta name="description" content="Discover The Glitch's two iconic Manchester pubs: Pub 01 in City Centre for craft beer &amp; smash burgers, and Pub 02 in Northern Quarter for bohemian cocktail lounge vibes, wood-fired pizza &amp; heated rooftop terrace." />
 
   <!-- Google Fonts: Playfair Display (editorial serif), Plus Jakarta Sans (body), Caveat (handwritten script), Syne (modern geometric branding) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <!-- Production Precompiled Stylesheet (100% Offline, Zero-FOUC, Instant Load) -->
   <link rel="stylesheet" href="assets/style.css" />
@@ -24,8 +21,7 @@
   <!-- Tailwind CSS (Local with CDN fallback) -->
   <script src="assets/tailwind.min.js"></script>
   <script>
-    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
-  </script>
+    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');  </script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -61,113 +57,6 @@
       }
     }
   </script>
-
-  <!-- Custom CSS for Glowing Neon and Fine Refinements -->
-  <style>
-    /* Neon glow effects */
-    .neon-cyan-text {
-      color: #5ce1e6;
-      text-shadow:
-        0 0 4px #5ce1e6,
-        0 0 12px rgba(92, 225, 230, 0.85),
-        0 0 25px rgba(92, 225, 230, 0.6),
-        0 0 45px rgba(92, 225, 230, 0.35);
-    }
-
-    .neon-pink-text {
-      color: #ff3b94;
-      text-shadow:
-        0 0 4px #ff3b94,
-        0 0 12px rgba(255, 59, 148, 0.85),
-        0 0 25px rgba(255, 59, 148, 0.6),
-        0 0 40px rgba(255, 59, 148, 0.35);
-    }
-
-    .neon-sign-box {
-      background: radial-gradient(circle at center, rgba(22, 28, 40, 0.95) 0%, #070b10 100%);
-      box-shadow:
-        inset 0 0 30px rgba(255, 42, 133, 0.12),
-        inset 0 0 30px rgba(77, 238, 234, 0.12),
-        0 20px 40px -15px rgba(0, 0, 0, 0.85);
-    }
-
-    @keyframes pulse-glow {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.85; transform: scale(1.02); }
-    }
-
-    .animate-pulse-glow {
-      animation: pulse-glow 3s ease-in-out infinite;
-    }
-
-    /* Custom dark scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #060a0f;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #1f2937;
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #374151;
-    }
-
-    .logo-no-bg {
-      filter: url(#remove-black-bg);
-    }
-
-    /* Tab switcher transition classes */
-    .tab-content {
-      transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
-    }
-
-    .tab-content.hidden {
-      display: none;
-      opacity: 0;
-      transform: translateY(12px);
-    }
-
-    .tab-content.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Active card highlight border */
-    .pub-hero-card.active-card {
-      border-color: #5ce1e6;
-      box-shadow: 0 0 25px rgba(77, 238, 234, 0.25), inset 0 0 15px rgba(77, 238, 234, 0.1);
-    }
-
-    .pub-hero-card.active-card-pink {
-      border-color: #ff3b94;
-      box-shadow: 0 0 25px rgba(255, 42, 133, 0.25), inset 0 0 15px rgba(255, 42, 133, 0.1);
-    }
-
-    /* Glitch Loader & Spinner Styles */
-    @keyframes glitch-load-slide {
-      0% { transform: translateX(-100%); }
-      50% { transform: translateX(0%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .loader-progress-bar {
-      animation: glitch-load-slide 1.4s ease-in-out infinite;
-    }
-
-    .loader-fade-out {
-      opacity: 0 !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-  </style>
 </head>
 
 <body class="bg-[#060a0f] text-neutral-200 font-sans antialiased selection:bg-[#4deeea]/20 selection:text-[#5ce1e6]">
@@ -176,99 +65,58 @@
   <svg class="sr-only" aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
     <defs>
       <filter id="remove-black-bg" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix"
-          values="1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0.85 0.90 0.90 0 -0.06" />
-      </filter>
-    </defs>
-  </svg>
+        <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.85 0.90 0.90 0 -0.06" /> </filter> </defs> </svg>
 
   <!-- ==================== GLITCH PAGE PRELOADER & SPINNER ==================== -->
-  <div id="glitchPageLoader"
-    class="fixed inset-0 z-[99999] bg-[#060a0f] flex flex-col items-center justify-center transition-all duration-500 ease-out select-none">
+  <div id="glitchPageLoader" class="fixed inset-0 z-[99999] bg-[#060a0f] flex flex-col items-center justify-center transition-all duration-500 ease-out select-none">
     <!-- Ambient glowing radial backdrop -->
-    <div
-      class="absolute w-80 sm:w-96 h-80 sm:h-96 bg-gradient-to-tr from-[#ff2a85]/20 via-transparent to-[#4deeea]/20 rounded-full blur-3xl pointer-events-none animate-pulse">
-    </div>
+    <div class="absolute w-80 sm:w-96 h-80 sm:h-96 bg-gradient-to-tr from-[#ff2a85]/20 via-transparent to-[#4deeea]/20 rounded-full blur-3xl pointer-events-none animate-pulse"> </div>
 
     <div class="relative z-10 flex flex-col items-center">
       <!-- Neon Dual-Ring Spinner enclosing Logo -->
       <div class="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
         <!-- Outer Glowing Cyan Spinner Ring (Clockwise) -->
-        <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-[#4deeea] border-r-[#4deeea]/40 animate-spin"
-          style="animation-duration: 1.1s; filter: drop-shadow(0 0 8px rgba(77, 238, 234, 0.75));"></div>
+        <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-[#4deeea] border-r-[#4deeea]/40 animate-spin" style="animation-duration: 1.1s; filter: drop-shadow(0 0 8px rgba(77, 238, 234, 0.75));"></div>
         <!-- Inner Glowing Pink Spinner Ring (Counter-Clockwise) -->
-        <div class="absolute inset-2 sm:inset-2.5 rounded-full border-2 border-transparent border-b-[#ff2a85] border-l-[#ff2a85]/40 animate-spin"
-          style="animation-duration: 1.5s; animation-direction: reverse; filter: drop-shadow(0 0 8px rgba(255, 42, 133, 0.75));"></div>
+        <div class="absolute inset-2 sm:inset-2.5 rounded-full border-2 border-transparent border-b-[#ff2a85] border-l-[#ff2a85]/40 animate-spin" style="animation-duration: 1.5s; animation-direction: reverse; filter: drop-shadow(0 0 8px rgba(255, 42, 133, 0.75));"></div>
         <!-- Center Pulsing Glitch Logo -->
-        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="48"
-          class="h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" />
-      </div>
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="48" class="h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" /> </div>
 
       <!-- Typography and Glowing Loading Bar -->
       <div class="mt-6 flex flex-col items-center space-y-2.5">
-        <span class="neon-cyan-text font-serif text-base sm:text-lg font-extrabold tracking-[0.3em] uppercase">
-          THE GLITCH
-        </span>
+        <span class="neon-cyan-text font-serif text-base sm:text-lg font-extrabold tracking-[0.3em] uppercase">THE GLITCH</span>
 
         <!-- Glowing Progress Track -->
         <div class="w-36 sm:w-44 h-1 bg-white/10 rounded-full overflow-hidden relative shadow-inner">
-          <div class="loader-progress-bar absolute inset-y-0 left-0 bg-gradient-to-r from-[#ff2a85] via-[#4deeea] to-[#ff2a85] rounded-full w-full"></div>
-        </div>
+          <div class="loader-progress-bar absolute inset-y-0 left-0 bg-gradient-to-r from-[#ff2a85] via-[#4deeea] to-[#ff2a85] rounded-full w-full"></div> </div>
 
-        <span class="text-[10px] tracking-[0.25em] text-neutral-400 font-bold uppercase pt-0.5">
-          Good Food &bull; Great Drinks &bull; Good Times
-        </span>
-      </div>
-    </div>
-  </div>
+        <span class="text-[10px] tracking-[0.25em] text-neutral-400 font-bold uppercase pt-0.5">Good Food &bull; Great Drinks &bull; Good Times</span> </div> </div> </div>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header
-    class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
+  <header class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
     <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
 
       <!-- Brand Logo -->
       <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
-        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52"
-          class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" />
-      </a>
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52" class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" /> </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="glitch-header-nav hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
         <a href="index.html" class="glitch-nav-link hover:text-white transition duration-200">Home</a>
-        <a href="our-pubs.html"
-          class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Our Pubs</a>
+        <a href="our-pubs.html" class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Our Pubs</a>
         <a href="menu.html" class="glitch-nav-link hover:text-white transition duration-200">Food &amp; Drinks</a>
         <a href="gallery.html" class="glitch-nav-link hover:text-white transition duration-200">Gallery</a>
-        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a>
-      </nav>
+        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a> </nav>
 
       <!-- Right Action & Mobile Button -->
       <div class="glitch-header-actions flex items-center gap-3">
-        <button onclick="openBookingModal()"
-          class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
-          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>Book a Table</span>
-        </button>
+        <button onclick="openBookingModal()" class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <span>Book a Table</span> </button>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button onclick="toggleMobileMenu()"
-          class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
-          aria-label="Toggle Navigation Menu">
-          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-    </div>
+        <button onclick="toggleMobileMenu()" class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg> </button> </div> </div>
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
@@ -278,16 +126,10 @@
       <a href="gallery.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Gallery</a>
       <a href="contact.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Contact</a>
       <div class="pt-2">
-        <button onclick="openBookingModal(); toggleMobileMenu();"
-          class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
-          <span>Book a Table</span>
-        </button>
-      </div>
-    </div>
-  </header>
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
+          <span>Book a Table</span> </button> </div> </div> </header>
 
-
-  <!-- ==================== HERO SECTION: "OUR PUBS & BARS" ==================== -->
+<!-- ==================== HERO SECTION: "OUR PUBS & BARS" ==================== -->
   <section id="hero-pubs" class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24 border-b border-white/[0.08]">
     <!-- Ambient glowing backgrounds -->
     <div class="absolute -top-32 left-1/4 w-[28rem] h-[28rem] bg-[#ff2a85]/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -300,234 +142,142 @@
         <div class="inline-flex items-center gap-3">
           <span class="w-8 h-[1px] bg-neutral-500"></span>
           <span class="text-xs uppercase tracking-[0.3em] text-[#5ce1e6] font-extrabold">The Glitch Destinations</span>
-          <span class="w-8 h-[1px] bg-neutral-500"></span>
-        </div>
+          <span class="w-8 h-[1px] bg-neutral-500"></span> </div>
 
-        <h1
-          class="text-4xl sm:text-6xl md:text-7xl font-serif font-extrabold text-white leading-[1.06] tracking-tight uppercase">
-          OUR PUBS &amp; <span class="neon-cyan-text">BARS</span>
-        </h1>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-serif font-extrabold text-white leading-[1.06] tracking-tight uppercase">
+          OUR PUBS &amp; <span class="neon-cyan-text">BARS</span> </h1>
 
-        <p class="text-neutral-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          Two unique Manchester venues. Two singular vibes. Both delivering honest hospitality, mouth-watering food, craft pours, and unforgettable nights. Select a location below to explore menus, interiors, and what's on.
-        </p>
+        <p class="text-neutral-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">Two unique Manchester venues. Two singular vibes. Both delivering honest hospitality, mouth-watering food, craft pours, and unforgettable nights. Select a location below to explore menus, interiors, and what's on.</p>
 
         <!-- Subtle instruction pill -->
         <div class="pt-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-xs text-neutral-400">
           <span class="w-2 h-2 rounded-full bg-[#4deeea] animate-ping"></span>
-          <span>Click either pub card to switch live details</span>
-        </div>
-      </div>
+          <span>Click either pub card to switch live details</span> </div> </div>
 
       <!-- ==================== DUAL PUB CARDS SELECTOR (HERO GRID) ==================== -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
         <!-- CARD 01: THE GLITCH - CITY CENTRE -->
-        <div id="heroCard1"
-          class="pub-hero-card active-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#5ce1e6]/60 cursor-pointer shadow-xl"
-          onclick="switchPub('city-centre', true)">
+        <div id="heroCard1" class="pub-hero-card active-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#5ce1e6]/60 cursor-pointer shadow-xl" onclick="switchPub('city-centre', true)">
           
           <!-- Image Banner -->
           <div class="relative h-60 sm:h-72 overflow-hidden bg-black/40">
-            <img src="assets/pub-city-centre.jpg" alt="The Glitch City Centre Pub Exterior and Interior"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <img src="assets/pub-city-centre.jpg" alt="The Glitch City Centre Pub Exterior and Interior" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-[#0c1219]/30 to-transparent"></div>
             
             <!-- Top Status Badges -->
             <div class="absolute top-4 left-4 flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[11px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">
-                Pub 01
-              </span>
+              <span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[11px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub 01</span>
               <span class="px-3 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md border border-emerald-500/30 text-[11px] font-semibold text-emerald-400 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Open Today &middot; 12PM
-              </span>
-            </div>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Open Today &middot; 12PM  </span> </div>
 
             <!-- Active Indicator Pin -->
             <div id="heroCard1Badge" class="absolute top-4 right-4 bg-[#5ce1e6] text-black font-extrabold text-[11px] tracking-wider uppercase px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5">
               <span>Selected</span>
-              <span class="text-xs">&check;</span>
-            </div>
-          </div>
+              <span class="text-xs">&check;</span> </div> </div>
 
           <!-- Card Content Body -->
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
             <div class="space-y-3">
               <div class="flex items-center justify-between gap-2">
-                <h3 class="text-2xl font-serif font-extrabold text-white group-hover:text-[#5ce1e6] transition duration-200">
-                  The Glitch &ndash; City Centre
-                </h3>
-              </div>
+                <h3 class="text-2xl font-serif font-extrabold text-white group-hover:text-[#5ce1e6] transition duration-200">The Glitch &ndash; City Centre</h3> </div>
 
               <!-- Address with icon -->
               <p class="text-xs sm:text-sm text-neutral-300 flex items-start gap-2">
                 <svg class="w-4 h-4 text-[#5ce1e6] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>123 High Street, Manchester, M1 2AB</span>
-              </p>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg>
+                <span>123 High Street, Manchester, M1 2AB</span> </p>
 
-              <p class="text-xs text-neutral-400 leading-relaxed">
-                High-energy urban gastropub featuring a 20-tap craft wall, smash burgers, live weekend acoustic acts, and bustling street terrace.
-              </p>
+              <p class="text-xs text-neutral-400 leading-relaxed">High-energy urban gastropub featuring a 20-tap craft wall, smash burgers, live weekend acoustic acts, and bustling street terrace.</p>
 
               <!-- Feature Tags -->
               <div class="flex flex-wrap gap-2 pt-2 text-[11px] font-medium text-neutral-300">
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍺 20 Craft Taps</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍔 Smash Burgers</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🎸 Live Bands</span>
-                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🌿 Street Terrace</span>
-              </div>
-            </div>
+                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🌿 Street Terrace</span> </div> </div>
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/[0.08]">
-              <button
-                class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
+              <button class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
                 <span>View Glitch 1</span>
-                <span>&darr;</span>
-              </button>
+                <span>&darr;</span> </button>
 
-              <button onclick="event.stopPropagation(); openBookingModal('City Centre');"
-                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
-                <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>Book a Table</span>
-              </button>
-            </div>
+              <button onclick="event.stopPropagation(); openBookingModal('City Centre');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+                <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <span>Book a Table</span> </button> </div> </div> </div>
 
-          </div>
-        </div>
-
-
-        <!-- CARD 02: THE GLITCH - NORTHERN QUARTER -->
-        <div id="heroCard2"
-          class="pub-hero-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#ff3b94]/60 cursor-pointer shadow-xl opacity-90 hover:opacity-100"
-          onclick="switchPub('northern-quarter', true)">
+<!-- CARD 02: THE GLITCH - NORTHERN QUARTER -->
+        <div id="heroCard2" class="pub-hero-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#ff3b94]/60 cursor-pointer shadow-xl opacity-90 hover:opacity-100" onclick="switchPub('northern-quarter', true)">
           
           <!-- Image Banner -->
           <div class="relative h-60 sm:h-72 overflow-hidden bg-black/40">
-            <img src="assets/pub-northern-quarter.jpg" alt="The Glitch Northern Quarter Pub Rooftop Terrace and Bar"
-              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <img src="assets/pub-northern-quarter.jpg" alt="The Glitch Northern Quarter Pub Rooftop Terrace and Bar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-[#0c1219]/30 to-transparent"></div>
             
             <!-- Top Status Badges -->
             <div class="absolute top-4 left-4 flex items-center gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[11px] font-extrabold uppercase tracking-widest text-[#ff3b94]">
-                Pub 02
-              </span>
+              <span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md border border-white/20 text-[11px] font-extrabold uppercase tracking-widest text-[#ff3b94]">Pub 02</span>
               <span class="px-3 py-1 rounded-full bg-emerald-950/80 backdrop-blur-md border border-emerald-500/30 text-[11px] font-semibold text-emerald-400 flex items-center gap-1.5">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Open Today &middot; 12PM
-              </span>
-            </div>
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Open Today &middot; 12PM  </span> </div>
 
             <!-- Active Indicator Pin (Hidden initially) -->
             <div id="heroCard2Badge" class="hidden absolute top-4 right-4 bg-[#ff3b94] text-white font-extrabold text-[11px] tracking-wider uppercase px-3 py-1 rounded-full shadow-lg flex items-center gap-1.5">
               <span>Selected</span>
-              <span class="text-xs">&check;</span>
-            </div>
-          </div>
+              <span class="text-xs">&check;</span> </div> </div>
 
           <!-- Card Content Body -->
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
             <div class="space-y-3">
               <div class="flex items-center justify-between gap-2">
-                <h3 class="text-2xl font-serif font-extrabold text-white group-hover:text-[#ff3b94] transition duration-200">
-                  The Glitch &ndash; Northern Quarter
-                </h3>
-              </div>
+                <h3 class="text-2xl font-serif font-extrabold text-white group-hover:text-[#ff3b94] transition duration-200">The Glitch &ndash; Northern Quarter</h3> </div>
 
               <!-- Address with icon -->
               <p class="text-xs sm:text-sm text-neutral-300 flex items-start gap-2">
                 <svg class="w-4 h-4 text-[#ff3b94] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span>45 Oldham St, Manchester, M4 1LE</span>
-              </p>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg>
+                <span>45 Oldham St, Manchester, M4 1LE</span> </p>
 
-              <p class="text-xs text-neutral-400 leading-relaxed">
-                Bohemian cocktail retreat with artisan wood-fired Napoli pizzas, velvet booth snugs, vinyl DJ decks, and a heated rooftop garden.
-              </p>
+              <p class="text-xs text-neutral-400 leading-relaxed">Bohemian cocktail retreat with artisan wood-fired Napoli pizzas, velvet booth snugs, vinyl DJ decks, and a heated rooftop garden.</p>
 
               <!-- Feature Tags -->
               <div class="flex flex-wrap gap-2 pt-2 text-[11px] font-medium text-neutral-300">
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍸 Botanical Mixology</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍕 Wood-Fired Pizza</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🌆 Rooftop Terrace</span>
-                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🎧 Resident DJs</span>
-              </div>
-            </div>
+                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🎧 Resident DJs</span> </div> </div>
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/[0.08]">
-              <button
-                class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
+              <button class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
                 <span>View Glitch 2</span>
-                <span>&darr;</span>
-              </button>
+                <span>&darr;</span> </button>
 
-              <button onclick="event.stopPropagation(); openBookingModal('Northern Quarter');"
-                class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
-                <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-                <span>Book a Table</span>
-              </button>
-            </div>
+              <button onclick="event.stopPropagation(); openBookingModal('Northern Quarter');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+                <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <span>Book a Table</span> </button> </div> </div> </div> </div> </div> </section>
 
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ==================== STICKY INTERACTIVE PUB SWITCHER BAR ==================== -->
+<!-- ==================== STICKY INTERACTIVE PUB SWITCHER BAR ==================== -->
   <div id="stickySwitcher" class="sticky top-20 z-40 bg-[#080d14]/95 backdrop-blur-lg border-b border-white/10 py-3 shadow-glass transition duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
       
       <!-- Label -->
       <div class="flex items-center gap-2 text-xs text-neutral-400 font-semibold uppercase tracking-wider">
         <span>Displaying Pub:</span>
-        <span id="switcherCurrentLabel" class="text-white font-bold">Pub 01 &mdash; City Centre</span>
-      </div>
+        <span id="switcherCurrentLabel" class="text-white font-bold">Pub 01 &mdash; City Centre</span> </div>
 
       <!-- Segmented Buttons -->
       <div class="inline-flex p-1 bg-[#060a0f] rounded-full border border-white/10 shadow-inner">
-        <button id="switchBtnCity" onclick="switchPub('city-centre', false)"
-          class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md">
-          📍 Pub 01: City Centre
-        </button>
-        <button id="switchBtnNQ" onclick="switchPub('northern-quarter', false)"
-          class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white">
-          📍 Pub 02: Northern Quarter
-        </button>
-      </div>
+        <button id="switchBtnCity" onclick="switchPub('city-centre', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md">📍 Pub 01: City Centre</button>
+        <button id="switchBtnNQ" onclick="switchPub('northern-quarter', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white">📍 Pub 02: Northern Quarter</button> </div>
 
       <!-- Quick Action -->
       <div class="hidden md:flex items-center gap-2">
-        <button id="switcherBookBtn" onclick="openBookingForCurrent()"
-          class="px-4 py-1.5 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] text-xs font-semibold text-white tracking-wide transition">
-          Book Table Here &rarr;
-        </button>
-      </div>
+        <button id="switcherBookBtn" onclick="openBookingForCurrent()" class="px-4 py-1.5 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] text-xs font-semibold text-white tracking-wide transition">Book Table Here &rarr;</button> </div> </div> </div>
 
-    </div>
-  </div>
-
-
-  <!-- ========================================================================= -->
+<!-- ========================================================================= -->
   <!-- ==================== VIEW 1: THE GLITCH - CITY CENTRE ==================== -->
   <!-- ========================================================================= -->
   <div id="pubContentCityCentre" class="tab-content active">
@@ -541,33 +291,16 @@
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-xs font-extrabold uppercase tracking-widest text-[#5ce1e6]">
               📍 Pub 01 Overview
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-              The Glitch &ndash; City Centre
-            </h2>
-            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">
-              Located directly on High Street in the beating heart of Manchester, Pub 01 is designed for high-energy get-togethers, craft taproom purists, and burger lovers. Featuring 20 rotating draft lines from the UK's finest independent breweries, live acoustic stages, and full weekend sports screenings.
-            </p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">The Glitch &ndash; City Centre</h2>
+            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">Located directly on High Street in the beating heart of Manchester, Pub 01 is designed for high-energy get-togethers, craft taproom purists, and burger lovers. Featuring 20 rotating draft lines from the UK's finest independent breweries, live acoustic stages, and full weekend sports screenings.</p>
             <div class="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-neutral-300">
               <span class="flex items-center gap-1.5"><span class="text-[#5ce1e6]">📍</span> 123 High Street, Manchester, M1 2AB</span>
               <span class="flex items-center gap-1.5"><span class="text-[#5ce1e6]">🚇</span> Piccadilly Gardens (3 min walk)</span>
-              <span class="flex items-center gap-1.5"><span class="text-[#5ce1e6]">📞</span> +44 (0)161 832 9001</span>
-            </div>
-          </div>
+              <span class="flex items-center gap-1.5"><span class="text-[#5ce1e6]">📞</span> +44 (0)161 832 9001</span> </div> </div>
 
           <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
-            <button onclick="openBookingModal('City Centre')"
-              class="w-full py-3.5 px-6 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">
-              Reserve Table at City Centre
-            </button>
-            <button onclick="openDirectionsModal('City Centre')"
-              class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">
-              Get Travel Directions ↗
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </section>
+            <button onclick="openBookingModal('City Centre')" class="w-full py-3.5 px-6 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">Reserve Table at City Centre</button>
+            <button onclick="openDirectionsModal('City Centre')" class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">Get Travel Directions ↗</button> </div> </div> </div> </section>
 
     <!-- SECTION 1: GLITCH 1 MENU HIGHLIGHTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -577,24 +310,14 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Pub 01 Kitchen &amp; Bar</span>
-            </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
-              City Centre Menu Highlights
-            </h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">
-              Gourmet smash burgers, crispy chicken wings, wild mushroom rice bowls, and our famous 20-tap craft line.
-            </p>
-          </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Pub 01 Kitchen &amp; Bar</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Menu Highlights</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Gourmet smash burgers, crispy chicken wings, wild mushroom rice bowls, and our famous 20-tap craft line.</p> </div>
 
           <div class="flex items-center gap-3">
-            <a href="menu.html"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition">
+            <a href="menu.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition">
               <span>View Full Food &amp; Drinks Menu</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
+              <span>&rarr;</span> </a> </div> </div>
 
         <!-- 4 Highlight Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -602,98 +325,60 @@
           <!-- Dish 1: Smash Burger -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-burger.jpg" alt="The Glitch Double Smash Burger"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£14.50</span>
-            </div>
+              <img src="assets/menu-burger.jpg" alt="The Glitch Double Smash Burger" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£14.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">House Signature</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">The Glitch Double Smash</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Two 4oz aged beef patties, double Monterey Jack, smoked bacon, caramelized beer onions &amp; glitch relish on toasted brioche.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Two 4oz aged beef patties, double Monterey Jack, smoked bacon, caramelized beer onions &amp; glitch relish on toasted brioche.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Served with skin-on fries</span>
-                <span class="text-emerald-400 font-semibold">Chef's Top Pick</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-emerald-400 font-semibold">Chef's Top Pick</span> </div> </div> </div>
 
           <!-- Dish 2: Loaded Wings -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-wings.jpg" alt="Crispy Glazed Chicken Wings"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£9.50</span>
-            </div>
+              <img src="assets/menu-wings.jpg" alt="Crispy Glazed Chicken Wings" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£9.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Sharer</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Korean Glazed Wings</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Crisp buttermilk fried wings tossed in sweet gochujang chili glaze, toasted sesame seeds, fresh scallions &amp; blue cheese dip.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Crisp buttermilk fried wings tossed in sweet gochujang chili glaze, toasted sesame seeds, fresh scallions &amp; blue cheese dip.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>1/2 kg or 1 kg</span>
-                <span class="text-amber-400 font-semibold">Mild Heat</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-amber-400 font-semibold">Mild Heat</span> </div> </div> </div>
 
           <!-- Dish 3: Kinoko Bowl -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-kinoko-bowl.jpg" alt="Kinoko Truffle Rice Bowl"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£13.00</span>
-            </div>
+              <img src="assets/menu-kinoko-bowl.jpg" alt="Kinoko Truffle Rice Bowl" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£13.00</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Vegan &bull; Bowl</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Kinoko Truffle Rice Bowl</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Pan-seared wild forest mushrooms, charred edamame, pickled daikon, nori crisps &amp; white truffle drizzle over sticky sushi rice.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Pan-seared wild forest mushrooms, charred edamame, pickled daikon, nori crisps &amp; white truffle drizzle over sticky sushi rice.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>100% Plant-Based</span>
-                <span class="text-cyan-400 font-semibold">Healthy</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-cyan-400 font-semibold">Healthy</span> </div> </div> </div>
 
           <!-- Drink 4: Craft Taproom Pours -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-taproom.jpg" alt="Fresh Craft Beers on Tap"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">From £5.80</span>
-            </div>
+              <img src="assets/menu-taproom.jpg" alt="Fresh Craft Beers on Tap" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">From £5.80</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Taproom Lines</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">20 Rotating Craft Lines</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Local Manchester IPAs, crisp continental lagers, nitro stouts, and guest sour ales served cold from our dedicated cellar room.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Local Manchester IPAs, crisp continental lagers, nitro stouts, and guest sour ales served cold from our dedicated cellar room.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Tasting Flights Available</span>
-                <span class="text-[#5ce1e6] font-semibold">Fresh Pours</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-[#5ce1e6] font-semibold">Fresh Pours</span> </div> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- SECTION 2: GLITCH 1 INTERIOR & ATMOSPHERE -->
+<!-- SECTION 2: GLITCH 1 INTERIOR & ATMOSPHERE -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -702,37 +387,26 @@
           <!-- Left: Large Interior Spotlight Image -->
           <div class="lg:col-span-7">
             <div class="rounded-2xl overflow-hidden border border-white/[0.12] shadow-2xl relative group">
-              <img src="assets/pub-cc-interior.jpg" alt="The Glitch City Centre Taproom and Bar Interior"
-                class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <img src="assets/pub-cc-interior.jpg" alt="The Glitch City Centre Taproom and Bar Interior" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               
               <!-- Floating Photo Tag -->
               <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-black/80 backdrop-blur-md border border-white/20 p-3.5 rounded-xl flex items-center gap-3">
                 <div class="w-10 h-10 rounded-lg bg-[#5ce1e6]/20 border border-[#5ce1e6]/40 flex items-center justify-center shrink-0">
-                  <span class="text-lg">🍺</span>
-                </div>
+                  <span class="text-lg">🍺</span> </div>
                 <div>
                   <div class="text-xs font-bold text-white uppercase tracking-wider">City Centre Main Taproom</div>
-                  <div class="text-[11px] text-neutral-400">High ceilings &bull; 20 Draft taps &bull; Leather booths</div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <div class="text-[11px] text-neutral-400">High ceilings &bull; 20 Draft taps &bull; Leather booths</div> </div> </div> </div> </div>
 
           <!-- Right: Atmosphere & Features Description -->
           <div class="lg:col-span-5 space-y-6">
             <div class="inline-flex items-center gap-3">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Space &amp; Ambience</span>
-            </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Space &amp; Ambience</span> </div>
 
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
-              Industrial Gastropub Built for Gathering.
-            </h3>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Industrial Gastropub Built for Gathering.</h3>
 
-            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
-              Step inside 123 High Street and you're greeted with glowing neon fixtures, exposed brickwork, custom dark oak furniture, and an energized crowd. Whether grabbing a casual pint after work or settling in for a full Saturday session, City Centre balances craft taproom prestige with easygoing charm.
-            </p>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Step inside 123 High Street and you're greeted with glowing neon fixtures, exposed brickwork, custom dark oak furniture, and an energized crowd. Whether grabbing a casual pint after work or settling in for a full Saturday session, City Centre balances craft taproom prestige with easygoing charm.</p>
 
             <!-- 3 Key Features -->
             <div class="space-y-3 pt-2">
@@ -740,36 +414,21 @@
                 <span class="text-xl mt-0.5">⚡</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">20-Line Craft Wall</h5>
-                  <p class="text-xs text-neutral-400">Chilled micro-brew cellar with constantly revolving taps and seasonal keg drops.</p>
-                </div>
-              </div>
+                  <p class="text-xs text-neutral-400">Chilled micro-brew cellar with constantly revolving taps and seasonal keg drops.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">🛋</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">Spacious Booth Snugs</h5>
-                  <p class="text-xs text-neutral-400">Plush leather banquettes designed for group dining and birthday gatherings.</p>
-                </div>
-              </div>
+                  <p class="text-xs text-neutral-400">Plush leather banquettes designed for group dining and birthday gatherings.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">☀️</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">Covered High Street Terrace</h5>
-                  <p class="text-xs text-neutral-400">Outdoor heated street-side seating for al-fresco drinks in any weather.</p>
-                </div>
-              </div>
-            </div>
+                  <p class="text-xs text-neutral-400">Outdoor heated street-side seating for al-fresco drinks in any weather.</p> </div> </div> </div> </div> </div> </div> </section>
 
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- SECTION 3: GLITCH 1 UPCOMING EVENTS -->
+<!-- SECTION 3: GLITCH 1 UPCOMING EVENTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -777,22 +436,13 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Live Programming</span>
-            </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
-              City Centre Upcoming Events
-            </h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">
-              From Friday night acoustic heroes to the legendary City Centre Sunday Roast feast.
-            </p>
-          </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Live Programming</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Upcoming Events</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">From Friday night acoustic heroes to the legendary City Centre Sunday Roast feast.</p> </div>
 
-          <button onclick="openBookingModal('City Centre')"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
+          <button onclick="openBookingModal('City Centre')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
             <span>Book Table for Next Event</span>
-            <span>&rarr;</span>
-          </button>
-        </div>
+            <span>&rarr;</span> </button> </div>
 
         <!-- 3 Events Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -800,91 +450,52 @@
           <!-- Event 1: Friday Live Music -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-music.jpg" alt="Live Music Night acoustic singer"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="assets/event-music.jpg" alt="Live Music Night acoustic singer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">Every Fri</span>
                 <span class="block text-base font-extrabold text-white mt-0.5">8:00</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span>
-              </div>
-            </div>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Live &amp; Acoustic</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">The Glitch Acoustic Showcase</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Manchester's best indie vocalists, acoustic guitar loops, and soulful covers paired with after-work drink specials.
-                </p>
-              </div>
-              <button onclick="openBookingModal('City Centre')"
-                class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">
-                Reserve Front Booth
-              </button>
-            </div>
-          </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Manchester's best indie vocalists, acoustic guitar loops, and soulful covers paired with after-work drink specials.</p> </div>
+              <button onclick="openBookingModal('City Centre')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Front Booth</button> </div> </div>
 
           <!-- Event 2: Sunday Roast -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-roast.jpg" alt="Sunday Roast with Yorkshire Pudding"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="assets/event-roast.jpg" alt="Sunday Roast with Yorkshire Pudding" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">Every Sun</span>
                 <span class="block text-base font-extrabold text-white mt-0.5">12:00</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span>
-              </div>
-            </div>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Weekly Tradition</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Signature Sunday Roast Club</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  28-day dry aged British beef sirloin or roasted mushroom wellington, giant Yorkshire pudding, duck fat potatoes &amp; bone marrow gravy.
-                </p>
-              </div>
-              <button onclick="openBookingModal('City Centre')"
-                class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">
-                Book Sunday Roast Table
-              </button>
-            </div>
-          </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">28-day dry aged British beef sirloin or roasted mushroom wellington, giant Yorkshire pudding, duck fat potatoes &amp; bone marrow gravy.</p> </div>
+              <button onclick="openBookingModal('City Centre')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Sunday Roast Table</button> </div> </div>
 
           <!-- Event 3: Tap Takeover -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/the_glitch_live_music_1788932227757.jpg" alt="Craft Beer Tap Takeover at The Glitch"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="assets/the_glitch_live_music_1788932227757.jpg" alt="Craft Beer Tap Takeover at The Glitch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">Monthly</span>
                 <span class="block text-base font-extrabold text-white mt-0.5">7:00</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span>
-              </div>
-            </div>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Craft Special</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Brewer Tap Takeover &amp; Tasting</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Guest independent breweries take over 8 taps with rare small-batch stouts, double IPAs, and guided tasting flights by head brewers.
-                </p>
-              </div>
-              <button onclick="openBookingModal('City Centre')"
-                class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">
-                Reserve Tasting Seat
-              </button>
-            </div>
-          </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Guest independent breweries take over 8 taps with rare small-batch stouts, double IPAs, and guided tasting flights by head brewers.</p> </div>
+              <button onclick="openBookingModal('City Centre')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Tasting Seat</button> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- SECTION 4: GLITCH 1 GALLERY -->
+<!-- SECTION 4: GLITCH 1 GALLERY -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -892,48 +503,28 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Visual Moments</span>
-            </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Gallery</h3>
-          </div>
-          <p class="text-xs text-neutral-400">Click any image to expand view</p>
-        </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Visual Moments</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Gallery</h3> </div>
+          <p class="text-xs text-neutral-400">Click any image to expand view</p> </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <div onclick="openLightbox('assets/gallery-4-feast.jpg', 'The Glitch City Centre Gastro Sharing Feast')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/gallery-4-feast.jpg" alt="Pub Feast Board"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
+          <div onclick="openLightbox('assets/gallery-4-feast.jpg', 'The Glitch City Centre Gastro Sharing Feast')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/gallery-4-feast.jpg" alt="Pub Feast Board" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/pub-cc-interior.jpg', 'City Centre 20-Tap Wall & Dining Room')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub-cc-interior.jpg" alt="Taproom Bar"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
+          <div onclick="openLightbox('assets/pub-cc-interior.jpg', 'City Centre 20-Tap Wall & Dining Room')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/pub-cc-interior.jpg" alt="Taproom Bar" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/gallery-5-booth.jpg', 'City Centre Cozy Leather Dining Booths')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/gallery-5-booth.jpg" alt="Pub Booth Interior"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
+          <div onclick="openLightbox('assets/gallery-5-booth.jpg', 'City Centre Cozy Leather Dining Booths')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/gallery-5-booth.jpg" alt="Pub Booth Interior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/gallery-7-crowd.jpg', 'Friday Evening Atmosphere at The Glitch')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/gallery-7-crowd.jpg" alt="Lively Crowd"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
-        </div>
+          <div onclick="openLightbox('assets/gallery-7-crowd.jpg', 'Friday Evening Atmosphere at The Glitch')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/gallery-7-crowd.jpg" alt="Lively Crowd" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div> </div> </div> </section>
 
-      </div>
-    </section>
-
-
-    <!-- SECTION 5: GLITCH 1 HOURS & PRACTICAL INFO -->
+<!-- SECTION 5: GLITCH 1 HOURS & PRACTICAL INFO -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -942,39 +533,31 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold">Pub 01 Schedule</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">City Centre Opening Hours</h3>
-            </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">City Centre Opening Hours</h3> </div>
 
             <div class="space-y-3 text-sm text-neutral-300">
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
                 <span class="text-neutral-400">Monday &ndash; Wednesday</span>
-                <span class="font-semibold text-white">12:00 PM &ndash; 11:00 PM</span>
-              </div>
+                <span class="font-semibold text-white">12:00 PM &ndash; 11:00 PM</span> </div>
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
                 <span class="text-neutral-400">Thursday</span>
-                <span class="font-semibold text-white">12:00 PM &ndash; 11:30 PM</span>
-              </div>
+                <span class="font-semibold text-white">12:00 PM &ndash; 11:30 PM</span> </div>
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
                 <span class="text-neutral-400">Friday &ndash; Saturday</span>
-                <span class="font-semibold text-[#5ce1e6]">12:00 PM &ndash; 12:00 AM (Late)</span>
-              </div>
+                <span class="font-semibold text-[#5ce1e6]">12:00 PM &ndash; 12:00 AM (Late)</span> </div>
               <div class="flex justify-between py-2">
                 <span class="text-neutral-400">Sunday</span>
-                <span class="font-semibold text-white">12:00 PM &ndash; 10:30 PM</span>
-              </div>
-            </div>
+                <span class="font-semibold text-white">12:00 PM &ndash; 10:30 PM</span> </div> </div>
 
             <div class="pt-2 text-xs text-neutral-400">
               Kitchen serves lunch and dinner daily until 10:00 PM (9:00 PM Sunday).
-            </div>
-          </div>
+            </div> </div>
 
           <!-- Transit & Location Info Column -->
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold">Travel &amp; Arrival</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch City Centre</h3>
-            </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch City Centre</h3> </div>
 
             <div class="space-y-4 text-xs sm:text-sm text-neutral-300">
               <div class="flex items-start gap-3">
@@ -982,46 +565,27 @@
                 <div>
                   <strong class="text-white block">Metrolink &amp; Trains:</strong>
                   Piccadilly Gardens Metrolink stop is a 3-minute walk (250m). Manchester Piccadilly train station is a 7-minute walk.
-                </div>
-              </div>
+                </div> </div>
 
               <div class="flex items-start gap-3">
                 <span class="text-lg">🚗</span>
                 <div>
                   <strong class="text-white block">Parking:</strong>
                   NCP Manchester Central and Church Street multi-story parking options within 300 meters.
-                </div>
-              </div>
+                </div> </div>
 
               <div class="flex items-start gap-3">
                 <span class="text-lg">♿</span>
                 <div>
                   <strong class="text-white block">Accessibility:</strong>
                   Fully level ground-floor entrance, accessible restroom, and lowered bar counter section.
-                </div>
-              </div>
-            </div>
+                </div> </div> </div>
 
             <div class="pt-2 flex gap-3">
-              <button onclick="openDirectionsModal('City Centre')"
-                class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">
-                Open in Google Maps ↗
-              </button>
-              <button onclick="openBookingModal('City Centre')"
-                class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">
-                Book a Table
-              </button>
-            </div>
-          </div>
+              <button onclick="openDirectionsModal('City Centre')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
+              <button onclick="openBookingModal('City Centre')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
 
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-
-  <!-- ========================================================================= -->
+<!-- ========================================================================= -->
   <!-- ==================== VIEW 2: THE GLITCH - NORTHERN QUARTER =============== -->
   <!-- ========================================================================= -->
   <div id="pubContentNorthernQuarter" class="tab-content hidden">
@@ -1035,33 +599,16 @@
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff3b94]/10 border border-[#ff3b94]/30 text-xs font-extrabold uppercase tracking-widest text-[#ff3b94]">
               📍 Pub 02 Overview
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">
-              The Glitch &ndash; Northern Quarter
-            </h2>
-            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">
-              Nestled at 45 Oldham Street in Manchester's renowned creative district, Pub 02 is an intimate bohemian sanctuary. Pairing wood-fired sourdough pizzas with artisanal botanical cocktails, vinyl DJ sets, vintage leather booths, and an all-weather heated skyline rooftop garden.
-            </p>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">The Glitch &ndash; Northern Quarter</h2>
+            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">Nestled at 45 Oldham Street in Manchester's renowned creative district, Pub 02 is an intimate bohemian sanctuary. Pairing wood-fired sourdough pizzas with artisanal botanical cocktails, vinyl DJ sets, vintage leather booths, and an all-weather heated skyline rooftop garden.</p>
             <div class="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-neutral-300">
               <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">📍</span> 45 Oldham St, Manchester, M4 1LE</span>
               <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">🚇</span> Stevenson Square / Shudehill (4 min walk)</span>
-              <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">📞</span> +44 (0)161 832 9002</span>
-            </div>
-          </div>
+              <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">📞</span> +44 (0)161 832 9002</span> </div> </div>
 
           <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
-            <button onclick="openBookingModal('Northern Quarter')"
-              class="w-full py-3.5 px-6 rounded-full bg-[#ff3b94] hover:bg-white hover:text-black text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">
-              Reserve Table at Northern Quarter
-            </button>
-            <button onclick="openDirectionsModal('Northern Quarter')"
-              class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">
-              Get Travel Directions ↗
-            </button>
-          </div>
-
-        </div>
-      </div>
-    </section>
+            <button onclick="openBookingModal('Northern Quarter')" class="w-full py-3.5 px-6 rounded-full bg-[#ff3b94] hover:bg-white hover:text-black text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">Reserve Table at Northern Quarter</button>
+            <button onclick="openDirectionsModal('Northern Quarter')" class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">Get Travel Directions ↗</button> </div> </div> </div> </section>
 
     <!-- SECTION 1: GLITCH 2 MENU HIGHLIGHTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -1071,24 +618,14 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Pub 02 Kitchen &amp; Bar</span>
-            </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
-              Northern Quarter Menu Highlights
-            </h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">
-              Artisan wood-fired pizzas, sharing antipasti boards, signature botanical coupes, and decadent craft desserts.
-            </p>
-          </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Pub 02 Kitchen &amp; Bar</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Menu Highlights</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Artisan wood-fired pizzas, sharing antipasti boards, signature botanical coupes, and decadent craft desserts.</p> </div>
 
           <div class="flex items-center gap-3">
-            <a href="menu.html"
-              class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition">
+            <a href="menu.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition">
               <span>View Full Food &amp; Drinks Menu</span>
-              <span>&rarr;</span>
-            </a>
-          </div>
-        </div>
+              <span>&rarr;</span> </a> </div> </div>
 
         <!-- 4 Highlight Cards -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -1096,98 +633,60 @@
           <!-- Dish 1: Artisan Pizza -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-pizza.jpg" alt="Artisan Wood-Fired Pizza"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£15.00</span>
-            </div>
+              <img src="assets/menu-pizza.jpg" alt="Artisan Wood-Fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£15.00</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Wood-Fired Oven</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Spicy Nduja &amp; Hot Honey</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Slow-fermented sourdough crust, San Marzano tomato base, creamy fior di latte, Calabrian spicy nduja &amp; hot chili honey.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Slow-fermented sourdough crust, San Marzano tomato base, creamy fior di latte, Calabrian spicy nduja &amp; hot chili honey.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Stone Baked 90s</span>
-                <span class="text-[#ff3b94] font-semibold">House Best</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-[#ff3b94] font-semibold">House Best</span> </div> </div> </div>
 
           <!-- Dish 2: Shareable Platter -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-shareables.jpg" alt="The Glitch Shareable Feast Board"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£18.50</span>
-            </div>
+              <img src="assets/menu-shareables.jpg" alt="The Glitch Shareable Feast Board" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£18.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Social Sharer</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">NQ Antipasti Sharing Board</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Prosciutto di Parma, burrata with pesto, charred artichokes, warm rosemary focaccia, marinated olives &amp; balsamic fig reduction.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Prosciutto di Parma, burrata with pesto, charred artichokes, warm rosemary focaccia, marinated olives &amp; balsamic fig reduction.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Serves 2-3 Guests</span>
-                <span class="text-amber-400 font-semibold">Perfect with Wine</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-amber-400 font-semibold">Perfect with Wine</span> </div> </div> </div>
 
           <!-- Drink 3: Signature Cocktail -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/gallery-1-cocktail.jpg" alt="Pink Botanical Gin Coupe Cocktail"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£11.50</span>
-            </div>
+              <img src="assets/gallery-1-cocktail.jpg" alt="Pink Botanical Gin Coupe Cocktail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£11.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Craft Mixology</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Neon Hibiscus Gin Coupe</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Manchester artisanal pink gin, hibiscus berry syrup, elderflower liqueur, fresh pressed lemon &amp; dry champagne foam.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Manchester artisanal pink gin, hibiscus berry syrup, elderflower liqueur, fresh pressed lemon &amp; dry champagne foam.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Served in Vintage Glass</span>
-                <span class="text-[#ff3b94] font-semibold">Signature</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-[#ff3b94] font-semibold">Signature</span> </div> </div> </div>
 
           <!-- Dish 4: Glitch Dessert -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-dessert.jpg" alt="Artisan Glitch Dessert"
-                class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£8.50</span>
-            </div>
+              <img src="assets/menu-dessert.jpg" alt="Artisan Glitch Dessert" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£8.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Sweet Finish</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Salted Caramel Fondant</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Warm melted 70% Valrhona dark chocolate cake with molten salted dulce de leche center, clotted vanilla bean gelato &amp; honeycomb dust.
-                </p>
-              </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Warm melted 70% Valrhona dark chocolate cake with molten salted dulce de leche center, clotted vanilla bean gelato &amp; honeycomb dust.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Vegetarian</span>
-                <span class="text-purple-400 font-semibold">Indulgent</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-purple-400 font-semibold">Indulgent</span> </div> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- SECTION 2: GLITCH 2 INTERIOR & ROOFTOP SHOWCASE -->
+<!-- SECTION 2: GLITCH 2 INTERIOR & ROOFTOP SHOWCASE -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -1196,37 +695,26 @@
           <!-- Left: Large Interior Spotlight Image -->
           <div class="lg:col-span-7">
             <div class="rounded-2xl overflow-hidden border border-white/[0.12] shadow-2xl relative group">
-              <img src="assets/pub-nq-interior.jpg" alt="The Glitch Northern Quarter Bohemian Lounge and Bar Interior"
-                class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <img src="assets/pub-nq-interior.jpg" alt="The Glitch Northern Quarter Bohemian Lounge and Bar Interior" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               
               <!-- Floating Photo Tag -->
               <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-black/80 backdrop-blur-md border border-white/20 p-3.5 rounded-xl flex items-center gap-3">
                 <div class="w-10 h-10 rounded-lg bg-[#ff3b94]/20 border border-[#ff3b94]/40 flex items-center justify-center shrink-0">
-                  <span class="text-lg">🍸</span>
-                </div>
+                  <span class="text-lg">🍸</span> </div>
                 <div>
                   <div class="text-xs font-bold text-white uppercase tracking-wider">Northern Quarter Speakeasy &amp; Lounge</div>
-                  <div class="text-[11px] text-neutral-400">Exposed brick &bull; Brass cocktail bar &bull; Vinyl decks</div>
-                </div>
-              </div>
-            </div>
-          </div>
+                  <div class="text-[11px] text-neutral-400">Exposed brick &bull; Brass cocktail bar &bull; Vinyl decks</div> </div> </div> </div> </div>
 
           <!-- Right: Atmosphere & Features Description -->
           <div class="lg:col-span-5 space-y-6">
             <div class="inline-flex items-center gap-3">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Space &amp; Ambience</span>
-            </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Space &amp; Ambience</span> </div>
 
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">
-              Bohemian Cocktail Den &amp; Rooftop Hideaway.
-            </h3>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Bohemian Cocktail Den &amp; Rooftop Hideaway.</h3>
 
-            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">
-              Tucked behind Oldham Street's vintage facades, Pub 02 is where Northern Quarter grit meets velvety nightlife. Sink into deep emerald velvet booths under warm filament bulbs, listen to vinyl records curated by local selectors, or take the stairs up to our heated all-weather skyline terrace.
-            </p>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Tucked behind Oldham Street's vintage facades, Pub 02 is where Northern Quarter grit meets velvety nightlife. Sink into deep emerald velvet booths under warm filament bulbs, listen to vinyl records curated by local selectors, or take the stairs up to our heated all-weather skyline terrace.</p>
 
             <!-- 3 Key Features -->
             <div class="space-y-3 pt-2">
@@ -1234,36 +722,21 @@
                 <span class="text-xl mt-0.5">🌆</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">Heated Skyline Rooftop Terrace</h5>
-                  <p class="text-xs text-neutral-400">Open year-round with retractable canopy, heaters, and panoramic sunset views over Oldham Street.</p>
-                </div>
-              </div>
+                  <p class="text-xs text-neutral-400">Open year-round with retractable canopy, heaters, and panoramic sunset views over Oldham Street.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">🍸</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">Artisan Cocktail Laboratory</h5>
-                  <p class="text-xs text-neutral-400">House infusions, barrel-aged negronis, and custom craft mocktails shaken by top mixologists.</p>
-                </div>
-              </div>
+                  <p class="text-xs text-neutral-400">House infusions, barrel-aged negronis, and custom craft mocktails shaken by top mixologists.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">🎶</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">Vinyl DJ Booth &amp; Intimate Snugs</h5>
-                  <p class="text-xs text-neutral-400">Warm analog soundscapes spanning disco, funk, and deep melodic house late into the night.</p>
-                </div>
-              </div>
-            </div>
+                  <p class="text-xs text-neutral-400">Warm analog soundscapes spanning disco, funk, and deep melodic house late into the night.</p> </div> </div> </div> </div> </div> </div> </section>
 
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- SECTION 3: GLITCH 2 UPCOMING EVENTS -->
+<!-- SECTION 3: GLITCH 2 UPCOMING EVENTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -1271,22 +744,13 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Live Programming</span>
-            </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">
-              Northern Quarter Upcoming Events
-            </h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">
-              Resident DJs spinning vinyl, secret acoustic sessions, and sunset rooftop weekend parties.
-            </p>
-          </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Live Programming</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Upcoming Events</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Resident DJs spinning vinyl, secret acoustic sessions, and sunset rooftop weekend parties.</p> </div>
 
-          <button onclick="openBookingModal('Northern Quarter')"
-            class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
+          <button onclick="openBookingModal('Northern Quarter')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
             <span>Book Table for Next Event</span>
-            <span>&rarr;</span>
-          </button>
-        </div>
+            <span>&rarr;</span> </button> </div>
 
         <!-- 3 Events Grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -1294,91 +758,52 @@
           <!-- Event 1: Saturday Resident DJ -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-dj.jpg" alt="DJ Night Club Decks Atmosphere"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="assets/event-dj.jpg" alt="DJ Night Club Decks Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#ff3b94] uppercase">Every Sat</span>
                 <span class="block text-base font-extrabold text-white mt-0.5">9:00</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span>
-              </div>
-            </div>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Club &amp; Beats</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">NQ Resident Vinyl Sessions</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Deep soul, cosmic disco, and underground house on original vinyl decks. Late night cocktails pouring till 1:00 AM.
-                </p>
-              </div>
-              <button onclick="openBookingModal('Northern Quarter')"
-                class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">
-                Reserve VIP Booth
-              </button>
-            </div>
-          </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Deep soul, cosmic disco, and underground house on original vinyl decks. Late night cocktails pouring till 1:00 AM.</p> </div>
+              <button onclick="openBookingModal('Northern Quarter')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve VIP Booth</button> </div> </div>
 
           <!-- Event 2: Special Event / Secret Sets -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-special.jpg" alt="Special Event Party Atmosphere"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="assets/event-special.jpg" alt="Special Event Party Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#ff3b94] uppercase">First Fri</span>
                 <span class="block text-base font-extrabold text-white mt-0.5">7:30</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span>
-              </div>
-            </div>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Exclusive Event</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">NQ Speakeasy Secret Sessions</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  Unannounced live guest musicians, cocktail tasting flights upon arrival, and complimentary chef aperitivo bites.
-                </p>
-              </div>
-              <button onclick="openBookingModal('Northern Quarter')"
-                class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">
-                Get on the Guestlist
-              </button>
-            </div>
-          </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Unannounced live guest musicians, cocktail tasting flights upon arrival, and complimentary chef aperitivo bites.</p> </div>
+              <button onclick="openBookingModal('Northern Quarter')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Get on the Guestlist</button> </div> </div>
 
           <!-- Event 3: Sunset Rooftop Social -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/pub-northern-quarter.jpg" alt="Sunset Rooftop Terrace Party"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <img src="assets/pub-northern-quarter.jpg" alt="Sunset Rooftop Terrace Party" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#ff3b94] uppercase">Thurs &amp; Sun</span>
                 <span class="block text-base font-extrabold text-white mt-0.5">5:00</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span>
-              </div>
-            </div>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Rooftop Vibe</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Skyline Sunset Aperitivo</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">
-                  2-for-£16 spritz cocktail specials, fresh wood-fired flatbreads, ambient acoustic music, and heated sunset loungers.
-                </p>
-              </div>
-              <button onclick="openBookingModal('Northern Quarter')"
-                class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">
-                Book Rooftop Table
-              </button>
-            </div>
-          </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">2-for-£16 spritz cocktail specials, fresh wood-fired flatbreads, ambient acoustic music, and heated sunset loungers.</p> </div>
+              <button onclick="openBookingModal('Northern Quarter')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Rooftop Table</button> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- SECTION 4: GLITCH 2 GALLERY -->
+<!-- SECTION 4: GLITCH 2 GALLERY -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -1386,48 +811,28 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Visual Moments</span>
-            </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Gallery</h3>
-          </div>
-          <p class="text-xs text-neutral-400">Click any image to expand view</p>
-        </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Visual Moments</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Gallery</h3> </div>
+          <p class="text-xs text-neutral-400">Click any image to expand view</p> </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <div onclick="openLightbox('assets/gallery-2-coupe.jpg', 'Northern Quarter Handcrafted Coupe Cocktails')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/gallery-2-coupe.jpg" alt="Coupe Cocktail on Marble"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
+          <div onclick="openLightbox('assets/gallery-2-coupe.jpg', 'Northern Quarter Handcrafted Coupe Cocktails')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/gallery-2-coupe.jpg" alt="Coupe Cocktail on Marble" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/pub-nq-interior.jpg', 'Northern Quarter Exposed Brick Velvet Snugs')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub-nq-interior.jpg" alt="Lounge Interior"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
+          <div onclick="openLightbox('assets/pub-nq-interior.jpg', 'Northern Quarter Exposed Brick Velvet Snugs')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/pub-nq-interior.jpg" alt="Lounge Interior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/pub-northern-quarter.jpg', 'Heated Skyline Rooftop Terrace on Oldham Street')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub-northern-quarter.jpg" alt="Rooftop Terrace"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
+          <div onclick="openLightbox('assets/pub-northern-quarter.jpg', 'Heated Skyline Rooftop Terrace on Oldham Street')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/pub-northern-quarter.jpg" alt="Rooftop Terrace" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/menu-pizza.jpg', 'Wood-Fired Pizza Fresh Out of the Oven')"
-            class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/menu-pizza.jpg" alt="Gourmet Pizza"
-              class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-          </div>
-        </div>
+          <div onclick="openLightbox('assets/menu-pizza.jpg', 'Wood-Fired Pizza Fresh Out of the Oven')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+            <img src="assets/menu-pizza.jpg" alt="Gourmet Pizza" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div> </div> </div> </section>
 
-      </div>
-    </section>
-
-
-    <!-- SECTION 5: GLITCH 2 HOURS & PRACTICAL INFO -->
+<!-- SECTION 5: GLITCH 2 HOURS & PRACTICAL INFO -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -1436,39 +841,31 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#ff3b94] font-bold">Pub 02 Schedule</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Northern Quarter Opening Hours</h3>
-            </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Northern Quarter Opening Hours</h3> </div>
 
             <div class="space-y-3 text-sm text-neutral-300">
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
                 <span class="text-neutral-400">Monday &ndash; Wednesday</span>
-                <span class="font-semibold text-white">12:00 PM &ndash; 11:00 PM</span>
-              </div>
+                <span class="font-semibold text-white">12:00 PM &ndash; 11:00 PM</span> </div>
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
                 <span class="text-neutral-400">Thursday</span>
-                <span class="font-semibold text-white">12:00 PM &ndash; 11:30 PM</span>
-              </div>
+                <span class="font-semibold text-white">12:00 PM &ndash; 11:30 PM</span> </div>
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
                 <span class="text-neutral-400">Friday &ndash; Saturday</span>
-                <span class="font-semibold text-[#ff3b94]">12:00 PM &ndash; 12:00 AM (Late)</span>
-              </div>
+                <span class="font-semibold text-[#ff3b94]">12:00 PM &ndash; 12:00 AM (Late)</span> </div>
               <div class="flex justify-between py-2">
                 <span class="text-neutral-400">Sunday</span>
-                <span class="font-semibold text-white">12:00 PM &ndash; 10:30 PM</span>
-              </div>
-            </div>
+                <span class="font-semibold text-white">12:00 PM &ndash; 10:30 PM</span> </div> </div>
 
             <div class="pt-2 text-xs text-neutral-400">
               Wood-fired oven and bar kitchen operates until 10:00 PM nightly. Cocktails until close.
-            </div>
-          </div>
+            </div> </div>
 
           <!-- Transit & Location Info Column -->
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#ff3b94] font-bold">Travel &amp; Arrival</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch Northern Quarter</h3>
-            </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch Northern Quarter</h3> </div>
 
             <div class="space-y-4 text-xs sm:text-sm text-neutral-300">
               <div class="flex items-start gap-3">
@@ -1476,46 +873,27 @@
                 <div>
                   <strong class="text-white block">Metrolink &amp; Buses:</strong>
                   Shudehill Interchange is a 4-minute walk (300m). Piccadilly Gardens is a 5-minute walk. Multiple bus routes stop directly on Oldham Street.
-                </div>
-              </div>
+                </div> </div>
 
               <div class="flex items-start gap-3">
                 <span class="text-lg">🚗</span>
                 <div>
                   <strong class="text-white block">Parking:</strong>
                   Northern Quarter on-street bays and Port Street car park located 200m away.
-                </div>
-              </div>
+                </div> </div>
 
               <div class="flex items-start gap-3">
                 <span class="text-lg">♿</span>
                 <div>
                   <strong class="text-white block">Accessibility &amp; Lift:</strong>
                   Step-free access to ground floor bar and lounge. Lift access directly to the heated rooftop terrace.
-                </div>
-              </div>
-            </div>
+                </div> </div> </div>
 
             <div class="pt-2 flex gap-3">
-              <button onclick="openDirectionsModal('Northern Quarter')"
-                class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">
-                Open in Google Maps ↗
-              </button>
-              <button onclick="openBookingModal('Northern Quarter')"
-                class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">
-                Book a Table
-              </button>
-            </div>
-          </div>
+              <button onclick="openDirectionsModal('Northern Quarter')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
+              <button onclick="openBookingModal('Northern Quarter')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
 
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-
-  <!-- ==================== "CAT / CTA" SECTION (CALL TO ACTION) ==================== -->
+<!-- ==================== "CAT / CTA" SECTION (CALL TO ACTION) ==================== -->
   <section id="cta-section" class="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-[#060a0f] via-[#090f17] to-[#05080c] border-b border-white/[0.08]">
     <!-- Ambient Neon Backdrop -->
     <div class="absolute -top-40 left-1/3 w-[36rem] h-[36rem] bg-[#4deeea]/15 rounded-full blur-3xl pointer-events-none"></div>
@@ -1527,18 +905,13 @@
         <div class="inline-flex items-center gap-3">
           <span class="w-8 h-[1px] bg-neutral-500"></span>
           <span class="text-xs uppercase tracking-[0.3em] text-[#5ce1e6] font-bold">Join Us Tonight</span>
-          <span class="w-8 h-[1px] bg-neutral-500"></span>
-        </div>
+          <span class="w-8 h-[1px] bg-neutral-500"></span> </div>
 
         <h2 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-black text-white tracking-tight leading-[1.08]">
           READY FOR AN <br class="hidden sm:inline">
-          <span class="neon-cyan-text">UNFORGETTABLE</span> NIGHT?
-        </h2>
+          <span class="neon-cyan-text">UNFORGETTABLE</span> NIGHT?  </h2>
 
-        <p class="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">
-          Reserve your table instantly with zero booking fees, explore our full food and drinks menu, or enquire about exclusive private hire for birthdays and celebrations.
-        </p>
-      </div>
+        <p class="text-neutral-300 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto">Reserve your table instantly with zero booking fees, explore our full food and drinks menu, or enquire about exclusive private hire for birthdays and celebrations.</p> </div>
 
       <!-- 3 CTA Action Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
@@ -1546,90 +919,48 @@
         <!-- Card 1: Book City Centre -->
         <div class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#5ce1e6]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl">
           <div class="space-y-3">
-            <span class="px-3 py-1 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] text-[10px] font-extrabold tracking-widest uppercase">
-              Pub 01
-            </span>
+            <span class="px-3 py-1 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] text-[10px] font-extrabold tracking-widest uppercase">Pub 01</span>
             <h4 class="text-xl font-bold text-white group-hover:text-[#5ce1e6] transition">Book City Centre</h4>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-              Craft beer taproom, smash burgers, and acoustic Friday nights on High Street. Instant confirmation.
-            </p>
-          </div>
-          <button onclick="openBookingModal('City Centre')"
-            class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
-            Reserve at Glitch 1 &rarr;
-          </button>
-        </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">Craft beer taproom, smash burgers, and acoustic Friday nights on High Street. Instant confirmation.</p> </div>
+          <button onclick="openBookingModal('City Centre')" class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">Reserve at Glitch 1 &rarr;</button> </div>
 
         <!-- Card 2: Book Northern Quarter -->
         <div class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#ff3b94]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl">
           <div class="space-y-3">
-            <span class="px-3 py-1 rounded-full bg-[#ff3b94]/10 text-[#ff3b94] text-[10px] font-extrabold tracking-widest uppercase">
-              Pub 02
-            </span>
+            <span class="px-3 py-1 rounded-full bg-[#ff3b94]/10 text-[#ff3b94] text-[10px] font-extrabold tracking-widest uppercase">Pub 02</span>
             <h4 class="text-xl font-bold text-white group-hover:text-[#ff3b94] transition">Book Northern Quarter</h4>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-              Cocktail speakeasy, wood-fired pizza, and heated rooftop terrace on Oldham Street.
-            </p>
-          </div>
-          <button onclick="openBookingModal('Northern Quarter')"
-            class="w-full py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
-            Reserve at Glitch 2 &rarr;
-          </button>
-        </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">Cocktail speakeasy, wood-fired pizza, and heated rooftop terrace on Oldham Street.</p> </div>
+          <button onclick="openBookingModal('Northern Quarter')" class="w-full py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">Reserve at Glitch 2 &rarr;</button> </div>
 
         <!-- Card 3: Private Hire & Events -->
         <div class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-amber-400/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl">
           <div class="space-y-3">
-            <span class="px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-[10px] font-extrabold tracking-widest uppercase">
-              Private Hire
-            </span>
+            <span class="px-3 py-1 rounded-full bg-amber-400/10 text-amber-400 text-[10px] font-extrabold tracking-widest uppercase">Private Hire</span>
             <h4 class="text-xl font-bold text-white group-hover:text-amber-400 transition">Parties &amp; Takeovers</h4>
-            <p class="text-xs text-neutral-400 leading-relaxed">
-              Planning a birthday, work party, or rooftop takeover? Tailored food packages &amp; drink tokens available.
-            </p>
-          </div>
-          <button onclick="openPrivateHireModal()"
-            class="w-full py-3 rounded-full border border-white/20 hover:border-amber-400 bg-white/[0.04] hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider transition">
-            Enquire for Hire &rarr;
-          </button>
-        </div>
-
-      </div>
+            <p class="text-xs text-neutral-400 leading-relaxed">Planning a birthday, work party, or rooftop takeover? Tailored food packages &amp; drink tokens available.</p> </div>
+          <button onclick="openPrivateHireModal()" class="w-full py-3 rounded-full border border-white/20 hover:border-amber-400 bg-white/[0.04] hover:bg-white/10 text-white font-bold text-xs uppercase tracking-wider transition">Enquire for Hire &rarr;</button> </div> </div>
 
       <!-- VIP Club Newsletter Signup strip -->
       <div class="mt-14 max-w-3xl mx-auto bg-[#080d14] rounded-2xl border border-white/10 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
         <div class="space-y-1 text-center sm:text-left">
           <h4 class="text-lg font-bold text-white">Join The Glitch VIP Circle</h4>
-          <p class="text-xs text-neutral-400">Receive free welcome cocktail tokens, secret gig invites, and 10% off Sunday roasts.</p>
-        </div>
+          <p class="text-xs text-neutral-400">Receive free welcome cocktail tokens, secret gig invites, and 10% off Sunday roasts.</p> </div>
         <form onsubmit="handleNewsletterSubmit(event)" class="flex w-full sm:w-auto items-center gap-2">
-          <input type="email" required placeholder="Enter your email"
-            class="bg-black/50 border border-white/20 rounded-full px-4 py-2.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] w-full sm:w-60" />
-          <button type="submit"
-            class="px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider shrink-0 transition">
-            Join
-          </button>
-        </form>
-      </div>
+          <input type="email" required placeholder="Enter your email" class="bg-black/50 border border-white/20 rounded-full px-4 py-2.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] w-full sm:w-60" />
+          <button type="submit" class="px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider shrink-0 transition">Join</button> </form> </div> </div> </section>
 
-    </div>
-  </section>
-
-
-  <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
+<!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
   <footer class="site-footer" id="contact" role="contentinfo">
     <div class="footer-container">
 
       <!-- SECTION 1 — BRAND STATEMENT -->
       <div class="footer-brand">
         <a href="index.html" class="footer-brand-logo-wrap" aria-label="The Glitch Homepage">
-          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" />
-        </a>
+          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" /> </a>
         <h2 class="footer-brand-title">THE GLITCH</h2>
         <div class="footer-brand-sub">PUB &bull; RESTAURANT</div>
         <div class="footer-brand-statement">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</div>
-        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p>
-      </div>
+        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p> </div>
 
       <!-- SECTION 2 — NAVIGATION -->
       <nav class="footer-nav" aria-label="Footer Navigation">
@@ -1640,9 +971,7 @@
           <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
           <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">GALLERY</a></li>
           <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
-          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li>
-        </ul>
-      </nav>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li> </ul> </nav>
 
       <!-- SECTION 3 — LOCATIONS -->
       <div class="footer-locations">
@@ -1653,20 +982,14 @@
             <p class="location-address">42 Peter Street, City Centre<br>Manchester, M2 5GP</p>
             <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Centre');return false;}">
               <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div>
           <div class="footer-locations-divider" aria-hidden="true"></div>
           <div class="footer-location-item">
             <span class="location-index">LOCATION 02</span>
             <p class="location-address">18 Dale Street, Northern Quarter<br>Manchester, M1 1EZ</p>
             <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Northern Quarter');return false;}">
               <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
 
       <!-- SECTION 4 — SOCIAL MEDIA -->
       <div class="footer-social">
@@ -1676,24 +999,16 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span>Instagram</span>
-          </a>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg>
+            <span>Instagram</span> </a>
           <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-            <span>Facebook</span>
-          </a>
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
+            <span>Facebook</span> </a>
           <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-            </svg>
-            <span>TikTok</span>
-          </a>
-        </div>
-      </div>
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path> </svg>
+            <span>TikTok</span> </a> </div> </div>
 
       <!-- SECTION 5 — PRIMARY CTA -->
       <div class="footer-cta">
@@ -1701,9 +1016,7 @@
         <p class="footer-cta-desc">Make your next visit one to remember.</p>
         <button type="button" class="footer-cta-btn" onclick="openBookingModal()" aria-label="Book a table at The Glitch">
           <span>BOOK A TABLE</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
-        </button>
-      </div>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span> </button> </div>
 
       <!-- SECTION 6 — BOTTOM BAR -->
       <div class="footer-bottom">
@@ -1713,53 +1026,33 @@
         <div class="footer-bottom-right">
           <a href="#" class="legal-link">PRIVACY POLICY</a>
           <span class="legal-sep" aria-hidden="true">&middot;</span>
-          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a>
-        </div>
-      </div>
+          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a> </div> </div> </div> </footer>
 
-    </div>
-  </footer>
-
-
-  <!-- ==================== BOOK A TABLE MODAL ==================== -->
-  <div id="bookingModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
-    aria-modal="true" role="dialog">
-    <div
-      class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition"
-        aria-label="Close Booking Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+<!-- ==================== BOOK A TABLE MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog">
+    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Booking Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
 
       <div>
         <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
         <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
-        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p>
-      </div>
+        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p> </div>
 
       <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
-          <select id="bookingLocation"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
+          <select id="bookingLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
             <option value="City Centre">Pub 01 &mdash; City Centre (123 High St)</option>
-            <option value="Northern Quarter">Pub 02 &mdash; Northern Quarter (45 Oldham St)</option>
-          </select>
-        </div>
+            <option value="Northern Quarter">Pub 02 &mdash; Northern Quarter (45 Oldham St)</option> </select> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Date</label>
-            <input type="date" required id="bookingDate"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" />
-          </div>
+            <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" /> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Time</label>
-            <select required id="bookingTime"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="12:00 PM">12:00 PM</option>
               <option value="1:30 PM">1:30 PM</option>
               <option value="3:00 PM">3:00 PM</option>
@@ -1767,166 +1060,93 @@
               <option value="6:30 PM">6:30 PM</option>
               <option value="7:30 PM" selected>7:30 PM</option>
               <option value="8:30 PM">8:30 PM</option>
-              <option value="9:30 PM">9:30 PM</option>
-            </select>
-          </div>
-        </div>
+              <option value="9:30 PM">9:30 PM</option> </select> </div> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
-            <select required id="bookingGuests"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="2 Guests" selected>2 Guests</option>
               <option value="3 Guests">3 Guests</option>
               <option value="4 Guests">4 Guests</option>
               <option value="6 Guests">6 Guests</option>
-              <option value="8+ Large Party">8+ Large Party</option>
-            </select>
-          </div>
+              <option value="8+ Large Party">8+ Large Party</option> </select> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Full Name</label>
-            <input type="text" required placeholder="Alex Mercer" id="bookingName"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-          </div>
-        </div>
+            <input type="text" required placeholder="Alex Mercer" id="bookingName" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div> </div>
 
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Email or Phone</label>
-          <input type="text" required placeholder="alex@example.com or +44 7123 456789" id="bookingContact"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-        </div>
+          <input type="text" required placeholder="alex@example.com or +44 7123 456789" id="bookingContact" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
 
         <div class="pt-2">
-          <button type="submit"
-            class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg">
-            Confirm Table Reservation
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+          <button type="submit" class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg">Confirm Table Reservation</button> </div> </form> </div> </div>
 
-
-  <!-- ==================== GET DIRECTIONS MODAL ==================== -->
-  <div id="directionsModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-    aria-modal="true" role="dialog">
+<!-- ==================== GET DIRECTIONS MODAL ==================== -->
+  <div id="directionsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
     <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-5">
-      <button onclick="closeDirectionsModal()"
-        class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Directions Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <button onclick="closeDirectionsModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Directions Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
 
       <div>
         <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Directions &amp; Map</span>
         <h3 id="directionsPubTitle" class="text-xl font-bold text-white mt-1">Pub 01 &mdash; City Centre</h3>
-        <p id="directionsPubAddress" class="text-neutral-400 text-xs mt-1">123 High Street, Manchester, M1 2AB</p>
-      </div>
+        <p id="directionsPubAddress" class="text-neutral-400 text-xs mt-1">123 High Street, Manchester, M1 2AB</p> </div>
 
-      <div
-        class="rounded-xl overflow-hidden border border-white/10 bg-[#080d14] p-4 text-xs text-neutral-300 space-y-3">
+      <div class="rounded-xl overflow-hidden border border-white/10 bg-[#080d14] p-4 text-xs text-neutral-300 space-y-3">
         <div class="flex items-center gap-2 text-white font-semibold">
           <span>🚇 Nearest Metrolink / Station:</span>
-          <span id="directionsTransit" class="text-neutral-300 font-normal">Piccadilly Gardens (3 min walk)</span>
-        </div>
+          <span id="directionsTransit" class="text-neutral-300 font-normal">Piccadilly Gardens (3 min walk)</span> </div>
         <div class="flex items-center gap-2 text-white font-semibold">
           <span>🚗 Parking:</span>
-          <span id="directionsParking" class="text-neutral-300 font-normal">NCP Manchester Central nearby</span>
-        </div>
+          <span id="directionsParking" class="text-neutral-300 font-normal">NCP Manchester Central nearby</span> </div>
         <div class="flex items-center gap-2 text-white font-semibold">
           <span>♿ Accessibility:</span>
-          <span class="text-neutral-300 font-normal">Step-free entrance &amp; accessible seating</span>
-        </div>
-      </div>
+          <span class="text-neutral-300 font-normal">Step-free entrance &amp; accessible seating</span> </div> </div>
 
       <div class="flex gap-3">
-        <a id="googleMapsLink" href="https://maps.google.com/?q=Manchester+High+Street" target="_blank" rel="noopener"
-          class="flex-1 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs text-center tracking-wider uppercase transition">
-          Open in Google Maps ↗
-        </a>
-        <button onclick="closeDirectionsModal()"
-          class="px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
+        <a id="googleMapsLink" href="https://maps.google.com/?q=Manchester+High+Street" target="_blank" rel="noopener" class="flex-1 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs text-center tracking-wider uppercase transition">Open in Google Maps ↗</a>
+        <button onclick="closeDirectionsModal()" class="px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition">Close</button> </div> </div> </div>
 
-
-  <!-- ==================== PRIVATE HIRE MODAL ==================== -->
-  <div id="privateHireModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-    aria-modal="true" role="dialog">
+<!-- ==================== PRIVATE HIRE MODAL ==================== -->
+  <div id="privateHireModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
     <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-5">
-      <button onclick="closePrivateHireModal()"
-        class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <button onclick="closePrivateHireModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
 
       <div>
         <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Event Enquiries</span>
         <h3 class="text-xl font-bold text-white mt-1">Private Hire &amp; Celebrations</h3>
-        <p class="text-neutral-400 text-xs mt-1">Book a booth package, semi-private area, or full rooftop takeover.</p>
-      </div>
+        <p class="text-neutral-400 text-xs mt-1">Book a booth package, semi-private area, or full rooftop takeover.</p> </div>
 
       <form onsubmit="handlePrivateHireSubmit(event)" class="space-y-4 text-xs sm:text-sm">
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
-          <select id="hireLocation"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
+          <select id="hireLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
             <option value="City Centre">Pub 01 &mdash; City Centre (Craft Taproom)</option>
             <option value="Northern Quarter">Pub 02 &mdash; Northern Quarter (Heated Rooftop / Speakeasy)</option>
-            <option value="Both">Not Sure / Open to Both</option>
-          </select>
-        </div>
+            <option value="Both">Not Sure / Open to Both</option> </select> </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Expected Guests</label>
-            <input type="number" min="10" max="250" placeholder="e.g. 25" required
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
-          </div>
+            <input type="number" min="10" max="250" placeholder="e.g. 25" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Target Date</label>
-            <input type="date" required
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
-          </div>
-        </div>
+            <input type="date" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div>
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Contact Details (Name &amp; Phone/Email)</label>
-          <input type="text" required placeholder="Sam Taylor &bull; sam@example.com"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
-        </div>
-        <button type="submit"
-          class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">
-          Submit Private Hire Request
-        </button>
-      </form>
-    </div>
-  </div>
+          <input type="text" required placeholder="Sam Taylor &bull; sam@example.com" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+        <button type="submit" class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">Submit Private Hire Request</button> </form> </div> </div>
 
-
-  <!-- ==================== GALLERY LIGHTBOX MODAL ==================== -->
-  <div id="lightboxModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
-    onclick="closeLightbox()" aria-modal="true" role="dialog">
+<!-- ==================== GALLERY LIGHTBOX MODAL ==================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md" onclick="closeLightbox()" aria-modal="true" role="dialog">
     <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeLightbox()"
-        class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
-        <span>Close</span> &times;
-      </button>
-      <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom"
-        class="max-h-[80vh] w-auto rounded-xl border border-white/20 shadow-2xl object-contain" />
-      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p>
-    </div>
-  </div>
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
+        <span>Close</span> &times;  </button>
+      <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom" class="max-h-[80vh] w-auto rounded-xl border border-white/20 shadow-2xl object-contain" />
+      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p> </div> </div>
 
-
-  <!-- ==================== JAVASCRIPT CONTROLLER ==================== -->
+<!-- ==================== JAVASCRIPT CONTROLLER ==================== -->
   <script>
     // State management: 'city-centre' or 'northern-quarter'
     let currentPub = 'city-centre';
@@ -2010,214 +1230,8 @@
         openBookingModal('Northern Quarter');
       }
     }
-
-    // Set default reservation date to tomorrow
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    const dateInput = document.getElementById('bookingDate');
-    if (dateInput) {
-      dateInput.value = tomorrow.toISOString().split('T')[0];
-    }
-
-    // Toggle Mobile Navigation Drawer
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobileMenu');
-      if (menu) {
-        menu.classList.toggle('hidden');
-      }
-    }
-
-    // Booking Modal
-    function openBookingModal(locationName) {
-      const modal = document.getElementById('bookingModal');
-      const locationSelect = document.getElementById('bookingLocation');
-      if (locationName && locationSelect) {
-        if (locationName.includes('City')) {
-          locationSelect.value = 'City Centre';
-        } else if (locationName.includes('Northern')) {
-          locationSelect.value = 'Northern Quarter';
-        }
-      } else if (locationSelect) {
-        locationSelect.value = (currentPub === 'northern-quarter') ? 'Northern Quarter' : 'City Centre';
-      }
-      if (modal) {
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeBookingModal() {
-      const modal = document.getElementById('bookingModal');
-      if (modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
-    }
-
-    function handleBookingSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('bookingName').value;
-      const pub = document.getElementById('bookingLocation').value;
-      const time = document.getElementById('bookingTime').value;
-      const guests = document.getElementById('bookingGuests').value;
-
-      alert(`🎉 Table Reserved!\n\nThank you ${name}, your table for ${guests} at The Glitch (${pub}) at ${time} has been requested.\nWe have sent an instant confirmation email.`);
-      closeBookingModal();
-    }
-
-    // Directions Modal
-    function openDirectionsModal(pub) {
-      const modal = document.getElementById('directionsModal');
-      const title = document.getElementById('directionsPubTitle');
-      const addr = document.getElementById('directionsPubAddress');
-      const transit = document.getElementById('directionsTransit');
-      const parking = document.getElementById('directionsParking');
-      const mapLink = document.getElementById('googleMapsLink');
-
-      if (pub === 'City Centre' || (pub !== 'Northern Quarter' && currentPub === 'city-centre')) {
-        title.innerText = 'Pub 01 — City Centre';
-        addr.innerText = '123 High Street, Manchester, M1 2AB';
-        transit.innerText = 'Piccadilly Gardens (3 min walk), Manchester Piccadilly Station (7 min walk)';
-        parking.innerText = 'NCP Manchester Central & Church Street parking nearby';
-        mapLink.href = 'https://www.google.com/maps/search/?api=1&query=123+High+Street+Manchester+M1+2AB';
-      } else {
-        title.innerText = 'Pub 02 — Northern Quarter';
-        addr.innerText = '45 Oldham St, Manchester, M4 1LE';
-        transit.innerText = 'Stevenson Square (2 min walk), Shudehill Interchange (4 min walk)';
-        parking.innerText = 'Northern Quarter on-street bays & Port Street Car Park (200m)';
-        mapLink.href = 'https://www.google.com/maps/search/?api=1&query=45+Oldham+St+Manchester+M4+1LE';
-      }
-
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeDirectionsModal() {
-      const modal = document.getElementById('directionsModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    // Private Hire Modal
-    function openPrivateHireModal() {
-      const modal = document.getElementById('privateHireModal');
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closePrivateHireModal() {
-      const modal = document.getElementById('privateHireModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    function handlePrivateHireSubmit(e) {
-      e.preventDefault();
-      alert('💌 Thank you for your private hire enquiry!\nOur events team will contact you within 24 hours with package details and availability.');
-      closePrivateHireModal();
-    }
-
-    function handleNewsletterSubmit(e) {
-      e.preventDefault();
-      alert('🍸 Welcome to The Glitch VIP Circle! Check your inbox for your complimentary welcome cocktail token.');
-      e.target.reset();
-    }
-
-    // Lightbox Modal
-    function openLightbox(src, caption) {
-      const modal = document.getElementById('lightboxModal');
-      const img = document.getElementById('lightboxImg');
-      const cap = document.getElementById('lightboxCaption');
-      img.src = src;
-      cap.innerText = caption || '';
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      const modal = document.getElementById('lightboxModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    // Escape key modal closer
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeBookingModal();
-        closeDirectionsModal();
-        closePrivateHireModal();
-        closeLightbox();
-      }
-    });
-
-    // Check URL hash on initial page load (e.g. #northern-quarter or #city-centre)
-    window.addEventListener('DOMContentLoaded', () => {
-      const hash = window.location.hash.toLowerCase();
-      if (hash.includes('northern') || hash.includes('pub-02') || hash.includes('nq')) {
-        switchPub('northern-quarter', false);
-      } else {
-        switchPub('city-centre', false);
-      }
-    });
-
-    // Automatic transparent logo processing on page load
-    (function initTransparentLogos() {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = function() {
-        try {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.naturalWidth || 700;
-          canvas.height = img.naturalHeight || 630;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0);
-          const idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const d = idata.data;
-          for (let i = 0; i < d.length; i += 4) {
-            const m = Math.max(d[i], d[i+1], d[i+2]);
-            if (m <= 14) {
-              d[i+3] = 0;
-            } else {
-              const ratio = (m - 14) / 241;
-              d[i+3] = Math.min(255, Math.round(Math.pow(ratio, 0.75) * 255));
-              const scale = Math.min(2.0, 1.0 / Math.max(0.2, ratio));
-              d[i] = Math.min(255, Math.round(d[i] * scale));
-              d[i+1] = Math.min(255, Math.round(d[i+1] * scale));
-              d[i+2] = Math.min(255, Math.round(d[i+2] * scale));
-            }
-          }
-          ctx.putImageData(idata, 0, 0);
-          const dataUrl = canvas.toDataURL('image/png');
-          document.querySelectorAll('img[src*="logo.png"]').forEach(el => {
-            el.src = dataUrl;
-          });
-          const fav = document.querySelector('link[rel="icon"]');
-          if (fav) fav.href = dataUrl;
-        } catch(e) {}
-      };
-      img.src = 'assets/logo.png';
-    })();
-
-    // Dismiss Glitch Preloader
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('glitchPageLoader');
-      if (loader) {
-        setTimeout(() => {
-          loader.classList.add('loader-fade-out');
-          setTimeout(() => { loader.remove(); }, 600);
-        }, 400);
-      }
-    });
-
-    // Safety fallback: ensure page is revealed after max 2.5s
-    setTimeout(() => {
-      const loader = document.getElementById('glitchPageLoader');
-      if (loader && !loader.classList.contains('loader-fade-out')) {
-        loader.classList.add('loader-fade-out');
-        setTimeout(() => { loader.remove(); }, 600);
-      }
-    }, 2500);
   </script>
+  <script src="assets/app.js"></script>
 
 </body>
 

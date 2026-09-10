@@ -1,27 +1,23 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | The Glitch — Pub &amp; Restaurant Manchester</title>
-  <meta name="description"
-    content="Get in touch with The Glitch Pub &amp; Restaurant. Book a table, inquire about private hire and events, or find directions to our City Centre and Northern Quarter locations." />
+  <meta name="description" content="Get in touch with The Glitch Pub &amp; Restaurant. Book a table, inquire about private hire and events, or find directions to our City Centre and Northern Quarter locations." />
   <meta name="theme-color" content="#05080c" />
 
   <!-- OpenGraph / Social Sharing -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Contact Us | The Glitch — Pub &amp; Restaurant Manchester" />
-  <meta property="og:description"
-    content="Whether you're booking a table, planning an event, or simply getting in touch, we'd love to hear from you." />
+  <meta property="og:description" content="Whether you're booking a table, planning an event, or simply getting in touch, we'd love to hear from you." />
   <meta property="og:image" content="assets/hero.jpg" />
 
   <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/style.css" />
@@ -32,8 +28,7 @@
   <!-- Tailwind CSS (Local with CDN fallback) -->
   <script src="assets/tailwind.min.js"></script>
   <script>
-    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
-  </script>
+    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');  </script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -72,25 +67,15 @@
   <svg class="sr-only" aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
     <defs>
       <filter id="remove-black-bg" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix"
-          values="1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0.85 0.90 0.90 0 -0.06" />
-      </filter>
-    </defs>
-  </svg>
+        <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.85 0.90 0.90 0 -0.06" /> </filter> </defs> </svg>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header
-    class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
+  <header class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
     <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
 
       <!-- Brand Logo -->
       <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
-        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52"
-          class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" />
-      </a>
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52" class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" /> </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="glitch-header-nav hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
@@ -98,33 +83,17 @@
         <a href="our-pubs.html" class="glitch-nav-link hover:text-white transition duration-200">Our Pubs</a>
         <a href="menu.html" class="glitch-nav-link hover:text-white transition duration-200">Food &amp; Drinks</a>
         <a href="gallery.html" class="glitch-nav-link hover:text-white transition duration-200">Gallery</a>
-        <a href="contact.html"
-          class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Contact</a>
-      </nav>
+        <a href="contact.html" class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Contact</a> </nav>
 
       <!-- Right Action & Mobile Button -->
       <div class="glitch-header-actions flex items-center gap-3">
-        <button onclick="openBookingModal()"
-          class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
-          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>Book a Table</span>
-        </button>
+        <button onclick="openBookingModal()" class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <span>Book a Table</span> </button>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button onclick="toggleMobileMenu()"
-          class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
-          aria-label="Toggle Navigation Menu">
-          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-    </div>
+        <button onclick="toggleMobileMenu()" class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg> </button> </div> </div>
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
@@ -134,20 +103,14 @@
       <a href="gallery.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Gallery</a>
       <a href="contact.html" class="glitch-mobile-nav-link active block text-[#4deeea] font-semibold py-1">Contact</a>
       <div class="pt-2">
-        <button onclick="openBookingModal(); toggleMobileMenu();"
-          class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
-          <span>Book a Table</span>
-        </button>
-      </div>
-    </div>
-  </header>
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
+          <span>Book a Table</span> </button> </div> </div> </header>
 
   <!-- ==================== 1. HERO SECTION ==================== -->
   <section class="contact-hero" id="hero">
     <!-- Cinematic Background Image -->
     <div class="contact-hero-bg">
-      <img src="assets/hero.jpg" alt="The Glitch Pub &amp; Restaurant atmosphere" loading="eager" />
-    </div>
+      <img src="assets/hero.jpg" alt="The Glitch Pub &amp; Restaurant atmosphere" loading="eager" /> </div>
 
     <!-- Dark Vignette Overlay -->
     <div class="contact-hero-overlay"></div>
@@ -156,19 +119,13 @@
     <div class="contact-hero-content">
       <span class="contact-hero-badge">THE GLITCH</span>
       <h1 class="contact-hero-title">GET IN TOUCH</h1>
-      <p class="contact-hero-subtitle">
-        Whether you're booking a table, planning an event, or simply getting in touch, we'd love to hear from you.
-      </p>
+      <p class="contact-hero-subtitle">Whether you're booking a table, planning an event, or simply getting in touch, we'd love to hear from you.</p>
 
       <!-- Scroll Down Indicator -->
       <a href="#contact-main" id="heroScrollTrigger" class="contact-scroll-indicator" aria-label="Scroll to contact information">
         <div class="contact-scroll-mouse">
-          <div class="contact-scroll-wheel"></div>
-        </div>
-        <span>SCROLL TO CONNECT</span>
-      </a>
-    </div>
-  </section>
+          <div class="contact-scroll-wheel"></div> </div>
+        <span>SCROLL TO CONNECT</span> </a> </div> </section>
 
   <!-- ==================== 2. CONTACT INFORMATION & FORM SECTION ==================== -->
   <section class="contact-main-section" id="contact-main">
@@ -179,88 +136,59 @@
         <div class="contact-info-col">
           <span class="section-label-tag">HOSPITALITY CONCIERGE</span>
           <h2 class="contact-col-title">WE'RE HERE FOR YOU</h2>
-          <p class="contact-col-lead">
-            Have questions regarding table reservations, group bookings, dietary requirements, or private hire? Our dedicated hospitality team is at your service.
-          </p>
+          <p class="contact-col-lead">Have questions regarding table reservations, group bookings, dietary requirements, or private hire? Our dedicated hospitality team is at your service.</p>
 
           <div class="contact-info-list">
             <!-- Phone Number -->
             <div class="contact-info-item">
               <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg> </div>
               <div class="contact-info-content">
                 <span class="contact-info-label">Direct Phone</span>
                 <a href="tel:+441618329940" class="contact-info-val">+44 (0) 161 832 9940</a>
-                <span class="contact-info-sub">Lines open daily from 11:00 AM – 11:00 PM</span>
-              </div>
-            </div>
+                <span class="contact-info-sub">Lines open daily from 11:00 AM – 11:00 PM</span> </div> </div>
 
             <!-- Email Address -->
             <div class="contact-info-item">
               <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
+                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg> </div>
               <div class="contact-info-content">
                 <span class="contact-info-label">Email Inquiries</span>
                 <a href="mailto:reservations@theglitchpub.co.uk" class="contact-info-val">reservations@theglitchpub.co.uk</a>
-                <span class="contact-info-sub">For private events: <a href="mailto:events@theglitchpub.co.uk" class="text-neutral-300 hover:text-[#4deeea] underline">events@theglitchpub.co.uk</a></span>
-              </div>
-            </div>
+                <span class="contact-info-sub">For private events: <a href="mailto:events@theglitchpub.co.uk" class="text-neutral-300 hover:text-[#4deeea] underline">events@theglitchpub.co.uk</a></span> </div> </div>
 
             <!-- Opening Hours Summary -->
             <div class="contact-info-item">
               <div class="contact-info-icon-box" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
                   <circle cx="12" cy="12" r="9" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3" />
-                </svg>
-              </div>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3" /> </svg> </div>
               <div class="contact-info-content">
                 <span class="contact-info-label">Service Hours</span>
                 <span class="contact-info-val">Mon – Sun: 12:00 PM – Late</span>
-                <span class="contact-info-sub">Kitchen closes 10:00 PM (11:00 PM Fri &amp; Sat)</span>
-              </div>
-            </div>
+                <span class="contact-info-sub">Kitchen closes 10:00 PM (11:00 PM Fri &amp; Sat)</span> </div> </div>
 
             <!-- Location 01 -->
             <div class="contact-info-item">
               <div class="contact-info-icon-box" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg> </div>
               <div class="contact-info-content">
                 <span class="contact-info-label">Location 01 &mdash; City Centre</span>
                 <span class="contact-info-val">42 Peter Street, Manchester, M2 5GP</span>
-                <span class="contact-info-sub">Opposite the Great Northern Warehouse</span>
-              </div>
-            </div>
+                <span class="contact-info-sub">Opposite the Great Northern Warehouse</span> </div> </div>
 
             <!-- Location 02 -->
             <div class="contact-info-item">
               <div class="contact-info-icon-box" aria-hidden="true">
                 <svg viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg> </div>
               <div class="contact-info-content">
                 <span class="contact-info-label">Location 02 &mdash; Northern Quarter</span>
                 <span class="contact-info-val">18 Dale Street, Manchester, M1 1EZ</span>
-                <span class="contact-info-sub">Just steps from Stevenson Square</span>
-              </div>
-            </div>
-          </div>
+                <span class="contact-info-sub">Just steps from Stevenson Square</span> </div> </div> </div>
 
           <!-- Social Media Group -->
           <div class="contact-social-wrap">
@@ -270,55 +198,40 @@
                 <svg viewBox="0 0 24 24">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-                <span>Instagram</span>
-              </a>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg>
+                <span>Instagram</span> </a>
               <a href="https://facebook.com" target="_blank" rel="noopener" class="contact-social-btn" aria-label="Facebook">
                 <svg viewBox="0 0 24 24">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg>
-                <span>Facebook</span>
-              </a>
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
+                <span>Facebook</span> </a>
               <a href="https://tiktok.com" target="_blank" rel="noopener" class="contact-social-btn" aria-label="TikTok">
                 <svg viewBox="0 0 24 24">
-                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-                </svg>
-                <span>TikTok</span>
-              </a>
-            </div>
-          </div>
-        </div>
+                  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path> </svg>
+                <span>TikTok</span> </a> </div> </div> </div>
 
         <!-- Right Side: Premium Contact Form -->
         <div class="contact-form-col">
           <div class="contact-form-card">
             <h3 class="contact-form-title">SEND A MESSAGE</h3>
-            <p class="contact-form-subtitle">
-              Fill in your details below and our reservations team will respond within 24 hours.
-            </p>
+            <p class="contact-form-subtitle">Fill in your details below and our reservations team will respond within 24 hours.</p>
 
             <form id="contactForm" class="contact-form-fields" novalidate>
               <!-- Full Name -->
               <div class="form-group">
                 <label for="contactName" class="form-label">Full Name</label>
-                <input type="text" id="contactName" name="name" required placeholder="e.g. Eleanor Vance" class="form-input" />
-              </div>
+                <input type="text" id="contactName" name="name" required placeholder="e.g. Eleanor Vance" class="form-input" /> </div>
 
               <!-- Email Address -->
               <div class="form-group">
                 <label for="contactEmail" class="form-label">Email Address</label>
-                <input type="email" id="contactEmail" name="email" required placeholder="e.g. eleanor@example.com" class="form-input" />
-              </div>
+                <input type="email" id="contactEmail" name="email" required placeholder="e.g. eleanor@example.com" class="form-input" /> </div>
 
               <!-- Phone Number -->
               <div class="form-group">
                 <label for="contactPhone" class="form-label">
                   <span>Phone Number</span>
-                  <span class="form-label-optional">(Optional)</span>
-                </label>
-                <input type="tel" id="contactPhone" name="phone" placeholder="e.g. +44 7700 900123" class="form-input" />
-              </div>
+                  <span class="form-label-optional">(Optional)</span> </label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="e.g. +44 7700 900123" class="form-input" /> </div>
 
               <!-- Subject -->
               <div class="form-group">
@@ -328,33 +241,20 @@
                   <option value="Private Dining &amp; Events">Private Dining &amp; Full Venue Hire</option>
                   <option value="Drink &amp; Food Menu">Drink &amp; Food / Dietary Question</option>
                   <option value="Press &amp; Partnerships">Press, Media &amp; Brand Partnerships</option>
-                  <option value="General Hospitality Inquiry">General Feedback &amp; Inquiries</option>
-                </select>
-              </div>
+                  <option value="General Hospitality Inquiry">General Feedback &amp; Inquiries</option> </select> </div>
 
               <!-- Message -->
               <div class="form-group">
                 <label for="contactMessage" class="form-label">Message</label>
-                <textarea id="contactMessage" name="message" required rows="5"
-                  placeholder="Tell us about your plans, party size, preferred date, or questions..."
-                  class="form-textarea"></textarea>
-              </div>
+                <textarea id="contactMessage" name="message" required rows="5" placeholder="Tell us about your plans, party size, preferred date, or questions..." class="form-textarea"></textarea> </div>
 
               <!-- Submit Button -->
               <button type="submit" id="contactSubmitBtn" class="form-submit-btn">
                 <span>SEND MESSAGE</span>
-                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
-              </button>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span> </button>
 
               <!-- In-Page Feedback Status Banner -->
-              <div id="formStatusBanner" class="form-status-banner" role="status" aria-live="polite"></div>
-            </form>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
+              <div id="formStatusBanner" class="form-status-banner" role="status" aria-live="polite"></div> </form> </div> </div> </div> </div> </section>
 
   <!-- ==================== 3. TWO LOCATIONS & STYLISH MAP SECTION ==================== -->
   <section class="locations-section" id="locations">
@@ -364,10 +264,7 @@
       <div class="locations-header">
         <span class="section-label-tag">OUR MANCHESTER HOUSES</span>
         <h2 class="locations-header-title">VISIT THE GLITCH</h2>
-        <p class="locations-header-desc">
-          Two distinctive venues across central Manchester, each crafted with our signature nightlife energy, warm pub hospitality, and elevated cocktails.
-        </p>
-      </div>
+        <p class="locations-header-desc">Two distinctive venues across central Manchester, each crafted with our signature nightlife energy, warm pub hospitality, and elevated cocktails.</p> </div>
 
       <!-- Two Location Detail Cards -->
       <div class="locations-cards-grid">
@@ -375,85 +272,47 @@
         <article class="location-detail-card">
           <div class="location-card-img-wrap">
             <img src="assets/pub-cc-interior.jpg" alt="The Glitch City Centre interior dining and bar" loading="lazy" />
-            <span class="location-card-badge">LOCATION 01</span>
-          </div>
+            <span class="location-card-badge">LOCATION 01</span> </div>
           <div class="location-card-body">
             <h3 class="location-card-title">CITY CENTRE</h3>
             <p class="location-card-address">
               42 Peter Street, City Centre<br />
               Manchester, M2 5GP
             </p>
-            <p class="location-card-meta">
-              Our flagship two-storey dining room, speakeasy cocktail lounge, and bustling taproom situated in the heart of Manchester.
-            </p>
+            <p class="location-card-meta">Our flagship two-storey dining room, speakeasy cocktail lounge, and bustling taproom situated in the heart of Manchester.</p>
             <div class="location-card-footer">
-              <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener"
-                class="location-directions-btn">
+              <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="location-directions-btn">
                 <span>GET DIRECTIONS</span>
-                <span class="arrow-glyph" aria-hidden="true">&rarr;</span>
-              </a>
-              <button type="button" onclick="openBookingModal('City Centre')" class="text-xs font-semibold text-neutral-400 hover:text-white transition uppercase tracking-wider">
-                Book City Centre &rarr;
-              </button>
-            </div>
-          </div>
-        </article>
+                <span class="arrow-glyph" aria-hidden="true">&rarr;</span> </a>
+              <button type="button" onclick="openBookingModal('City Centre')" class="text-xs font-semibold text-neutral-400 hover:text-white transition uppercase tracking-wider">Book City Centre &rarr;</button> </div> </div> </article>
 
         <!-- Location 02 -->
         <article class="location-detail-card">
           <div class="location-card-img-wrap">
             <img src="assets/pub-nq-interior.jpg" alt="The Glitch Northern Quarter interior atmosphere" loading="lazy" />
-            <span class="location-card-badge">LOCATION 02</span>
-          </div>
+            <span class="location-card-badge">LOCATION 02</span> </div>
           <div class="location-card-body">
             <h3 class="location-card-title">NORTHERN QUARTER</h3>
             <p class="location-card-address">
               18 Dale Street, Northern Quarter<br />
               Manchester, M1 1EZ
             </p>
-            <p class="location-card-meta">
-              An intimate, industrial-chic sanctuary featuring exposed brick, artisan craft draught lines, and weekend vinyl DJ sessions.
-            </p>
+            <p class="location-card-meta">An intimate, industrial-chic sanctuary featuring exposed brick, artisan craft draught lines, and weekend vinyl DJ sessions.</p>
             <div class="location-card-footer">
-              <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener"
-                class="location-directions-btn">
+              <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener" class="location-directions-btn">
                 <span>GET DIRECTIONS</span>
-                <span class="arrow-glyph" aria-hidden="true">&rarr;</span>
-              </a>
-              <button type="button" onclick="openBookingModal('Northern Quarter')" class="text-xs font-semibold text-neutral-400 hover:text-white transition uppercase tracking-wider">
-                Book Northern Quarter &rarr;
-              </button>
-            </div>
-          </div>
-        </article>
-      </div>
+                <span class="arrow-glyph" aria-hidden="true">&rarr;</span> </a>
+              <button type="button" onclick="openBookingModal('Northern Quarter')" class="text-xs font-semibold text-neutral-400 hover:text-white transition uppercase tracking-wider">Book Northern Quarter &rarr;</button> </div> </div> </article> </div>
 
       <!-- Stylish Embedded Map Card with Interactive Location Switcher -->
       <div class="locations-map-card">
         <div class="map-card-toolbar">
           <div class="map-tabs-group" role="tablist" aria-label="Location Map Switcher">
-            <button type="button" id="mapTabCityCentre" class="map-tab-btn active" role="tab" aria-selected="true">
-              City Centre Map
-            </button>
-            <button type="button" id="mapTabNorthernQuarter" class="map-tab-btn" role="tab" aria-selected="false">
-              Northern Quarter Map
-            </button>
-          </div>
-          <a id="mapExternalLink" href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank"
-            rel="noopener" class="map-external-link">
-            Open City Centre in Google Maps &nearr;
-          </a>
-        </div>
+            <button type="button" id="mapTabCityCentre" class="map-tab-btn active" role="tab" aria-selected="true">City Centre Map</button>
+            <button type="button" id="mapTabNorthernQuarter" class="map-tab-btn" role="tab" aria-selected="false">Northern Quarter Map</button> </div>
+          <a id="mapExternalLink" href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="map-external-link">Open City Centre in Google Maps &nearr;</a> </div>
         <div class="map-frame-wrapper">
-          <iframe id="contactMapIframe"
-            src="https://maps.google.com/maps?q=42+Peter+Street,+Manchester+M2+5GP,+UK&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
-            title="The Glitch Google Maps Location" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-
-    </div>
-  </section>
+          <iframe id="contactMapIframe" src="https://maps.google.com/maps?q=42+Peter+Street,+Manchester+M2+5GP,+UK&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title="The Glitch Google Maps Location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe> </div> </div> </div> </section>
 
   <!-- ==================== 4. OPENING HOURS SECTION ==================== -->
   <section class="hours-section" id="hours">
@@ -461,72 +320,51 @@
       <div class="hours-header">
         <span class="section-label-tag">SERVICE SCHEDULE</span>
         <h2 class="hours-title">OPENING HOURS</h2>
-        <p class="hours-subtitle">
-          Join us for lunch, dinner, after-work drinks, and late-night nightlife sessions across both locations.
-        </p>
-      </div>
+        <p class="hours-subtitle">Join us for lunch, dinner, after-work drinks, and late-night nightlife sessions across both locations.</p> </div>
 
       <div class="hours-schedule-box">
         <!-- Monday - Thursday -->
         <div class="hours-row">
           <div class="hours-day-wrap">
             <span class="hours-day-name">Monday &ndash; Thursday</span>
-            <span class="hours-day-note">Lunch, Dinner &amp; Evening Cocktails</span>
-          </div>
+            <span class="hours-day-note">Lunch, Dinner &amp; Evening Cocktails</span> </div>
           <div class="hours-time-badge">
             12:00 PM &ndash; 11:00 PM
-          </div>
-        </div>
+          </div> </div>
 
         <!-- Friday - Saturday -->
         <div class="hours-row">
           <div class="hours-day-wrap">
             <span class="hours-day-name">Friday &ndash; Saturday</span>
-            <span class="hours-day-note">Weekend Feast, Resident DJs &amp; Late Night Bar</span>
-          </div>
+            <span class="hours-day-note">Weekend Feast, Resident DJs &amp; Late Night Bar</span> </div>
           <div class="hours-time-badge">
             12:00 PM &ndash; 1:00 AM
-          </div>
-        </div>
+          </div> </div>
 
         <!-- Sunday -->
         <div class="hours-row">
           <div class="hours-day-wrap">
             <span class="hours-day-name">Sunday</span>
-            <span class="hours-day-note">Famous Sunday Roast &amp; Acoustic Chill</span>
-          </div>
+            <span class="hours-day-note">Famous Sunday Roast &amp; Acoustic Chill</span> </div>
           <div class="hours-time-badge">
             12:00 PM &ndash; 10:00 PM
-          </div>
-        </div>
-      </div>
+          </div> </div> </div>
 
-      <p class="hours-footer-note">
-        * Kitchen service concludes one hour prior to venue closing time. Walk-ins are always welcomed for drinks and bar seating at both houses.
-      </p>
-    </div>
-  </section>
+      <p class="hours-footer-note">* Kitchen service concludes one hour prior to venue closing time. Walk-ins are always welcomed for drinks and bar seating at both houses.</p> </div> </section>
 
   <!-- ==================== 5. FINAL CTA SECTION ==================== -->
   <section class="final-cta-section" id="cta">
     <div class="final-cta-content">
       <span class="final-cta-badge">EXPERIENCE THE GLITCH</span>
       <h2 class="final-cta-title">YOUR TABLE IS WAITING.</h2>
-      <p class="final-cta-desc">
-        Come for the food. Stay for the atmosphere.
-      </p>
+      <p class="final-cta-desc">Come for the food. Stay for the atmosphere.</p>
       <div class="final-cta-btn-group">
         <button type="button" onclick="openBookingModal()" class="cta-primary-btn" aria-label="Book a table now">
           <span>BOOK A TABLE</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
-        </button>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span> </button>
         <a href="menu.html" class="cta-secondary-btn" aria-label="Explore food and drinks menu">
           <span>VIEW MENU</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
-        </a>
-      </div>
-    </div>
-  </section>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span> </a> </div> </div> </section>
 
   <!-- ==================== 6. PREMIUM EDITORIAL FOOTER ==================== -->
   <footer class="site-footer" id="contact" role="contentinfo">
@@ -535,13 +373,11 @@
       <!-- SECTION 1 — BRAND STATEMENT -->
       <div class="footer-brand">
         <a href="index.html" class="footer-brand-logo-wrap" aria-label="The Glitch Homepage">
-          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" />
-        </a>
+          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" /> </a>
         <h2 class="footer-brand-title">THE GLITCH</h2>
         <div class="footer-brand-sub">PUB &bull; RESTAURANT</div>
         <div class="footer-brand-statement">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</div>
-        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p>
-      </div>
+        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p> </div>
 
       <!-- SECTION 2 — NAVIGATION -->
       <nav class="footer-nav" aria-label="Footer Navigation">
@@ -552,9 +388,7 @@
           <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
           <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">GALLERY</a></li>
           <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
-          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li>
-        </ul>
-      </nav>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li> </ul> </nav>
 
       <!-- SECTION 3 — LOCATIONS -->
       <div class="footer-locations">
@@ -565,20 +399,14 @@
             <p class="location-address">42 Peter Street, City Centre<br>Manchester, M2 5GP</p>
             <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Centre');return false;}">
               <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div>
           <div class="footer-locations-divider" aria-hidden="true"></div>
           <div class="footer-location-item">
             <span class="location-index">LOCATION 02</span>
             <p class="location-address">18 Dale Street, Northern Quarter<br>Manchester, M1 1EZ</p>
             <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Northern Quarter');return false;}">
               <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
 
       <!-- SECTION 4 — SOCIAL MEDIA -->
       <div class="footer-social">
@@ -588,24 +416,16 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span>Instagram</span>
-          </a>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg>
+            <span>Instagram</span> </a>
           <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-            <span>Facebook</span>
-          </a>
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
+            <span>Facebook</span> </a>
           <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-            </svg>
-            <span>TikTok</span>
-          </a>
-        </div>
-      </div>
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path> </svg>
+            <span>TikTok</span> </a> </div> </div>
 
       <!-- SECTION 5 — PRIMARY CTA -->
       <div class="footer-cta">
@@ -613,9 +433,7 @@
         <p class="footer-cta-desc">Make your next visit one to remember.</p>
         <button type="button" class="footer-cta-btn" onclick="openBookingModal()" aria-label="Book a table at The Glitch">
           <span>BOOK A TABLE</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
-        </button>
-      </div>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span> </button> </div>
 
       <!-- SECTION 6 — BOTTOM BAR -->
       <div class="footer-bottom">
@@ -625,55 +443,36 @@
         <div class="footer-bottom-right">
           <a href="#" class="legal-link">PRIVACY POLICY</a>
           <span class="legal-sep" aria-hidden="true">&middot;</span>
-          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a>
-        </div>
-      </div>
-
-    </div>
-  </footer>
+          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a> </div> </div> </div> </footer>
 
   <!-- ==================== TABLE RESERVATION MODAL ==================== -->
-  <div id="bookingModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
-    aria-modal="true" role="dialog">
-    <div
-      class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog">
+    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
       <!-- Close Button -->
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition"
-        aria-label="Close Booking Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Booking Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
 
       <!-- Modal Title -->
       <div>
         <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
         <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
-        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p>
-      </div>
+        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p> </div>
 
       <!-- Booking Form -->
       <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
-          <select id="bookingLocation"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
+          <select id="bookingLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
             <option value="City Centre">Location 01 &mdash; City Centre (42 Peter St)</option>
-            <option value="Northern Quarter">Location 02 &mdash; Northern Quarter (18 Dale St)</option>
-          </select>
-        </div>
+            <option value="Northern Quarter">Location 02 &mdash; Northern Quarter (18 Dale St)</option> </select> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Date</label>
-            <input type="date" required id="bookingDate"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" />
-          </div>
+            <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" /> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Time</label>
-            <select required id="bookingTime"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="12:00 PM">12:00 PM</option>
               <option value="1:30 PM">1:30 PM</option>
               <option value="3:00 PM">3:00 PM</option>
@@ -681,46 +480,30 @@
               <option value="6:30 PM">6:30 PM</option>
               <option value="7:30 PM" selected>7:30 PM</option>
               <option value="8:30 PM">8:30 PM</option>
-              <option value="9:30 PM">9:30 PM</option>
-            </select>
-          </div>
-        </div>
+              <option value="9:30 PM">9:30 PM</option> </select> </div> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
-            <select required id="bookingGuests"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="2 Guests" selected>2 Guests</option>
               <option value="3 Guests">3 Guests</option>
               <option value="4 Guests">4 Guests</option>
               <option value="6 Guests">6 Guests</option>
-              <option value="8+ Large Party">8+ Large Party</option>
-            </select>
-          </div>
+              <option value="8+ Large Party">8+ Large Party</option> </select> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Full Name</label>
-            <input type="text" required placeholder="Alex Mercer" id="bookingName"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-          </div>
-        </div>
+            <input type="text" required placeholder="Alex Mercer" id="bookingName" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div> </div>
 
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Email Address</label>
-          <input type="email" required placeholder="alex@example.com" id="bookingEmail"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-        </div>
+          <input type="email" required placeholder="alex@example.com" id="bookingEmail" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
 
-        <button type="submit"
-          class="w-full py-3 mt-2 rounded-full bg-[#4deeea] hover:bg-[#38d8d4] text-neutral-950 font-bold tracking-wider uppercase transition duration-200 shadow-lg shadow-[#4deeea]/20">
-          Confirm Reservation
-        </button>
-      </form>
-    </div>
-  </div>
+        <button type="submit" class="w-full py-3 mt-2 rounded-full bg-[#4deeea] hover:bg-[#38d8d4] text-neutral-950 font-bold tracking-wider uppercase transition duration-200 shadow-lg shadow-[#4deeea]/20">Confirm Reservation</button> </form> </div> </div>
 
   <!-- Page Logic -->
   <script src="contact.js"></script>
+  <script src="assets/app.js"></script>
 </body>
 
 </html>

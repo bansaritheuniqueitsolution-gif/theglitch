@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 
 <head>
@@ -6,15 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food & Drink Menu — THE GLITCH</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
-  <meta name="description"
-    content="The Glitch official Food & Drink menu. Weekend Brunch, gourmet Glitch burgers, artisan wood-fired pizzas, chicken wings, authentic Indian curries & rice dishes, signature mocktails and desserts across our locations." />
+  <meta name="description" content="The Glitch official Food & Drink menu. Weekend Brunch, gourmet Glitch burgers, artisan wood-fired pizzas, chicken wings, authentic Indian curries & rice dishes, signature mocktails and desserts across our locations." />
 
   <!-- Google Fonts: Playfair Display (editorial serif), Plus Jakarta Sans (body), Caveat (handwritten script), Syne (modern geometric branding) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet">
 
   <!-- Production Precompiled Stylesheet (100% Offline, Zero-FOUC, Instant Load) -->
   <link rel="stylesheet" href="assets/style.css" />
@@ -24,8 +21,7 @@
   <!-- Tailwind CSS (Local with CDN fallback) -->
   <script src="assets/tailwind.min.js"></script>
   <script>
-    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
-  </script>
+    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');  </script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -62,253 +58,66 @@
   </script>
 
   <!-- Custom CSS for Glowing Neon and Alternating Refinements -->
-  <style>
-    /* Neon glow effects */
-    .neon-cyan-text {
-      color: #5ce1e6;
-      text-shadow:
-        0 0 4px #5ce1e6,
-        0 0 12px rgba(92, 225, 230, 0.85),
-        0 0 25px rgba(92, 225, 230, 0.6),
-        0 0 45px rgba(92, 225, 230, 0.35);
-    }
-
-    .neon-pink-text {
-      color: #ff3b94;
-      text-shadow:
-        0 0 4px #ff3b94,
-        0 0 12px rgba(255, 59, 148, 0.85),
-        0 0 25px rgba(255, 59, 148, 0.6),
-        0 0 40px rgba(255, 59, 148, 0.35);
-    }
-
-    .neon-sign-box {
-      background: radial-gradient(circle at center, rgba(22, 28, 40, 0.95) 0%, #070b10 100%);
-      box-shadow:
-        inset 0 0 30px rgba(255, 42, 133, 0.12),
-        inset 0 0 30px rgba(77, 238, 234, 0.12),
-        0 20px 40px -15px rgba(0, 0, 0, 0.85);
-    }
-
-    /* Menu item dotted leader line */
-    .dotted-leader {
-      flex: 1;
-      border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
-      margin: 0 12px;
-      position: relative;
-      top: -4px;
-    }
-
-    /* Print styles */
-    @media print {
-
-      header,
-      footer,
-      #bookingModal,
-      #itemModal,
-      .no-print {
-        display: none !important;
-      }
-
-      body {
-        background: white !important;
-        color: black !important;
-      }
-
-      .dotted-leader {
-        border-bottom: 1px dotted #666 !important;
-      }
-    }
-
-    /* Subtle neon tube pulse animation */
-    @keyframes neon-pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-        filter: drop-shadow(0 0 14px rgba(77, 238, 234, 0.85));
-      }
-
-      50% {
-        opacity: 0.93;
-        filter: drop-shadow(0 0 9px rgba(77, 238, 234, 0.65));
-      }
-    }
-
-    .animate-neon-pulse {
-      animation: neon-pulse 3.5s ease-in-out infinite;
-    }
-
-    /* Custom dark scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: #060a0f;
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: #1f2937;
-      border-radius: 4px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-      background: #374151;
-    }
-
-    /* Remove black background from raster logo */
-    .logo-no-bg {
-      filter: url(#remove-black-bg);
-    }
-
-    /* Menu item interactive hover row */
-    .menu-item-row {
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border-radius: 0.5rem;
-      padding: 0.625rem 0.75rem;
-      margin-left: -0.75rem;
-      margin-right: -0.75rem;
-    }
-
-    .menu-item-row:hover {
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .menu-item-row:hover .menu-item-title {
-      color: #5ce1e6;
-    }
-
-    /* Hide scrollbar for category tabs on mobile */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .no-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
-    /* Glitch Loader & Spinner Styles */
-    @keyframes glitch-load-slide {
-      0% { transform: translateX(-100%); }
-      50% { transform: translateX(0%); }
-      100% { transform: translateX(100%); }
-    }
-
-    .loader-progress-bar {
-      animation: glitch-load-slide 1.4s ease-in-out infinite;
-    }
-
-    .loader-fade-out {
-      opacity: 0 !important;
-      visibility: hidden !important;
-      pointer-events: none !important;
-    }
-  </style>
 </head>
 
 <body class="bg-[#060a0f] text-neutral-200 font-sans antialiased selection:bg-[#4deeea]/20 selection:text-[#5ce1e6]">
 
   <!-- SVG Filter that removes black background from the logo into true transparency -->
-  <svg class="sr-only" aria-hidden="true" width="0" height="0"
-    style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
+  <svg class="sr-only" aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
     <defs>
       <filter id="remove-black-bg" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix" values="1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0.85 0.90 0.90 0 -0.06" />
-      </filter>
-    </defs>
-  </svg>
+        <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.85 0.90 0.90 0 -0.06" /> </filter> </defs> </svg>
 
   <!-- ==================== GLITCH PAGE PRELOADER & SPINNER ==================== -->
-  <div id="glitchPageLoader"
-    class="fixed inset-0 z-[99999] bg-[#060a0f] flex flex-col items-center justify-center transition-all duration-500 ease-out select-none">
+  <div id="glitchPageLoader" class="fixed inset-0 z-[99999] bg-[#060a0f] flex flex-col items-center justify-center transition-all duration-500 ease-out select-none">
     <!-- Ambient glowing radial backdrop -->
-    <div
-      class="absolute w-80 sm:w-96 h-80 sm:h-96 bg-gradient-to-tr from-[#ff2a85]/20 via-transparent to-[#4deeea]/20 rounded-full blur-3xl pointer-events-none animate-pulse">
-    </div>
+    <div class="absolute w-80 sm:w-96 h-80 sm:h-96 bg-gradient-to-tr from-[#ff2a85]/20 via-transparent to-[#4deeea]/20 rounded-full blur-3xl pointer-events-none animate-pulse"> </div>
 
     <div class="relative z-10 flex flex-col items-center">
       <!-- Neon Dual-Ring Spinner enclosing Logo -->
       <div class="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
         <!-- Outer Glowing Cyan Spinner Ring (Clockwise) -->
-        <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-[#4deeea] border-r-[#4deeea]/40 animate-spin"
-          style="animation-duration: 1.1s; filter: drop-shadow(0 0 8px rgba(77, 238, 234, 0.75));"></div>
+        <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-[#4deeea] border-r-[#4deeea]/40 animate-spin" style="animation-duration: 1.1s; filter: drop-shadow(0 0 8px rgba(77, 238, 234, 0.75));"></div>
         <!-- Inner Glowing Pink Spinner Ring (Counter-Clockwise) -->
-        <div class="absolute inset-2 sm:inset-2.5 rounded-full border-2 border-transparent border-b-[#ff2a85] border-l-[#ff2a85]/40 animate-spin"
-          style="animation-duration: 1.5s; animation-direction: reverse; filter: drop-shadow(0 0 8px rgba(255, 42, 133, 0.75));"></div>
+        <div class="absolute inset-2 sm:inset-2.5 rounded-full border-2 border-transparent border-b-[#ff2a85] border-l-[#ff2a85]/40 animate-spin" style="animation-duration: 1.5s; animation-direction: reverse; filter: drop-shadow(0 0 8px rgba(255, 42, 133, 0.75));"></div>
         <!-- Center Pulsing Glitch Logo -->
-        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="48"
-          class="h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" />
-      </div>
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="48" class="h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" /> </div>
 
       <!-- Typography and Glowing Loading Bar -->
       <div class="mt-6 flex flex-col items-center space-y-2.5">
-        <span class="neon-cyan-text font-serif text-base sm:text-lg font-extrabold tracking-[0.3em] uppercase">
-          THE GLITCH
-        </span>
+        <span class="neon-cyan-text font-serif text-base sm:text-lg font-extrabold tracking-[0.3em] uppercase">THE GLITCH</span>
 
         <!-- Glowing Progress Track -->
         <div class="w-36 sm:w-44 h-1 bg-white/10 rounded-full overflow-hidden relative shadow-inner">
-          <div class="loader-progress-bar absolute inset-y-0 left-0 bg-gradient-to-r from-[#ff2a85] via-[#4deeea] to-[#ff2a85] rounded-full w-full"></div>
-        </div>
+          <div class="loader-progress-bar absolute inset-y-0 left-0 bg-gradient-to-r from-[#ff2a85] via-[#4deeea] to-[#ff2a85] rounded-full w-full"></div> </div>
 
-        <span class="text-[10px] tracking-[0.25em] text-neutral-400 font-bold uppercase pt-0.5">
-          Good Food &bull; Great Drinks &bull; Good Times
-        </span>
-      </div>
-    </div>
-  </div>
+        <span class="text-[10px] tracking-[0.25em] text-neutral-400 font-bold uppercase pt-0.5">Good Food &bull; Great Drinks &bull; Good Times</span> </div> </div> </div>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header
-    class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
+  <header class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
     <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
 
       <!-- Brand Logo -->
       <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
-        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52"
-          class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" />
-      </a>
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52" class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" /> </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="glitch-header-nav hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
         <a href="index.html" class="glitch-nav-link hover:text-white transition duration-200">Home</a>
         <a href="our-pubs.html" class="glitch-nav-link hover:text-white transition duration-200">Our Pubs</a>
-        <a href="menu.html"
-          class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Food &amp; Drinks</a>
+        <a href="menu.html" class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Food &amp; Drinks</a>
         <a href="gallery.html" class="glitch-nav-link hover:text-white transition duration-200">Gallery</a>
-        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a>
-      </nav>
+        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a> </nav>
 
       <!-- Right Action & Mobile Button -->
       <div class="glitch-header-actions flex items-center gap-3">
-        <button onclick="openBookingModal()"
-          class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
-          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>Book a Table</span>
-        </button>
+        <button onclick="openBookingModal()" class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          <span>Book a Table</span> </button>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button onclick="toggleMobileMenu()"
-          class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
-          aria-label="Toggle Navigation Menu">
-          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </div>
-
-    </div>
+        <button onclick="toggleMobileMenu()" class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none" aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg> </button> </div> </div>
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
@@ -318,21 +127,13 @@
       <a href="gallery.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Gallery</a>
       <a href="contact.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Contact</a>
       <div class="pt-2">
-        <button onclick="openBookingModal(); toggleMobileMenu();"
-          class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
-          <span>Book a Table</span>
-        </button>
-      </div>
-    </div>
-  </header>
+        <button onclick="openBookingModal(); toggleMobileMenu();" class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
+          <span>Book a Table</span> </button> </div> </div> </header>
 
-
-  <!-- ==================== HERO SECTION (PDF REFERENCE PAGE 1) ==================== -->
+<!-- ==================== HERO SECTION (PDF REFERENCE PAGE 1) ==================== -->
   <section class="relative overflow-hidden pt-16 pb-14 lg:pt-20 lg:pb-20 border-b border-white/[0.08] bg-[#070b10]">
     <!-- Ambient glowing backgrounds -->
-    <div
-      class="absolute -top-32 left-1/2 -translate-x-1/2 w-[42rem] h-96 bg-[#ff2a85]/10 rounded-full blur-3xl pointer-events-none">
-    </div>
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[42rem] h-96 bg-[#ff2a85]/10 rounded-full blur-3xl pointer-events-none"> </div>
     <div class="absolute top-1/2 right-10 w-96 h-96 bg-[#4deeea]/10 rounded-full blur-3xl pointer-events-none"></div>
 
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
@@ -340,15 +141,11 @@
       <!-- Eyebrow label -->
       <div class="inline-flex items-center justify-center gap-3">
         <span class="w-8 h-[1px] bg-neutral-500"></span>
-        <span class="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">Eat &middot; Drink &middot;
-          Play</span>
-        <span class="w-8 h-[1px] bg-neutral-500"></span>
-      </div>
+        <span class="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">Eat &middot; Drink &middot; Play</span>
+        <span class="w-8 h-[1px] bg-neutral-500"></span> </div>
 
       <!-- Main Heading (Editorial Serif) -->
-      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif font-extrabold text-[#f4ede3] tracking-tight uppercase">
-        Food &amp; Drink
-      </h1>
+      <h1 class="text-5xl sm:text-6xl md:text-7xl font-serif font-extrabold text-[#f4ede3] tracking-tight uppercase">Food &amp; Drink</h1>
 
       <!-- Reference Statement Quote -->
       <p class="text-neutral-300 text-base sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed font-normal">
@@ -358,85 +155,46 @@
 
       <!-- CTA Reservation Button -->
       <div class="pt-3">
-        <button onclick="openBookingModal()"
-          class="inline-flex items-center justify-center gap-2 px-9 py-3.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-950 font-bold text-xs sm:text-sm tracking-widest uppercase transition duration-200 shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-0.5 active:scale-95">
+        <button onclick="openBookingModal()" class="inline-flex items-center justify-center gap-2 px-9 py-3.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-950 font-bold text-xs sm:text-sm tracking-widest uppercase transition duration-200 shadow-xl hover:shadow-cyan-500/10 hover:-translate-y-0.5 active:scale-95">
           <span>Make a Reservation</span>
-          <span>&rarr;</span>
-        </button>
-      </div>
-
-    </div>
+          <span>&rarr;</span> </button> </div> </div>
 
     <!-- ==================== DUAL ATMOSPHERIC CARDS: GLITCH 1 (CITY CENTRE) & GLITCH 2 ==================== -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 lg:pt-16">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
 
         <!-- Card 1: THE GLITCH 1 (City Centre) -> ONLY MOCKTAILS & DRINKS -->
-        <div id="heroCardGlitch1"
-          class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#4deeea]/50">
-          <img src="assets/menu-mocktails.jpg" alt="The Glitch 1 City Centre Mocktail Bar"
-            class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+        <div id="heroCardGlitch1" class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#4deeea]/50">
+          <img src="assets/menu-mocktails.jpg" alt="The Glitch 1 City Centre Mocktail Bar" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent"></div>
 
           <div class="relative z-10 space-y-3 text-center flex flex-col items-center">
-            <div
-              class="inline-flex items-center gap-2 bg-[#4deeea]/20 text-[#5ce1e6] border border-[#4deeea]/40 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
-              <span>🍸 Dedicated Mocktail &amp; Craft Bar</span>
-            </div>
-            <h2
-              class="text-3xl sm:text-4xl font-serif font-extrabold text-white tracking-wide uppercase drop-shadow-md">
-              The Glitch 1 &ndash; City Centre
-            </h2>
-            <p class="text-neutral-300 text-xs sm:text-sm max-w-sm">
-              Artisan mocktails, fresh mint mojitos, craft libations &amp; buzzing social lounge.
-            </p>
+            <div class="inline-flex items-center gap-2 bg-[#4deeea]/20 text-[#5ce1e6] border border-[#4deeea]/40 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
+              <span>🍸 Dedicated Mocktail &amp; Craft Bar</span> </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-extrabold text-white tracking-wide uppercase drop-shadow-md">The Glitch 1 &ndash; City Centre</h2>
+            <p class="text-neutral-300 text-xs sm:text-sm max-w-sm">Artisan mocktails, fresh mint mojitos, craft libations &amp; buzzing social lounge.</p>
             <div class="pt-2">
-              <button onclick="filterByLocation('glitch1')"
-                class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#4deeea]/50 bg-black/60 backdrop-blur-md hover:bg-[#4deeea] text-white hover:text-black font-semibold text-xs tracking-widest uppercase transition duration-300 hover:scale-105 shadow-lg">
+              <button onclick="filterByLocation('glitch1')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-[#4deeea]/50 bg-black/60 backdrop-blur-md hover:bg-[#4deeea] text-white hover:text-black font-semibold text-xs tracking-widest uppercase transition duration-300 hover:scale-105 shadow-lg">
                 <span>View Mocktails (City Centre)</span>
-                <span>&rarr;</span>
-              </button>
-            </div>
-          </div>
-        </div>
+                <span>&rarr;</span> </button> </div> </div> </div>
 
         <!-- Card 2: THE GLITCH 2 (Northern Quarter) -> SHOWS ALL ITEMS -->
-        <div id="heroCardGlitch2"
-          class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#ff2a85]/50">
-          <img src="assets/menu-brunch.jpg" alt="The Glitch 2 Full Dining and Weekend Brunch"
-            class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
+        <div id="heroCardGlitch2" class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#ff2a85]/50">
+          <img src="assets/menu-brunch.jpg" alt="The Glitch 2 Full Dining and Weekend Brunch" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent"></div>
 
           <div class="relative z-10 space-y-3 text-center flex flex-col items-center">
-            <div
-              class="inline-flex items-center gap-2 bg-[#ff2a85]/20 text-[#ff4fa8] border border-[#ff2a85]/40 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
-              <span>🍽 Full Gastro Pub &amp; Brunch Menu</span>
-            </div>
-            <h2
-              class="text-3xl sm:text-4xl font-serif font-extrabold text-white tracking-wide uppercase drop-shadow-md">
-              The Glitch 2 &ndash; Dining &amp; Pub
-            </h2>
-            <p class="text-neutral-300 text-xs sm:text-sm max-w-sm">
-              Weekend brunch, gourmet burgers, pizzas, wings, Indian curries, rice dishes &amp; desserts.
-            </p>
+            <div class="inline-flex items-center gap-2 bg-[#ff2a85]/20 text-[#ff4fa8] border border-[#ff2a85]/40 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
+              <span>🍽 Full Gastro Pub &amp; Brunch Menu</span> </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-extrabold text-white tracking-wide uppercase drop-shadow-md">The Glitch 2 &ndash; Dining &amp; Pub</h2>
+            <p class="text-neutral-300 text-xs sm:text-sm max-w-sm">Weekend brunch, gourmet burgers, pizzas, wings, Indian curries, rice dishes &amp; desserts.</p>
             <div class="pt-2">
-              <button onclick="filterByLocation('glitch2')"
-                class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/40 bg-black/60 backdrop-blur-md hover:bg-white text-white hover:text-black font-semibold text-xs tracking-widest uppercase transition duration-300 hover:scale-105 shadow-lg">
+              <button onclick="filterByLocation('glitch2')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/40 bg-black/60 backdrop-blur-md hover:bg-white text-white hover:text-black font-semibold text-xs tracking-widest uppercase transition duration-300 hover:scale-105 shadow-lg">
                 <span>View All Items (The Glitch 2)</span>
-                <span>&rarr;</span>
-              </button>
-            </div>
-          </div>
-        </div>
+                <span>&rarr;</span> </button> </div> </div> </div> </div> </div> </section>
 
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ==================== LOCATION & CATEGORY CONTROLS ==================== -->
-  <section id="menu-content"
-    class="sticky top-20 z-40 bg-[#060a0f]/95 backdrop-blur-lg border-b border-white/[0.08] py-4 no-print shadow-xl">
+<!-- ==================== LOCATION & CATEGORY CONTROLS ==================== -->
+  <section id="menu-content" class="sticky top-20 z-40 bg-[#060a0f]/95 backdrop-blur-lg border-b border-white/[0.08] py-4 no-print shadow-xl">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
 
       <!-- Location Selector Banner Tabs (City Centre Mocktails Only vs Glitch 2 All Items) -->
@@ -444,122 +202,45 @@
         <div class="flex items-center gap-2">
           <span class="text-[11px] font-extrabold uppercase tracking-widest text-neutral-400">Location Filter:</span>
           <div class="inline-flex p-1 rounded-full bg-[#0c1219] border border-white/10 text-xs font-semibold">
-            <button onclick="filterByLocation('all')" id="loc-btn-all"
-              class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-white">
-              All Locations
-            </button>
-            <button onclick="filterByLocation('glitch1')" id="loc-btn-glitch1"
-              class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-[#5ce1e6]">
-              🍸 The Glitch 1 (City Centre &middot; Mocktails Only)
-            </button>
-            <button onclick="filterByLocation('glitch2')" id="loc-btn-glitch2"
-              class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-[#ff4fa8]">
-              🍽 The Glitch 2 (All Items)
-            </button>
-          </div>
-        </div>
+            <button onclick="filterByLocation('all')" id="loc-btn-all" class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-white">All Locations</button>
+            <button onclick="filterByLocation('glitch1')" id="loc-btn-glitch1" class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-[#5ce1e6]">🍸 The Glitch 1 (City Centre &middot; Mocktails Only)</button>
+            <button onclick="filterByLocation('glitch2')" id="loc-btn-glitch2" class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-[#ff4fa8]">🍽 The Glitch 2 (All Items)</button> </div> </div>
 
         <div class="flex items-center gap-2">
           <!-- Print / PDF Action Button -->
-          <button onclick="window.print()" title="Print or Save PDF Menu"
-            class="px-3 py-1.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/10 text-neutral-300 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition">
-            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
-            </svg>
-            <span class="hidden sm:inline">Print Menu</span>
-          </button>
-        </div>
-      </div>
+          <button onclick="window.print()" title="Print or Save PDF Menu" class="px-3 py-1.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/10 text-neutral-300 hover:text-white text-xs font-semibold flex items-center gap-1.5 transition">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" /></svg>
+            <span class="hidden sm:inline">Print Menu</span> </button> </div> </div>
 
-
-      <!-- Real Menu Category Navigation Tabs (User's Exact Categories) -->
+<!-- Real Menu Category Navigation Tabs (User's Exact Categories) -->
       <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
-        <div id="categoryTabsContainer"
-          class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 no-scrollbar text-xs font-semibold">
-          <button onclick="filterCategory('all')" id="tab-all"
-            class="category-tab px-4 py-2 rounded-full bg-[#f4ede3] text-neutral-950 font-bold whitespace-nowrap transition duration-200 shadow-sm">
-            All Menu
-          </button>
-          <button onclick="filterCategory('brunch')" id="tab-brunch"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Weekend Brunch
-          </button>
-          <button onclick="filterCategory('burgers')" id="tab-burgers"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Burgers
-          </button>
-          <button onclick="filterCategory('pizzas')" id="tab-pizzas"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Pizzas
-          </button>
-          <button onclick="filterCategory('wings')" id="tab-wings"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Chicken Wings
-          </button>
-          <button onclick="filterCategory('sides')" id="tab-sides"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Sides
-          </button>
-          <button onclick="filterCategory('indian')" id="tab-indian"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Indian Style
-          </button>
-          <button onclick="filterCategory('rice')" id="tab-rice"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Rice Dishes
-          </button>
-          <button onclick="filterCategory('drinks')" id="tab-drinks"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Cocktails &amp; Mocktails
-          </button>
-          <button onclick="filterCategory('desserts')" id="tab-desserts"
-            class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">
-            Desserts
-          </button>
-        </div>
+        <div id="categoryTabsContainer" class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 no-scrollbar text-xs font-semibold">
+          <button onclick="filterCategory('all')" id="tab-all" class="category-tab px-4 py-2 rounded-full bg-[#f4ede3] text-neutral-950 font-bold whitespace-nowrap transition duration-200 shadow-sm">All Menu</button>
+          <button onclick="filterCategory('brunch')" id="tab-brunch" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Weekend Brunch</button>
+          <button onclick="filterCategory('burgers')" id="tab-burgers" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Burgers</button>
+          <button onclick="filterCategory('pizzas')" id="tab-pizzas" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Pizzas</button>
+          <button onclick="filterCategory('wings')" id="tab-wings" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Chicken Wings</button>
+          <button onclick="filterCategory('sides')" id="tab-sides" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Sides</button>
+          <button onclick="filterCategory('indian')" id="tab-indian" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Indian Style</button>
+          <button onclick="filterCategory('rice')" id="tab-rice" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Rice Dishes</button>
+          <button onclick="filterCategory('drinks')" id="tab-drinks" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Cocktails &amp; Mocktails</button>
+          <button onclick="filterCategory('desserts')" id="tab-desserts" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">Desserts</button> </div>
 
         <!-- Search Bar -->
         <div class="relative flex-1 sm:w-64">
-          <svg class="w-4 h-4 text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none"
-            stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-          <input type="text" id="menuSearch" oninput="handleSearch(this.value)"
-            placeholder="Search burgers, pizzas, wings, mocktails..."
-            class="w-full bg-[#0c1219] border border-white/15 rounded-full pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-          <button id="clearSearchBtn" onclick="clearSearch()"
-            class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-white text-xs">&times;</button>
-        </div>
-      </div>
+          <svg class="w-4 h-4 text-neutral-400 absolute left-3 top-1/2 -translate-y-1/2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+          <input type="text" id="menuSearch" oninput="handleSearch(this.value)" placeholder="Search burgers, pizzas, wings, mocktails..." class="w-full bg-[#0c1219] border border-white/15 rounded-full pl-9 pr-4 py-1.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
+          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 hover:text-white text-xs">&times;</button> </div> </div>
 
       <!-- Dietary Quick Filter Chips -->
       <div class="flex flex-wrap items-center gap-2 text-[11px] pt-0.5">
         <span class="text-neutral-500 uppercase tracking-widest text-[10px] font-bold">Diet:</span>
-        <button onclick="toggleDietaryFilter('V')" id="filter-V"
-          class="diet-filter px-2.5 py-0.5 rounded-md border border-white/10 hover:border-white/30 text-neutral-300 transition">
-          🌿 Vegetarian (V)
-        </button>
-        <button onclick="toggleDietaryFilter('HOT')" id="filter-HOT"
-          class="diet-filter px-2.5 py-0.5 rounded-md border border-white/10 hover:border-white/30 text-neutral-300 transition">
-          🌶 Spicy
-        </button>
-        <button onclick="toggleDietaryFilter('HALAL')" id="filter-HALAL"
-          class="diet-filter px-2.5 py-0.5 rounded-md border border-white/10 hover:border-white/30 text-neutral-300 transition">
-          🍗 Chicken &amp; Paneer
-        </button>
-        <button onclick="clearAllFilters()" id="clearFiltersBtn"
-          class="hidden text-[#ff2a85] hover:underline font-bold ml-2">
-          Reset Filters
-        </button>
-      </div>
+        <button onclick="toggleDietaryFilter('V')" id="filter-V" class="diet-filter px-2.5 py-0.5 rounded-md border border-white/10 hover:border-white/30 text-neutral-300 transition">🌿 Vegetarian (V)</button>
+        <button onclick="toggleDietaryFilter('HOT')" id="filter-HOT" class="diet-filter px-2.5 py-0.5 rounded-md border border-white/10 hover:border-white/30 text-neutral-300 transition">🌶 Spicy</button>
+        <button onclick="toggleDietaryFilter('HALAL')" id="filter-HALAL" class="diet-filter px-2.5 py-0.5 rounded-md border border-white/10 hover:border-white/30 text-neutral-300 transition">🍗 Chicken &amp; Paneer</button>
+        <button onclick="clearAllFilters()" id="clearFiltersBtn" class="hidden text-[#ff2a85] hover:underline font-bold ml-2">Reset Filters</button> </div> </div> </section>
 
-    </div>
-  </section>
-
-
-  <!-- ==================== MAIN STRUCTURED MENU CONTENT ==================== -->
+<!-- ==================== MAIN STRUCTURED MENU CONTENT ==================== -->
   <!-- STRICT ALTERNATING LAYOUT: RIGHT -> LEFT -> RIGHT -> LEFT -> RIGHT -> LEFT -> RIGHT -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 space-y-24">
 
@@ -569,17 +250,9 @@
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff2a85] uppercase">Saturday &amp; Sunday
-            &middot; 11AM &ndash; 3PM</span>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Weekend Brunch
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-300 -rotate-1">
-          Weekends taste better here!
-        </p>
-      </div>
+          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff2a85] uppercase">Saturday &amp; Sunday &middot; 11AM &ndash; 3PM</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Weekend Brunch</h2> </div>
+        <p class="font-script text-2xl text-neutral-300 -rotate-1">Weekends taste better here!</p> </div>
 
       <!-- 2-Column Grid: Packages Left, Image RIGHT -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -588,196 +261,112 @@
         <div class="lg:col-span-7 space-y-5">
 
           <!-- Package 1: GLITCH BRUNCH -->
-          <div
-            class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-[#4deeea]/50 p-6 transition duration-300 group menu-item-row"
-            onclick="openItemModal('GLITCH BRUNCH', '£19.95 per person', 'Enjoy 1 delicious Main from our brunch menu plus 1 signature Drink of your choice. Great food, great drinks, great vibes.', 'assets/menu-brunch.jpg', ['BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Choose from our burgers, pizzas, curries or wings paired with cold beer or mocktail.')"
-            data-dietary="" data-locations="glitch2">
+          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-[#4deeea]/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BRUNCH', '£19.95 per person', 'Enjoy 1 delicious Main from our brunch menu plus 1 signature Drink of your choice. Great food, great drinks, great vibes.', 'assets/menu-brunch.jpg', ['BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Choose from our burgers, pizzas, curries or wings paired with cold beer or mocktail.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Tier 01</span>
-                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch
-                  Brunch</h3>
-              </div>
+                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Brunch</h3> </div>
               <div class="text-right">
                 <span class="text-2xl font-serif font-extrabold text-[#f4ede3]">£19.95</span>
-                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span>
-              </div>
-            </div>
+                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span> </div> </div>
             <div class="text-xs text-neutral-300 font-bold mt-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-[#4deeea]"></span>
-              <span>1 MAIN + 1 DRINK</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-1">Great Food &middot; Great Drinks &middot; Great Vibes</p>
-          </div>
+              <span>1 MAIN + 1 DRINK</span> </div>
+            <p class="text-xs text-neutral-400 mt-1">Great Food &middot; Great Drinks &middot; Great Vibes</p> </div>
 
           <!-- Package 2: GLITCH BOOZY BRUNCH (Featured Highlight) -->
-          <div
-            class="bg-[#0c1219] rounded-2xl border-2 border-[#ff2a85] p-6 transition duration-300 group shadow-lg shadow-[#ff2a85]/10 menu-item-row relative overflow-hidden"
-            onclick="openItemModal('GLITCH BOOZY BRUNCH', '£26.95 per person', 'Our most popular brunch experience! 1 delicious Main dish plus 2 drinks of your choice including craft cocktails, prosecco, or beer.', 'assets/menu-brunch.jpg', ['POPULAR', 'BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Enjoy 2 cocktails or pints with your favorite burger or pizza.')"
-            data-dietary="" data-locations="glitch2">
-            <div
-              class="absolute top-0 right-0 bg-[#ff2a85] text-white text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-bl-lg">
+          <div class="bg-[#0c1219] rounded-2xl border-2 border-[#ff2a85] p-6 transition duration-300 group shadow-lg shadow-[#ff2a85]/10 menu-item-row relative overflow-hidden" onclick="openItemModal('GLITCH BOOZY BRUNCH', '£26.95 per person', 'Our most popular brunch experience! 1 delicious Main dish plus 2 drinks of your choice including craft cocktails, prosecco, or beer.', 'assets/menu-brunch.jpg', ['POPULAR', 'BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Enjoy 2 cocktails or pints with your favorite burger or pizza.')" data-dietary="" data-locations="glitch2">
+            <div class="absolute top-0 right-0 bg-[#ff2a85] text-white text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-bl-lg">
               Most Popular
             </div>
             <div class="flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff4fa8]">Tier 02</span>
-                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch
-                  Boozy Brunch</h3>
-              </div>
+                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Boozy Brunch</h3> </div>
               <div class="text-right">
                 <span class="text-2xl font-serif font-extrabold text-[#f4ede3]">£26.95</span>
-                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span>
-              </div>
-            </div>
+                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span> </div> </div>
             <div class="text-xs text-[#ff4fa8] font-bold mt-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85]"></span>
-              <span>1 MAIN + 2 DRINKS</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-1">Good Food &middot; Better Vibes &middot; Weekend Feels</p>
-          </div>
+              <span>1 MAIN + 2 DRINKS</span> </div>
+            <p class="text-xs text-neutral-400 mt-1">Good Food &middot; Better Vibes &middot; Weekend Feels</p> </div>
 
           <!-- Package 3: GLITCH BOTTOMLESS BRUNCH -->
-          <div
-            class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-amber-400/50 p-6 transition duration-300 group menu-item-row"
-            onclick="openItemModal('GLITCH BOTTOMLESS BRUNCH', '£32.95 per person', 'The ultimate weekend celebration: 1 Main plus UNLIMITED drinks for 90 whole minutes. Choose from beer, cider, prosecco, or house cocktails.', 'assets/menu-brunch.jpg', ['BOTTOMLESS'], 'Saturday & Sunday | 11AM - 3PM (90 mins)', 'Unlimited drinks flow for 90 minutes. Table booking essential.')"
-            data-dietary="" data-locations="glitch2">
+          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-amber-400/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BOTTOMLESS BRUNCH', '£32.95 per person', 'The ultimate weekend celebration: 1 Main plus UNLIMITED drinks for 90 whole minutes. Choose from beer, cider, prosecco, or house cocktails.', 'assets/menu-brunch.jpg', ['BOTTOMLESS'], 'Saturday & Sunday | 11AM - 3PM (90 mins)', 'Unlimited drinks flow for 90 minutes. Table booking essential.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">Tier 03</span>
-                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch
-                  Bottomless Brunch</h3>
-              </div>
+                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Bottomless Brunch</h3> </div>
               <div class="text-right">
                 <span class="text-2xl font-serif font-extrabold text-[#f4ede3]">£32.95</span>
-                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span>
-              </div>
-            </div>
+                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span> </div> </div>
             <div class="text-xs text-amber-300 font-bold mt-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>1 MAIN + UNLIMITED DRINKS (90 MINUTES)</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-1">Eat &middot; Drink &middot; Party &middot; Groups Welcome</p>
-          </div>
-
-        </div>
+              <span>1 MAIN + UNLIMITED DRINKS (90 MINUTES)</span> </div>
+            <p class="text-xs text-neutral-400 mt-1">Eat &middot; Drink &middot; Party &middot; Groups Welcome</p> </div> </div>
 
         <!-- Right Column: Featured Image RIGHT (5 cols) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-brunch.jpg', 'The Glitch Weekend Brunch Table Feast')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-brunch.jpg', 'The Glitch Weekend Brunch Table Feast')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-brunch.jpg" alt="Weekend Brunch Table Feast at The Glitch"
-                class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-brunch.jpg" alt="Weekend Brunch Table Feast at The Glitch" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Weekend Brunch
-                  Feast</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Weekend Brunch Feast</span> </div> </div> </div> </div> </div> </section>
 
-      </div>
-    </section>
-
-
-    <!-- ==================== SECTION 2: BURGERS (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 2: BURGERS (IMAGE ON LEFT) ==================== -->
     <section id="section-burgers" class="menu-section scroll-mt-36" data-category="burgers" data-locations="glitch2">
 
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#5ce1e6] uppercase">Craft Patties &middot;
-            Served with Fries</span>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Burgers
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-400 -rotate-1">
-          Juicy &amp; packed with flavor
-        </p>
-      </div>
+          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#5ce1e6] uppercase">Craft Patties &middot; Served with Fries</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Burgers</h2> </div>
+        <p class="font-script text-2xl text-neutral-400 -rotate-1">Juicy &amp; packed with flavor</p> </div>
 
       <!-- 2-Column Grid: Image LEFT, Items RIGHT (Alternating!) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
         <!-- Left Column: Featured Burger Image LEFT (5 cols) -->
         <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-burger.jpg', 'Glitch Burger — Juicy beef patty with cheese, glitch sauce and fries')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-burger.jpg', 'Glitch Burger — Juicy beef patty with cheese, glitch sauce and fries')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-burger.jpg" alt="Glitch Burger with melted cheese and fries"
-                class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-burger.jpg" alt="Glitch Burger with melted cheese and fries" class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">The Glitch Burger</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">The Glitch Burger</span> </div> </div> </div> </div>
 
         <!-- Right Column: Burgers List RIGHT (7 cols) -->
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
 
           <!-- Item 1: GLITCH BURGER -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('GLITCH BURGER', '£13.95', 'Juicy prime beef patty, melted American cheddar cheese, crisp lettuce, ripe tomato, and our secret Glitch sauce, served on a toasted brioche bun with hot seasoned fries.', 'assets/menu-burger.jpg', ['HOUSE SPECIAL'], 'Served with seasoned fries', 'Pairs with fresh draft IPA or chilled Pilsner.')"
-            data-dietary="" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('GLITCH BURGER', '£13.95', 'Juicy prime beef patty, melted American cheddar cheese, crisp lettuce, ripe tomato, and our secret Glitch sauce, served on a toasted brioche bun with hot seasoned fries.', 'assets/menu-burger.jpg', ['HOUSE SPECIAL'], 'Served with seasoned fries', 'Pairs with fresh draft IPA or chilled Pilsner.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span class="text-xs text-[#5ce1e6] font-bold">★</span>
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Glitch Burger
-                </h3>
-                <span
-                  class="text-[9px] px-2 py-0.5 rounded-full bg-[#4deeea]/15 text-[#5ce1e6] font-extrabold uppercase tracking-wider">House
-                  Special</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Glitch Burger</h3>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-[#4deeea]/15 text-[#5ce1e6] font-extrabold uppercase tracking-wider">House Special</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.95</span>
-            </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.95</span> </div>
             <div class="text-[11px] text-[#5ce1e6] font-medium mt-0.5">
               Served with crispy seasoned fries
             </div>
-            <p class="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">
-              Juicy beef patty, cheese, lettuce, tomato and glitch sauce, served with fries.
-            </p>
-          </div>
+            <p class="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">Juicy beef patty, cheese, lettuce, tomato and glitch sauce, served with fries.</p> </div>
 
           <!-- Item 2: CRISPY CHICKEN BURGER -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('CRISPY CHICKEN BURGER', '£13.50', 'Crispy buttermilk-fried chicken breast, shredded lettuce, smoky chipotle mayonnaise, on a buttered brioche bun served with golden fries.', 'assets/menu-burger.jpg', ['HALAL'], 'Served with seasoned fries', 'Pairs with a cold pale ale or fresh mint mojito.')"
-            data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('CRISPY CHICKEN BURGER', '£13.50', 'Crispy buttermilk-fried chicken breast, shredded lettuce, smoky chipotle mayonnaise, on a buttered brioche bun served with golden fries.', 'assets/menu-burger.jpg', ['HALAL'], 'Served with seasoned fries', 'Pairs with a cold pale ale or fresh mint mojito.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Crispy Chicken Burger
-                </h3>
-                <span class="text-[9px] px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 font-bold uppercase">Fan
-                  Favorite</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Crispy Chicken Burger</h3>
+                <span class="text-[9px] px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 font-bold uppercase">Fan Favorite</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.50</span>
-            </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.50</span> </div>
             <div class="text-[11px] text-neutral-400 font-medium mt-0.5">
               Served with crispy seasoned fries
             </div>
-            <p class="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">
-              Buttermilk chicken, lettuce, chipotle mayo, served with fries.
-            </p>
-          </div>
+            <p class="text-xs sm:text-sm text-neutral-400 mt-1 leading-relaxed">Buttermilk chicken, lettuce, chipotle mayo, served with fries.</p> </div>
 
           <!-- Burger Add-ons -->
           <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-2">
@@ -785,34 +374,17 @@
             <div class="flex flex-wrap items-center gap-3 text-xs text-neutral-300">
               <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Extra Beef Patty &pound;3.50</span>
               <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Smoked Bacon &pound;1.50</span>
-              <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Upgrade to Cheesy Fries
-                &pound;1.50</span>
-            </div>
-          </div>
+              <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Upgrade to Cheesy Fries &pound;1.50</span> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==================== SECTION 3: PIZZAS (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 3: PIZZAS (IMAGE ON RIGHT) ==================== -->
     <section id="section-pizzas" class="menu-section scroll-mt-36" data-category="pizzas" data-locations="glitch2">
 
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff4fa8] uppercase">Stone-Baked &middot; Fresh
-            Dough</span>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Pizzas
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-400 -rotate-1">
-          Crispy crust &amp; bubbling cheese
-        </p>
-      </div>
+          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff4fa8] uppercase">Stone-Baked &middot; Fresh Dough</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Pizzas</h2> </div>
+        <p class="font-script text-2xl text-neutral-400 -rotate-1">Crispy crust &amp; bubbling cheese</p> </div>
 
       <!-- 2-Column Grid: Items Left, Image RIGHT (Alternating!) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -821,150 +393,83 @@
         <div class="lg:col-span-7 space-y-5">
 
           <!-- Margherita -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('MARGHERITA PIZZA', '£11.50', 'Classic Italian pizza with slow-cooked San Marzano tomato sauce, creamy fior di latte mozzarella, and torn fresh basil leaves.', 'assets/menu-pizza.jpg', ['V'], 'Available daily', 'Pairs with Italian Pilsner or Pinot Grigio.')"
-            data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('MARGHERITA PIZZA', '£11.50', 'Classic Italian pizza with slow-cooked San Marzano tomato sauce, creamy fior di latte mozzarella, and torn fresh basil leaves.', 'assets/menu-pizza.jpg', ['V'], 'Available daily', 'Pairs with Italian Pilsner or Pinot Grigio.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Margherita</h3>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Margherita</h3>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.50</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella and fresh basil.</p>
-          </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.50</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella and fresh basil.</p> </div>
 
           <!-- Pepperoni -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('PEPPERONI PIZZA', '£13.50', 'Loaded with spicy artisan pepperoni slices, rich tomato sauce, and golden melted mozzarella.', 'assets/menu-pizza.jpg', [], 'Available daily', 'Pairs with fresh cold lager or IPA.')"
-            data-dietary="" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('PEPPERONI PIZZA', '£13.50', 'Loaded with spicy artisan pepperoni slices, rich tomato sauce, and golden melted mozzarella.', 'assets/menu-pizza.jpg', [], 'Available daily', 'Pairs with fresh cold lager or IPA.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
-              <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                Pepperoni</h3>
+              <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Pepperoni</h3>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.50</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella and pepperoni.</p>
-          </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.50</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella and pepperoni.</p> </div>
 
           <!-- BBQ Chicken -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('BBQ CHICKEN PIZZA', '£14.00', 'Tender grilled chicken breast, smoky BBQ sauce base, sliced red onions, and melted mozzarella.', 'assets/menu-pizza.jpg', ['HALAL'], 'Available daily', 'Pairs with smoky cocktails or dark ale.')"
-            data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('BBQ CHICKEN PIZZA', '£14.00', 'Tender grilled chicken breast, smoky BBQ sauce base, sliced red onions, and melted mozzarella.', 'assets/menu-pizza.jpg', ['HALAL'], 'Available daily', 'Pairs with smoky cocktails or dark ale.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
-              <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                BBQ Chicken</h3>
+              <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">BBQ Chicken</h3>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">14.00</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">BBQ sauce, chicken, red onions and mozzarella.
-            </p>
-          </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">14.00</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">BBQ sauce, chicken, red onions and mozzarella.  </p> </div>
 
           <!-- Veggie Supreme -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('VEGGIE SUPREME PIZZA', '£12.50', 'Crisp bell peppers, red onions, button mushrooms, black olives, sweetcorn, tomato sauce and mozzarella.', 'assets/menu-pizza.jpg', ['V'], 'Available daily', 'Pairs with crisp dry cider.')"
-            data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('VEGGIE SUPREME PIZZA', '£12.50', 'Crisp bell peppers, red onions, button mushrooms, black olives, sweetcorn, tomato sauce and mozzarella.', 'assets/menu-pizza.jpg', ['V'], 'Available daily', 'Pairs with crisp dry cider.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Veggie Supreme</h3>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Veggie Supreme</h3>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">12.50</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Peppers, onions, mushrooms, olives and sweetcorn.
-            </p>
-          </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">12.50</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Peppers, onions, mushrooms, olives and sweetcorn.  </p> </div>
 
           <!-- Hot & Spicy -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('HOT & SPICY PIZZA', '£14.00', 'Spicy pepperoni, sliced fiery jalapeños, crunchy red onions, chili flakes, tomato sauce and melted mozzarella.', 'assets/menu-pizza.jpg', ['HOT'], 'Available daily', 'Pairs with a chilled pale ale.')"
-            data-dietary="HOT" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('HOT & SPICY PIZZA', '£14.00', 'Spicy pepperoni, sliced fiery jalapeños, crunchy red onions, chili flakes, tomato sauce and melted mozzarella.', 'assets/menu-pizza.jpg', ['HOT'], 'Available daily', 'Pairs with a chilled pale ale.')" data-dietary="HOT" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Hot &amp; Spicy</h3>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">Spicy</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Hot &amp; Spicy</h3>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">Spicy</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">14.00</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Spicy pepperoni, jalapeños, red onions and
-              mozzarella.</p>
-          </div>
-
-        </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">14.00</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Spicy pepperoni, jalapeños, red onions and mozzarella.</p> </div> </div>
 
         <!-- Right Column: Featured Pizza Image RIGHT (5 cols) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-pizza.jpg', 'Artisan Wood-Fired Pizza with fresh mozzarella, pepperoni & basil')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-pizza.jpg', 'Artisan Wood-Fired Pizza with fresh mozzarella, pepperoni & basil')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-pizza.jpg" alt="Artisan Wood-Fired Pizza at The Glitch"
-                class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-pizza.jpg" alt="Artisan Wood-Fired Pizza at The Glitch" class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Wood-Fired Pizza</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Wood-Fired Pizza</span> </div> </div> </div> </div> </div> </section>
 
-      </div>
-    </section>
-
-
-    <!-- ==================== SECTION 4: CHICKEN WINGS & SIDES (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 4: CHICKEN WINGS & SIDES (IMAGE ON LEFT) ==================== -->
     <section id="section-wings" class="menu-section scroll-mt-36" data-category="wings" data-locations="glitch2">
 
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff2a85] uppercase">Sauced &amp; Glazed
-            &middot; Hot &amp; Crispy</span>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Chicken Wings &amp; Sides
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-400 -rotate-1">
-          Pick your glaze &amp; pair with sides
-        </p>
-      </div>
+          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff2a85] uppercase">Sauced &amp; Glazed &middot; Hot &amp; Crispy</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Chicken Wings &amp; Sides</h2> </div>
+        <p class="font-script text-2xl text-neutral-400 -rotate-1">Pick your glaze &amp; pair with sides</p> </div>
 
       <!-- 2-Column Grid: Image LEFT, Items RIGHT (Alternating!) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
         <!-- Left Column: Featured Wings Image LEFT (5 cols) -->
         <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-wings.jpg', 'Glazed Chicken Wings with sesame, scallions and dips')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-wings.jpg', 'Glazed Chicken Wings with sesame, scallions and dips')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-wings.jpg" alt="Glazed Chicken Wings platter at The Glitch"
-                class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-wings.jpg" alt="Glazed Chicken Wings platter at The Glitch" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Crispy Glazed
-                  Wings</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Crispy Glazed Wings</span> </div> </div> </div> </div>
 
         <!-- Right Column: Wings Flavors & Sides List RIGHT (7 cols) -->
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
@@ -972,37 +477,27 @@
           <div>
             <div class="flex items-baseline justify-between border-b border-white/10 pb-2 mb-3">
               <h3 class="text-lg font-serif font-bold text-white uppercase">Chicken Wings (6 Flavors)</h3>
-              <span class="text-xs font-bold text-[#5ce1e6]">6pc &pound;9.95 &middot; 12pc &pound;16.95</span>
-            </div>
+              <span class="text-xs font-bold text-[#5ce1e6]">6pc &pound;9.95 &middot; 12pc &pound;16.95</span> </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
               <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
                 <strong class="text-white block font-bold text-sm">Classic Buffalo</strong>
-                <p class="text-neutral-400 text-[11px] mt-0.5">A timeless favourite. Tangy, spicy &amp; full of flavour.
-                </p>
-              </div>
+                <p class="text-neutral-400 text-[11px] mt-0.5">A timeless favourite. Tangy, spicy &amp; full of flavour.  </p> </div>
               <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
                 <strong class="text-white block font-bold text-sm">Smokey BBQ</strong>
-                <p class="text-neutral-400 text-[11px] mt-0.5">Rich, smoky &amp; sweet. BBQ done right.</p>
-              </div>
+                <p class="text-neutral-400 text-[11px] mt-0.5">Rich, smoky &amp; sweet. BBQ done right.</p> </div>
               <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
                 <strong class="text-white block font-bold text-sm">Honey BBQ</strong>
-                <p class="text-neutral-400 text-[11px] mt-0.5">Sweet honey meets rich smoky BBQ.</p>
-              </div>
+                <p class="text-neutral-400 text-[11px] mt-0.5">Sweet honey meets rich smoky BBQ.</p> </div>
               <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
                 <strong class="text-white block font-bold text-sm">Korean BBQ</strong>
-                <p class="text-neutral-400 text-[11px] mt-0.5">Sweet, savoury &amp; garlicky with a hint of heat.</p>
-              </div>
+                <p class="text-neutral-400 text-[11px] mt-0.5">Sweet, savoury &amp; garlicky with a hint of heat.</p> </div>
               <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
                 <strong class="text-white block font-bold text-sm text-[#ff4fa8]">Hot &amp; Spicy &#x1F336;</strong>
-                <p class="text-neutral-400 text-[11px] mt-0.5">For the heat lovers. Spicy, fiery &amp; bold.</p>
-              </div>
+                <p class="text-neutral-400 text-[11px] mt-0.5">For the heat lovers. Spicy, fiery &amp; bold.</p> </div>
               <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06]">
                 <strong class="text-white block font-bold text-sm">Sweet Chilli</strong>
-                <p class="text-neutral-400 text-[11px] mt-0.5">Sweet, tangy &amp; slightly spicy.</p>
-              </div>
-            </div>
-          </div>
+                <p class="text-neutral-400 text-[11px] mt-0.5">Sweet, tangy &amp; slightly spicy.</p> </div> </div> </div>
 
           <!-- Sides Sub-section -->
           <div id="section-sides" class="pt-4 border-t border-white/10" data-category="sides">
@@ -1010,54 +505,32 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <div class="flex justify-between p-2 rounded bg-white/[0.02] border border-white/[0.06]">
                 <span class="text-neutral-200">Fries</span>
-                <span class="text-white font-bold">&pound;3.95</span>
-              </div>
+                <span class="text-white font-bold">&pound;3.95</span> </div>
               <div class="flex justify-between p-2 rounded bg-white/[0.02] border border-white/[0.06]">
                 <span class="text-neutral-200">Cheesy Fries</span>
-                <span class="text-white font-bold">&pound;4.95</span>
-              </div>
+                <span class="text-white font-bold">&pound;4.95</span> </div>
               <div class="flex justify-between p-2 rounded bg-white/[0.02] border border-white/[0.06]">
                 <span class="text-neutral-200">Onion Rings</span>
-                <span class="text-white font-bold">&pound;4.50</span>
-              </div>
+                <span class="text-white font-bold">&pound;4.50</span> </div>
               <div class="flex justify-between p-2 rounded bg-white/[0.02] border border-white/[0.06]">
                 <span class="text-neutral-200">Mozzarella Sticks</span>
-                <span class="text-white font-bold">&pound;5.95</span>
-              </div>
+                <span class="text-white font-bold">&pound;5.95</span> </div>
               <div class="flex justify-between p-2 rounded bg-white/[0.02] border border-white/[0.06]">
                 <span class="text-neutral-200">Garlic Bread</span>
-                <span class="text-white font-bold">&pound;4.50</span>
-              </div>
+                <span class="text-white font-bold">&pound;4.50</span> </div>
               <div class="flex justify-between p-2 rounded bg-white/[0.02] border border-white/[0.06]">
                 <span class="text-neutral-200">Garlic Bread with Cheese</span>
-                <span class="text-white font-bold">&pound;5.50</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-white font-bold">&pound;5.50</span> </div> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==================== SECTION 5: INDIAN STYLE & RICE DISHES (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 5: INDIAN STYLE & RICE DISHES (IMAGE ON RIGHT) ==================== -->
     <section id="section-indian" class="menu-section scroll-mt-36" data-category="indian" data-locations="glitch2">
 
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#5ce1e6] uppercase">Traditional Spices
-            &middot; Served with Rice &amp; Naan</span>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Indian Style &amp; Rice Dishes
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-400 -rotate-1">
-          Authentic curries &amp; fragrant stir-fried rice
-        </p>
-      </div>
+          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#5ce1e6] uppercase">Traditional Spices &middot; Served with Rice &amp; Naan</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Indian Style &amp; Rice Dishes</h2> </div>
+        <p class="font-script text-2xl text-neutral-400 -rotate-1">Authentic curries &amp; fragrant stir-fried rice</p> </div>
 
       <!-- 2-Column Grid: Items Left, Image RIGHT (Alternating!) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -1067,192 +540,105 @@
 
           <!-- Curries Group -->
           <div class="space-y-4">
-            <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Signature Indian
-              Curries</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Signature Indian Curries</span>
 
             <!-- Chicken Curry -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('CHICKEN CURRY', '£13.95', 'Tender chicken pieces simmered in rich, authentic Indian spiced sauce. Served with basmati rice and warm naan or paratha.', 'assets/menu-curry.jpg', ['HALAL'], 'Served with rice & naan or paratha', 'Pairs with an Indian Pale Ale or crisp mango lassi.')"
-              data-dietary="HALAL" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('CHICKEN CURRY', '£13.95', 'Tender chicken pieces simmered in rich, authentic Indian spiced sauce. Served with basmati rice and warm naan or paratha.', 'assets/menu-curry.jpg', ['HALAL'], 'Served with rice & naan or paratha', 'Pairs with an Indian Pale Ale or crisp mango lassi.')" data-dietary="HALAL" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Chicken Curry</h3>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">Authentic</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Chicken Curry</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">Authentic</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.95</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tender chicken in rich, authentic sauce. Served
-                with rice and naan or paratha.</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">13.95</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tender chicken in rich, authentic sauce. Served with rice and naan or paratha.</p> </div>
 
             <!-- Paneer Curry -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('PANEER CURRY', '£12.50', 'Creamy Indian cottage cheese cubes cooked with traditional roasted spices in aromatic gravy. Served with rice and naan or paratha.', 'assets/menu-curry.jpg', ['V'], 'Served with rice & naan or paratha', 'Pairs with refreshing citrus highballs.')"
-              data-dietary="V" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('PANEER CURRY', '£12.50', 'Creamy Indian cottage cheese cubes cooked with traditional roasted spices in aromatic gravy. Served with rice and naan or paratha.', 'assets/menu-curry.jpg', ['V'], 'Served with rice & naan or paratha', 'Pairs with refreshing citrus highballs.')" data-dietary="V" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Paneer Curry</h3>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Paneer Curry</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">12.50</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Creamy paneer cooked with traditional spices.
-                Served with rice and naan or paratha.</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">12.50</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Creamy paneer cooked with traditional spices. Served with rice and naan or paratha.</p> </div>
 
             <!-- Egg Curry -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('EGG CURRY', '£11.95', 'Boiled eggs simmered in flavourful authentic Indian sauce. Served with fragrant basmati rice and warm naan or paratha.', 'assets/menu-curry.jpg', ['V'], 'Served with rice & naan or paratha', 'Pairs with fresh pilsner.')"
-              data-dietary="V" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('EGG CURRY', '£11.95', 'Boiled eggs simmered in flavourful authentic Indian sauce. Served with fragrant basmati rice and warm naan or paratha.', 'assets/menu-curry.jpg', ['V'], 'Served with rice & naan or paratha', 'Pairs with fresh pilsner.')" data-dietary="V" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Egg Curry</h3>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Egg Curry</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.95</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Boiled eggs in flavourful Indian sauce. Served
-                with rice and naan or paratha.</p>
-            </div>
-          </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.95</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Boiled eggs in flavourful Indian sauce. Served with rice and naan or paratha.</p> </div> </div>
 
           <!-- Rice Dishes Group -->
           <div id="section-rice" class="pt-4 border-t border-white/10 space-y-4" data-category="rice">
-            <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Fragrant Stir-Fried Rice
-              Dishes</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Fragrant Stir-Fried Rice Dishes</span>
 
             <!-- Chicken Rice -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('CHICKEN RICE', '£11.95', 'Fragrant stir-fried rice tossed with spiced tender chicken, spring onions, and warm Indian spices.', 'assets/menu-curry.jpg', ['HALAL'], 'Available daily', 'Pairs with cold draft lager.')"
-              data-dietary="HALAL" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('CHICKEN RICE', '£11.95', 'Fragrant stir-fried rice tossed with spiced tender chicken, spring onions, and warm Indian spices.', 'assets/menu-curry.jpg', ['HALAL'], 'Available daily', 'Pairs with cold draft lager.')" data-dietary="HALAL" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Chicken Rice</h3>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Chicken Rice</h3>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.95</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fragrant stir-fried rice with chicken and
-                Indian spices.</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.95</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fragrant stir-fried rice with chicken and Indian spices.</p> </div>
 
             <!-- Paneer Rice -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('PANEER RICE', '£10.95', 'Stir-fried basmati rice cooked with golden paneer cubes and fresh garden vegetables.', 'assets/menu-curry.jpg', ['V'], 'Available daily', 'Pairs with fresh mojito.')"
-              data-dietary="V" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('PANEER RICE', '£10.95', 'Stir-fried basmati rice cooked with golden paneer cubes and fresh garden vegetables.', 'assets/menu-curry.jpg', ['V'], 'Available daily', 'Pairs with fresh mojito.')" data-dietary="V" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Paneer Rice</h3>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Paneer Rice</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">10.95</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Stir-fried rice with paneer and vegetables.</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">10.95</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Stir-fried rice with paneer and vegetables.</p> </div>
 
             <!-- Egg Rice -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('EGG RICE', '£9.95', 'Fragrant stir-fried rice tossed with scrambled egg, scallions, and delicate spices.', 'assets/menu-curry.jpg', ['V'], 'Available daily', 'Pairs with any beer.')"
-              data-dietary="V" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('EGG RICE', '£9.95', 'Fragrant stir-fried rice tossed with scrambled egg, scallions, and delicate spices.', 'assets/menu-curry.jpg', ['V'], 'Available daily', 'Pairs with any beer.')" data-dietary="V" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Egg Rice</h3>
-                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Egg Rice</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.95</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Stir-fried rice with egg and vegetables.</p>
-            </div>
-          </div>
-
-        </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.95</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Stir-fried rice with egg and vegetables.</p> </div> </div> </div>
 
         <!-- Right Column: Featured Curry Image RIGHT (5 cols) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-curry.jpg', 'Authentic Indian Chicken Curry with Basmati Rice and Warm Garlic Naan')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-curry.jpg', 'Authentic Indian Chicken Curry with Basmati Rice and Warm Garlic Naan')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-curry.jpg" alt="Indian Chicken Curry and Naan at The Glitch"
-                class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-curry.jpg" alt="Indian Chicken Curry and Naan at The Glitch" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Indian Style
-                  Curries</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Indian Style Curries</span> </div> </div> </div> </div> </div> </section>
 
-      </div>
-    </section>
-
-
-    <!-- ==================== SECTION 6: COCKTAILS & MOCKTAILS (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 6: COCKTAILS & MOCKTAILS (IMAGE ON LEFT) ==================== -->
     <!-- SHOWN ON BOTH GLITCH 1 (CITY CENTRE) AND GLITCH 2! -->
-    <section id="section-drinks" class="menu-section scroll-mt-36" data-category="drinks"
-      data-locations="glitch1 glitch2">
+    <section id="section-drinks" class="menu-section scroll-mt-36" data-category="drinks" data-locations="glitch1 glitch2">
 
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
           <div class="inline-flex items-center gap-2">
-            <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#4deeea] uppercase">Served at Both Pubs
-              &middot; City Centre &amp; Glitch 2</span>
-            <span
-              class="bg-[#4deeea]/20 text-[#5ce1e6] text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#4deeea]/30">The
-              Glitch 1 Feature</span>
-          </div>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Cocktails &amp; Mocktails
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-400 -rotate-1">
-          Handcrafted sips &amp; refreshing alcohol-free coolers
-        </p>
-      </div>
+            <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#4deeea] uppercase">Served at Both Pubs &middot; City Centre &amp; Glitch 2</span>
+            <span class="bg-[#4deeea]/20 text-[#5ce1e6] text-[10px] font-bold px-2 py-0.5 rounded-full border border-[#4deeea]/30">The Glitch 1 Feature</span> </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Cocktails &amp; Mocktails</h2> </div>
+        <p class="font-script text-2xl text-neutral-400 -rotate-1">Handcrafted sips &amp; refreshing alcohol-free coolers</p> </div>
 
       <!-- 2-Column Grid: Image LEFT, Items RIGHT (Alternating!) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
         <!-- Left Column: Featured Drinks Image LEFT (5 cols) -->
         <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-mocktails.jpg', 'Signature Mocktails & Cocktails — Fresh Mint Mojito, Passionfruit Martini & Berry Spritz')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-mocktails.jpg', 'Signature Mocktails & Cocktails — Fresh Mint Mojito, Passionfruit Martini & Berry Spritz')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-mocktails.jpg" alt="Artisan cocktails and mocktails at The Glitch"
-                class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-mocktails.jpg" alt="Artisan cocktails and mocktails at The Glitch" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Mocktail &amp; Cocktail
-                  Bar</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Mocktail &amp; Cocktail Bar</span> </div> </div> </div> </div>
 
         <!-- Right Column: Drinks & Mocktails List RIGHT (7 cols) -->
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
@@ -1261,143 +647,81 @@
           <div class="space-y-4">
             <div class="flex items-center justify-between border-b border-white/10 pb-2">
               <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-extrabold flex items-center gap-1.5">
-                <span>🌱</span> Signature Mocktails (City Centre Spotlight)
-              </span>
-              <span class="text-[11px] text-neutral-400">Non-Alcoholic</span>
-            </div>
+                <span>🌱</span> Signature Mocktails (City Centre Spotlight)  </span>
+              <span class="text-[11px] text-neutral-400">Non-Alcoholic</span> </div>
 
             <!-- Fresh Mint Mojito Mocktail -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('FRESH MINT MOJITO (MOCKTAIL)', '£6.50', 'Fresh muddled lime wedges, fresh garden mint, pure cane sugar, crushed ice, topped with chilled effervescent soda water. (Also available as rum cocktail £9.95).', 'assets/menu-mocktails.jpg', ['MOCKTAIL', 'POPULAR'], 'City Centre & Glitch 2', 'Ultra refreshing, crisp and aromatic.')"
-              data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('FRESH MINT MOJITO (MOCKTAIL)', '£6.50', 'Fresh muddled lime wedges, fresh garden mint, pure cane sugar, crushed ice, topped with chilled effervescent soda water. (Also available as rum cocktail £9.95).', 'assets/menu-mocktails.jpg', ['MOCKTAIL', 'POPULAR'], 'City Centre & Glitch 2', 'Ultra refreshing, crisp and aromatic.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Fresh Mint Mojito</h3>
-                  <span
-                    class="text-[9px] px-1.5 py-0.5 rounded bg-[#4deeea]/15 text-[#5ce1e6] font-bold">Mocktail</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Fresh Mint Mojito</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#4deeea]/15 text-[#5ce1e6] font-bold">Mocktail</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fresh mint, muddled lime, crushed ice, soda.
-                (Cocktail option: £9.95)</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fresh mint, muddled lime, crushed ice, soda. (Cocktail option: £9.95)</p> </div>
 
             <!-- Passionfruit Martini Mocktail -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('PASSIONFRUIT MARTINI (MOCKTAIL)', '£6.95', 'Sweet tropical passionfruit purée, vanilla bean syrup, fresh lime juice, served with a sparkling elderflower shooter. (Also available as vodka cocktail £10.50).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'City Centre & Glitch 2', 'Tropical, smooth, and vibrant.')"
-              data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('PASSIONFRUIT MARTINI (MOCKTAIL)', '£6.95', 'Sweet tropical passionfruit purée, vanilla bean syrup, fresh lime juice, served with a sparkling elderflower shooter. (Also available as vodka cocktail £10.50).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'City Centre & Glitch 2', 'Tropical, smooth, and vibrant.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Passionfruit Martini</h3>
-                  <span
-                    class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">Mocktail</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Passionfruit Martini</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">Mocktail</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.95</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Passionfruit purée, vanilla, lime, sparkling
-                fizz. (Cocktail option: £10.50)</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.95</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Passionfruit purée, vanilla, lime, sparkling fizz. (Cocktail option: £10.50)</p> </div>
 
             <!-- Virgin Piña Colada -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('VIRGIN PIÑA COLADA', '£6.50', 'Rich coconut cream shaken with fresh golden pineapple juice, crushed ice, and garnished with a caramelized pineapple slice. (Cocktail option: £9.95).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'City Centre & Glitch 2', 'Creamy tropical indulgence.')"
-              data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('VIRGIN PIÑA COLADA', '£6.50', 'Rich coconut cream shaken with fresh golden pineapple juice, crushed ice, and garnished with a caramelized pineapple slice. (Cocktail option: £9.95).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'City Centre & Glitch 2', 'Creamy tropical indulgence.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Piña Colada</h3>
-                  <span
-                    class="text-[9px] px-1.5 py-0.5 rounded bg-[#4deeea]/15 text-[#5ce1e6] font-bold">Mocktail</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Piña Colada</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#4deeea]/15 text-[#5ce1e6] font-bold">Mocktail</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Coconut cream, pineapple juice, crushed ice.
-                (Cocktail option: £9.95)</p>
-            </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Coconut cream, pineapple juice, crushed ice. (Cocktail option: £9.95)</p> </div>
 
             <!-- Berry Bliss Spritz -->
-            <div class="menu-item-row group"
-              onclick="openItemModal('BERRY BLISS SPRITZ', '£6.50', 'Muddled seasonal berries, raspberry coulis, fresh lime juice, sparkling Mediterranean tonic, and mint.', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'City Centre & Glitch 2', 'Tart, sweet, and effervescent.')"
-              data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('BERRY BLISS SPRITZ', '£6.50', 'Muddled seasonal berries, raspberry coulis, fresh lime juice, sparkling Mediterranean tonic, and mint.', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'City Centre & Glitch 2', 'Tart, sweet, and effervescent.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
-                  <h3
-                    class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                    Berry Bliss Spritz</h3>
-                  <span
-                    class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">Mocktail</span>
-                </div>
+                  <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Berry Bliss Spritz</h3>
+                  <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">Mocktail</span> </div>
                 <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span>
-              </div>
-              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fresh strawberries, raspberries, cranberry
-                splash, lime, sparkling tonic.</p>
-            </div>
-          </div>
+                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span> </div>
+              <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fresh strawberries, raspberries, cranberry splash, lime, sparkling tonic.</p> </div> </div>
 
           <!-- Classic Cocktails Grid (Poster List) -->
           <div class="pt-4 border-t border-white/10 space-y-3">
-            <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Classic Glitch
-              Cocktails</span>
+            <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Classic Glitch Cocktails</span>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
               <div class="flex justify-between p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
                 <span class="text-white font-medium">Long Island Iced Tea</span>
-                <span class="text-[#f4ede3] font-bold">&pound;10.50</span>
-              </div>
+                <span class="text-[#f4ede3] font-bold">&pound;10.50</span> </div>
               <div class="flex justify-between p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
                 <span class="text-white font-medium">Margarita</span>
-                <span class="text-[#f4ede3] font-bold">&pound;9.95</span>
-              </div>
+                <span class="text-[#f4ede3] font-bold">&pound;9.95</span> </div>
               <div class="flex justify-between p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
                 <span class="text-white font-medium">Cosmopolitan</span>
-                <span class="text-[#f4ede3] font-bold">&pound;9.95</span>
-              </div>
+                <span class="text-[#f4ede3] font-bold">&pound;9.95</span> </div>
               <div class="flex justify-between p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
                 <span class="text-white font-medium">Caipirinha</span>
-                <span class="text-[#f4ede3] font-bold">&pound;9.95</span>
-              </div>
+                <span class="text-[#f4ede3] font-bold">&pound;9.95</span> </div>
               <div class="flex justify-between p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
                 <span class="text-white font-medium">Whiskey Sour</span>
-                <span class="text-[#f4ede3] font-bold">&pound;10.00</span>
-              </div>
+                <span class="text-[#f4ede3] font-bold">&pound;10.00</span> </div>
               <div class="flex justify-between p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
                 <span class="text-white font-medium">Bloody Mary</span>
-                <span class="text-[#f4ede3] font-bold">&pound;9.95</span>
-              </div>
-            </div>
-          </div>
+                <span class="text-[#f4ede3] font-bold">&pound;9.95</span> </div> </div> </div> </div> </div> </section>
 
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- ==================== SECTION 7: DESSERTS (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 7: DESSERTS (IMAGE ON RIGHT) ==================== -->
     <section id="section-desserts" class="menu-section scroll-mt-36" data-category="desserts" data-locations="glitch2">
 
       <!-- Header -->
       <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
         <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff4fa8] uppercase">Sweet Treats &middot; Warm
-            Puddings</span>
-          <h2
-            class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">
-            Desserts
-          </h2>
-        </div>
-        <p class="font-script text-2xl text-neutral-400 -rotate-1">
-          Sweet finishes to remember
-        </p>
-      </div>
+          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff4fa8] uppercase">Sweet Treats &middot; Warm Puddings</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Desserts</h2> </div>
+        <p class="font-script text-2xl text-neutral-400 -rotate-1">Sweet finishes to remember</p> </div>
 
       <!-- 2-Column Grid: Items Left, Image RIGHT (Alternating!) -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
@@ -1406,128 +730,74 @@
         <div class="lg:col-span-7 space-y-5">
 
           <!-- Chocolate Brownie -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('CHOCOLATE BROWNIE', '£7.50', 'Warm, gooey dark chocolate fudge brownie served with a scoop of Madagascan vanilla bean ice cream and warm chocolate sauce drizzle.', 'assets/menu-dessert.jpg', ['V'], 'Warm Dessert', 'Pairs with an Espresso Martini or hot coffee.')"
-            data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('CHOCOLATE BROWNIE', '£7.50', 'Warm, gooey dark chocolate fudge brownie served with a scoop of Madagascan vanilla bean ice cream and warm chocolate sauce drizzle.', 'assets/menu-dessert.jpg', ['V'], 'Warm Dessert', 'Pairs with an Espresso Martini or hot coffee.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span class="text-xs text-[#ff4fa8] font-bold">★</span>
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Chocolate Brownie</h3>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">House
-                  Favorite</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Chocolate Brownie</h3>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">House Favorite</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">7.50</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Warm brownie served with vanilla ice cream and
-              chocolate sauce.</p>
-          </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">7.50</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Warm brownie served with vanilla ice cream and chocolate sauce.</p> </div>
 
           <!-- Cheese Cake -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('CHEESE CAKE', '£7.50', 'Velvety New York style cheesecake on a buttery biscuit base, topped with sweet forest berry compote and fresh mint.', 'assets/menu-dessert.jpg', ['V'], 'Available daily', 'Pairs with sweet dessert wine or fruit mocktails.')"
-            data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('CHEESE CAKE', '£7.50', 'Velvety New York style cheesecake on a buttery biscuit base, topped with sweet forest berry compote and fresh mint.', 'assets/menu-dessert.jpg', ['V'], 'Available daily', 'Pairs with sweet dessert wine or fruit mocktails.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Cheese Cake</h3>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">V</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Cheese Cake</h3>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">V</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">7.50</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Creamy cheesecake with berry compote.</p>
-          </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">7.50</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Creamy cheesecake with berry compote.</p> </div>
 
           <!-- Ice Cream -->
-          <div class="menu-item-row group"
-            onclick="openItemModal('ICE CREAM (VANILLA OR CHOCOLATE)', '£4.50', 'Two generous scoops of premium Italian gelato. Choose between Madagascan vanilla bean or rich Belgian chocolate.', 'assets/menu-dessert.jpg', ['V', 'GF'], 'Available daily', 'Simple, creamy and delicious.')"
-            data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('ICE CREAM (VANILLA OR CHOCOLATE)', '£4.50', 'Two generous scoops of premium Italian gelato. Choose between Madagascan vanilla bean or rich Belgian chocolate.', 'assets/menu-dessert.jpg', ['V', 'GF'], 'Available daily', 'Simple, creamy and delicious.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
-                <h3
-                  class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">
-                  Ice Cream</h3>
-                <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">Vanilla /
-                  Chocolate</span>
-              </div>
+                <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Ice Cream</h3>
+                <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">Vanilla / Chocolate</span> </div>
               <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">4.50</span>
-            </div>
-            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Vanilla or Chocolate.</p>
-          </div>
-
-        </div>
+              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">4.50</span> </div>
+            <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Vanilla or Chocolate.</p> </div> </div>
 
         <!-- Right Column: Featured Dessert Image RIGHT (5 cols) -->
         <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer"
-            onclick="openLightbox('assets/menu-dessert.jpg', 'Warm Chocolate Brownie with Vanilla Ice Cream and Chocolate Drizzle')">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-dessert.jpg', 'Warm Chocolate Brownie with Vanilla Ice Cream and Chocolate Drizzle')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-dessert.jpg" alt="Warm Chocolate Brownie with Ice Cream at The Glitch"
-                class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none">
-              </div>
+              <img src="assets/menu-dessert.jpg" alt="Warm Chocolate Brownie with Ice Cream at The Glitch" class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"> </div>
               <!-- Pill Badge -->
-              <div
-                class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
-                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Chocolate Brownie</span>
-              </div>
-            </div>
-          </div>
-        </div>
+              <div class="absolute bottom-5 left-1/2 -translate-x-1/2 bg-black/80 backdrop-blur-md border border-white/25 px-5 py-2 rounded-full text-center shadow-xl whitespace-nowrap">
+                <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider">Chocolate Brownie</span> </div> </div> </div> </div> </div> </section> </main>
 
-      </div>
-    </section>
-
-  </main>
-
-
-  <!-- ==================== RESERVATION BANNER CTA ==================== -->
-  <section
-    class="bg-gradient-to-b from-[#060a0f] via-[#0b111a] to-[#060a0f] border-t border-b border-white/[0.08] py-16 text-center relative overflow-hidden">
+<!-- ==================== RESERVATION BANNER CTA ==================== -->
+  <section class="bg-gradient-to-b from-[#060a0f] via-[#0b111a] to-[#060a0f] border-t border-b border-white/[0.08] py-16 text-center relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-6">
       <span class="text-xs uppercase tracking-[0.3em] text-[#4deeea] font-bold">Good Food Creates Great Memories</span>
-      <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">
-        Reserve Your Table at The Glitch
-      </h2>
+      <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Reserve Your Table at The Glitch</h2>
       <p class="text-neutral-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
         Perfect for groups &amp; celebrations &middot; Live music on weekends &middot; Book your table online in
         seconds.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
-        <button onclick="openBookingModal()"
-          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs sm:text-sm tracking-wider uppercase transition duration-200 shadow-xl active:scale-95">
+        <button onclick="openBookingModal()" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs sm:text-sm tracking-wider uppercase transition duration-200 shadow-xl active:scale-95">
           <span>Book a Table Now</span>
-          <span>&rarr;</span>
-        </button>
-        <a href="index.html#our-pubs"
-          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/25 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm tracking-wider uppercase transition duration-200">
-          <span>View Pub Locations</span>
-        </a>
-      </div>
-    </div>
-  </section>
+          <span>&rarr;</span> </button>
+        <a href="index.html#our-pubs" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/25 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm tracking-wider uppercase transition duration-200">
+          <span>View Pub Locations</span> </a> </div> </div> </section>
 
-
-  <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
+<!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
   <footer class="site-footer" id="contact" role="contentinfo">
     <div class="footer-container">
 
       <!-- SECTION 1 — BRAND STATEMENT -->
       <div class="footer-brand">
         <a href="index.html" class="footer-brand-logo-wrap" aria-label="The Glitch Homepage">
-          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" />
-        </a>
+          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" /> </a>
         <h2 class="footer-brand-title">THE GLITCH</h2>
         <div class="footer-brand-sub">PUB &bull; RESTAURANT</div>
         <div class="footer-brand-statement">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</div>
-        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p>
-      </div>
+        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p> </div>
 
       <!-- SECTION 2 — NAVIGATION -->
       <nav class="footer-nav" aria-label="Footer Navigation">
@@ -1538,9 +808,7 @@
           <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
           <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">GALLERY</a></li>
           <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
-          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li>
-        </ul>
-      </nav>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li> </ul> </nav>
 
       <!-- SECTION 3 — LOCATIONS -->
       <div class="footer-locations">
@@ -1551,20 +819,14 @@
             <p class="location-address">42 Peter Street, City Centre<br>Manchester, M2 5GP</p>
             <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Centre');return false;}">
               <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div>
           <div class="footer-locations-divider" aria-hidden="true"></div>
           <div class="footer-location-item">
             <span class="location-index">LOCATION 02</span>
             <p class="location-address">18 Dale Street, Northern Quarter<br>Manchester, M1 1EZ</p>
             <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Northern Quarter');return false;}">
               <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
-            </a>
-          </div>
-        </div>
-      </div>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
 
       <!-- SECTION 4 — SOCIAL MEDIA -->
       <div class="footer-social">
@@ -1574,24 +836,16 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-            <span>Instagram</span>
-          </a>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg>
+            <span>Instagram</span> </a>
           <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-            </svg>
-            <span>Facebook</span>
-          </a>
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
+            <span>Facebook</span> </a>
           <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
-            </svg>
-            <span>TikTok</span>
-          </a>
-        </div>
-      </div>
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path> </svg>
+            <span>TikTok</span> </a> </div> </div>
 
       <!-- SECTION 5 — PRIMARY CTA -->
       <div class="footer-cta">
@@ -1599,9 +853,7 @@
         <p class="footer-cta-desc">Make your next visit one to remember.</p>
         <button type="button" class="footer-cta-btn" onclick="openBookingModal()" aria-label="Book a table at The Glitch">
           <span>BOOK A TABLE</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
-        </button>
-      </div>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span> </button> </div>
 
       <!-- SECTION 6 — BOTTOM BAR -->
       <div class="footer-bottom">
@@ -1611,182 +863,108 @@
         <div class="footer-bottom-right">
           <a href="#" class="legal-link">PRIVACY POLICY</a>
           <span class="legal-sep" aria-hidden="true">&middot;</span>
-          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a>
-        </div>
-      </div>
+          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a> </div> </div> </div> </footer>
 
-    </div>
-  </footer>
-
-
-  <!-- ==================== ITEM DETAIL MODAL ==================== -->
-  <div id="itemModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300"
-    aria-modal="true" role="dialog">
-    <div
-      class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full overflow-hidden relative shadow-2xl space-y-0">
-      <button onclick="closeItemModal()"
-        class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 text-neutral-300 hover:text-white flex items-center justify-center transition"
-        aria-label="Close Dish Modal">
-        &times;
-      </button>
+<!-- ==================== ITEM DETAIL MODAL ==================== -->
+  <div id="itemModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/85 backdrop-blur-md transition-opacity duration-300" aria-modal="true" role="dialog">
+    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full overflow-hidden relative shadow-2xl space-y-0">
+      <button onclick="closeItemModal()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 text-neutral-300 hover:text-white flex items-center justify-center transition" aria-label="Close Dish Modal">&times;</button>
 
       <div id="modalItemImgContainer" class="relative h-56 w-full overflow-hidden bg-black">
         <img id="modalItemImg" src="" alt="" class="w-full h-full object-cover" />
         <div class="absolute inset-0 bg-gradient-to-t from-[#0e141c] via-transparent to-transparent"></div>
-        <div id="modalItemBadges" class="absolute bottom-3 left-5 flex flex-wrap gap-1.5"></div>
-      </div>
+        <div id="modalItemBadges" class="absolute bottom-3 left-5 flex flex-wrap gap-1.5"></div> </div>
 
       <div class="p-6 space-y-4">
         <div class="flex items-baseline justify-between gap-2 border-b border-white/10 pb-3">
           <div>
             <h3 id="modalItemTitle" class="text-2xl font-serif font-extrabold text-white uppercase"></h3>
-            <span id="modalItemTiming" class="text-xs text-[#4deeea] font-medium block mt-0.5"></span>
-          </div>
-          <span id="modalItemPrice" class="text-2xl font-serif font-bold text-[#f4ede3] shrink-0"></span>
-        </div>
+            <span id="modalItemTiming" class="text-xs text-[#4deeea] font-medium block mt-0.5"></span> </div>
+          <span id="modalItemPrice" class="text-2xl font-serif font-bold text-[#f4ede3] shrink-0"></span> </div>
 
         <p id="modalItemDesc" class="text-neutral-300 text-sm leading-relaxed"></p>
 
-        <div id="modalItemPairingContainer"
-          class="bg-white/[0.04] border border-white/[0.08] p-3.5 rounded-xl space-y-1">
+        <div id="modalItemPairingContainer" class="bg-white/[0.04] border border-white/[0.08] p-3.5 rounded-xl space-y-1">
           <span class="text-[10px] uppercase tracking-widest text-[#5ce1e6] font-bold">Recommended Pairing</span>
-          <p id="modalItemPairing" class="text-xs text-neutral-300"></p>
-        </div>
+          <p id="modalItemPairing" class="text-xs text-neutral-300"></p> </div>
 
         <div class="pt-2 flex items-center gap-3">
-          <button onclick="bookTableForDish()"
-            class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-950 font-bold text-xs uppercase tracking-wider transition duration-200">
-            Book a Table to Taste
-          </button>
-          <button onclick="closeItemModal()"
-            class="px-5 py-3 rounded-full border border-white/20 text-white hover:bg-white/10 text-xs font-semibold uppercase tracking-wider transition duration-200">
-            Close
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
+          <button onclick="bookTableForDish()" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-950 font-bold text-xs uppercase tracking-wider transition duration-200">Book a Table to Taste</button>
+          <button onclick="closeItemModal()" class="px-5 py-3 rounded-full border border-white/20 text-white hover:bg-white/10 text-xs font-semibold uppercase tracking-wider transition duration-200">Close</button> </div> </div> </div> </div>
 
-
-  <!-- ==================== TABLE BOOKING MODAL ==================== -->
-  <div id="bookingModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
-    aria-modal="true" role="dialog">
-    <div
-      class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
+<!-- ==================== TABLE BOOKING MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog">
+    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
       <!-- Close Button -->
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition"
-        aria-label="Close Booking Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Booking Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
 
       <!-- Modal Title -->
       <div>
         <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
         <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
-        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p>
-      </div>
+        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p> </div>
 
       <!-- Booking Form -->
       <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
-          <select id="bookingLocation"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
+          <select id="bookingLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
             <option value="City Centre">The Glitch 1 &mdash; City Centre (Mocktail Lounge &amp; Bar)</option>
-            <option value="Northern Quarter" selected>The Glitch 2 &mdash; Northern Quarter (Dining &amp; Brunch)
-            </option>
-          </select>
-        </div>
+            <option value="Northern Quarter" selected>The Glitch 2 &mdash; Northern Quarter (Dining &amp; Brunch)  </option> </select> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Date</label>
-            <input type="date" required id="bookingDate"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" />
-          </div>
+            <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" /> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Time</label>
-            <select required id="bookingTime"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="12:00 PM">12:00 PM (Brunch)</option>
               <option value="1:30 PM">1:30 PM (Brunch)</option>
               <option value="5:00 PM">5:00 PM</option>
               <option value="6:30 PM">6:30 PM</option>
               <option value="7:30 PM" selected>7:30 PM</option>
               <option value="8:30 PM">8:30 PM</option>
-              <option value="9:30 PM">9:30 PM</option>
-            </select>
-          </div>
-        </div>
+              <option value="9:30 PM">9:30 PM</option> </select> </div> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
-            <select id="bookingGuests"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="1 person">1 person</option>
               <option value="2 people" selected>2 people</option>
               <option value="3 people">3 people</option>
               <option value="4 people">4 people</option>
               <option value="6 people">6 people</option>
-              <option value="8+ people (Group)">8+ people (Group)</option>
-            </select>
-          </div>
+              <option value="8+ people (Group)">8+ people (Group)</option> </select> </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Seating Area</label>
-            <select id="bookingArea"
-              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+            <select id="bookingArea" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
               <option value="Dining Room">Dining Room</option>
               <option value="Bar Booths">Bar Booths</option>
-              <option value="Outdoor Terrace">Outdoor Terrace</option>
-            </select>
-          </div>
-        </div>
+              <option value="Outdoor Terrace">Outdoor Terrace</option> </select> </div> </div>
 
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Your Name</label>
-          <input type="text" required id="bookingName" placeholder="Alex Morgan"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-        </div>
+          <input type="text" required id="bookingName" placeholder="Alex Morgan" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
 
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Email / Phone</label>
-          <input type="text" required id="bookingContact" placeholder="alex@example.com / 07123 456789"
-            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
-        </div>
+          <input type="text" required id="bookingContact" placeholder="alex@example.com / 07123 456789" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
 
         <div class="pt-2">
-          <button type="submit"
-            class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-md">
-            Confirm Table Reservation
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+          <button type="submit" class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-md">Confirm Table Reservation</button> </div> </form> </div> </div>
 
-
-  <!-- ==================== LIGHTBOX MODAL ==================== -->
-  <div id="lightboxModal"
-    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md"
-    onclick="closeLightbox()">
+<!-- ==================== LIGHTBOX MODAL ==================== -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/90 backdrop-blur-md" onclick="closeLightbox()">
     <div class="relative max-w-4xl max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeLightbox()"
-        class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
-        <span>Close</span> &times;
-      </button>
-      <img id="lightboxImg" src="" alt="The Glitch Food Zoom"
-        class="max-h-[80vh] w-auto rounded-2xl border border-white/20 shadow-2xl object-contain" />
-      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p>
-    </div>
-  </div>
+      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
+        <span>Close</span> &times;  </button>
+      <img id="lightboxImg" src="" alt="The Glitch Food Zoom" class="max-h-[80vh] w-auto rounded-2xl border border-white/20 shadow-2xl object-contain" />
+      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p> </div> </div>
 
-
-  <!-- ==================== JAVASCRIPT LOGIC & BUSINESS RULES ==================== -->
+<!-- ==================== JAVASCRIPT LOGIC & BUSINESS RULES ==================== -->
   <script>
     // State management
     let currentLocation = 'all'; // 'all', 'glitch1' (Mocktails only), 'glitch2' (All items)
@@ -2059,132 +1237,8 @@
       closeItemModal();
       openBookingModal();
     }
-
-    // Table Booking Modal
-    function openBookingModal(locationName) {
-      const modal = document.getElementById('bookingModal');
-      const locationSelect = document.getElementById('bookingLocation');
-      if (locationName && locationSelect) {
-        if (locationName.includes('City') || locationName.includes('1')) {
-          locationSelect.value = 'City Centre';
-        } else if (locationName.includes('Northern') || locationName.includes('2')) {
-          locationSelect.value = 'Northern Quarter';
-        }
-      } else if (currentLocation === 'glitch1' && locationSelect) {
-        locationSelect.value = 'City Centre';
-      } else if (currentLocation === 'glitch2' && locationSelect) {
-        locationSelect.value = 'Northern Quarter';
-      }
-
-      if (modal) {
-        modal.classList.remove('hidden');
-        document.body.style.overflow = 'hidden';
-      }
-    }
-
-    function closeBookingModal() {
-      const modal = document.getElementById('bookingModal');
-      if (modal) {
-        modal.classList.add('hidden');
-        document.body.style.overflow = '';
-      }
-    }
-
-    function handleBookingSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('bookingName').value;
-      const pub = document.getElementById('bookingLocation').value;
-      const time = document.getElementById('bookingTime').value;
-      const guests = document.getElementById('bookingGuests').value;
-
-      alert(`🎉 Table Reserved!\n\nThank you ${name}, your table for ${guests} at The Glitch (${pub}) at ${time} has been requested.\nWe have sent a confirmation to your contact details.`);
-      closeBookingModal();
-    }
-
-    // Lightbox Modal
-    function openLightbox(src, caption) {
-      const modal = document.getElementById('lightboxModal');
-      const img = document.getElementById('lightboxImg');
-      const cap = document.getElementById('lightboxCaption');
-      img.src = src;
-      cap.innerText = caption || '';
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-
-    function closeLightbox() {
-      const modal = document.getElementById('lightboxModal');
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-
-    // Close on Escape key
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeBookingModal();
-        closeItemModal();
-        closeLightbox();
-      }
-    });
-
-    // Automatic transparent logo processing on page load
-    (function initTransparentLogos() {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = function () {
-        try {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.naturalWidth || 700;
-          canvas.height = img.naturalHeight || 630;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0);
-          const idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const d = idata.data;
-          for (let i = 0; i < d.length; i += 4) {
-            const m = Math.max(d[i], d[i + 1], d[i + 2]);
-            if (m <= 14) {
-              d[i + 3] = 0;
-            } else {
-              const ratio = (m - 14) / 241;
-              d[i + 3] = Math.min(255, Math.round(Math.pow(ratio, 0.75) * 255));
-              const scale = Math.min(2.0, 1.0 / Math.max(0.2, ratio));
-              d[i] = Math.min(255, Math.round(d[i] * scale));
-              d[i + 1] = Math.min(255, Math.round(d[i + 1] * scale));
-              d[i + 2] = Math.min(255, Math.round(d[i + 2] * scale));
-            }
-          }
-          ctx.putImageData(idata, 0, 0);
-          const dataUrl = canvas.toDataURL('image/png');
-          document.querySelectorAll('img[src*="logo.png"]').forEach(el => {
-            el.src = dataUrl;
-          });
-          const fav = document.querySelector('link[rel="icon"]');
-          if (fav) fav.href = dataUrl;
-        } catch (e) { }
-      };
-      img.src = 'assets/logo.png';
-    })();
-
-    // Dismiss Glitch Preloader
-    window.addEventListener('load', () => {
-      const loader = document.getElementById('glitchPageLoader');
-      if (loader) {
-        setTimeout(() => {
-          loader.classList.add('loader-fade-out');
-          setTimeout(() => { loader.remove(); }, 600);
-        }, 400);
-      }
-    });
-
-    // Safety fallback: ensure page is revealed after max 2.5s
-    setTimeout(() => {
-      const loader = document.getElementById('glitchPageLoader');
-      if (loader && !loader.classList.contains('loader-fade-out')) {
-        loader.classList.add('loader-fade-out');
-        setTimeout(() => { loader.remove(); }, 600);
-      }
-    }, 2500);
   </script>
+  <script src="assets/app.js"></script>
 
 </body>
 

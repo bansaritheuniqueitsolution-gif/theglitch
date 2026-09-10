@@ -427,74 +427,7 @@
   }
 
   // -------------------------------------------------------------------------
-  // 7. MOBILE MENU TOGGLE (EXPOSED GLOBALLY)
-  // -------------------------------------------------------------------------
-  window.toggleMobileMenu = function () {
-    const menu = document.getElementById('mobileMenu');
-    if (menu) {
-      menu.classList.toggle('hidden');
-    }
-  };
-
-  // -------------------------------------------------------------------------
-  // 8. TABLE RESERVATION MODAL (EXPOSED GLOBALLY)
-  // -------------------------------------------------------------------------
-  window.openBookingModal = function (locationName) {
-    const modal = document.getElementById('bookingModal');
-    const locationSelect = document.getElementById('bookingLocation');
-    if (locationName && locationSelect) {
-      if (locationName.includes('City')) {
-        locationSelect.value = 'City Centre';
-      } else if (locationName.includes('Northern')) {
-        locationSelect.value = 'Northern Quarter';
-      }
-    }
-    if (modal) {
-      modal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-  };
-
-  window.closeBookingModal = function () {
-    const modal = document.getElementById('bookingModal');
-    if (modal) {
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
-    }
-  };
-
-  window.handleBookingSubmit = function (e) {
-    if (e && e.preventDefault) e.preventDefault();
-    const nameInput = document.getElementById('bookingName');
-    const pubInput = document.getElementById('bookingLocation');
-    const timeInput = document.getElementById('bookingTime');
-    const guestsInput = document.getElementById('bookingGuests');
-
-    const name = nameInput ? nameInput.value : 'Guest';
-    const pub = pubInput ? pubInput.value : 'The Glitch';
-    const time = timeInput ? timeInput.value : '7:00 PM';
-    const guests = guestsInput ? guestsInput.value : '2 Guests';
-
-    alert(`🎉 Table Reserved!\n\nThank you ${name}, your table for ${guests} at The Glitch (${pub}) at ${time} has been requested.\nWe have sent a confirmation to your contact details.`);
-    window.closeBookingModal();
-  };
-
-  // Click outside to close booking modal
-  const bookingModal = document.getElementById('bookingModal');
-  if (bookingModal) {
-    bookingModal.addEventListener('click', (e) => {
-      if (e.target === bookingModal) window.closeBookingModal();
-    });
-  }
-
-  window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && bookingModal && !bookingModal.classList.contains('hidden')) {
-      window.closeBookingModal();
-    }
-  });
-
-  // -------------------------------------------------------------------------
-  // 9. INITIALIZATION
+  // 7. INITIALIZATION
   // -------------------------------------------------------------------------
   document.addEventListener('DOMContentLoaded', () => {
     renderGallery(GALLERY_DATA);
@@ -509,44 +442,6 @@
     if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
     if (lightboxNext) lightboxNext.addEventListener('click', showNextImage);
     if (lightboxPrev) lightboxPrev.addEventListener('click', showPrevImage);
-
-    // Automatic transparent logo processing on page load
-    (function initTransparentLogos() {
-      const img = new Image();
-      img.crossOrigin = "anonymous";
-      img.onload = function() {
-        try {
-          const canvas = document.createElement('canvas');
-          canvas.width = img.naturalWidth || 700;
-          canvas.height = img.naturalHeight || 630;
-          const ctx = canvas.getContext('2d');
-          ctx.drawImage(img, 0, 0);
-          const idata = ctx.getImageData(0, 0, canvas.width, canvas.height);
-          const d = idata.data;
-          for (let i = 0; i < d.length; i += 4) {
-            const m = Math.max(d[i], d[i+1], d[i+2]);
-            if (m <= 14) {
-              d[i+3] = 0;
-            } else {
-              const ratio = (m - 14) / 241;
-              d[i+3] = Math.min(255, Math.round(Math.pow(ratio, 0.75) * 255));
-              const scale = Math.min(2.0, 1.0 / Math.max(0.2, ratio));
-              d[i] = Math.min(255, Math.round(d[i] * scale));
-              d[i+1] = Math.min(255, Math.round(d[i+1] * scale));
-              d[i+2] = Math.min(255, Math.round(d[i+2] * scale));
-            }
-          }
-          ctx.putImageData(idata, 0, 0);
-          const dataUrl = canvas.toDataURL('image/png');
-          document.querySelectorAll('img[src*="logo.png"]').forEach(el => {
-            el.src = dataUrl;
-          });
-          const fav = document.querySelector('link[rel="icon"]');
-          if (fav) fav.href = dataUrl;
-        } catch(e) {}
-      };
-      img.src = 'assets/logo.png';
-    })();
   });
 
 })();
