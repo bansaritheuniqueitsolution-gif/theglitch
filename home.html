@@ -124,6 +124,23 @@
     .logo-no-bg {
       filter: url(#remove-black-bg);
     }
+
+    /* Glitch Loader & Spinner Styles */
+    @keyframes glitch-load-slide {
+      0% { transform: translateX(-100%); }
+      50% { transform: translateX(0%); }
+      100% { transform: translateX(100%); }
+    }
+
+    .loader-progress-bar {
+      animation: glitch-load-slide 1.4s ease-in-out infinite;
+    }
+
+    .loader-fade-out {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
   </style>
 </head>
 
@@ -142,6 +159,46 @@
     </defs>
   </svg>
 
+  <!-- ==================== GLITCH PAGE PRELOADER & SPINNER ==================== -->
+  <div id="glitchPageLoader"
+    class="fixed inset-0 z-[99999] bg-[#060a0f] flex flex-col items-center justify-center transition-all duration-500 ease-out select-none">
+    <!-- Ambient glowing radial backdrop -->
+    <div
+      class="absolute w-80 sm:w-96 h-80 sm:h-96 bg-gradient-to-tr from-[#ff2a85]/20 via-transparent to-[#4deeea]/20 rounded-full blur-3xl pointer-events-none animate-pulse">
+    </div>
+
+    <div class="relative z-10 flex flex-col items-center">
+      <!-- Neon Dual-Ring Spinner enclosing Logo -->
+      <div class="relative w-28 h-28 sm:w-32 sm:h-32 flex items-center justify-center">
+        <!-- Outer Glowing Cyan Spinner Ring (Clockwise) -->
+        <div class="absolute inset-0 rounded-full border-2 border-transparent border-t-[#4deeea] border-r-[#4deeea]/40 animate-spin"
+          style="animation-duration: 1.1s; filter: drop-shadow(0 0 8px rgba(77, 238, 234, 0.75));"></div>
+        <!-- Inner Glowing Pink Spinner Ring (Counter-Clockwise) -->
+        <div class="absolute inset-2 sm:inset-2.5 rounded-full border-2 border-transparent border-b-[#ff2a85] border-l-[#ff2a85]/40 animate-spin"
+          style="animation-duration: 1.5s; animation-direction: reverse; filter: drop-shadow(0 0 8px rgba(255, 42, 133, 0.75));"></div>
+        <!-- Center Pulsing Glitch Logo -->
+        <img src="assets/logo.png" alt="The Glitch Logo"
+          class="h-12 sm:h-14 w-auto object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" />
+      </div>
+
+      <!-- Typography and Glowing Loading Bar -->
+      <div class="mt-6 flex flex-col items-center space-y-2.5">
+        <span class="neon-cyan-text font-serif text-base sm:text-lg font-extrabold tracking-[0.3em] uppercase">
+          THE GLITCH
+        </span>
+
+        <!-- Glowing Progress Track -->
+        <div class="w-36 sm:w-44 h-1 bg-white/10 rounded-full overflow-hidden relative shadow-inner">
+          <div class="loader-progress-bar absolute inset-y-0 left-0 bg-gradient-to-r from-[#ff2a85] via-[#4deeea] to-[#ff2a85] rounded-full w-full"></div>
+        </div>
+
+        <span class="text-[10px] tracking-[0.25em] text-neutral-400 font-bold uppercase pt-0.5">
+          Good Food &bull; Great Drinks &bull; Good Times
+        </span>
+      </div>
+    </div>
+  </div>
+
   <!-- ==================== HEADER / NAVBAR ==================== -->
   <header
     class="sticky top-0 z-50 bg-[#060a0f]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
@@ -156,11 +213,10 @@
       <nav class="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
         <a href="#hero"
           class="text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-white after:rounded-full">Home</a>
-        <a href="#our-pubs" class="hover:text-white transition duration-200">Our Pubs</a>
-        <a href="#about" class="hover:text-white transition duration-200">Food &amp; Drinks</a>
+        <a href="our-pubs.html" class="hover:text-white transition duration-200">Our Pubs</a>
+        <a href="menu.html" class="hover:text-white transition duration-200">Food &amp; Drinks</a>
         <a href="#events" class="hover:text-white transition duration-200">What's On</a>
         <a href="#gallery" class="hover:text-white transition duration-200">Gallery</a>
-        <a href="#about" class="hover:text-white transition duration-200">About</a>
         <a href="#contact" class="hover:text-white transition duration-200">Contact</a>
       </nav>
 
@@ -191,12 +247,10 @@
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="hidden md:hidden bg-[#0a0f16] border-b border-white/10 px-6 py-5 space-y-4">
       <a href="#hero" onclick="toggleMobileMenu()" class="block text-white font-semibold py-1">Home</a>
-      <a href="#our-pubs" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">Our Pubs</a>
-      <a href="#about" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">Food &amp;
-        Drinks</a>
+      <a href="our-pubs.html" class="block text-neutral-300 hover:text-white py-1">Our Pubs</a>
+      <a href="menu.html" class="block text-neutral-300 hover:text-white py-1">Food &amp; Drinks</a>
       <a href="#events" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">What's On</a>
       <a href="#gallery" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">Gallery</a>
-      <a href="#about" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">About</a>
       <a href="#contact" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">Contact</a>
       <div class="pt-2">
         <button onclick="openBookingModal(); toggleMobileMenu();"
@@ -243,7 +297,7 @@
 
           <!-- Action Buttons -->
           <div class="flex flex-wrap items-center gap-4 pt-1">
-            <a href="#our-pubs"
+            <a href="our-pubs.html"
               class="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-sm tracking-wide transition duration-200 shadow-md hover:shadow-cyan-500/10 hover:-translate-y-0.5">
               <span>Explore Our Pubs</span>
               <span>&rarr;</span>
@@ -405,11 +459,11 @@
 
             <!-- Bottom Action buttons -->
             <div class="flex flex-wrap items-center gap-3 pt-6 mt-6 border-t border-white/[0.08]">
-              <button onclick="openBookingModal('City Centre')"
+              <a href="our-pubs.html#city-centre"
                 class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200">
                 <span>Explore Pub</span>
                 <span>&rarr;</span>
-              </button>
+              </a>
               <button onclick="openBookingModal('City Centre')"
                 class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
                 <svg class="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -494,11 +548,11 @@
 
             <!-- Bottom Action buttons -->
             <div class="flex flex-wrap items-center gap-3 pt-6 mt-6 border-t border-white/[0.08]">
-              <button onclick="openBookingModal('Northern Quarter')"
+              <a href="our-pubs.html#northern-quarter"
                 class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200">
                 <span>Explore Pub</span>
                 <span>&rarr;</span>
-              </button>
+              </a>
               <button onclick="openBookingModal('Northern Quarter')"
                 class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
                 <svg class="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -987,11 +1041,10 @@
         <!-- Center Nav Links -->
         <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-neutral-300">
           <a href="#hero" class="hover:text-white transition duration-200">Home</a>
-          <a href="#our-pubs" class="hover:text-white transition duration-200">Our Pubs</a>
-          <a href="#about" class="hover:text-white transition duration-200">Food &amp; Drinks</a>
+          <a href="our-pubs.html" class="hover:text-white transition duration-200">Our Pubs</a>
+          <a href="menu.html" class="hover:text-white transition duration-200">Food &amp; Drinks</a>
           <a href="#events" class="hover:text-white transition duration-200">What's On</a>
           <a href="#gallery" class="hover:text-white transition duration-200">Gallery</a>
-          <a href="#about" class="hover:text-white transition duration-200">About</a>
           <a href="#contact" class="hover:text-white transition duration-200">Contact</a>
         </nav>
 
@@ -1352,6 +1405,26 @@
       };
       img.src = 'assets/logo.png';
     })();
+
+    // Dismiss Glitch Preloader
+    window.addEventListener('load', () => {
+      const loader = document.getElementById('glitchPageLoader');
+      if (loader) {
+        setTimeout(() => {
+          loader.classList.add('loader-fade-out');
+          setTimeout(() => { loader.remove(); }, 600);
+        }, 400);
+      }
+    });
+
+    // Safety fallback: ensure page is revealed after max 2.5s
+    setTimeout(() => {
+      const loader = document.getElementById('glitchPageLoader');
+      if (loader && !loader.classList.contains('loader-fade-out')) {
+        loader.classList.add('loader-fade-out');
+        setTimeout(() => { loader.remove(); }, 600);
+      }
+    }, 2500);
   </script>
 
 </body>
