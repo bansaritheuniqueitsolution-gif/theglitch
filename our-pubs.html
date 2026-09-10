@@ -16,8 +16,16 @@
     href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap"
     rel="stylesheet">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Production Precompiled Stylesheet (100% Offline, Zero-FOUC, Instant Load) -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/header.css" />
+  <link rel="stylesheet" href="assets/footer.css" />
+
+  <!-- Tailwind CSS (Local with CDN fallback) -->
+  <script src="assets/tailwind.min.js"></script>
+  <script>
+    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+  </script>
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -195,8 +203,8 @@
         <div class="absolute inset-2 sm:inset-2.5 rounded-full border-2 border-transparent border-b-[#ff2a85] border-l-[#ff2a85]/40 animate-spin"
           style="animation-duration: 1.5s; animation-direction: reverse; filter: drop-shadow(0 0 8px rgba(255, 42, 133, 0.75));"></div>
         <!-- Center Pulsing Glitch Logo -->
-        <img src="assets/logo.png" alt="The Glitch Logo"
-          class="h-12 sm:h-14 w-auto object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" />
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="48"
+          class="h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain logo-no-bg animate-pulse drop-shadow-[0_0_16px_rgba(77,238,234,0.85)]" />
       </div>
 
       <!-- Typography and Glowing Loading Bar -->
@@ -219,31 +227,30 @@
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
   <header
-    class="sticky top-0 z-50 bg-[#060a0f]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
+    <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
 
       <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
-        <img src="assets/logo.png" alt="The Glitch Logo"
-          class="h-12 sm:h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(0,240,255,0.4)]" />
+      <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52"
+          class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" />
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
-        <a href="index.html" class="hover:text-white transition duration-200">Home</a>
+      <nav class="glitch-header-nav hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
+        <a href="index.html" class="glitch-nav-link hover:text-white transition duration-200">Home</a>
         <a href="our-pubs.html"
-          class="text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Our Pubs</a>
-        <a href="menu.html" class="hover:text-white transition duration-200">Food &amp; Drinks</a>
-        <a href="index.html#events" class="hover:text-white transition duration-200">What's On</a>
-        <a href="index.html#gallery" class="hover:text-white transition duration-200">Gallery</a>
-        <a href="#contact" class="hover:text-white transition duration-200">Contact</a>
+          class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Our Pubs</a>
+        <a href="menu.html" class="glitch-nav-link hover:text-white transition duration-200">Food &amp; Drinks</a>
+        <a href="gallery.html" class="glitch-nav-link hover:text-white transition duration-200">Gallery</a>
+        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a>
       </nav>
 
       <!-- Right Action & Mobile Button -->
-      <div class="flex items-center gap-3">
+      <div class="glitch-header-actions flex items-center gap-3">
         <button onclick="openBookingModal()"
-          class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
-          <svg class="w-4 h-4 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
@@ -252,9 +259,9 @@
 
         <!-- Mobile Menu Hamburger Button -->
         <button onclick="toggleMobileMenu()"
-          class="md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
+          class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
           aria-label="Toggle Navigation Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16" />
           </svg>
@@ -264,16 +271,15 @@
     </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-[#0a0f16] border-b border-white/10 px-6 py-5 space-y-4">
-      <a href="index.html" class="block text-neutral-300 hover:text-white py-1">Home</a>
-      <a href="our-pubs.html" class="block text-white font-semibold py-1">Our Pubs</a>
-      <a href="menu.html" class="block text-neutral-300 hover:text-white py-1">Food &amp; Drinks</a>
-      <a href="index.html#events" class="block text-neutral-300 hover:text-white py-1">What's On</a>
-      <a href="index.html#gallery" class="block text-neutral-300 hover:text-white py-1">Gallery</a>
-      <a href="#contact" onclick="toggleMobileMenu()" class="block text-neutral-300 hover:text-white py-1">Contact</a>
+    <div id="mobileMenu" class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
+      <a href="index.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Home</a>
+      <a href="our-pubs.html" class="glitch-mobile-nav-link active block text-[#4deeea] font-semibold py-1">Our Pubs</a>
+      <a href="menu.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Food &amp; Drinks</a>
+      <a href="gallery.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Gallery</a>
+      <a href="contact.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Contact</a>
       <div class="pt-2">
         <button onclick="openBookingModal(); toggleMobileMenu();"
-          class="w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
+          class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
           <span>Book a Table</span>
         </button>
       </div>
@@ -1610,49 +1616,104 @@
   </section>
 
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer id="contact" class="bg-[#05080c] border-t border-white/[0.08] pt-14 pb-8 text-neutral-400">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+  <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="footer-container">
 
-      <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-8 border-b border-white/[0.08]">
-        
-        <!-- Brand -->
-        <a href="index.html" class="flex items-center gap-2 shrink-0 py-1" aria-label="The Glitch Homepage">
-          <img src="assets/logo.png" alt="The Glitch Logo"
-            class="h-10 sm:h-12 w-auto object-contain hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_10px_rgba(0,240,255,0.4)]" />
+      <!-- SECTION 1 — BRAND STATEMENT -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo-wrap" aria-label="The Glitch Homepage">
+          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" />
         </a>
-
-        <!-- Center Nav Links -->
-        <nav class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-neutral-300">
-          <a href="index.html" class="hover:text-white transition duration-200">Home</a>
-          <a href="our-pubs.html" class="text-white transition duration-200">Our Pubs</a>
-          <a href="menu.html" class="hover:text-white transition duration-200">Food &amp; Drinks</a>
-          <a href="index.html#events" class="hover:text-white transition duration-200">What's On</a>
-          <a href="index.html#gallery" class="hover:text-white transition duration-200">Gallery</a>
-          <a href="#contact" class="hover:text-white transition duration-200">Contact</a>
-        </nav>
-
-        <!-- Right Side Locations -->
-        <div class="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 text-xs text-neutral-400">
-          <div class="flex items-center gap-1.5">
-            <span>📍</span>
-            <span><strong>Pub 01</strong> &middot; City Centre (123 High St)</span>
-          </div>
-          <div class="flex items-center gap-1.5">
-            <span>📍</span>
-            <span><strong>Pub 02</strong> &middot; Northern Quarter (45 Oldham St)</span>
-          </div>
-        </div>
-
+        <h2 class="footer-brand-title">THE GLITCH</h2>
+        <div class="footer-brand-sub">PUB &bull; RESTAURANT</div>
+        <div class="footer-brand-statement">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</div>
+        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p>
       </div>
 
-      <!-- Bottom Row: Copyright & Tagline -->
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-neutral-500">
-        <div>
-          &copy; 2025 The Glitch Pubs &amp; Bars. All rights reserved.
+      <!-- SECTION 2 — NAVIGATION -->
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">HOME</a></li>
+          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
+          <li class="footer-nav-item"><a href="menu.html" class="footer-nav-link">DRINK &amp; FOOD</a></li>
+          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
+          <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">GALLERY</a></li>
+          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- SECTION 3 — LOCATIONS -->
+      <div class="footer-locations">
+        <span class="footer-section-label">VISIT THE GLITCH</span>
+        <div class="footer-locations-grid">
+          <div class="footer-location-item">
+            <span class="location-index">LOCATION 01</span>
+            <p class="location-address">42 Peter Street, City Centre<br>Manchester, M2 5GP</p>
+            <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Centre');return false;}">
+              <span>GET DIRECTIONS</span>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+          <div class="footer-locations-divider" aria-hidden="true"></div>
+          <div class="footer-location-item">
+            <span class="location-index">LOCATION 02</span>
+            <p class="location-address">18 Dale Street, Northern Quarter<br>Manchester, M1 1EZ</p>
+            <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Northern Quarter');return false;}">
+              <span>GET DIRECTIONS</span>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
         </div>
-        <div class="tracking-widest font-semibold uppercase text-neutral-400 text-[11px]">
-          Good Food &nbsp;/&nbsp; Great Drinks &nbsp;/&nbsp; Good Times
+      </div>
+
+      <!-- SECTION 4 — SOCIAL MEDIA -->
+      <div class="footer-social">
+        <span class="footer-section-label">FOLLOW THE GLITCH</span>
+        <div class="footer-social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SECTION 5 — PRIMARY CTA -->
+      <div class="footer-cta">
+        <h3 class="footer-cta-title">YOUR TABLE IS WAITING.</h3>
+        <p class="footer-cta-desc">Make your next visit one to remember.</p>
+        <button type="button" class="footer-cta-btn" onclick="openBookingModal()" aria-label="Book a table at The Glitch">
+          <span>BOOK A TABLE</span>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- SECTION 6 — BOTTOM BAR -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          &copy; 2026 THE GLITCH
+        </div>
+        <div class="footer-bottom-right">
+          <a href="#" class="legal-link">PRIVACY POLICY</a>
+          <span class="legal-sep" aria-hidden="true">&middot;</span>
+          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a>
         </div>
       </div>
 

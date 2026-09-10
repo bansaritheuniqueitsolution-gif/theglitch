@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — THE GLITCH | Manchester Pub &amp; Restaurant</title>
+  <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
+  <meta name="description"
+    content="A glimpse into The Glitch. Explore our editorial gallery capturing the culinary craft, signature cocktails, authentic pub energy, and unforgettable nightlife across Manchester." />
+
+  <!-- Google Fonts: Playfair Display (editorial serif), Plus Jakarta Sans (clean body), Syne (modern geometric) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Precompiled Stylesheet (Matching index.html, menu.html, our-pubs.html) -->
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/header.css" />
+
+  <!-- Dedicated Premium Gallery Stylesheet -->
+  <link rel="stylesheet" href="gallery.css" />
+  <link rel="stylesheet" href="assets/footer.css" />
+
+  <!-- Tailwind CSS (Local with CDN fallback) -->
+  <script src="assets/tailwind.min.js"></script>
+  <script>
+    window.tailwind || document.write('<script src="https://cdn.tailwindcss.com"><\/script>');
+  </script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            glitch: {
+              bg: '#060a0f',
+              dark: '#080d14',
+              card: '#0c1219',
+              cardBorder: 'rgba(255, 255, 255, 0.08)',
+              cyan: '#4deeea',
+              cyanGlow: '#5ce1e6',
+              pink: '#ff2a85',
+              pinkGlow: '#ff4fa8',
+              cream: '#f4ede3',
+              creamHover: '#ffffff',
+              muted: '#94a3b8'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            script: ['"Caveat"', 'cursive'],
+            brand: ['"Syne"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- SVG Filter to make raster logo background 100% transparent -->
+  <svg class="sr-only" aria-hidden="true" width="0" height="0"
+    style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
+    <defs>
+      <filter id="remove-black-bg" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0.85 0.90 0.90 0 -0.06" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header
+    class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
+    <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+
+      <!-- Brand Logo -->
+      <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52"
+          class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="glitch-header-nav hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
+        <a href="index.html" class="glitch-nav-link hover:text-white transition duration-200">Home</a>
+        <a href="our-pubs.html" class="glitch-nav-link hover:text-white transition duration-200">Our Pubs</a>
+        <a href="menu.html" class="glitch-nav-link hover:text-white transition duration-200">Food &amp; Drinks</a>
+        <a href="gallery.html"
+          class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Gallery</a>
+        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a>
+      </nav>
+
+      <!-- Right Action & Mobile Button -->
+      <div class="glitch-header-actions flex items-center gap-3">
+        <button onclick="openBookingModal()"
+          class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span>Book a Table</span>
+        </button>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button onclick="toggleMobileMenu()"
+          class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
+          aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
+      <a href="index.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Home</a>
+      <a href="our-pubs.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Our Pubs</a>
+      <a href="menu.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Food &amp; Drinks</a>
+      <a href="gallery.html" class="glitch-mobile-nav-link active block text-[#4deeea] font-semibold py-1">Gallery</a>
+      <a href="contact.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Contact</a>
+      <div class="pt-2">
+        <button onclick="openBookingModal(); toggleMobileMenu();"
+          class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
+          <span>Book a Table</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero-section" id="hero">
+    <!-- Slow Parallax Image Wrapper -->
+    <div class="hero-parallax-wrapper">
+      <img src="assets/pub-nq-interior.jpg" alt="The Glitch pub & restaurant atmosphere" class="hero-bg-img"
+        id="heroBgImg" />
+    </div>
+
+    <!-- Cinematic Vignette & Gradient Overlays -->
+    <div class="hero-overlay"></div>
+
+    <!-- Hero Content -->
+    <div class="hero-content">
+      <span class="eyebrow">THE GLITCH</span>
+      <h1 class="hero-heading">A GLIMPSE INTO THE GLITCH</h1>
+      <p class="hero-subtitle">
+        Food, drinks, people and moments that make every night memorable.
+      </p>
+    </div>
+
+    <!-- Animated Scroll Down Indicator -->
+    <a href="#galleryIntro" class="hero-scroll-indicator" aria-label="Scroll to gallery">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ==================== GALLERY INTRODUCTION ==================== -->
+  <section class="intro-section" id="galleryIntro">
+    <div class="container intro-content">
+      <span class="eyebrow">THE GLITCH GALLERY</span>
+      <h2 class="intro-heading">MORE THAN A PLACE. AN EXPERIENCE.</h2>
+      <p class="intro-desc">
+        Step inside The Glitch and discover the atmosphere behind the food, drinks and unforgettable nights.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== CATEGORY FILTER BAR ==================== -->
+  <section class="gallery-filters-section" id="galleryFilters">
+    <div class="container">
+      <div class="filters-wrapper" role="tablist" aria-label="Gallery Category Filters">
+        <button type="button" class="filter-btn active" data-filter="ALL" role="tab" aria-selected="true">
+          All <span class="filter-count">(18)</span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="RESTAURANT" role="tab" aria-selected="false">
+          Restaurant <span class="filter-count"></span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="PUB" role="tab" aria-selected="false">
+          Pub <span class="filter-count"></span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="FOOD &amp; DRINKS" role="tab" aria-selected="false">
+          Food &amp; Drinks <span class="filter-count"></span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="EVENTS" role="tab" aria-selected="false">
+          Events <span class="filter-count"></span>
+        </button>
+        <button type="button" class="filter-btn" data-filter="ATMOSPHERE" role="tab" aria-selected="false">
+          Atmosphere <span class="filter-count"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDITORIAL MASONRY GALLERY GRID ==================== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid" aria-live="polite">
+        <!-- Rendered dynamically by gallery.js with 18 curated items -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED EXPERIENCE 01: THE RESTAURANT ==================== -->
+  <section class="experience-section" id="experienceRestaurant">
+    <div class="container">
+      <div class="experience-grid">
+        
+        <!-- Text Column -->
+        <div class="experience-text">
+          <span class="eyebrow">THE RESTAURANT</span>
+          <h2 class="experience-heading">WHERE FOOD MEETS ATMOSPHERE.</h2>
+          <p class="experience-desc">
+            From carefully prepared plates to the energy around the table, every detail is part of the experience. Discover seasonal artisan gastronomy made with locally sourced ingredients, crafted for unforgettable evenings.
+          </p>
+          <a href="menu.html" class="btn-primary">
+            <span>Explore the Menu</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Media Collage Column -->
+        <div class="experience-media">
+          <div class="experience-featured-img">
+            <img src="assets/gallery-3-plate.jpg" alt="Artisan plated culinary masterpiece" loading="lazy" />
+          </div>
+          <div class="experience-sub-images">
+            <div class="experience-sub-img">
+              <img src="assets/menu-burger.jpg" alt="Gourmet smash burger" loading="lazy" />
+            </div>
+            <div class="experience-sub-img">
+              <img src="assets/gallery-4-feast.jpg" alt="Chefs dining feast" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FEATURED EXPERIENCE 02: THE PUB ==================== -->
+  <section class="experience-section" id="experiencePub">
+    <div class="container">
+      <div class="experience-grid reversed">
+        
+        <!-- Text Column -->
+        <div class="experience-text">
+          <span class="eyebrow">THE PUB</span>
+          <h2 class="experience-heading">WHERE THE NIGHT COMES ALIVE.</h2>
+          <p class="experience-desc">
+            Good drinks, great company and an atmosphere designed for nights worth remembering. From craft beer taps and bespoke cocktail coupes to weekend DJ sets and candlelit corners, we set the stage for Manchester revelry.
+          </p>
+          <button type="button" class="btn-primary open-booking-modal">
+            <span>Book a Table</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Media Collage Column -->
+        <div class="experience-media">
+          <div class="experience-featured-img">
+            <img src="assets/hero.jpg" alt="Nightlife at The Glitch main bar" loading="lazy" />
+          </div>
+          <div class="experience-sub-images">
+            <div class="experience-sub-img">
+              <img src="assets/gallery-1-cocktail.jpg" alt="Glowing signature cocktail" loading="lazy" />
+            </div>
+            <div class="experience-sub-img">
+              <img src="assets/toast-hands.jpg" alt="Friends toasting drinks" loading="lazy" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CALL TO ACTION ==================== -->
+  <section class="cta-section">
+    <div class="cta-bg-wrapper">
+      <img src="assets/event-special.jpg" alt="Atmospheric celebration at The Glitch" class="cta-bg-img" loading="lazy" />
+    </div>
+    <div class="cta-overlay"></div>
+
+    <div class="container cta-content">
+      <span class="eyebrow">YOUR TABLE AWAITS</span>
+      <h2 class="cta-heading">COME EXPERIENCE THE GLITCH.</h2>
+      <p class="cta-subtitle">
+        Good food. Great drinks. Unforgettable nights.
+      </p>
+      <div class="cta-actions">
+        <button type="button" class="btn-primary open-booking-modal">
+          <span>Book a Table</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+        <a href="contact.html" class="btn-secondary">
+          <span>Contact Us</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="footer-container">
+
+      <!-- SECTION 1 — BRAND STATEMENT -->
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo-wrap" aria-label="The Glitch Homepage">
+          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" />
+        </a>
+        <h2 class="footer-brand-title">THE GLITCH</h2>
+        <div class="footer-brand-sub">PUB &bull; RESTAURANT</div>
+        <div class="footer-brand-statement">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</div>
+        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p>
+      </div>
+
+      <!-- SECTION 2 — NAVIGATION -->
+      <nav class="footer-nav" aria-label="Footer Navigation">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">HOME</a></li>
+          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
+          <li class="footer-nav-item"><a href="menu.html" class="footer-nav-link">DRINK &amp; FOOD</a></li>
+          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
+          <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">GALLERY</a></li>
+          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- SECTION 3 — LOCATIONS -->
+      <div class="footer-locations">
+        <span class="footer-section-label">VISIT THE GLITCH</span>
+        <div class="footer-locations-grid">
+          <div class="footer-location-item">
+            <span class="location-index">LOCATION 01</span>
+            <p class="location-address">42 Peter Street, City Centre<br>Manchester, M2 5GP</p>
+            <a href="https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP" target="_blank" rel="noopener" class="location-direction-link">
+              <span>GET DIRECTIONS</span>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+          <div class="footer-locations-divider" aria-hidden="true"></div>
+          <div class="footer-location-item">
+            <span class="location-index">LOCATION 02</span>
+            <p class="location-address">18 Dale Street, Northern Quarter<br>Manchester, M1 1EZ</p>
+            <a href="https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ" target="_blank" rel="noopener" class="location-direction-link">
+              <span>GET DIRECTIONS</span>
+              <span class="arrow-icon" aria-hidden="true">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION 4 — SOCIAL MEDIA -->
+      <div class="footer-social">
+        <span class="footer-section-label">FOLLOW THE GLITCH</span>
+        <div class="footer-social-links">
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SECTION 5 — PRIMARY CTA -->
+      <div class="footer-cta">
+        <h3 class="footer-cta-title">YOUR TABLE IS WAITING.</h3>
+        <p class="footer-cta-desc">Make your next visit one to remember.</p>
+        <button type="button" class="footer-cta-btn" onclick="openBookingModal()" aria-label="Book a table at The Glitch">
+          <span>BOOK A TABLE</span>
+          <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+
+      <!-- SECTION 6 — BOTTOM BAR -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          &copy; 2026 THE GLITCH
+        </div>
+        <div class="footer-bottom-right">
+          <a href="#" class="legal-link">PRIVACY POLICY</a>
+          <span class="legal-sep" aria-hidden="true">&middot;</span>
+          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== FULLSCREEN CINEMA LIGHTBOX ==================== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image Lightbox">
+    <!-- Top Header -->
+    <div class="lightbox-header">
+      <div class="lightbox-info">
+        <span class="lightbox-category" id="lightboxCategory">CATEGORY</span>
+        <span class="lightbox-counter" id="lightboxCounter">01 / 18</span>
+      </div>
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Lightbox Center Body -->
+    <div class="lightbox-body">
+      <button type="button" class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous Image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="lightbox-media-container">
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      </div>
+
+      <button type="button" class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next Image">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Bottom Caption -->
+    <div class="lightbox-caption">
+      <h3 class="lightbox-title" id="lightboxTitle">Image Title</h3>
+      <p class="lightbox-subtitle" id="lightboxSubtitle">Image subtitle or description</p>
+    </div>
+  </div>
+
+  <!-- ==================== TABLE RESERVATION MODAL ==================== -->
+  <div id="bookingModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+    aria-modal="true" role="dialog">
+    <div
+      class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
+      <!-- Close Button -->
+      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition"
+        aria-label="Close Booking Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Modal Title -->
+      <div>
+        <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
+        <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
+        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p>
+      </div>
+
+      <!-- Booking Form -->
+      <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+        <div>
+          <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
+          <select id="bookingLocation"
+            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
+            <option value="City Centre">Pub 01 &mdash; City Centre (123 High St)</option>
+            <option value="Northern Quarter">Pub 02 &mdash; Northern Quarter (45 Oldham St)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Date</label>
+            <input type="date" required id="bookingDate"
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" />
+          </div>
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Time</label>
+            <select required id="bookingTime"
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+              <option value="12:00 PM">12:00 PM</option>
+              <option value="1:30 PM">1:30 PM</option>
+              <option value="3:00 PM">3:00 PM</option>
+              <option value="5:00 PM">5:00 PM</option>
+              <option value="6:30 PM">6:30 PM</option>
+              <option value="7:30 PM" selected>7:30 PM</option>
+              <option value="8:30 PM">8:30 PM</option>
+              <option value="9:30 PM">9:30 PM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
+            <select required id="bookingGuests"
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+              <option value="2 Guests" selected>2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="6 Guests">6 Guests</option>
+              <option value="8+ Large Party">8+ Large Party</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Full Name</label>
+            <input type="text" required placeholder="Alex Mercer" id="bookingName"
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-neutral-300 font-semibold mb-1">Email or Phone</label>
+          <input type="text" required placeholder="alex@example.com or +44 7123 456789" id="bookingContact"
+            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" />
+        </div>
+
+        <div class="pt-2">
+          <button type="submit"
+            class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg">
+            Confirm Table Reservation
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- JavaScript Controller -->
+  <script src="gallery.js"></script>
+</body>
+
+</html>

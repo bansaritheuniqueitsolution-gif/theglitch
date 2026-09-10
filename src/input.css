@@ -1,0 +1,242 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@source "../*.html";
+
+@theme {
+  --color-glitch-bg: #060a0f;
+  --color-glitch-dark: #080d14;
+  --color-glitch-card: #0c1219;
+  --color-glitch-card-border: rgba(255, 255, 255, 0.08);
+  --color-glitch-cyan: #4deeea;
+  --color-glitch-cyan-glow: #5ce1e6;
+  --color-glitch-pink: #ff2a85;
+  --color-glitch-pink-glow: #ff4fa8;
+  --color-glitch-cream: #f4ede3;
+  --color-glitch-cream-hover: #ffffff;
+  --color-glitch-muted: #94a3b8;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+  --font-brand: "Syne", sans-serif;
+  --shadow-neon-cyan: 0 0 15px rgba(77, 238, 234, 0.45), 0 0 30px rgba(77, 238, 234, 0.25);
+  --shadow-neon-pink: 0 0 15px rgba(255, 42, 133, 0.45), 0 0 30px rgba(255, 42, 133, 0.25);
+  --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Base Reset & Safeguards */
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #060a0f !important;
+  color: #f4ede3;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Ensure images and SVGs never blow up or render unconstrained */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Specific SVG icon sizing defaults */
+svg.w-4 { width: 1rem; }
+svg.h-4 { height: 1rem; }
+svg.w-5 { width: 1.25rem; }
+svg.h-5 { height: 1.25rem; }
+svg.w-6 { width: 1.5rem; }
+svg.h-6 { height: 1.5rem; }
+svg.w-8 { width: 2rem; }
+svg.h-8 { height: 2rem; }
+
+/* Logo sizing safeguards */
+.logo-no-bg,
+img[alt*="The Glitch Logo"],
+img[src*="logo.png"] {
+  max-height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Neon glow effects */
+.neon-cyan-text {
+  color: #5ce1e6;
+  text-shadow:
+    0 0 4px #5ce1e6,
+    0 0 12px rgba(92, 225, 230, 0.85),
+    0 0 25px rgba(92, 225, 230, 0.6),
+    0 0 45px rgba(92, 225, 230, 0.35);
+}
+
+.neon-pink-text {
+  color: #ff3b94;
+  text-shadow:
+    0 0 4px #ff3b94,
+    0 0 12px rgba(255, 59, 148, 0.85),
+    0 0 25px rgba(255, 59, 148, 0.6),
+    0 0 40px rgba(255, 59, 148, 0.35);
+}
+
+.neon-sign-box {
+  background: radial-gradient(circle at center, rgba(22, 28, 40, 0.95) 0%, #070b10 100%);
+  box-shadow:
+    inset 0 0 30px rgba(255, 42, 133, 0.12),
+    inset 0 0 30px rgba(77, 238, 234, 0.12),
+    0 20px 40px -15px rgba(0, 0, 0, 0.85);
+}
+
+/* Neon tube pulse animation */
+@keyframes neon-pulse {
+  0%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(77, 238, 234, 0.85));
+  }
+  50% {
+    opacity: 0.93;
+    filter: drop-shadow(0 0 9px rgba(77, 238, 234, 0.65));
+  }
+}
+
+.animate-neon-pulse {
+  animation: neon-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* Custom dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Remove black background from raster logo */
+.logo-no-bg {
+  filter: url(#remove-black-bg);
+}
+
+/* Glitch Loader & Spinner Styles */
+@keyframes glitch-load-slide {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(100%); }
+}
+
+.loader-progress-bar {
+  animation: glitch-load-slide 1.4s ease-in-out infinite;
+}
+
+.loader-fade-out {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Menu item interactive hover row */
+.menu-item-row {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.625rem 0.75rem;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
+.menu-item-row:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.menu-item-row:hover .menu-item-title {
+  color: #5ce1e6;
+}
+
+/* Hide scrollbar for category tabs on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Menu item dotted leader line */
+.dotted-leader {
+  flex: 1;
+  border-bottom: 2px dotted rgba(255, 255, 255, 0.2);
+  margin: 0 12px;
+  position: relative;
+  top: -4px;
+}
+
+/* Tab switcher transition classes */
+.tab-content {
+  transition: opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+}
+
+.tab-content.hidden {
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.tab-content.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Active card highlight border */
+.pub-hero-card.active-card {
+  border-color: #5ce1e6;
+  box-shadow: 0 0 25px rgba(77, 238, 234, 0.25), inset 0 0 15px rgba(77, 238, 234, 0.1);
+}
+
+/* Print styles */
+@media print {
+  header,
+  footer,
+  #bookingModal,
+  #itemModal,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .dotted-leader {
+    border-bottom: 1px dotted #666 !important;
+  }
+}

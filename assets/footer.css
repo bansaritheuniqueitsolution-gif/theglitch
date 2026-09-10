@@ -1,0 +1,679 @@
+/**
+ * ==========================================================================
+ * THE GLITCH — Premium Editorial Footer Stylesheet
+ * Brand: THE GLITCH | PUB & RESTAURANT
+ * Aesthetic: High-end, Cinematic, Minimal, Sophisticated, Nightlife & Hospitality
+ * ==========================================================================
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap');
+
+:root {
+  --glitch-footer-bg: #05080c;
+  --glitch-footer-dark: #070b10;
+  --glitch-footer-accent: #4deeea;
+  --glitch-footer-accent-glow: rgba(77, 238, 234, 0.45);
+  --glitch-footer-pink: #ff2a85;
+  --glitch-footer-display: #f4ede3;
+  --glitch-footer-text: #f8fafc;
+  --glitch-footer-muted: #94a3b8;
+  --glitch-footer-dim: #64748b;
+  --glitch-footer-border: rgba(255, 255, 255, 0.08);
+  --glitch-footer-border-light: rgba(255, 255, 255, 0.14);
+  --glitch-font-serif: 'Playfair Display', Georgia, serif;
+  --glitch-font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --glitch-font-brand: 'Syne', sans-serif;
+  --glitch-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ==========================================================================
+   BASE FOOTER SECTION
+   ========================================================================== */
+.site-footer {
+  position: relative !important;
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  background-color: var(--glitch-footer-bg);
+  background-image: 
+    radial-gradient(ellipse 75% 45% at 50% 0%, rgba(77, 238, 234, 0.06) 0%, transparent 68%),
+    radial-gradient(ellipse 55% 35% at 50% 100%, rgba(255, 42, 133, 0.03) 0%, transparent 65%);
+  border-top: 1px solid var(--glitch-footer-border);
+  color: var(--glitch-footer-muted);
+  font-family: var(--glitch-font-sans);
+  padding: 120px 0 44px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Luminous Top Hairline with Centered Accent Core */
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(77, 238, 234, 0.5) 50%, transparent 100%);
+  pointer-events: none;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ==========================================================================
+   SECTION 1 — BRAND STATEMENT
+   ========================================================================== */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 64px;
+  max-width: 920px;
+  width: 100%;
+}
+
+.footer-brand-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 18px;
+  transition: transform 0.4s var(--glitch-ease);
+}
+
+.footer-brand-logo-wrap:hover {
+  transform: scale(1.05);
+}
+
+.footer-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 16px rgba(77, 238, 234, 0.35));
+}
+
+.footer-brand-title {
+  font-family: var(--glitch-font-brand);
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  line-height: 1;
+}
+
+.footer-brand-sub {
+  font-family: var(--glitch-font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  color: var(--glitch-footer-accent);
+  text-transform: uppercase;
+  margin: 0 0 38px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand-sub::before,
+.footer-brand-sub::after {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: rgba(77, 238, 234, 0.45);
+}
+
+.footer-brand-statement {
+  font-family: var(--glitch-font-serif);
+  font-size: clamp(2.3rem, 5.8vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--glitch-footer-display);
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.footer-brand-tagline {
+  font-family: var(--glitch-font-sans);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--glitch-footer-muted);
+  letter-spacing: 0.02em;
+  margin: 0;
+  max-width: 600px;
+}
+
+/* ==========================================================================
+   SECTION 2 — NAVIGATION
+   ========================================================================== */
+.footer-nav {
+  width: 100%;
+  margin-bottom: 64px;
+  padding: 24px 0;
+  border-top: 1px solid var(--glitch-footer-border);
+  border-bottom: 1px solid var(--glitch-footer-border);
+}
+
+.footer-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-item {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-nav-link {
+  font-family: var(--glitch-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  text-decoration: none;
+  position: relative;
+  padding: 6px 2px;
+  transition: color 0.3s var(--glitch-ease);
+}
+
+/* Animated Underline Effect */
+.footer-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: var(--glitch-footer-accent);
+  box-shadow: 0 0 10px var(--glitch-footer-accent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s var(--glitch-ease);
+}
+
+.footer-nav-link:hover {
+  color: var(--glitch-footer-accent);
+}
+
+.footer-nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.footer-nav-sep {
+  color: var(--glitch-footer-border-light);
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+/* ==========================================================================
+   SECTION 3 — LOCATIONS
+   ========================================================================== */
+.footer-locations {
+  width: 100%;
+  max-width: 840px;
+  margin-bottom: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-section-label {
+  font-family: var(--glitch-font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--glitch-footer-dim);
+  margin-bottom: 28px;
+  display: block;
+}
+
+.footer-locations-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 48px;
+}
+
+.footer-location-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.location-index {
+  font-family: var(--glitch-font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--glitch-footer-accent);
+  margin-bottom: 8px;
+}
+
+.location-address {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  margin: 0 0 14px 0;
+  font-weight: 400;
+}
+
+.location-direction-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--glitch-footer-muted);
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 4px 0;
+  transition: color 0.25s ease;
+}
+
+.location-direction-link .arrow-icon {
+  display: inline-block;
+  font-size: 0.95rem;
+  line-height: 1;
+  transition: transform 0.3s var(--glitch-ease), color 0.3s ease;
+}
+
+.location-direction-link:hover {
+  color: #ffffff;
+}
+
+.location-direction-link:hover .arrow-icon {
+  transform: translateX(6px);
+  color: var(--glitch-footer-accent);
+}
+
+.footer-locations-divider {
+  width: 1px;
+  height: 72px;
+  background: linear-gradient(to bottom, transparent, var(--glitch-footer-border-light), transparent);
+}
+
+/* ==========================================================================
+   SECTION 4 — SOCIAL MEDIA
+   ========================================================================== */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 72px;
+  width: 100%;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--glitch-footer-muted);
+  text-decoration: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s var(--glitch-ease);
+}
+
+.footer-social-link svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.3s var(--glitch-ease);
+}
+
+.footer-social-link:hover {
+  color: var(--glitch-footer-accent);
+  background: rgba(77, 238, 234, 0.08);
+  border-color: rgba(77, 238, 234, 0.35);
+  transform: translateY(-3px);
+}
+
+.footer-social-link:hover svg {
+  stroke: var(--glitch-footer-accent);
+  filter: drop-shadow(0 0 8px rgba(77, 238, 234, 0.5));
+}
+
+/* ==========================================================================
+   SECTION 5 — PRIMARY CTA (Editorial Seamless Layout — No Card Container)
+   ========================================================================== */
+.footer-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 84px;
+  padding: 24px 20px 0;
+  width: 100%;
+  max-width: 820px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.footer-cta-title {
+  font-family: var(--glitch-font-serif);
+  font-size: clamp(2.3rem, 5.2vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+}
+
+.footer-cta-desc {
+  font-family: var(--glitch-font-sans);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--glitch-footer-muted);
+  letter-spacing: 0.02em;
+  margin: 0 0 36px 0;
+  max-width: 580px;
+}
+
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #f4ede3;
+  color: #060a0f;
+  font-family: var(--glitch-font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 18px 46px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.45);
+  transition: all 0.35s var(--glitch-ease);
+  text-decoration: none;
+}
+
+.footer-cta-btn .cta-arrow {
+  display: inline-block;
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 0.3s var(--glitch-ease);
+}
+
+.footer-cta-btn:hover {
+  background: var(--glitch-footer-accent);
+  color: #060a0f;
+  border-color: var(--glitch-footer-accent);
+  box-shadow: 0 0 35px rgba(77, 238, 234, 0.55), 0 8px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+}
+
+.footer-cta-btn:hover .cta-arrow {
+  transform: translateX(6px);
+}
+
+.footer-cta-btn:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   SECTION 6 — BOTTOM BAR
+   ========================================================================== */
+.footer-bottom {
+  width: 100%;
+  padding-top: 36px;
+  border-top: 1px solid var(--glitch-footer-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 0.75rem;
+  color: var(--glitch-footer-dim);
+}
+
+.footer-bottom-left {
+  text-align: left;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.footer-bottom-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+}
+
+.legal-link {
+  color: var(--glitch-footer-dim);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.legal-link:hover {
+  color: #e2e8f0;
+}
+
+.legal-sep {
+  color: var(--glitch-footer-border);
+  user-select: none;
+}
+
+/* ==========================================================================
+   PROGRESSIVE ENHANCEMENT: SCROLL REVEAL
+   ========================================================================== */
+@supports (animation-timeline: view()) {
+  .site-footer {
+    animation: footerScrollReveal linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% entry 35%;
+  }
+  @keyframes footerScrollReveal {
+    0% {
+      opacity: 0.7;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet (max-width: 900px) */
+@media (max-width: 900px) {
+  .site-footer {
+    padding: 88px 0 40px;
+  }
+
+  .footer-brand {
+    margin-bottom: 48px;
+  }
+
+  .footer-nav {
+    margin-bottom: 48px;
+  }
+
+  .footer-locations {
+    margin-bottom: 56px;
+  }
+
+  .footer-locations-grid {
+    gap: 32px;
+  }
+
+  .footer-social {
+    margin-bottom: 56px;
+  }
+
+  .footer-cta {
+    margin-bottom: 64px;
+    padding: 16px 20px 0;
+  }
+}
+
+/* Mobile (max-width: 640px) */
+@media (max-width: 640px) {
+  .site-footer {
+    padding: 72px 0 36px;
+  }
+
+  .footer-brand-title {
+    font-size: 1.5rem;
+    letter-spacing: 0.22em;
+  }
+
+  .footer-brand-sub {
+    font-size: 0.6875rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 24px;
+  }
+
+  .footer-brand-statement {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .footer-brand-tagline {
+    font-size: 0.95rem;
+  }
+
+  /* Navigation on mobile: wrapped with comfortable spacing */
+  .footer-nav {
+    padding: 20px 0;
+    margin-bottom: 44px;
+  }
+
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-nav-sep {
+    display: none;
+  }
+
+  .footer-nav-link {
+    font-size: 0.875rem;
+    padding: 4px 0;
+  }
+
+  /* Locations stacked vertically on mobile */
+  .footer-locations {
+    margin-bottom: 48px;
+  }
+
+  .footer-locations-grid {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-locations-divider {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--glitch-footer-border-light), transparent);
+  }
+
+  /* Social links on mobile */
+  .footer-social {
+    margin-bottom: 52px;
+  }
+
+  .footer-social-links {
+    flex-wrap: wrap;
+    gap: 12px 16px;
+  }
+
+  /* CTA on mobile */
+  .footer-cta {
+    padding: 10px 16px 0;
+    margin-bottom: 56px;
+  }
+
+  .footer-cta-title {
+    font-size: 1.85rem;
+  }
+
+  .footer-cta-desc {
+    font-size: 0.95rem;
+    margin-bottom: 28px;
+  }
+
+  .footer-cta-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 28px;
+  }
+
+  /* Bottom bar stacked vertically on mobile */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    padding-top: 28px;
+  }
+
+  .footer-bottom-left {
+    text-align: center;
+  }
+
+  .footer-bottom-right {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
