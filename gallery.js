@@ -174,7 +174,7 @@
     {
       id: 18,
       title: 'City Centre Lanterns',
-      subtitle: 'Warm street-level welcome on Peter Street',
+      subtitle: 'Warm street-level welcome on Prince of Wales Rd',
       category: 'PUB',
       image: 'assets/pub-city-centre.jpg',
       spanClass: 'col-span-3 row-span-1',

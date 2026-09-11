@@ -14,13 +14,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mapLocations = {
     cityCentre: {
-      url: 'https://maps.google.com/maps?q=42+Peter+Street,+Manchester+M2+5GP,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
-      extUrl: 'https://maps.google.com/?q=42+Peter+Street+Manchester+M2+5GP',
+      url: 'https://maps.google.com/maps?q=37+Prince+of+Wales+Rd,+Norwich+NR1+1BG,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
+      extUrl: 'https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG',
       label: 'Open City Centre in Google Maps ↗'
     },
     northernQuarter: {
-      url: 'https://maps.google.com/maps?q=18+Dale+Street,+Northern+Quarter,+Manchester+M1+1EZ,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
-      extUrl: 'https://maps.google.com/?q=18+Dale+Street+Manchester+M1+1EZ',
+      url: 'https://maps.google.com/maps?q=25b+St+Giles+St,+Norwich+NR2+1JN,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
+      extUrl: 'https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN',
       label: 'Open Northern Quarter in Google Maps ↗'
     }
   };

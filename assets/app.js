@@ -70,10 +70,10 @@
 
     const isNQ = pub && pub.toLowerCase().includes('northern');
     if (title) title.innerText = isNQ ? 'Pub 02 — Northern Quarter' : 'Pub 01 — City Centre';
-    if (addr) addr.innerText = isNQ ? '45 Oldham St, Manchester, M4 1LE' : '123 High Street, Manchester, M1 2AB';
+    if (addr) addr.innerText = isNQ ? '25b St Giles St, Norwich NR2 1JN, United Kingdom' : '37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom';
     if (transit) transit.innerText = isNQ ? 'Stevenson Square (2 min walk), Shudehill Interchange (4 min walk)' : 'Piccadilly Gardens (3 min walk), Piccadilly Station (7 min walk)';
     if (parking) parking.innerText = isNQ ? 'Port Street Car Park & on-street bays' : 'NCP Manchester Central & Church Street';
-    if (mapLink) mapLink.href = isNQ ? 'https://www.google.com/maps/search/?api=1&query=45+Oldham+St+Manchester+M4+1LE' : 'https://www.google.com/maps/search/?api=1&query=123+High+Street+Manchester+M1+2AB';
+    if (mapLink) mapLink.href = isNQ ? 'https://www.google.com/maps/search/?api=1&query=25b+St+Giles+St+Norwich+NR2+1JN' : 'https://www.google.com/maps/search/?api=1&query=37+Prince+of+Wales+Rd+Norwich+NR1+1BG';
 
     if (modal) {
       modal.classList.remove('hidden');
