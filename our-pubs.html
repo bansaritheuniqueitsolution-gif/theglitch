@@ -1045,53 +1045,64 @@
       <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Booking Modal">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
 
-      <div>
-        <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
-        <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
-        <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p> </div>
-
-      <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+      <div id="bookingFormContainer" class="space-y-6">
         <div>
-          <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
-          <select id="bookingLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
-            <option value="City Centre">Pub 01 &mdash; City Centre (37 Prince of Wales Rd)</option>
-            <option value="City Center">Pub 02 &mdash; City Center (25b St Giles St)</option> </select> </div>
+          <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
+          <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
+          <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p> </div>
 
-        <div class="grid grid-cols-2 gap-4">
+        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
           <div>
-            <label class="block text-neutral-300 font-semibold mb-1">Date</label>
-            <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" /> </div>
-          <div>
-            <label class="block text-neutral-300 font-semibold mb-1">Time</label>
-            <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
-              <option value="12:00 PM">12:00 PM</option>
-              <option value="1:30 PM">1:30 PM</option>
-              <option value="3:00 PM">3:00 PM</option>
-              <option value="5:00 PM">5:00 PM</option>
-              <option value="6:30 PM">6:30 PM</option>
-              <option value="7:30 PM" selected>7:30 PM</option>
-              <option value="8:30 PM">8:30 PM</option>
-              <option value="9:30 PM">9:30 PM</option> </select> </div> </div>
+            <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
+            <select id="bookingLocation" onchange="updateBookingRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
+              <option value="City Centre">Pub 01 &mdash; City Centre (37 Prince of Wales Rd)</option>
+              <option value="City Center">Pub 02 &mdash; City Center (25b St Giles St)</option> </select> 
+            <!-- Live Destination Mailbox Notice -->
+            <div id="bookingMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] flex items-center gap-2 font-medium transition-all duration-200">
+              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span>Booking request will be sent to: <strong id="bookingTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+            </div>
+          </div>
 
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
-            <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
-              <option value="2 Guests" selected>2 Guests</option>
-              <option value="3 Guests">3 Guests</option>
-              <option value="4 Guests">4 Guests</option>
-              <option value="6 Guests">6 Guests</option>
-              <option value="8+ Large Party">8+ Large Party</option> </select> </div>
-          <div>
-            <label class="block text-neutral-300 font-semibold mb-1">Full Name</label>
-            <input type="text" required placeholder="Alex Mercer" id="bookingName" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div> </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1">Date</label>
+              <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" /> </div>
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1">Time</label>
+              <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:30 PM">1:30 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:30 PM">6:30 PM</option>
+                <option value="7:30 PM" selected>7:30 PM</option>
+                <option value="8:30 PM">8:30 PM</option>
+                <option value="9:30 PM">9:30 PM</option> </select> </div> </div>
 
-        <div>
-          <label class="block text-neutral-300 font-semibold mb-1">Email or Phone</label>
-          <input type="text" required placeholder="alex@example.com or +44 7123 456789" id="bookingContact" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
+              <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+                <option value="2 Guests" selected>2 Guests</option>
+                <option value="3 Guests">3 Guests</option>
+                <option value="4 Guests">4 Guests</option>
+                <option value="6 Guests">6 Guests</option>
+                <option value="8+ Large Party">8+ Large Party</option> </select> </div>
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1">Full Name</label>
+              <input type="text" required placeholder="Alex Mercer" id="bookingName" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div> </div>
 
-        <div class="pt-2">
-          <button type="submit" class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg">Confirm Table Reservation</button> </div> </form> </div> </div>
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Email or Phone</label>
+            <input type="text" required placeholder="alex@example.com or +44 7123 456789" id="bookingContact" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
+
+          <div class="pt-2">
+            <button type="submit" id="bookingSubmitBtn" class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg">Confirm Table Reservation</button> </div> </form>
+      </div>
+
+      <!-- In-Modal Booking Success State Container -->
+      <div id="bookingSuccessContainer" class="hidden text-center py-4 space-y-5"></div> </div> </div>
 
 <!-- ==================== GET DIRECTIONS MODAL ==================== -->
   <div id="directionsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
@@ -1130,13 +1141,19 @@
         <h3 class="text-xl font-bold text-white mt-1">Private Hire &amp; Celebrations</h3>
         <p class="text-neutral-400 text-xs mt-1">Book a booth package, semi-private area, or full rooftop takeover.</p> </div>
 
-      <form onsubmit="handlePrivateHireSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+      <form id="privateHireForm" onsubmit="handlePrivateHireSubmit(event)" class="space-y-4 text-xs sm:text-sm">
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
-          <select id="hireLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
+          <select id="hireLocation" onchange="updateHireRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
             <option value="City Centre">Pub 01 &mdash; City Centre (Craft Taproom)</option>
             <option value="City Center">Pub 02 &mdash; City Center (Heated Rooftop / Speakeasy)</option>
-            <option value="Both">Not Sure / Open to Both</option> </select> </div>
+            <option value="Both">Not Sure / Open to Both</option> </select> 
+          <!-- Live Destination Mailbox Notice -->
+          <div id="hireMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-200">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Enquiry will be sent to: <strong id="hireTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+          </div>
+        </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Expected Guests</label>

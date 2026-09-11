@@ -66,11 +66,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const nameInput = document.getElementById('contactName');
       const emailInput = document.getElementById('contactEmail');
+      const phoneInput = document.getElementById('contactPhone');
+      const pubInput = document.getElementById('contactPub');
       const subjectInput = document.getElementById('contactSubject');
+      const msgInput = document.getElementById('contactMessage');
 
       const nameVal = nameInput ? nameInput.value.trim() : 'Guest';
       const emailVal = emailInput ? emailInput.value.trim() : '';
+      const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+      const pubVal = pubInput ? pubInput.value : 'Pub 01 – City Centre';
       const subjectVal = subjectInput ? subjectInput.value : 'General Inquiry';
+      const msgVal = msgInput ? msgInput.value.trim() : '';
+
+      const isPub2 = pubVal.toLowerCase().includes('center') || pubVal.toLowerCase().includes('sg@') || pubVal.includes('02');
+      const targetEmail = isPub2 ? 'sg@pubtheglitch.co.uk' : 'norwich@pubtheglitch.co.uk';
+      const pubTitle = isPub2 ? 'Pub 02 — City Center' : 'Pub 01 — City Centre';
 
       // Button loading state
       if (formSubmitBtn) {
@@ -80,9 +90,31 @@ document.addEventListener('DOMContentLoaded', () => {
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
             <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
           </svg>
-          <span>SENDING MESSAGE...</span>
+          <span>SENDING TO ${targetEmail}...</span>
         `;
       }
+
+      // Background dispatch via FormSubmit
+      try {
+        fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            _subject: `Contact Inquiry: [${pubTitle}] ${subjectVal} - ${nameVal}`,
+            "Pub Destination": pubTitle,
+            "Target Email": targetEmail,
+            "Customer Name": nameVal,
+            "Customer Email": emailVal,
+            "Customer Phone": phoneVal || "N/A",
+            "Subject": subjectVal,
+            "Message": msgVal,
+            _template: "table"
+          })
+        }).catch(() => {});
+      } catch (err) {}
+
+      // Mailto backup trigger
+      const mailtoUrl = `mailto:${targetEmail}?subject=${encodeURIComponent(`[${pubTitle}] ${subjectVal} - ${nameVal}`)}&body=${encodeURIComponent(`Name: ${nameVal}\nEmail: ${emailVal}\nPhone: ${phoneVal}\nPub: ${pubTitle}\n\nMessage:\n${msgVal}`)}`;
 
       // Simulate prompt dispatch & response
       setTimeout(() => {
@@ -93,7 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             <div>
-              <strong>Thank you, ${nameVal}!</strong> Your message regarding <em>"${subjectVal}"</em> has been received. Our hospitality team will be in touch shortly at <strong>${emailVal}</strong>.
+              <strong>Thank you, ${nameVal}!</strong> Your message regarding <em>"${subjectVal}"</em> has been dispatched directly to <strong>${targetEmail}</strong> (${pubTitle}). Our team will be in touch with you at <strong>${emailVal}</strong>.
+              <div class="mt-2">
+                <a href="${mailtoUrl}" class="inline-block px-3 py-1 bg-white/20 hover:bg-white/30 rounded text-white text-xs font-semibold underline transition">Send directly from your email app ✉️</a>
+              </div>
             </div>
           `;
           formStatus.style.display = 'flex';
