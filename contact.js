@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', () => {
         mapExtLink.href = mapLocations.cityCentre.extUrl;
         mapExtLink.textContent = mapLocations.cityCentre.label;
       }
+      const pubInput = document.getElementById('contactPub');
+      if (pubInput) {
+        pubInput.value = 'Pub 01 – City Centre';
+        window.updateContactPubNotice();
+      }
     } else if (loc === 'northernQuarter' || loc === 'cityCenter') {
       if (mapTabNQ) mapTabNQ.classList.add('active');
       if (mapTabCC) mapTabCC.classList.remove('active');
@@ -44,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
       if (mapExtLink) {
         mapExtLink.href = mapLocations.cityCenter.extUrl;
         mapExtLink.textContent = mapLocations.cityCenter.label;
+      }
+      const pubInput = document.getElementById('contactPub');
+      if (pubInput) {
+        pubInput.value = 'Pub 02 – City Center';
+        window.updateContactPubNotice();
       }
     }
   };
@@ -54,6 +64,36 @@ document.addEventListener('DOMContentLoaded', () => {
   if (mapTabNQ) {
     mapTabNQ.addEventListener('click', () => switchMapLocation('cityCenter'));
   }
+
+  // Live destination notice for Select Pub dropdown
+  window.updateContactPubNotice = function () {
+    const pubInput = document.getElementById('contactPub');
+    const noticeEl = document.getElementById('contactPubNotice');
+    if (!pubInput || !noticeEl) return;
+
+    const val = pubInput.value.toLowerCase();
+    if (val.includes('center') || val.includes('02') || val.includes('sg@') || val.includes('giles')) {
+      noticeEl.className = 'mt-2 text-xs px-3.5 py-2 rounded-lg bg-[#ff3b94]/10 border border-[#ff3b94]/30 text-[#ff3b94] flex items-center gap-2 font-medium transition-all duration-300';
+      noticeEl.innerHTML = `
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <span>Inquiry will go directly to Pub 02: <strong id="contactPubTargetEmail" class="underline tracking-wide">sg@pubtheglitch.co.uk</strong></span>
+      `;
+    } else if (val.includes('both') || val.includes('general')) {
+      noticeEl.className = 'mt-2 text-xs px-3.5 py-2 rounded-lg bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-300';
+      noticeEl.innerHTML = `
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <span>General inquiry will go to: <strong id="contactPubTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+      `;
+    } else {
+      noticeEl.className = 'mt-2 text-xs px-3.5 py-2 rounded-lg bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] flex items-center gap-2 font-medium transition-all duration-300';
+      noticeEl.innerHTML = `
+        <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        <span>Inquiry will go directly to Pub 01: <strong id="contactPubTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+      `;
+    }
+  };
+
+  window.updateContactPubNotice();
 
   // 2. Contact Form Interactive Handler
   const contactForm = document.getElementById('contactForm');
@@ -137,6 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Reset form & restore button
         contactForm.reset();
+        window.updateContactPubNotice();
         if (formSubmitBtn) {
           formSubmitBtn.disabled = false;
           formSubmitBtn.innerHTML = `

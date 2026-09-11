@@ -218,6 +218,23 @@
             <p class="contact-form-subtitle">Fill in your details below and our reservations team will respond within 24 hours.</p>
 
             <form id="contactForm" class="contact-form-fields" novalidate>
+              <!-- 1. Select Pub Dropdown -->
+              <div class="form-group">
+                <label for="contactPub" class="form-label font-bold text-white flex items-center justify-between">
+                  <span>Select Pub</span>
+                  <span class="text-[11px] font-normal text-[#5ce1e6] uppercase tracking-wider">Choose Location</span>
+                </label>
+                <select id="contactPub" name="pub" class="form-select" onchange="updateContactPubNotice()">
+                  <option value="Pub 01 – City Centre">Pub 01 — City Centre (37 Prince of Wales Rd)</option>
+                  <option value="Pub 02 – City Center">Pub 02 — City Center (25b St Giles St)</option>
+                  <option value="General / Both Locations">General / Both Locations</option> </select> 
+                <!-- Live Destination Mailbox Notice -->
+                <div id="contactPubNotice" class="mt-2 text-xs px-3.5 py-2 rounded-lg bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] flex items-center gap-2 font-medium transition-all duration-300">
+                  <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <span>Inquiry will go directly to Pub 01: <strong id="contactPubTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+                </div>
+              </div>
+
               <!-- Full Name -->
               <div class="form-group">
                 <label for="contactName" class="form-label">Full Name</label>
@@ -234,14 +251,6 @@
                   <span>Phone Number</span>
                   <span class="form-label-optional">(Optional)</span> </label>
                 <input type="tel" id="contactPhone" name="phone" placeholder="e.g. +44 7700 900123" class="form-input" /> </div>
-
-              <!-- Select Pub Location -->
-              <div class="form-group">
-                <label for="contactPub" class="form-label">Select Pub Location</label>
-                <select id="contactPub" name="pub" class="form-select">
-                  <option value="Pub 01 – City Centre (norwich@pubtheglitch.co.uk)">Pub 01 — City Centre (37 Prince of Wales Rd)</option>
-                  <option value="Pub 02 – City Center (sg@pubtheglitch.co.uk)">Pub 02 — City Center (25b St Giles St)</option>
-                  <option value="General / Both Venues">General / Both Locations</option> </select> </div>
 
               <!-- Subject -->
               <div class="form-group">
