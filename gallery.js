@@ -21,11 +21,11 @@
     {
       id: 1,
       title: 'The Industrial Lounge',
-      subtitle: 'Northern Quarter vaulted brick & copper bar',
+      subtitle: 'City Center vaulted brick & copper bar',
       category: 'PUB',
       image: 'assets/pub-nq-interior.jpg',
       spanClass: 'col-span-8 row-span-2',
-      alt: 'Atmospheric vaulted brick interior of The Glitch Northern Quarter pub'
+      alt: 'Atmospheric vaulted brick interior of The Glitch City Center pub'
     },
     {
       id: 2,

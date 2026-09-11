@@ -18,11 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
       extUrl: 'https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG',
       label: 'Open City Centre in Google Maps ↗'
     },
-    northernQuarter: {
+    cityCenter: {
       url: 'https://maps.google.com/maps?q=25b+St+Giles+St,+Norwich+NR2+1JN,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
       extUrl: 'https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN',
-      label: 'Open Northern Quarter in Google Maps ↗'
-    }
+      label: 'Open City Center in Google Maps ↗'
+    },
+    get northernQuarter() { return this.cityCenter; }
   };
 
   window.switchMapLocation = function (loc) {
@@ -36,13 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
         mapExtLink.href = mapLocations.cityCentre.extUrl;
         mapExtLink.textContent = mapLocations.cityCentre.label;
       }
-    } else if (loc === 'northernQuarter') {
+    } else if (loc === 'northernQuarter' || loc === 'cityCenter') {
       if (mapTabNQ) mapTabNQ.classList.add('active');
       if (mapTabCC) mapTabCC.classList.remove('active');
-      mapIframe.src = mapLocations.northernQuarter.url;
+      mapIframe.src = mapLocations.cityCenter.url;
       if (mapExtLink) {
-        mapExtLink.href = mapLocations.northernQuarter.extUrl;
-        mapExtLink.textContent = mapLocations.northernQuarter.label;
+        mapExtLink.href = mapLocations.cityCenter.extUrl;
+        mapExtLink.textContent = mapLocations.cityCenter.label;
       }
     }
   };
@@ -51,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mapTabCC.addEventListener('click', () => switchMapLocation('cityCentre'));
   }
   if (mapTabNQ) {
-    mapTabNQ.addEventListener('click', () => switchMapLocation('northernQuarter'));
+    mapTabNQ.addEventListener('click', () => switchMapLocation('cityCenter'));
   }
 
   // 2. Contact Form Interactive Handler

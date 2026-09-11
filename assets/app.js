@@ -23,10 +23,11 @@
     const modal = document.getElementById('bookingModal');
     const select = document.getElementById('bookingLocation');
     if (locationName && select) {
-      if (locationName.toLowerCase().includes('city')) {
+      const loc = locationName.toLowerCase();
+      if (loc.includes('center') || loc.includes('northern') || loc.includes('giles') || loc.includes('2')) {
+        select.value = 'City Center';
+      } else if (loc.includes('centre') || loc.includes('wales') || loc.includes('1') || loc.includes('city')) {
         select.value = 'City Centre';
-      } else if (locationName.toLowerCase().includes('northern')) {
-        select.value = 'Northern Quarter';
       }
     }
     if (modal) {
@@ -68,12 +69,12 @@
     const parking = document.getElementById('directionsParking');
     const mapLink = document.getElementById('googleMapsLink');
 
-    const isNQ = pub && pub.toLowerCase().includes('northern');
-    if (title) title.innerText = isNQ ? 'Pub 02 — Northern Quarter' : 'Pub 01 — City Centre';
-    if (addr) addr.innerText = isNQ ? '25b St Giles St, Norwich NR2 1JN, United Kingdom' : '37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom';
-    if (transit) transit.innerText = isNQ ? 'Stevenson Square (2 min walk), Shudehill Interchange (4 min walk)' : 'Piccadilly Gardens (3 min walk), Piccadilly Station (7 min walk)';
-    if (parking) parking.innerText = isNQ ? 'Port Street Car Park & on-street bays' : 'NCP Manchester Central & Church Street';
-    if (mapLink) mapLink.href = isNQ ? 'https://www.google.com/maps/search/?api=1&query=25b+St+Giles+St+Norwich+NR2+1JN' : 'https://www.google.com/maps/search/?api=1&query=37+Prince+of+Wales+Rd+Norwich+NR1+1BG';
+    const isPub2 = pub && (pub.toLowerCase().includes('center') || pub.toLowerCase().includes('northern') || pub.toLowerCase().includes('giles') || pub.includes('2'));
+    if (title) title.innerText = isPub2 ? 'Pub 02 — City Center' : 'Pub 01 — City Centre';
+    if (addr) addr.innerText = isPub2 ? '25b St Giles St, Norwich NR2 1JN, United Kingdom' : '37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom';
+    if (transit) transit.innerText = isPub2 ? 'St Giles Street (1 min walk), Norwich Market (3 min walk)' : 'Norwich Railway Station (6 min walk), Prince of Wales Rd (1 min walk)';
+    if (parking) parking.innerText = isPub2 ? 'St Giles Multi-Storey car park & on-street bays' : 'Rose Lane Car Park & on-street parking';
+    if (mapLink) mapLink.href = isPub2 ? 'https://www.google.com/maps/search/?api=1&query=25b+St+Giles+St+Norwich+NR2+1JN' : 'https://www.google.com/maps/search/?api=1&query=37+Prince+of+Wales+Rd+Norwich+NR1+1BG';
 
     if (modal) {
       modal.classList.remove('hidden');

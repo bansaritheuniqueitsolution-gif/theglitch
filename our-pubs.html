@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Pubs &amp; Bars — THE GLITCH | Manchester City Centre &amp; Northern Quarter</title>
+  <title>Our Pubs &amp; Bars — THE GLITCH | Manchester City Centre &amp; City Center</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
-  <meta name="description" content="Discover The Glitch's two iconic Manchester pubs: Pub 01 in City Centre for craft beer &amp; smash burgers, and Pub 02 in Northern Quarter for bohemian cocktail lounge vibes, wood-fired pizza &amp; heated rooftop terrace." />
+  <meta name="description" content="Discover The Glitch's two iconic Manchester pubs: Pub 01 in City Centre for craft beer &amp; smash burgers, and Pub 02 in City Center for bohemian cocktail lounge vibes, wood-fired pizza &amp; heated rooftop terrace." />
 
   <!-- Google Fonts: Playfair Display (editorial serif), Plus Jakarta Sans (body), Caveat (handwritten script), Syne (modern geometric branding) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -206,14 +206,14 @@
 
               <button onclick="event.stopPropagation(); openBookingModal('City Centre');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
                 <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                <span>Book a Table</span> </button> </div> </div> </div>
+                <span>Book a Table</span> </button> </div> </div> </div> </div>
 
-<!-- CARD 02: THE GLITCH - NORTHERN QUARTER -->
-        <div id="heroCard2" class="pub-hero-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#ff3b94]/60 cursor-pointer shadow-xl opacity-90 hover:opacity-100" onclick="switchPub('northern-quarter', true)">
+<!-- CARD 02: THE GLITCH - CITY CENTER -->
+        <div id="heroCard2" class="pub-hero-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#ff3b94]/60 cursor-pointer shadow-xl opacity-90 hover:opacity-100" onclick="switchPub('city-center', true)">
           
           <!-- Image Banner -->
           <div class="relative h-60 sm:h-72 overflow-hidden bg-black/40">
-            <img src="assets/pub-northern-quarter.jpg" alt="The Glitch Northern Quarter Pub Rooftop Terrace and Bar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+            <img src="assets/pub-northern-quarter.jpg" alt="The Glitch City Center Pub Rooftop Terrace and Bar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-[#0c1219]/30 to-transparent"></div>
             
             <!-- Top Status Badges -->
@@ -231,7 +231,7 @@
           <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between space-y-6">
             <div class="space-y-3">
               <div class="flex items-center justify-between gap-2">
-                <h3 class="text-2xl font-serif font-extrabold text-white group-hover:text-[#ff3b94] transition duration-200">The Glitch &ndash; Northern Quarter</h3> </div>
+                <h3 class="text-2xl font-serif font-extrabold text-white group-hover:text-[#ff3b94] transition duration-200">The Glitch &ndash; City Center</h3> </div>
 
               <!-- Address with icon -->
               <p class="text-xs sm:text-sm text-neutral-300 flex items-start gap-2">
@@ -255,7 +255,7 @@
                 <span>View Glitch 2</span>
                 <span>&darr;</span> </button>
 
-              <button onclick="event.stopPropagation(); openBookingModal('Northern Quarter');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+              <button onclick="event.stopPropagation(); openBookingModal('City Center');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
                 <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 <span>Book a Table</span> </button> </div> </div> </div> </div> </div> </section>
 
@@ -271,7 +271,7 @@
       <!-- Segmented Buttons -->
       <div class="inline-flex p-1 bg-[#060a0f] rounded-full border border-white/10 shadow-inner">
         <button id="switchBtnCity" onclick="switchPub('city-centre', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md">📍 Pub 01: City Centre</button>
-        <button id="switchBtnNQ" onclick="switchPub('northern-quarter', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white">📍 Pub 02: Northern Quarter</button> </div>
+        <button id="switchBtnNQ" onclick="switchPub('city-center', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white">📍 Pub 02: City Center</button> </div>
 
       <!-- Quick Action -->
       <div class="hidden md:flex items-center gap-2">
@@ -586,12 +586,15 @@
               <button onclick="openBookingModal('City Centre')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
 
 <!-- ========================================================================= -->
-  <!-- ==================== VIEW 2: THE GLITCH - NORTHERN QUARTER =============== -->
+  <!-- ==================== VIEW 2: THE GLITCH - CITY CENTER =============== -->
   <!-- ========================================================================= -->
   <div id="pubContentNorthernQuarter" class="tab-content hidden">
 
-    <!-- Overview Banner -->
-    <section class="py-12 sm:py-16 border-b border-white/[0.08] relative overflow-hidden bg-[#0a070e]">
+    <!-- HERO / BANNER SECTION -->
+    <section class="py-14 sm:py-20 border-b border-white/[0.08] relative bg-gradient-to-b from-[#120a14] via-[#090e15] to-[#070b10] overflow-hidden">
+      <!-- Glow circles -->
+      <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#ff3b94]/15 rounded-full blur-3xl pointer-events-none"></div>
+      
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
@@ -599,16 +602,16 @@
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff3b94]/10 border border-[#ff3b94]/30 text-xs font-extrabold uppercase tracking-widest text-[#ff3b94]">
               📍 Pub 02 Overview
             </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">The Glitch &ndash; Northern Quarter</h2>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">The Glitch &ndash; City Center</h2>
             <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">Nestled at 25b St Giles St in the city's renowned creative district, Pub 02 is an intimate bohemian sanctuary. Pairing wood-fired sourdough pizzas with artisanal botanical cocktails, vinyl DJ sets, vintage leather booths, and an all-weather heated skyline rooftop garden.</p>
             <div class="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-neutral-300">
               <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">📍</span> 25b St Giles St, Norwich NR2 1JN, United Kingdom</span>
-              <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">🚇</span> Stevenson Square / Shudehill (4 min walk)</span>
+              <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">🚇</span> St Giles Street / Market (3 min walk)</span>
               <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">📞</span> +44 (0)161 832 9002</span> </div> </div>
 
           <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
-            <button onclick="openBookingModal('Northern Quarter')" class="w-full py-3.5 px-6 rounded-full bg-[#ff3b94] hover:bg-white hover:text-black text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">Reserve Table at Northern Quarter</button>
-            <button onclick="openDirectionsModal('Northern Quarter')" class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">Get Travel Directions ↗</button> </div> </div> </div> </section>
+            <button onclick="openBookingModal('City Center')" class="w-full py-3.5 px-6 rounded-full bg-[#ff3b94] hover:bg-white hover:text-black text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">Reserve Table at City Center</button>
+            <button onclick="openDirectionsModal('City Center')" class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">Get Travel Directions ↗</button> </div> </div> </div> </section>
 
     <!-- SECTION 1: GLITCH 2 MENU HIGHLIGHTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -619,7 +622,7 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Pub 02 Kitchen &amp; Bar</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Menu Highlights</h3>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Center Menu Highlights</h3>
             <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Artisan wood-fired pizzas, sharing antipasti boards, signature botanical coupes, and decadent craft desserts.</p> </div>
 
           <div class="flex items-center gap-3">
@@ -695,7 +698,7 @@
           <!-- Left: Large Interior Spotlight Image -->
           <div class="lg:col-span-7">
             <div class="rounded-2xl overflow-hidden border border-white/[0.12] shadow-2xl relative group">
-              <img src="assets/pub-nq-interior.jpg" alt="The Glitch Northern Quarter Bohemian Lounge and Bar Interior" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <img src="assets/pub-nq-interior.jpg" alt="The Glitch City Center Bohemian Lounge and Bar Interior" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               
               <!-- Floating Photo Tag -->
@@ -703,7 +706,7 @@
                 <div class="w-10 h-10 rounded-lg bg-[#ff3b94]/20 border border-[#ff3b94]/40 flex items-center justify-center shrink-0">
                   <span class="text-lg">🍸</span> </div>
                 <div>
-                  <div class="text-xs font-bold text-white uppercase tracking-wider">Northern Quarter Speakeasy &amp; Lounge</div>
+                  <div class="text-xs font-bold text-white uppercase tracking-wider">City Center Speakeasy &amp; Lounge</div>
                   <div class="text-[11px] text-neutral-400">Exposed brick &bull; Brass cocktail bar &bull; Vinyl decks</div> </div> </div> </div> </div>
 
           <!-- Right: Atmosphere & Features Description -->
@@ -714,7 +717,7 @@
 
             <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Bohemian Cocktail Den &amp; Rooftop Hideaway.</h3>
 
-            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Tucked behind St Giles Street's vintage facades, Pub 02 is where Northern Quarter grit meets velvety nightlife. Sink into deep emerald velvet booths under warm filament bulbs, listen to vinyl records curated by local selectors, or take the stairs up to our heated all-weather skyline terrace.</p>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Tucked behind St Giles Street's vintage facades, Pub 02 is where City Center vibrancy meets velvety nightlife. Sink into deep emerald velvet booths under warm filament bulbs, listen to vinyl records curated by local selectors, or take the stairs up to our heated all-weather skyline terrace.</p>
 
             <!-- 3 Key Features -->
             <div class="space-y-3 pt-2">
@@ -745,10 +748,10 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Live Programming</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Upcoming Events</h3>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Center Upcoming Events</h3>
             <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Resident DJs spinning vinyl, secret acoustic sessions, and sunset rooftop weekend parties.</p> </div>
 
-          <button onclick="openBookingModal('Northern Quarter')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
+          <button onclick="openBookingModal('City Center')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
             <span>Book Table for Next Event</span>
             <span>&rarr;</span> </button> </div>
 
@@ -767,9 +770,9 @@
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Club &amp; Beats</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">NQ Resident Vinyl Sessions</h4>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Resident Vinyl Sessions</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Deep soul, cosmic disco, and underground house on original vinyl decks. Late night cocktails pouring till 1:00 AM.</p> </div>
-              <button onclick="openBookingModal('Northern Quarter')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve VIP Booth</button> </div> </div>
+              <button onclick="openBookingModal('City Center')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve VIP Booth</button> </div> </div>
 
           <!-- Event 2: Special Event / Secret Sets -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -783,9 +786,9 @@
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Exclusive Event</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">NQ Speakeasy Secret Sessions</h4>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Speakeasy Secret Sessions</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Unannounced live guest musicians, cocktail tasting flights upon arrival, and complimentary chef aperitivo bites.</p> </div>
-              <button onclick="openBookingModal('Northern Quarter')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Get on the Guestlist</button> </div> </div>
+              <button onclick="openBookingModal('City Center')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Get on the Guestlist</button> </div> </div>
 
           <!-- Event 3: Sunset Rooftop Social -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -801,7 +804,7 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Rooftop Vibe</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Skyline Sunset Aperitivo</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">2-for-£16 spritz cocktail specials, fresh wood-fired flatbreads, ambient acoustic music, and heated sunset loungers.</p> </div>
-              <button onclick="openBookingModal('Northern Quarter')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Rooftop Table</button> </div> </div> </div> </div> </section>
+              <button onclick="openBookingModal('City Center')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Rooftop Table</button> </div> </div> </div> </div> </section>
 
 <!-- SECTION 4: GLITCH 2 GALLERY -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -812,15 +815,15 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Visual Moments</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Northern Quarter Gallery</h3> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Center Gallery</h3> </div>
           <p class="text-xs text-neutral-400">Click any image to expand view</p> </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
-          <div onclick="openLightbox('assets/gallery-2-coupe.jpg', 'Northern Quarter Handcrafted Coupe Cocktails')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+          <div onclick="openLightbox('assets/gallery-2-coupe.jpg', 'City Center Handcrafted Coupe Cocktails')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
             <img src="assets/gallery-2-coupe.jpg" alt="Coupe Cocktail on Marble" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
-          <div onclick="openLightbox('assets/pub-nq-interior.jpg', 'Northern Quarter Exposed Brick Velvet Snugs')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
+          <div onclick="openLightbox('assets/pub-nq-interior.jpg', 'City Center Exposed Brick Velvet Snugs')" class="h-40 sm:h-52 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
             <img src="assets/pub-nq-interior.jpg" alt="Lounge Interior" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" />
             <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div> </div>
 
@@ -841,7 +844,7 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#ff3b94] font-bold">Pub 02 Schedule</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Northern Quarter Opening Hours</h3> </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">City Center Opening Hours</h3> </div>
 
             <div class="space-y-3 text-sm text-neutral-300">
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
@@ -865,7 +868,7 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#ff3b94] font-bold">Travel &amp; Arrival</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch Northern Quarter</h3> </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch City Center</h3> </div>
 
             <div class="space-y-4 text-xs sm:text-sm text-neutral-300">
               <div class="flex items-start gap-3">
@@ -879,7 +882,7 @@
                 <span class="text-lg">🚗</span>
                 <div>
                   <strong class="text-white block">Parking:</strong>
-                  Northern Quarter on-street bays and Port Street car park located 200m away.
+                  City Center on-street bays and St Giles multi-storey car park located 200m away.
                 </div> </div>
 
               <div class="flex items-start gap-3">
@@ -890,8 +893,8 @@
                 </div> </div> </div>
 
             <div class="pt-2 flex gap-3">
-              <button onclick="openDirectionsModal('Northern Quarter')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
-              <button onclick="openBookingModal('Northern Quarter')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
+              <button onclick="openDirectionsModal('City Center')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
+              <button onclick="openBookingModal('City Center')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
 
 <!-- ==================== "CAT / CTA" SECTION (CALL TO ACTION) ==================== -->
   <section id="cta-section" class="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-[#060a0f] via-[#090f17] to-[#05080c] border-b border-white/[0.08]">
@@ -924,13 +927,13 @@
             <p class="text-xs text-neutral-400 leading-relaxed">Craft beer taproom, smash burgers, and acoustic Friday nights on Prince of Wales Rd. Instant confirmation.</p> </div>
           <button onclick="openBookingModal('City Centre')" class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">Reserve at Glitch 1 &rarr;</button> </div>
 
-        <!-- Card 2: Book Northern Quarter -->
+        <!-- Card 2: Book City Center -->
         <div class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#ff3b94]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl">
           <div class="space-y-3">
             <span class="px-3 py-1 rounded-full bg-[#ff3b94]/10 text-[#ff3b94] text-[10px] font-extrabold tracking-widest uppercase">Pub 02</span>
-            <h4 class="text-xl font-bold text-white group-hover:text-[#ff3b94] transition">Book Northern Quarter</h4>
+            <h4 class="text-xl font-bold text-white group-hover:text-[#ff3b94] transition">Book City Center</h4>
             <p class="text-xs text-neutral-400 leading-relaxed">Cocktail speakeasy, wood-fired pizza, and heated rooftop terrace on St Giles Street.</p> </div>
-          <button onclick="openBookingModal('Northern Quarter')" class="w-full py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">Reserve at Glitch 2 &rarr;</button> </div>
+          <button onclick="openBookingModal('City Center')" class="w-full py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">Reserve at Glitch 2 &rarr;</button> </div>
 
         <!-- Card 3: Private Hire & Events -->
         <div class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-amber-400/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl">
@@ -987,7 +990,7 @@
           <div class="footer-location-item">
             <span class="location-index">LOCATION 02</span>
             <p class="location-address">25b St Giles St<br>Norwich NR2 1JN, United Kingdom</p>
-            <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Northern Quarter');return false;}">
+            <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Center');return false;}">
               <span>GET DIRECTIONS</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
 
@@ -1044,7 +1047,7 @@
           <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
           <select id="bookingLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
             <option value="City Centre">Pub 01 &mdash; City Centre (37 Prince of Wales Rd)</option>
-            <option value="Northern Quarter">Pub 02 &mdash; Northern Quarter (25b St Giles St)</option> </select> </div>
+            <option value="City Center">Pub 02 &mdash; City Center (25b St Giles St)</option> </select> </div>
 
         <div class="grid grid-cols-2 gap-4">
           <div>
@@ -1124,7 +1127,7 @@
           <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
           <select id="hireLocation" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
             <option value="City Centre">Pub 01 &mdash; City Centre (Craft Taproom)</option>
-            <option value="Northern Quarter">Pub 02 &mdash; Northern Quarter (Heated Rooftop / Speakeasy)</option>
+            <option value="City Center">Pub 02 &mdash; City Center (Heated Rooftop / Speakeasy)</option>
             <option value="Both">Not Sure / Open to Both</option> </select> </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
@@ -1148,10 +1151,10 @@
 
 <!-- ==================== JAVASCRIPT CONTROLLER ==================== -->
   <script>
-    // State management: 'city-centre' or 'northern-quarter'
+    // State management: 'city-centre' or 'city-center'
     let currentPub = 'city-centre';
 
-    // Switch between Glitch 1 (City Centre) and Glitch 2 (Northern Quarter)
+    // Switch between Glitch 1 (City Centre) and Glitch 2 (City Center)
     function switchPub(pubKey, shouldScroll) {
       currentPub = pubKey;
 
@@ -1194,7 +1197,7 @@
           document.getElementById('stickySwitcher').scrollIntoView({ behavior: 'smooth' });
         }
       } else {
-        // Show Northern Quarter
+        // Show City Center
         nqContent.classList.remove('hidden');
         nqContent.classList.add('active');
         cityContent.classList.add('hidden');
@@ -1203,7 +1206,7 @@
         // Sticky Switcher styling
         switchBtnNQ.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#ff3b94] text-white shadow-md";
         switchBtnCity.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white";
-        switcherLabel.innerText = "Pub 02 — Northern Quarter";
+        switcherLabel.innerText = "Pub 02 — City Center";
 
         // Hero Cards styling
         heroCard2.classList.add('active-card-pink');
@@ -1215,7 +1218,7 @@
         heroCard1Badge.classList.add('hidden');
 
         // Update URL hash smoothly
-        history.replaceState(null, null, '#northern-quarter');
+        history.replaceState(null, null, '#city-center');
 
         if (shouldScroll) {
           document.getElementById('stickySwitcher').scrollIntoView({ behavior: 'smooth' });
@@ -1227,9 +1230,17 @@
       if (currentPub === 'city-centre') {
         openBookingModal('City Centre');
       } else {
-        openBookingModal('Northern Quarter');
+        openBookingModal('City Center');
       }
     }
+
+    // Handle deep links via URL hash
+    document.addEventListener('DOMContentLoaded', () => {
+      const hash = (window.location.hash || '').toLowerCase();
+      if (hash.includes('center') || hash.includes('northern') || hash.includes('pub2') || hash.includes('glitch2')) {
+        switchPub('city-center', false);
+      }
+    });
   </script>
   <script src="assets/app.js"></script>
 
