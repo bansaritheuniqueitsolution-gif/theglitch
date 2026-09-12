@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | The Glitch - Pub &amp; Restaurant Manchester</title>
+  <title>Contact Us | The Glitch - Pub &amp; Restaurant Norwich</title>
   <meta name="description" content="Get in touch with The Glitch Pub &amp; Restaurant. Book a table, inquire about private hire and events, or find directions to our City Centre and City Center locations." />
   <meta name="theme-color" content="#05080c" />
 
   <!-- OpenGraph / Social Sharing -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact Us | The Glitch — Pub &amp; Restaurant Manchester" />
+  <meta property="og:title" content="Contact Us | The Glitch — Pub &amp; Restaurant Norwich" />
   <meta property="og:description" content="Whether you're booking a table, planning an event, or simply getting in touch, we'd love to hear from you." />
   <meta property="og:image" content="assets/hero.jpg" />
 
@@ -69,6 +69,42 @@
       <filter id="remove-black-bg" color-interpolation-filters="sRGB">
         <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.85 0.90 0.90 0 -0.06" /> </filter> </defs> </svg>
 
+  <!-- ==================== GLITCH PAGE PRELOADER & TRANSITION (2 to 3s Auto-Dismiss) ==================== -->
+  <div id="glitchPageLoader" class="glitch-page-loader" aria-hidden="true">
+    <div class="glitch-loader-glow"></div>
+    <div class="glitch-loader-content">
+      <div class="glitch-spinner-box">
+        <div class="glitch-ring-cyan"></div>
+        <div class="glitch-ring-pink"></div>
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="48" class="glitch-loader-logo" />
+      </div>
+      <div class="glitch-loader-meta">
+        <span class="glitch-loader-title">THE GLITCH</span>
+        <div class="glitch-loader-track">
+          <div class="glitch-loader-bar"></div>
+        </div>
+        <span class="glitch-loader-tagline">Good Food &bull; Great Drinks &bull; Good Times</span>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var loader = document.getElementById('glitchPageLoader');
+      if (!loader) return;
+      var dismissed = false;
+      function dismiss() {
+        if (dismissed) return;
+        dismissed = true;
+        loader.classList.add('loader-hidden');
+        setTimeout(function () {
+          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+        }, 550);
+      }
+      setTimeout(dismiss, 2200);
+      loader.addEventListener('click', dismiss);
+    })();
+  </script>
+
   <!-- ==================== HEADER / NAVBAR ==================== -->
   <header class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
     <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
@@ -87,8 +123,8 @@
 
       <!-- Right Action & Mobile Button -->
       <div class="glitch-header-actions flex items-center gap-3">
-        <button onclick="openBookingModal()" class="glitch-book-btn hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-sm font-medium transition duration-200 shadow-sm active:scale-95">
-          <svg class="w-4 h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        <button onclick="openBookingModal()" class="glitch-book-btn inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-xs sm:text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
           <span>Book a Table</span> </button>
 
         <!-- Mobile Menu Hamburger Button -->
@@ -118,8 +154,8 @@
     <!-- Hero Content -->
     <div class="contact-hero-content">
       <span class="contact-hero-badge">THE GLITCH</span>
-      <h1 class="contact-hero-title">GET IN TOUCH</h1>
-      <p class="contact-hero-subtitle">Whether you're booking a table, planning an event, or simply getting in touch, we'd love to hear from you.</p>
+      <h1 class="contact-hero-title">Get in Touch</h1>
+      <p class="contact-hero-subtitle">Have a question, planning a visit, or looking to book a table? Get in touch with the team at your preferred Glitch location.</p>
 
       <!-- Scroll Down Indicator -->
       <a href="#contact-main" id="heroScrollTrigger" class="contact-scroll-indicator" aria-label="Scroll to contact information">
@@ -132,65 +168,60 @@
     <div class="contact-main-container">
       <div class="contact-grid">
 
-        <!-- Left Side: Direct Contact Details -->
+        <!-- Left Side: Direct Contact Details & Interactive Pub Selector -->
         <div class="contact-info-col">
-          <span class="section-label-tag">HOSPITALITY CONCIERGE</span>
-          <h2 class="contact-col-title">WE'RE HERE FOR YOU</h2>
-          <p class="contact-col-lead">Have questions regarding table reservations, group bookings, dietary requirements, or private hire? Our dedicated hospitality team is at your service.</p>
+          <span class="section-label-tag">CHOOSE YOUR PUB</span>
+          <h2 class="contact-col-title">SELECT LOCATION</h2>
+          <p class="contact-col-lead">We operate two unique Norwich pub destinations. Select your preferred house to explore its details or click to direct your enquiry.</p>
 
-          <div class="contact-info-list">
-            <!-- Phone Number -->
-            <div class="contact-info-item">
-              <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg> </div>
-              <div class="contact-info-content">
-                <span class="contact-info-label">Direct Phone</span>
-                <a href="tel:+441618329940" class="contact-info-val">+44 (0) 161 832 9940</a>
-                <span class="contact-info-sub">Lines open daily from 11:00 AM – 11:00 PM</span> </div> </div>
+          <!-- Dual Pub Location Cards (Interactive Selector) -->
+          <div class="pub-cards-container">
+            <!-- Pub 1 Card -->
+            <div id="pubCard1" class="pub-card-select active-pub1" onclick="selectPub('pub1')" role="button" tabindex="0" aria-label="Select Pub 1 — City Centre">
+              <div class="pub-card-top">
+                <span class="pub-card-badge-pub1">PUB 01</span>
+                <span id="pubCard1Badge" class="pub-card-status-pin"><span>Selected</span> &check;</span>
+              </div>
+              <h3 class="pub-card-title">Pub 1 &mdash; City Centre</h3>
+              <div class="pub-card-details">
+                <div class="pub-card-row">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="text-[#4deeea]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</span>
+                </div>
+                <div class="pub-card-row">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="text-[#4deeea]"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3"/></svg>
+                  <span>Tue &ndash; Thu: 16:00 &ndash; 23:00 | Fri &ndash; Sat: 14:00 &ndash; 03:00 | Sun &ndash; Mon: Closed</span>
+                </div>
+              </div>
+              <div class="pub-card-email-badge bg-[#4deeea]/10 border border-[#4deeea]/30 text-[#5ce1e6]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>Direct Mailbox: <strong class="underline">norwich@pubtheglitch.co.uk</strong></span>
+              </div>
+            </div>
 
-            <!-- Email Address -->
-            <div class="contact-info-item">
-              <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg> </div>
-              <div class="contact-info-content">
-                <span class="contact-info-label">Email Inquiries</span>
-                <div class="space-y-1 mt-1">
-                  <div><span class="text-xs text-neutral-400">Pub 01:</span> <a href="mailto:norwich@pubtheglitch.co.uk" class="contact-info-val text-sm">norwich@pubtheglitch.co.uk</a></div>
-                  <div><span class="text-xs text-neutral-400">Pub 02:</span> <a href="mailto:sg@pubtheglitch.co.uk" class="contact-info-val text-sm">sg@pubtheglitch.co.uk</a></div>
-                </div> </div> </div>
-
-            <!-- Opening Hours Summary -->
-            <div class="contact-info-item">
-              <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="9" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 7v5l3 3" /> </svg> </div>
-              <div class="contact-info-content">
-                <span class="contact-info-label">Service Hours</span>
-                <span class="contact-info-val">See Individual House Schedules Below</span>
-                <span class="contact-info-sub">Pub 01: City Centre &bull; Pub 02: City Center</span> </div> </div>
-
-            <!-- Location 01 -->
-            <div class="contact-info-item">
-              <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg> </div>
-              <div class="contact-info-content">
-                <span class="contact-info-label">Location 01 &mdash; City Centre</span>
-                <span class="contact-info-val">37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</span>
-                <span class="contact-info-sub">Email: <a href="mailto:norwich@pubtheglitch.co.uk" class="text-neutral-300 hover:text-[#4deeea] underline">norwich@pubtheglitch.co.uk</a></span> </div> </div>
-
-            <!-- Location 02 -->
-            <div class="contact-info-item">
-              <div class="contact-info-icon-box" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg> </div>
-              <div class="contact-info-content">
-                <span class="contact-info-label">Location 02 &mdash; City Center</span>
-                <span class="contact-info-val">25b St Giles St, Norwich NR2 1JN, United Kingdom</span>
-                <span class="contact-info-sub">Email: <a href="mailto:sg@pubtheglitch.co.uk" class="text-neutral-300 hover:text-[#ff3b94] underline">sg@pubtheglitch.co.uk</a></span> </div> </div> </div>
+            <!-- Pub 2 Card -->
+            <div id="pubCard2" class="pub-card-select opacity-70" onclick="selectPub('pub2')" role="button" tabindex="0" aria-label="Select Pub 2 — City Center">
+              <div class="pub-card-top">
+                <span class="pub-card-badge-pub2">PUB 02</span>
+                <span id="pubCard2Badge" class="pub-card-status-pin"><span>Select Pub 2</span> &rarr;</span>
+              </div>
+              <h3 class="pub-card-title">Pub 2 &mdash; City Center</h3>
+              <div class="pub-card-details">
+                <div class="pub-card-row">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="text-[#ff2a85]"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>25b St Giles St, Norwich NR2 1JN, United Kingdom</span>
+                </div>
+                <div class="pub-card-row">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" class="text-[#ff2a85]"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v5l3 3"/></svg>
+                  <span>Mon &ndash; Wed: 12:00 &ndash; 21:30 | Thu &ndash; Sat: 11:00 &ndash; 23:00 | Sun: 12:00 &ndash; 21:30</span>
+                </div>
+              </div>
+              <div class="pub-card-email-badge bg-[#ff2a85]/10 border border-[#ff2a85]/30 text-[#ff4fa8]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>Direct Mailbox: <strong class="underline">sg@pubtheglitch.co.uk</strong></span>
+              </div>
+            </div>
+          </div>
 
           <!-- Social Media Group -->
           <div class="contact-social-wrap">
@@ -218,62 +249,98 @@
             <p class="contact-form-subtitle">Fill in your details below and our reservations team will respond within 24 hours.</p>
 
             <form id="contactForm" class="contact-form-fields" novalidate>
-              <!-- 1. Select Pub Dropdown -->
+              <!-- 1. Pub Location Selector -->
               <div class="form-group">
-                <label for="contactPub" class="form-label font-bold text-white flex items-center justify-between">
-                  <span>Select Pub</span>
-                  <span class="text-[11px] font-normal text-[#5ce1e6] uppercase tracking-wider">Choose Location</span>
+                <label class="form-label">
+                  <span>Select Location</span>
+                  <span class="text-[11px] font-normal text-[#4deeea] uppercase tracking-wider">Choose Pub</span>
                 </label>
-                <select id="contactPub" name="pub" class="form-select" onchange="updateContactPubNotice()">
-                  <option value="Pub 01 – City Centre">Pub 01 — City Centre (37 Prince of Wales Rd)</option>
-                  <option value="Pub 02 – City Center">Pub 02 — City Center (25b St Giles St)</option>
-                  <option value="General / Both Locations">General / Both Locations</option> </select> 
+                <div class="pub-toggle-group" role="group" aria-label="Select Location">
+                  <button type="button" id="togglePub1" class="pub-toggle-btn active-pub1" onclick="selectPub('pub1')" aria-pressed="true">
+                    <span>Pub 1</span>
+                  </button>
+                  <button type="button" id="togglePub2" class="pub-toggle-btn" onclick="selectPub('pub2')" aria-pressed="false">
+                    <span>Pub 2</span>
+                  </button>
+                </div>
+                <!-- Synchronized hidden field for form data -->
+                <input type="hidden" id="contactPub" name="selected_pub" value="Pub 1" />
                 <!-- Live Destination Mailbox Notice -->
-                <div id="contactPubNotice" class="mt-2 text-xs px-3.5 py-2 rounded-lg bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] flex items-center gap-2 font-medium transition-all duration-300">
+                <div id="contactPubNotice" class="mt-3 text-xs px-3.5 py-2.5 rounded-lg bg-[#4deeea]/10 border border-[#4deeea]/30 text-[#5ce1e6] flex items-center gap-2.5 font-medium transition-all duration-300">
                   <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  <span>Inquiry will go directly to Pub 01: <strong id="contactPubTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+                  <span>Enquiry will route directly to <strong>Pub 1</strong>: <strong class="underline tracking-wide text-white">norwich@pubtheglitch.co.uk</strong></span>
                 </div>
               </div>
 
               <!-- Full Name -->
               <div class="form-group">
-                <label for="contactName" class="form-label">Full Name</label>
-                <input type="text" id="contactName" name="name" required placeholder="e.g. Eleanor Vance" class="form-input" /> </div>
+                <label for="contactName" class="form-label">
+                  <span>Full Name</span>
+                  <span class="text-[#4deeea] text-xs">*</span>
+                </label>
+                <input type="text" id="contactName" name="customer_name" required placeholder="e.g. Eleanor Vance" class="form-input" autocomplete="name" />
+                <div class="form-error-msg" id="nameError"></div>
+              </div>
 
               <!-- Email Address -->
               <div class="form-group">
-                <label for="contactEmail" class="form-label">Email Address</label>
-                <input type="email" id="contactEmail" name="email" required placeholder="e.g. eleanor@example.com" class="form-input" /> </div>
+                <label for="contactEmail" class="form-label">
+                  <span>Email Address</span>
+                  <span class="text-[#4deeea] text-xs">*</span>
+                </label>
+                <input type="email" id="contactEmail" name="customer_email" required placeholder="e.g. eleanor@example.com" class="form-input" autocomplete="email" />
+                <div class="form-error-msg" id="emailError"></div>
+              </div>
 
               <!-- Phone Number -->
               <div class="form-group">
                 <label for="contactPhone" class="form-label">
                   <span>Phone Number</span>
-                  <span class="form-label-optional">(Optional)</span> </label>
-                <input type="tel" id="contactPhone" name="phone" placeholder="e.g. +44 7700 900123" class="form-input" /> </div>
+                  <span class="text-[#4deeea] text-xs">*</span>
+                </label>
+                <input type="tel" id="contactPhone" name="customer_phone" required placeholder="e.g. +44 7700 900123" class="form-input" autocomplete="tel" />
+                <div class="form-error-msg" id="phoneError"></div>
+              </div>
 
               <!-- Subject -->
               <div class="form-group">
-                <label for="contactSubject" class="form-label">Subject</label>
+                <label for="contactSubject" class="form-label">
+                  <span>Subject</span>
+                  <span class="text-[#4deeea] text-xs">*</span>
+                </label>
                 <select id="contactSubject" name="subject" required class="form-select">
+                  <option value="" disabled selected>Select an inquiry subject...</option>
                   <option value="Table Reservation">Table Reservation Inquiry</option>
                   <option value="Private Dining &amp; Events">Private Dining &amp; Full Venue Hire</option>
                   <option value="Drink &amp; Food Menu">Drink &amp; Food / Dietary Question</option>
+                  <option value="Live Music &amp; DJ Nights">Live Music &amp; DJ Nights</option>
                   <option value="Press &amp; Partnerships">Press, Media &amp; Brand Partnerships</option>
-                  <option value="General Hospitality Inquiry">General Feedback &amp; Inquiries</option> </select> </div>
+                  <option value="General Hospitality Inquiry">General Feedback &amp; Inquiries</option>
+                </select>
+                <div class="form-error-msg" id="subjectError"></div>
+              </div>
 
               <!-- Message -->
               <div class="form-group">
-                <label for="contactMessage" class="form-label">Message</label>
-                <textarea id="contactMessage" name="message" required rows="5" placeholder="Tell us about your plans, party size, preferred date, or questions..." class="form-textarea"></textarea> </div>
+                <label for="contactMessage" class="form-label">
+                  <span>Message</span>
+                  <span class="text-[#4deeea] text-xs">*</span>
+                </label>
+                <textarea id="contactMessage" name="message" required rows="5" placeholder="Tell us about your plans, party size, preferred date, or questions..." class="form-textarea"></textarea>
+                <div class="form-error-msg" id="messageError"></div>
+              </div>
 
               <!-- Submit Button -->
               <button type="submit" id="contactSubmitBtn" class="form-submit-btn">
-                <span>SEND MESSAGE</span>
-                <span class="btn-arrow" aria-hidden="true">&rarr;</span> </button>
+                <span>Send Message</span>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+              </button>
 
               <!-- In-Page Feedback Status Banner -->
-              <div id="formStatusBanner" class="form-status-banner" role="status" aria-live="polite"></div> </form> </div> </div> </div> </div> </section>
+              <div id="formStatusBanner" class="form-status-banner" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div> </div> </div> </section>
 
   <!-- ==================== 3. TWO LOCATIONS & STYLISH MAP SECTION ==================== -->
   <section class="locations-section" id="locations">
@@ -281,16 +348,16 @@
       
       <!-- Section Header -->
       <div class="locations-header">
-        <span class="section-label-tag">OUR MANCHESTER HOUSES</span>
+        <span class="section-label-tag">OUR NORWICH HOUSES</span>
         <h2 class="locations-header-title">VISIT THE GLITCH</h2>
-        <p class="locations-header-desc">Two distinctive venues across central Manchester, each crafted with our signature nightlife energy, warm pub hospitality, and elevated cocktails.</p> </div>
+        <p class="locations-header-desc">Two distinctive venues across central Norwich, each crafted with our signature nightlife energy, warm pub hospitality, and elevated cocktails.</p> </div>
 
       <!-- Two Location Detail Cards -->
       <div class="locations-cards-grid">
         <!-- Location 01 -->
         <article class="location-detail-card">
           <div class="location-card-img-wrap">
-            <img src="assets/pub-cc-interior.jpg" alt="The Glitch City Centre interior dining and bar" loading="lazy" />
+            <img src="assets/pub-cc-interior.jpg" alt="The Glitch City Centre interior dining and bar" loading="lazy" decoding="async" />
             <span class="location-card-badge">LOCATION 01</span> </div>
           <div class="location-card-body">
             <h3 class="location-card-title">CITY CENTRE</h3>
@@ -298,7 +365,10 @@
               37 Prince of Wales Rd<br />
               Norwich NR1 1BG, United Kingdom
             </p>
-            <p class="location-card-meta">Our flagship two-storey dining room, speakeasy cocktail lounge, and bustling taproom situated in the heart of Manchester.</p>
+            <div class="text-xs space-y-1 my-2 text-neutral-300">
+              <p><a href="mailto:norwich@pubtheglitch.co.uk" class="text-[#5ce1e6] hover:underline transition">✉️ norwich@pubtheglitch.co.uk</a></p>
+            </div>
+            <p class="location-card-meta">Our flagship two-storey dining room, speakeasy cocktail lounge, and bustling taproom situated in the heart of Norwich.</p>
             <div class="location-card-footer">
               <a href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank" rel="noopener" class="location-directions-btn">
                 <span>GET DIRECTIONS</span>
@@ -308,7 +378,7 @@
         <!-- Location 02 -->
         <article class="location-detail-card">
           <div class="location-card-img-wrap">
-            <img src="assets/pub-nq-interior.jpg" alt="The Glitch City Center interior atmosphere" loading="lazy" />
+            <img src="assets/pub-nq-interior.jpg" alt="The Glitch City Center interior atmosphere" loading="lazy" decoding="async" />
             <span class="location-card-badge">LOCATION 02</span> </div>
           <div class="location-card-body">
             <h3 class="location-card-title">CITY CENTER</h3>
@@ -316,6 +386,9 @@
               25b St Giles St<br />
               Norwich NR2 1JN, United Kingdom
             </p>
+            <div class="text-xs space-y-1 my-2 text-neutral-300">
+              <p><a href="mailto:sg@pubtheglitch.co.uk" class="text-[#ff3b94] hover:underline transition">✉️ sg@pubtheglitch.co.uk</a></p>
+            </div>
             <p class="location-card-meta">An intimate, industrial-chic sanctuary featuring exposed brick, artisan craft draught lines, and weekend vinyl DJ sessions.</p>
             <div class="location-card-footer">
               <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-directions-btn">
@@ -429,6 +502,9 @@
           <div class="footer-location-item">
             <span class="location-index">LOCATION 01</span>
             <p class="location-address">37 Prince of Wales Rd<br>Norwich NR1 1BG, United Kingdom</p>
+            <div class="footer-location-contacts text-xs space-y-1 mb-3 text-neutral-300">
+              <p><a href="mailto:norwich@pubtheglitch.co.uk" class="hover:text-[#5ce1e6] underline transition">✉️ norwich@pubtheglitch.co.uk</a></p>
+            </div>
             <a href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Centre');return false;}">
               <span>GET DIRECTIONS</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div>
@@ -436,6 +512,9 @@
           <div class="footer-location-item">
             <span class="location-index">LOCATION 02</span>
             <p class="location-address">25b St Giles St<br>Norwich NR2 1JN, United Kingdom</p>
+            <div class="footer-location-contacts text-xs space-y-1 mb-3 text-neutral-300">
+              <p><a href="mailto:sg@pubtheglitch.co.uk" class="hover:text-[#ff3b94] underline transition">✉️ sg@pubtheglitch.co.uk</a></p>
+            </div>
             <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Center');return false;}">
               <span>GET DIRECTIONS</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
@@ -477,74 +556,171 @@
           <span class="legal-sep" aria-hidden="true">&middot;</span>
           <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a> </div> </div> </div> </footer>
 
-  <!-- ==================== TABLE RESERVATION MODAL ==================== -->
-  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog">
-    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl space-y-6">
-      <!-- Close Button -->
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Booking Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
+<!-- ==================== TABLE RESERVATION MODAL ==================== -->
+  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog" onclick="if(event.target === this) closeBookingModal()">
+    <div class="booking-modal-card bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-5 sm:p-7 relative shadow-2xl space-y-5 max-h-[90vh] max-h-[90dvh] overflow-y-auto">
+      <!-- Close Button with large touch target -->
+      <button type="button" onclick="closeBookingModal()" class="booking-modal-close-btn" aria-label="Close Booking Modal">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" /></svg>
+      </button>
 
-      <div id="bookingFormContainer" class="space-y-6">
+      <div id="bookingFormContainer" class="space-y-4 sm:space-y-5">
         <!-- Modal Title -->
-        <div>
-          <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Reserve Your Spot</span>
-          <h3 class="text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
-          <p class="text-neutral-400 text-xs mt-1">Instant confirmation for parties of all sizes.</p> </div>
+        <div class="pr-10">
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30 text-[10px] uppercase tracking-widest font-bold">
+            <span>●</span> Table Reservation
+          </div>
+          <h3 class="text-xl sm:text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
+          <p class="text-neutral-400 text-xs mt-0.5">Select your pub venue, reserve your slot, and send your request directly to our team.</p>
+        </div>
 
         <!-- Booking Form -->
-        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+        <form id="bookingForm" onsubmit="handleBookingSubmit(event)" novalidate class="space-y-4 text-xs sm:text-sm">
+          <!-- Step 1: Select Pub Location (Dropdown) -->
           <div>
-            <label class="block text-neutral-300 font-semibold mb-1">Select Pub Location</label>
-            <select id="bookingLocation" onchange="updateBookingRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:border-[#4deeea]">
-              <option value="City Centre">Pub 01 &mdash; City Centre (37 Prince of Wales Rd)</option>
-              <option value="City Center">Pub 02 &mdash; City Center (25b St Giles St)</option> </select> 
-            <!-- Live Destination Mailbox Notice -->
-            <div id="bookingMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] flex items-center gap-2 font-medium transition-all duration-200">
-              <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span>Booking request will be sent to: <strong id="bookingTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+            <label for="bookingLocation" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <span>1. Select Pub Venue</span>
+              <span class="text-[10px] text-neutral-400 font-normal">Choose location</span>
+            </label>
+            <div class="relative">
+              <select id="bookingLocation" onchange="selectBookingPub(this.value)" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-4 py-3 text-white font-medium text-xs sm:text-sm focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
+                <option value="City Centre" selected>Pub 01 — City Centre (37 Prince of Wales Rd)</option>
+                <option value="City Center">Pub 02 — City Center (25b St Giles St)</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-neutral-400">
+                <svg class="w-4 h-4 text-[#4deeea]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+            
+            <!-- Live Selected Pub Contact Box -->
+            <div id="bookingVenueContactBox" class="mt-2.5 p-3 rounded-xl bg-[#080d14] border border-white/10 space-y-1.5">
+              <div class="flex items-center justify-between text-[11px]">
+                <span class="font-bold uppercase tracking-wider text-neutral-300">Direct Mailbox &amp; Venue Routing</span>
+                <span id="bookingVenueBadge" class="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30">City Centre</span>
+              </div>
+              <p id="bookingTargetAddress" class="text-[11px] text-neutral-400">37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</p>
+              <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs pt-0.5">
+                <a id="bookingTargetMailLink" href="mailto:norwich@pubtheglitch.co.uk" class="inline-flex items-center gap-1.5 text-[#5ce1e6] hover:underline transition">
+                  <svg class="w-3.5 h-3.5 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  <strong id="bookingTargetEmail" class="font-semibold tracking-wide">norwich@pubtheglitch.co.uk</strong>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label class="block text-neutral-300 font-semibold mb-1">Date</label>
-              <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]" /> </div>
-            <div>
-              <label class="block text-neutral-300 font-semibold mb-1">Time</label>
-              <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
-                <option value="12:00 PM">12:00 PM</option>
-                <option value="1:30 PM">1:30 PM</option>
-                <option value="3:00 PM">3:00 PM</option>
-                <option value="5:00 PM">5:00 PM</option>
-                <option value="6:30 PM">6:30 PM</option>
-                <option value="7:30 PM" selected>7:30 PM</option>
-                <option value="8:30 PM">8:30 PM</option>
-                <option value="9:30 PM">9:30 PM</option> </select> </div> </div>
+          <!-- Step 2: Date & Time -->
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <span>2. Date &amp; Time</span>
+              <span class="text-[10px] text-rose-400 font-bold uppercase tracking-wider">* Compulsory</span>
+            </label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="bookingDate" class="sr-only">Reservation Date</label>
+                <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition" />
+                <span id="bookingDateError" class="booking-error-msg hidden"></span>
+              </div>
+              <div>
+                <label for="bookingTime" class="sr-only">Reservation Time</label>
+                <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition">
+                  <option value="" disabled>Select Arrival Time</option>
+                  <option value="12:00 PM">12:00 PM — Lunch</option>
+                  <option value="1:30 PM">1:30 PM — Afternoon</option>
+                  <option value="3:00 PM">3:00 PM — Afternoon Drinks</option>
+                  <option value="5:00 PM">5:00 PM — Early Evening</option>
+                  <option value="6:30 PM">6:30 PM — Dinner Slot</option>
+                  <option value="7:30 PM" selected>7:30 PM — Prime Evening (Popular)</option>
+                  <option value="8:30 PM">8:30 PM — Dinner &amp; Cocktails</option>
+                  <option value="9:30 PM">9:30 PM — Late Night / DJ Night</option>
+                  <option value="10:00 PM">10:00 PM — Drinks Only</option>
+                </select>
+                <span id="bookingTimeError" class="booking-error-msg hidden"></span>
+              </div>
+            </div>
+          </div>
 
-          <div class="grid grid-cols-2 gap-4">
-            <div>
-              <label class="block text-neutral-300 font-semibold mb-1">Guests</label>
-              <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-[#4deeea]">
+          <!-- Step 3: Party Size (Seating Preference removed) -->
+          <div>
+            <label for="bookingGuests" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <span>3. Party Size</span>
+              <span class="text-[10px] text-neutral-400 font-normal">Number of guests</span>
+            </label>
+            <div class="relative">
+              <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
+                <option value="1 Guest">1 Guest</option>
                 <option value="2 Guests" selected>2 Guests</option>
                 <option value="3 Guests">3 Guests</option>
                 <option value="4 Guests">4 Guests</option>
+                <option value="5 Guests">5 Guests</option>
                 <option value="6 Guests">6 Guests</option>
-                <option value="8+ Large Party">8+ Large Party</option> </select> </div>
+                <option value="7-8 Guests">7-8 Guests</option>
+                <option value="8+ Large Party">8+ Large Party / Event</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-neutral-400">
+                <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Customer Contact Details -->
+          <div class="space-y-3 pt-2 border-t border-white/[0.08]">
             <div>
-              <label class="block text-neutral-300 font-semibold mb-1">Full Name</label>
-              <input type="text" required placeholder="Alex Mercer" id="bookingName" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div> </div>
+              <label for="bookingName" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <span>Full Name</span>
+                <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">* Compulsory</span>
+              </label>
+              <input type="text" required placeholder="Alex Mercer" id="bookingName" name="customer_name" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+              <span id="bookingNameError" class="booking-error-msg hidden"></span>
+            </div>
 
-          <div>
-            <label class="block text-neutral-300 font-semibold mb-1">Email or Phone</label>
-            <input type="text" required placeholder="alex@example.com or +44 7123 456789" id="bookingContact" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea]" /> </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label for="bookingEmail" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                  <span>Email ID</span>
+                  <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">* Compulsory</span>
+                </label>
+                <input type="email" required placeholder="alex@example.com" id="bookingEmail" name="customer_email" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+                <span id="bookingEmailError" class="booking-error-msg hidden"></span>
+              </div>
+              <div>
+                <label for="bookingPhone" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                  <span>Contact Number</span>
+                  <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">* Compulsory</span>
+                </label>
+                <input type="tel" required placeholder="+44 7123 456789" id="bookingPhone" name="customer_phone" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+                <span id="bookingPhoneError" class="booking-error-msg hidden"></span>
+              </div>
+            </div>
 
+            <div>
+              <label for="bookingNotes" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <span>Special Requests / Occasion</span>
+                <span class="text-[10px] text-neutral-500 font-normal">Optional</span>
+              </label>
+              <input type="text" placeholder="Birthday celebration, dietary needs, booth near window..." id="bookingNotes" name="booking_notes" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+            </div>
+          </div>
+
+          <!-- Direct Send Action -->
           <div class="pt-2">
-            <button type="submit" id="bookingSubmitBtn" class="w-full py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg">Confirm Table Reservation</button> </div> </form>
+            <button type="submit" id="bookingSubmitBtn" class="w-full py-3.5 px-6 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg active:scale-95 flex items-center justify-center gap-2">
+              <span>Directly Send Reservation Mail</span>
+              <span aria-hidden="true">&rarr;</span>
+            </button>
+            <p class="text-[11px] text-center text-neutral-400 mt-2">
+              Direct live dispatch &bull; Zero reservation fee &bull; Instant confirmation ticket
+            </p>
+          </div>
+        </form>
       </div>
 
       <!-- In-Modal Booking Success State Container -->
-      <div id="bookingSuccessContainer" class="hidden text-center py-4 space-y-5"></div> </div> </div>
+      <div id="bookingSuccessContainer" class="hidden text-center py-2 space-y-4"></div>
+    </div>
+  </div>
 
+  <!-- EmailJS Browser SDK (Official CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Page Logic -->
   <script src="contact.js"></script>
   <script src="assets/app.js"></script>
