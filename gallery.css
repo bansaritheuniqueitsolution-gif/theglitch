@@ -330,13 +330,115 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   7B. DUAL LOCATION SHOWCASE SECTION (MATCHING FOOD & DRINK)
+   -------------------------------------------------------------------------- */
+.gallery-showcase-section {
+  padding: 0 0 50px;
+  position: relative;
+}
+
+.gallery-hero-card {
+  position: relative;
+  transition: all var(--transition-smooth);
+}
+
+.gallery-hero-card.active-g1 {
+  border-color: var(--cyan-accent) !important;
+  box-shadow: 0 0 35px rgba(77, 238, 234, 0.35), 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+}
+
+.gallery-hero-card.active-g2 {
+  border-color: var(--pink-accent) !important;
+  box-shadow: 0 0 35px rgba(255, 42, 133, 0.35), 0 20px 40px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Location Selector Bar */
+.location-filter-bar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.loc-pill-btn {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.loc-pill-btn.active-glitch1 {
+  background-color: var(--cyan-accent) !important;
+  color: #060a0f !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px rgba(77, 238, 234, 0.4);
+}
+
+.loc-pill-btn.active-glitch2 {
+  background-color: var(--pink-accent) !important;
+  color: #ffffff !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px rgba(255, 42, 133, 0.4);
+}
+
+.loc-pill-btn.active-all {
+  background-color: var(--text-cream) !important;
+  color: #060a0f !important;
+  font-weight: 800 !important;
+  box-shadow: 0 0 16px rgba(244, 237, 227, 0.3);
+}
+
+.item-badges-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.item-venue-tag {
+  font-size: 0.625rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+}
+
+.venue-tag-g1 {
+  color: var(--cyan-glow);
+  background: rgba(77, 238, 234, 0.15);
+  border: 1px solid rgba(77, 238, 234, 0.4);
+}
+
+.venue-tag-g2 {
+  color: var(--pink-glow);
+  background: rgba(255, 42, 133, 0.15);
+  border: 1px solid rgba(255, 42, 133, 0.4);
+}
+
+.lightbox-venue-badge {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--cyan-glow);
+  padding: 3px 12px;
+  border-radius: 9999px;
+  border: 1px solid rgba(77, 238, 234, 0.4);
+  background: rgba(77, 238, 234, 0.12);
+}
+
+.lightbox-venue-badge.venue-g2 {
+  color: var(--pink-glow);
+  border-color: rgba(255, 42, 133, 0.4);
+  background: rgba(255, 42, 133, 0.12);
+}
+
+/* --------------------------------------------------------------------------
    8. CATEGORY FILTER NAVIGATION
    -------------------------------------------------------------------------- */
 .gallery-filters-section {
   position: sticky;
   top: var(--header-height);
   z-index: 100;
-  background: rgba(6, 10, 15, 0.94);
+  background: rgba(6, 10, 15, 0.95);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   padding: 16px 0;
