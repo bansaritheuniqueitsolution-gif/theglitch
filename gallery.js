@@ -263,12 +263,12 @@
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
       locationColor: 'pink',
-      title: 'The St Giles Cocktail Mixologists',
-      subtitle: 'Friendly craft bartenders and team behind the counter',
+      title: 'Heated Rooftop Garden Terrace',
+      subtitle: 'Panoramic skyline views across Norwich historic spires & craft cocktails',
       category: 'PUB',
-      image: 'assets/pub2-team.jpg',
+      image: 'assets/pub2-rooftop.jpg',
       spanClass: 'col-span-4 row-span-1',
-      alt: 'Friendly bar mixology team at The Glitch 2 St Giles'
+      alt: 'Heated botanical rooftop garden terrace at The Glitch 2'
     },
     {
       id: 211,
@@ -295,6 +295,32 @@
       image: 'assets/menu-burger.jpg',
       spanClass: 'col-span-6 row-span-1',
       alt: 'Gourmet smash burger with fries at The Glitch 2'
+    },
+    {
+      id: 213,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Ruby Velvet Lounge & Bathtub Snug',
+      subtitle: 'Deep crimson wingbacks, antique parlor table & candlelight next to clawfoot bathtub',
+      category: 'ATMOSPHERE',
+      image: 'assets/pub2-red-lounge.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Ruby red velvet wingback lounge suite and parlor table at The Glitch 2'
+    },
+    {
+      id: 214,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Velvet Music Lounge & Acoustic Corner',
+      subtitle: 'Moody purple ceiling illumination, classic rock acoustics & plush tufted velvet armchairs',
+      category: 'PUB',
+      image: 'assets/pub2-velvet-snug.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Velvet music lounge and acoustic corner at The Glitch 2 Norwich Market'
     }
   ];
 
