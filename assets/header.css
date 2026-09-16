@@ -593,7 +593,7 @@
   transform: translateY(-1px);
 }
 
-/* Pub 01 Active State (City Centre Cyan) */
+/* Pub 01 Active State (Prince of Wales Rd Cyan) */
 .booking-pub-tab.active-pub1 {
   background: linear-gradient(135deg, rgba(92, 225, 230, 0.12) 0%, rgba(8, 13, 20, 0.9) 100%);
   border-color: #5ce1e6;
@@ -605,7 +605,7 @@
   color: #5ce1e6;
 }
 
-/* Pub 02 Active State (City Center Pink) */
+/* Pub 02 Active State (Norwich Market Pink) */
 .booking-pub-tab.active-pub2 {
   background: linear-gradient(135deg, rgba(255, 59, 148, 0.12) 0%, rgba(8, 13, 20, 0.9) 100%);
   border-color: #ff3b94;

@@ -32,7 +32,7 @@ const PUB_DATA = {
     pub1: {
         id: "pub1",
         label: "Pub 1",
-        name: "Pub 1 — City Centre",
+        name: "Pub 1 — Prince of Wales Rd",
         email: "norwich@pubtheglitch.co.uk",
         address: "37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom",
         hours: "Tue – Thu: 16:00 – 23:00 | Fri – Sat: 14:00 – 03:00 | Sun – Mon: Closed",
@@ -43,7 +43,7 @@ const PUB_DATA = {
     pub2: {
         id: "pub2",
         label: "Pub 2",
-        name: "Pub 2 — City Center",
+        name: "Pub 2 — Norwich Market",
         email: "sg@pubtheglitch.co.uk",
         address: "25b St Giles St, Norwich NR2 1JN, United Kingdom",
         hours: "Mon – Wed: 12:00 – 21:30 | Thu – Sat: 11:00 – 23:00 | Sun: 12:00 – 21:30",
@@ -457,12 +457,12 @@ document.addEventListener('DOMContentLoaded', () => {
         cityCentre: {
             url: 'https://maps.google.com/maps?q=37+Prince+of+Wales+Rd,+Norwich+NR1+1BG,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
             extUrl: 'https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG',
-            label: 'Open City Centre in Google Maps ↗'
+            label: 'Open Prince of Wales Rd in Google Maps ↗'
         },
         cityCenter: {
             url: 'https://maps.google.com/maps?q=25b+St+Giles+St,+Norwich+NR2+1JN,+UK&t=&z=16&ie=UTF8&iwloc=&output=embed',
             extUrl: 'https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN',
-            label: 'Open City Center in Google Maps ↗'
+            label: 'Open Norwich Market in Google Maps ↗'
         }
     };
 

@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Pubs &amp; Bars — THE GLITCH | Norwich City Centre &amp; City Center</title>
+  <title>Our Pubs &amp; Bars — THE GLITCH | Prince of Wales Rd &amp; Norwich Market</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
-  <meta name="description" content="Discover The Glitch's two iconic Norwich pubs: Pub 01 in City Centre for craft beer &amp; smash burgers, and Pub 02 in City Center for bohemian cocktail lounge vibes, wood-fired pizza &amp; heated rooftop terrace." />
+  <meta name="description" content="Discover The Glitch's two iconic Norwich pubs: Pub 01 on Prince of Wales Rd for craft beer &amp; smash burgers, and Pub 02 at Norwich Market for bohemian cocktail lounge vibes, wood-fired pizza &amp; heated rooftop terrace." />
 
   <!-- Google Fonts: Playfair Display (editorial serif), Plus Jakarta Sans (body), Caveat (handwritten script), Syne (modern geometric branding) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -169,7 +169,7 @@
       <!-- ==================== DUAL PUB CARDS SELECTOR (HERO GRID) ==================== -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-        <!-- CARD 01: THE GLITCH - CITY CENTRE -->
+        <!-- CARD 01: THE GLITCH - PRINCE OF WALES RD -->
         <div id="heroCard1" class="pub-hero-card active-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#5ce1e6]/60 cursor-pointer shadow-xl" onclick="switchPub('city-centre', true)">
           
           <!-- Image Banner -->
@@ -215,20 +215,20 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/[0.08]">
-              <button class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
+              <button type="button" onclick="event.stopPropagation(); switchPub('city-centre', true);" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#5ce1e6] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
                 <span>View Glitch 1</span>
                 <span>&darr;</span> </button>
 
-              <button onclick="event.stopPropagation(); openBookingModal('City Centre');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+              <button type="button" onclick="event.stopPropagation(); openBookingModal('Prince of Wales Rd');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
                 <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 <span>Book a Table</span> </button> </div> </div> </div>
 
-<!-- CARD 02: THE GLITCH - CITY CENTER -->
+<!-- CARD 02: THE GLITCH - NORWICH MARKET -->
         <div id="heroCard2" class="pub-hero-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#ff3b94]/60 cursor-pointer shadow-xl opacity-90 hover:opacity-100" onclick="switchPub('city-center', true)">
           
           <!-- Image Banner -->
           <div class="relative h-60 sm:h-72 overflow-hidden bg-black/40">
-            <img src="assets/pub2-golden-bar.jpg" alt="The Glitch City Center Curved Golden Bar &amp; Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/pub2-golden-bar.jpg" alt="The Glitch Norwich Market Curved Golden Bar &amp; Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-[#0c1219]/30 to-transparent"></div>
             
             <!-- Top Status Badges -->
@@ -269,56 +269,43 @@
 
             <!-- Action Buttons -->
             <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-white/[0.08]">
-              <button class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
+              <button type="button" onclick="event.stopPropagation(); switchPub('city-center', true);" class="flex-1 inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#ff3b94] hover:bg-[#ff5ca6] text-white font-bold text-xs tracking-wider uppercase transition duration-200 shadow-md">
                 <span>View Glitch 2</span>
                 <span>&darr;</span> </button>
 
-              <button onclick="event.stopPropagation(); openBookingModal('City Center');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+              <button type="button" onclick="event.stopPropagation(); openBookingModal('Norwich Market');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
                 <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
                 <span>Book a Table</span> </button> </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== STICKY INTERACTIVE PUB SWITCHER BAR ==================== -->
-  <div id="stickySwitcher" class="sticky top-20 z-40 bg-[#080d14]/95 backdrop-blur-lg border-b border-white/10 py-3 shadow-glass transition duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- ==================== CLEAN INTERACTIVE PUB SWITCHER TABS ==================== -->
+  <section id="pubSwitcherSection" class="relative z-30 py-5 border-b border-white/[0.08] bg-[#070b10]/95 backdrop-blur-md sticky top-20 shadow-glass transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       
-      <!-- Label -->
-      <div class="flex items-center gap-2 text-xs text-neutral-400 font-semibold uppercase tracking-wider">
-        <span>Displaying Pub:</span>
-        <span id="switcherCurrentLabel" class="text-white font-bold">Pub 01 &mdash; Prince of Wales Rd</span> </div>
+      <!-- Label & Current Venue -->
+      <div class="flex items-center gap-3">
+        <span id="switcherStatusDot" class="w-2.5 h-2.5 rounded-full bg-[#5ce1e6] animate-pulse"></span>
+        <span class="text-xs uppercase tracking-widest text-neutral-400 font-semibold">Active Venue:</span>
+        <span id="switcherCurrentLabel" class="text-sm font-bold text-white tracking-wide">Pub 01 &mdash; Prince of Wales Rd</span> </div>
 
-      <!-- Segmented Buttons -->
-      <div class="inline-flex p-1 bg-[#060a0f] rounded-full border border-white/10 shadow-inner">
-        <button id="switchBtnCity" onclick="switchPub('city-centre', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md">📍 Pub 01: Prince of Wales Rd</button>
-        <button id="switchBtnNQ" onclick="switchPub('city-center', false)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white">📍 Pub 02: Norwich Market</button> </div>
+      <!-- Segmented Switcher Buttons -->
+      <div class="inline-flex p-1.5 bg-[#060a0f] rounded-full border border-white/10 shadow-inner" role="tablist">
+        <button id="switchBtnCity" type="button" role="tab" aria-selected="true" onclick="switchPub('city-centre', true)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md flex items-center gap-2">
+          <span>🍺</span>
+          <span>Pub 01: Prince of Wales Rd</span> </button>
+        <button id="switchBtnNQ" type="button" role="tab" aria-selected="false" onclick="switchPub('city-center', true)" class="px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white flex items-center gap-2">
+          <span>🍸</span>
+          <span>Pub 02: Norwich Market</span> </button> </div>
 
-      <!-- Quick Action -->
-      <div class="hidden md:flex items-center gap-2">
-        <button id="switcherBookBtn" onclick="openBookingForCurrent()" class="px-4 py-1.5 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] text-xs font-semibold text-white tracking-wide transition">Book Table Here &rarr;</button> </div> </div> </div>
+      <!-- Quick Action: Book Table for Current Venue -->
+      <div class="hidden md:flex items-center gap-3">
+        <button id="switcherBookBtn" onclick="openBookingForCurrent()" class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 text-xs font-bold uppercase tracking-wider transition shadow-md">
+          <svg class="w-3.5 h-3.5 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          <span>Book a Table</span> </button> </div> </div> </section>
 
-<!-- ========================================================================= -->
-  <!-- ==================== VIEW 1: THE GLITCH - CITY CENTRE ==================== -->
+  <!-- ========================================================================= -->
+  <!-- ==================== VIEW 1: THE GLITCH - PRINCE OF WALES RD ============= -->
   <!-- ========================================================================= -->
   <div id="pubContentCityCentre" class="tab-content active">
-
-    <!-- Overview Banner -->
-    <section class="py-12 sm:py-16 border-b border-white/[0.08] relative overflow-hidden bg-[#070b10]">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-8 space-y-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-xs font-extrabold uppercase tracking-widest text-[#5ce1e6]">
-              📍 Pub 01 Overview
-            </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">The Glitch &ndash; Prince of Wales Rd</h2>
-            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">Located directly on Prince of Wales Rd in the beating heart of the city, Pub 01 is designed for high-energy get-togethers, craft taproom purists, and burger lovers. Featuring 20 rotating draft lines from the UK's finest independent breweries, live acoustic stages, and full weekend sports screenings.</p>
-            <div class="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-neutral-300">
-              <span class="flex items-center gap-1.5"><span class="text-[#5ce1e6]">📍</span> 37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</span>
-              <span class="flex items-center gap-1.5"><span class="text-[#5ce1e6]">🚇</span> Piccadilly Gardens (3 min walk)</span>
-              <a href="mailto:norwich@pubtheglitch.co.uk" class="flex items-center gap-1.5 hover:text-white transition"><span class="text-[#5ce1e6]">✉️</span> norwich@pubtheglitch.co.uk</a> </div> </div>
-
-          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
-            <button onclick="openBookingModal('City Centre')" class="w-full py-3.5 px-6 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">Reserve Table at City Centre</button>
-            <button onclick="openDirectionsModal('City Centre')" class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">Get Travel Directions ↗</button> </div> </div> </div> </section>
 
     <!-- SECTION 1: GLITCH 1 MENU HIGHLIGHTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -329,7 +316,7 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Pub 01 Kitchen &amp; Bar</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Menu Highlights</h3>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Prince of Wales Rd Menu Highlights</h3>
             <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Gourmet smash burgers, crispy chicken wings, wild mushroom rice bowls, and our famous 20-tap craft line.</p> </div>
 
           <div class="flex items-center gap-3">
@@ -402,19 +389,40 @@
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
-          <!-- Left: Large Interior Spotlight Image -->
-          <div class="lg:col-span-7">
-            <div class="rounded-2xl overflow-hidden border border-white/[0.12] shadow-2xl relative group">
-              <img src="assets/pub1-taps.jpg" alt="The Glitch City Centre Craft Beer Taps and Bar Atmosphere" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+          <!-- Left: 3-Photo Visual Atmosphere Mosaic -->
+          <div class="lg:col-span-7 space-y-4">
+            <!-- Featured Main Photo: Craft Draught Wall -->
+            <div onclick="openLightbox('assets/pub1-taps.jpg', 'The 20-Tap Craft Draught Beer Wall &amp; Living Greenery at The Glitch Prince of Wales Rd')" class="rounded-2xl overflow-hidden border border-white/[0.12] shadow-2xl relative group cursor-pointer h-72 sm:h-80">
+              <img src="assets/pub1-taps.jpg" alt="The Glitch Prince of Wales Rd Craft Beer Taps and Bar Atmosphere" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
               
               <!-- Floating Photo Tag -->
-              <div class="absolute bottom-5 left-5 right-5 sm:right-auto bg-black/80 backdrop-blur-md border border-white/20 p-3.5 rounded-xl flex items-center gap-3">
-                <div class="w-10 h-10 rounded-lg bg-[#5ce1e6]/20 border border-[#5ce1e6]/40 flex items-center justify-center shrink-0">
-                  <span class="text-lg">🍺</span> </div>
-                <div>
-                  <div class="text-xs font-bold text-white uppercase tracking-wider">Craft Draught Wall &amp; Greenery</div>
-                  <div class="text-[11px] text-neutral-400">Guinness Extra Cold &bull; Live Sports &bull; Premium Spirits Bar</div> </div> </div> </div> </div>
+              <div class="absolute bottom-4 left-4 right-4 bg-black/80 backdrop-blur-md border border-white/20 p-3 rounded-xl flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded-lg bg-[#5ce1e6]/20 border border-[#5ce1e6]/40 flex items-center justify-center shrink-0">
+                    <span class="text-sm">🍺</span> </div>
+                  <div>
+                    <div class="text-xs font-bold text-white uppercase tracking-wider">20 Craft Draught Wall &amp; Living Greenery</div>
+                    <div class="text-[11px] text-neutral-400">Guinness Extra Cold &bull; Rotating Independent Lines</div> </div> </div>
+                <span class="text-[11px] font-semibold text-[#5ce1e6] flex items-center gap-1 group-hover:translate-x-0.5 transition">Zoom ↗</span> </div> </div>
+
+            <!-- Two Companion Atmosphere Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <!-- Companion 1: Illuminated Spirits Back Bar -->
+              <div onclick="openLightbox('assets/pub1-bar.jpg', 'Illuminated Premium Spirits Shelves &amp; Back Bar at Prince of Wales Rd')" class="rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative h-40 sm:h-44 shadow-lg">
+                <img src="assets/pub1-bar.jpg" alt="Illuminated Spirits Wall" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+                <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+                  <span class="text-xs font-bold text-white tracking-wide">Spirits Wall &amp; Cocktails</span>
+                  <span class="text-[10px] text-[#5ce1e6] font-bold uppercase">View ↗</span> </div> </div>
+
+              <!-- Companion 2: Matchday Live Sports Arena -->
+              <div onclick="openLightbox('assets/pub1-sports.jpg', 'Live Matchday Atmosphere &amp; Sports Screens at Prince of Wales Rd')" class="rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative h-40 sm:h-44 shadow-lg">
+                <img src="assets/pub1-sports.jpg" alt="Matchday Live Sports" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-transparent to-transparent"></div>
+                <div class="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+                  <span class="text-xs font-bold text-white tracking-wide">Giant HD Matchday Screens</span>
+                  <span class="text-[10px] text-[#5ce1e6] font-bold uppercase">View ↗</span> </div> </div> </div> </div>
 
           <!-- Right: Atmosphere & Features Description -->
           <div class="lg:col-span-5 space-y-6">
@@ -424,27 +432,33 @@
 
             <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Vibrant Craft Pub &amp; Matchday Atmosphere.</h3>
 
-            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Step inside 37 Prince of Wales Rd to experience authentic Norwich pub energy. Enjoy fresh cold pints of Guinness on tap, craft draught beers, live Premier League and football matchdays on our giant HD screens, an illuminated premium spirits bar, and weekend pint specials from £4.25.</p>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Step inside 37 Prince of Wales Rd to experience authentic Norwich pub energy. Enjoy fresh cold pints of Guinness on tap, 20 rotating craft draught beers, live Premier League and football matchdays on our giant HD screens, an illuminated premium spirits bar, and weekend pint specials from £4.25.</p>
 
-            <!-- 3 Key Features -->
+            <!-- 4 Key Features -->
             <div class="space-y-3 pt-2">
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">🍺</span>
                 <div>
-                  <h5 class="text-sm font-bold text-white">Craft Draught Lines &amp; £4.25 Specials</h5>
+                  <h5 class="text-sm font-bold text-white">20 Rotating Craft Taps &amp; £4.25 Specials</h5>
                   <p class="text-xs text-neutral-400">Guinness Extra Cold, Carlsberg Pilsner, Angelo Poretti, and Brooklyn Stonewall Inn IPA with £4.25 weekend pint specials.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">📺</span>
                 <div>
-                  <h5 class="text-sm font-bold text-white">Live Sports on Giant HD Screens</h5>
-                  <p class="text-xs text-neutral-400">Premier League, Champions League, and international tournament fixtures live with an electric matchday crowd.</p> </div> </div>
+                  <h5 class="text-sm font-bold text-white">Live Sports on Giant 4K Screens</h5>
+                  <p class="text-xs text-neutral-400">Premier League, Champions League, and international fixtures live with full crowd energy and stadium sound.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">🍸</span>
                 <div>
                   <h5 class="text-sm font-bold text-white">Neon Spirits Bar &amp; Party Platters</h5>
-                  <p class="text-xs text-neutral-400">Illuminated back bar stocked with premium spirits, party sharer drink platters, and fresh lime shots.</p> </div> </div> </div> </div> </div> </div> </section>
+                  <p class="text-xs text-neutral-400">Illuminated back bar stocked with premium spirits, party sharer drink platters, and fresh lime shots.</p> </div> </div>
+
+              <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
+                <span class="text-xl mt-0.5">🌿</span>
+                <div>
+                  <h5 class="text-sm font-bold text-white">Heated Outdoor Street Terrace</h5>
+                  <p class="text-xs text-neutral-400">Heated streetfront seating on Prince of Wales Rd &mdash; perfect for warm afternoons and weekend socialising.</p> </div> </div> </div> </div> </div> </div> </section>
 
 <!-- SECTION 3: GLITCH 1 UPCOMING EVENTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -455,10 +469,10 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Live Programming</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Upcoming Events</h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">From Friday night acoustic heroes to the legendary City Centre Sunday Roast feast.</p> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Prince of Wales Rd Upcoming Events</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">From Friday night acoustic heroes to the legendary Prince of Wales Rd Sunday Roast feast.</p> </div>
 
-          <button onclick="openBookingModal('City Centre')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
+          <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
             <span>Book Table for Next Event</span>
             <span>&rarr;</span> </button> </div>
 
@@ -479,7 +493,7 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Live &amp; Acoustic</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">The Glitch Acoustic Showcase</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Norwich's finest indie vocalists, acoustic guitar loops, and soulful covers paired with after-work drink specials.</p> </div>
-              <button onclick="openBookingModal('City Centre')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Front Booth</button> </div> </div>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Front Booth</button> </div> </div>
 
           <!-- Event 2: Sunday Roast -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -495,7 +509,7 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Weekly Tradition</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Signature Sunday Roast Club</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">28-day dry aged British beef sirloin or roasted mushroom wellington, giant Yorkshire pudding, duck fat potatoes &amp; bone marrow gravy.</p> </div>
-              <button onclick="openBookingModal('City Centre')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Sunday Roast Table</button> </div> </div>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Sunday Roast Table</button> </div> </div>
 
           <!-- Event 3: DJ Night -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -512,65 +526,138 @@
               <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Join the Guestlist</button> </div> </div> </div> </div> </section>
 
 <!-- SECTION 4: GLITCH 1 GALLERY -->
-    <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
+    <section id="pub1GallerySection" class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+        <!-- Header & Category Filter Buttons -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Visual Moments</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Centre Gallery</h3> </div>
-          <p class="text-xs text-neutral-400">Click any image to expand view</p> </div>
+              <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Visual Archive</span> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Prince of Wales Rd Gallery</h3>
+            <p class="text-neutral-400 text-xs sm:text-sm mt-1">Authentic visual moments from The Glitch 1 &bull; 37 Prince of Wales Rd</p> </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+          <!-- Interactive Filter Tabs -->
+          <div class="flex flex-wrap items-center gap-2" id="pub1FilterBar">
+            <button onclick="filterPub1Gallery('all', this)" class="pub1-filter-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md">All (12)</button>
+            <button onclick="filterPub1Gallery('taps', this)" class="pub1-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.1] border border-white/10">Bar &amp; Taps (5)</button>
+            <button onclick="filterPub1Gallery('matchday', this)" class="pub1-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.1] border border-white/10">Matchday &amp; Crowd (3)</button>
+            <button onclick="filterPub1Gallery('exterior', this)" class="pub1-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.1] border border-white/10">Exterior &amp; Terrace (3)</button>
+            <button onclick="filterPub1Gallery('food', this)" class="pub1-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.1] border border-white/10">Food &amp; Burgers (1)</button> </div> </div>
+
+        <!-- 12-Item Photo Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="pub1GalleryGrid">
+
           <!-- Photo 1: Neon Night Facade -->
-          <div onclick="openLightbox('assets/pub1-exterior-night.jpg', 'The Glitch Pub Neon Storefront &amp; Weekend Offers at Night')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-exterior-night.jpg" alt="The Glitch Pub Neon Night Facade" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Neon Storefront</div> </div>
+          <div data-category="exterior" onclick="openPub1Lightbox(0)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch Prince of Wales Rd Illuminated Neon Pub Facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Exterior</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Neon Pub Facade at Night</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Illuminated storefront with heated outdoor seating</p> </div> </div>
 
           <!-- Photo 2: Draught Taps Wall -->
-          <div onclick="openLightbox('assets/pub1-taps.jpg', 'Craft Beer Draught Taps &amp; Greenery Wall at The Glitch')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-taps.jpg" alt="Craft Beer Taps" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Craft Beer Taps</div> </div>
+          <div data-category="taps" onclick="openPub1Lightbox(1)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-taps.jpg" alt="Craft Beer Draught Taps Wall &amp; Greenery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Bar &amp; Taps</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">20 Craft Draught Wall</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Independent UK craft lines &amp; living greenery</p> </div> </div>
 
           <!-- Photo 3: Pints of Guinness -->
-          <div onclick="openLightbox('assets/pub1-guinness.jpg', 'Pours of Chilled Guinness Extra Cold on the Bar Mat')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-guinness.jpg" alt="Guinness Pints" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Pints of Guinness</div> </div>
+          <div data-category="taps" onclick="openPub1Lightbox(2)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-guinness.jpg" alt="Fresh Poured Guinness Extra Cold" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Bar &amp; Taps</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Guinness Extra Cold</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Poured fresh on draught with creamy head</p> </div> </div>
 
           <!-- Photo 4: Live Sports Matchday -->
-          <div onclick="openLightbox('assets/pub1-sports.jpg', 'Live Sports Matchday Viewing on Giant Screens with Crowd')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-sports.jpg" alt="Live Sports Matchday" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Live Matchdays</div> </div>
+          <div data-category="matchday" onclick="openPub1Lightbox(3)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-sports.jpg" alt="Live Sports Matchday Viewing with Crowd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Matchday</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Live Sports Arena</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Giant HD screens with electric fan atmosphere</p> </div> </div>
 
           <!-- Photo 5: Spirits Bar -->
-          <div onclick="openLightbox('assets/pub1-bar.jpg', 'Illuminated Premium Spirits Shelves &amp; Back Bar')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-bar.jpg" alt="Spirits Bar" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Spirits Wall</div> </div>
+          <div data-category="taps" onclick="openPub1Lightbox(4)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-bar.jpg" alt="Illuminated Premium Spirits Shelves &amp; Back Bar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Bar &amp; Taps</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Illuminated Spirits Wall</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Top-shelf gins, rums, and premium whiskies</p> </div> </div>
 
-          <!-- Photo 6: Party Drinks Platter -->
-          <div onclick="openLightbox('assets/pub1-drinks.jpg', 'Party Platter: Brooklyn Stonewall Inn IPA &amp; Fresh Lime Shots')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-drinks.jpg" alt="Party Platter &amp; Shots" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Party Sharer Tray</div> </div>
+          <!-- Photo 6: Daytime Streetfront & Outdoor Terrace -->
+          <div data-category="exterior" onclick="openPub1Lightbox(5)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-exterior-day.jpg" alt="The Glitch Day Exterior on Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Exterior</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Street Terrace by Day</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">37 Prince of Wales Rd outdoor dining &amp; drinks</p> </div> </div>
 
-          <!-- Photo 7: The Bar Crew -->
-          <div onclick="openLightbox('assets/pub1-team.jpg', 'The Glitch Friendly City Centre Bar Team')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-team.jpg" alt="The Glitch Team" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Our Bar Crew</div> </div>
+          <!-- Photo 7: Party Drinks Platter -->
+          <div data-category="taps" onclick="openPub1Lightbox(6)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-drinks.jpg" alt="Party Platter: Brooklyn Stonewall Inn IPA &amp; Lime Shots" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Bar &amp; Taps</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Party Drinks Platter</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Brooklyn IPA pints &amp; chilled lime shots</p> </div> </div>
 
-          <!-- Photo 8: Chilled Ciders on Wood Lounge -->
-          <div onclick="openLightbox('assets/pub1-cider.jpg', 'Chilled Pints on Carlsberg Coasters &amp; Wood-Slatted Lounge')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
-            <img src="assets/pub1-cider.jpg" alt="Chilled Pints &amp; Lounge" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
-            <div class="absolute bottom-2 left-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded text-[11px] text-white font-medium truncate opacity-0 group-hover:opacity-100 transition">Chilled Pints</div> </div> </div> </div> </section>
+          <!-- Photo 8: The Bar Crew -->
+          <div data-category="matchday" onclick="openPub1Lightbox(7)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-team.jpg" alt="The Friendly Glitch 1 Bar Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Our Team</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">The Glitch 1 Bar Crew</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Warm hospitality &amp; honest pub passion</p> </div> </div>
+
+          <!-- Photo 9: Chilled Ciders on Wood Lounge -->
+          <div data-category="taps" onclick="openPub1Lightbox(8)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-cider.jpg" alt="Chilled Pints on Wood-Slatted Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Bar &amp; Taps</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Chilled Draught Pints</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Craft pints served in our wooden lounge</p> </div> </div>
+
+          <!-- Photo 10: Weekend DJ Booth -->
+          <div data-category="matchday" onclick="openPub1Lightbox(9)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/event-dj-pub1.jpg" alt="DJ Night at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Nightlife</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Weekend DJ Sessions</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Vinyl spins &amp; late-night beats till 3:00 AM</p> </div> </div>
+
+          <!-- Photo 11: Vibrant Night Storefront -->
+          <div data-category="exterior" onclick="openPub1Lightbox(10)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-exterior-night.jpg" alt="Storefront Neon Glow at Night" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Exterior</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Storefront Neon Glow</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Weekend chalkboard specials on Prince of Wales Rd</p> </div> </div>
+
+          <!-- Photo 12: Smash Burger & Fries -->
+          <div data-category="food" onclick="openPub1Lightbox(11)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/menu-burger.jpg" alt="The Glitch Signature Double Smash Burger" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Food &amp; Kitchen</span>
+            <div class="absolute bottom-3 left-3 right-3">
+              <h5 class="text-sm font-bold text-white truncate">Double Smash Burger</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Aged beef, melted Monterey Jack &amp; skin-on fries</p> </div> </div>
+
+        </div> </div> </section>
 
 <!-- SECTION 5: GLITCH 1 HOURS & PRACTICAL INFO -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -581,7 +668,7 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold">Pub 01 Schedule</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">City Centre Opening Hours</h3> </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Prince of Wales Rd Opening Hours</h3> </div>
 
             <div class="space-y-3 text-sm text-neutral-300">
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
@@ -608,7 +695,7 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold">Travel &amp; Arrival</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch City Centre</h3> </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch Prince of Wales Rd</h3> </div>
 
             <div class="space-y-4 text-xs sm:text-sm text-neutral-300">
               <div class="flex items-start gap-3">
@@ -633,36 +720,14 @@
                 </div> </div> </div>
 
             <div class="pt-2 flex gap-3">
-              <button onclick="openDirectionsModal('City Centre')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
-              <button onclick="openBookingModal('City Centre')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
+              <button onclick="openDirectionsModal('Prince of Wales Rd')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
 
 <!-- ========================================================================= -->
-  <!-- ==================== VIEW 2: THE GLITCH - CITY CENTER =============== -->
+  <!-- ==================== VIEW 2: THE GLITCH - NORWICH MARKET =============== -->
+  <!-- ========================================================================= -->
   <!-- ========================================================================= -->
   <div id="pubContentNorthernQuarter" class="tab-content hidden">
-
-    <!-- HERO / BANNER SECTION -->
-    <section class="py-14 sm:py-20 border-b border-white/[0.08] relative bg-gradient-to-b from-[#120a14] via-[#090e15] to-[#070b10] overflow-hidden">
-      <!-- Glow circles -->
-      <div class="absolute -top-32 -left-32 w-96 h-96 bg-[#ff3b94]/15 rounded-full blur-3xl pointer-events-none"></div>
-      
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
-          <div class="lg:col-span-8 space-y-4">
-            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#ff3b94]/10 border border-[#ff3b94]/30 text-xs font-extrabold uppercase tracking-widest text-[#ff3b94]">
-              📍 Pub 02 Overview
-            </div>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight">The Glitch &ndash; Norwich Market</h2>
-            <p class="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-3xl">Nestled at 25b St Giles St in the city's renowned creative district, Pub 02 is an intimate bohemian sanctuary. Pairing wood-fired sourdough pizzas with artisanal botanical cocktails, vinyl DJ sets, vintage leather booths, and an all-weather heated skyline rooftop garden.</p>
-            <div class="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-neutral-300">
-              <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">📍</span> 25b St Giles St, Norwich NR2 1JN, United Kingdom</span>
-              <span class="flex items-center gap-1.5"><span class="text-[#ff3b94]">🚇</span> St Giles Street / Market (3 min walk)</span>
-              <a href="mailto:sg@pubtheglitch.co.uk" class="flex items-center gap-1.5 hover:text-white transition"><span class="text-[#ff3b94]">✉️</span> sg@pubtheglitch.co.uk</a> </div> </div>
-
-          <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-end">
-            <button onclick="openBookingModal('City Center')" class="w-full py-3.5 px-6 rounded-full bg-[#ff3b94] hover:bg-white hover:text-black text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition shadow-lg text-center">Reserve Table at City Center</button>
-            <button onclick="openDirectionsModal('City Center')" class="w-full py-3 px-6 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs sm:text-sm uppercase tracking-wider transition text-center">Get Travel Directions ↗</button> </div> </div> </div> </section>
 
     <!-- SECTION 1: GLITCH 2 MENU HIGHLIGHTS -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative">
@@ -673,72 +738,72 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Pub 02 Kitchen &amp; Bar</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Center Menu Highlights</h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Artisan wood-fired pizzas, sharing antipasti boards, signature botanical coupes, and decadent craft desserts.</p> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Norwich Market Menu Highlights</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Triple-stacked craft burgers served with fries, 9.5&quot; stone-baked pizzas, glazed chicken wings, loaded fries, and authentic Masala curries with fresh naan.</p> </div>
 
           <div class="flex items-center gap-3">
             <a href="menu.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/[0.06] hover:bg-white/15 border border-white/20 text-white text-xs sm:text-sm font-semibold tracking-wide uppercase transition">
               <span>View Full Food &amp; Drinks Menu</span>
               <span>&rarr;</span> </a> </div> </div>
 
-        <!-- 4 Highlight Cards -->
+        <!-- 4 Highlight Cards with Real Pub 02 Dishes -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           
-          <!-- Dish 1: Artisan Pizza -->
-          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
+          <!-- Dish 1: The Glitch Cheeseburger -->
+          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-pizza.jpg" alt="Artisan Wood-Fired Pizza" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£15.00</span> </div>
+              <img src="assets/menu-burger.jpg" alt="The Glitch Cheeseburger served with fries" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;12.99</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Wood-Fired Oven</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Spicy Nduja &amp; Hot Honey</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Slow-fermented sourdough crust, San Marzano tomato base, creamy fior di latte, Calabrian spicy nduja &amp; hot chili honey.</p> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Triple Beef Patty</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">The Glitch Cheeseburger</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">3 beef patties, melted cheese, lettuce, tomato, onions &amp; glitch burger sauce. Served complete with seasoned fries.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Stone Baked 90s</span>
+                <span>Served with Fries</span>
                 <span class="text-[#ff3b94] font-semibold">House Best</span> </div> </div> </div>
 
-          <!-- Dish 2: Shareable Platter -->
-          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
+          <!-- Dish 2: Glitchy Pepperoni Pizza -->
+          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-shareables.jpg" alt="The Glitch Shareable Feast Board" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£18.50</span> </div>
+              <img src="assets/menu-pizza.jpg" alt="Glitchy Pepperoni 9.5 inch Pizza" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;9.99</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Social Sharer</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">NQ Antipasti Sharing Board</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Prosciutto di Parma, burrata with pesto, charred artichokes, warm rosemary focaccia, marinated olives &amp; balsamic fig reduction.</p> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">9.5&quot; Stone-Baked</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Glitchy Pepperoni Pizza</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Stone-baked crust, rich tomato sauce base, melted mozzarella cheese, artisan pepperoni slices, and a kick of chili flakes.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Serves 2-3 Guests</span>
-                <span class="text-amber-400 font-semibold">Perfect with Wine</span> </div> </div> </div>
+                <span>Stone-Baked 9.5&quot;</span>
+                <span class="text-amber-400 font-semibold">Top Seller</span> </div> </div> </div>
 
-          <!-- Drink 3: Signature Cocktail -->
-          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
+          <!-- Dish 3: 12 Peri Peri Chicken Wings -->
+          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/pub2-cocktail.jpg" alt="Signature Sunset Layered Highball Cocktail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£11.50</span> </div>
+              <img src="assets/menu-wings.jpg" alt="12 Peri Peri Chicken Wings" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;9.49</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">House Craft</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Signature Sunset Highball</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Layered artisan gin aperitif, pressed blood orange, tonic infusion, chilled highball pour &amp; fresh citrus wheel.</p> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">The Glitch Chicken</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">12 Peri Peri Wings</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">12 succulent wings drenched in spicy Peri Peri sauce. Also available in Korean BBQ, Buffalo, Hot Honey, and Smokey BBQ.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Served in Ribbed Highball</span>
-                <span class="text-[#ff3b94] font-semibold">House Best</span> </div> </div> </div>
+                <span>Choice of 7 Flavors</span>
+                <span class="text-[#ff3b94] font-semibold">Crowd Favorite</span> </div> </div> </div>
 
-          <!-- Dish 4: Glitch Dessert -->
-          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
+          <!-- Dish 4: Masala Meets Curry Platter -->
+          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-dessert.jpg" alt="Artisan Glitch Dessert" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">£8.50</span> </div>
+              <img src="assets/menu-curry.jpg" alt="Glitch Curry Platter with Naan and Rice" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;14.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Sweet Finish</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Salted Caramel Fondant</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Warm melted 70% Valrhona dark chocolate cake with molten salted dulce de leche center, clotted vanilla bean gelato &amp; honeycomb dust.</p> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Masala Meets</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Glitch Curry Feast Platter</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Aromatic Chicken Tadka, Paneer Masala (V), or Egg Curry served complete with fragrant basmati rice and warm Naan or Paratha.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Vegetarian</span>
-                <span class="text-purple-400 font-semibold">Indulgent</span> </div> </div> </div> </div> </div> </section>
+                <span>Naan or Paratha + Rice</span>
+                <span class="text-emerald-400 font-semibold">Halal &amp; Veg Options</span> </div> </div> </div> </div> </div> </section>
 
 <!-- SECTION 2: GLITCH 2 INTERIOR & ROOFTOP SHOWCASE -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -749,7 +814,7 @@
           <!-- Left: Large Interior Spotlight Image -->
           <div class="lg:col-span-7">
             <div class="rounded-2xl overflow-hidden border border-white/[0.12] shadow-2xl relative group">
-              <img src="assets/pub2-golden-bar.jpg" alt="The Glitch City Center Hand-Hammered Golden Bar and Bohemian Lounge" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+              <img src="assets/pub2-golden-bar.jpg" alt="The Glitch Norwich Market Hand-Hammered Golden Bar and Bohemian Lounge" class="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
               
               <!-- Floating Photo Tag -->
@@ -799,10 +864,10 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Live Programming</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Center Upcoming Events</h3>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Norwich Market Upcoming Events</h3>
             <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Resident DJs spinning vinyl, live sports matchdays, and weekend party specials.</p> </div>
 
-          <button onclick="openBookingModal('City Center')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
+          <button onclick="openBookingModal('Norwich Market')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">
             <span>Book Table for Next Event</span>
             <span>&rarr;</span> </button> </div>
 
@@ -823,12 +888,12 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Club &amp; Beats</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Resident DJ Weekend Sessions</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Party anthems, deep house, and throwback bangers under neon lights. Late night drinks pouring till 1:00 AM.</p> </div>
-              <button onclick="openBookingModal('City Center')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve VIP Booth</button> </div> </div>
+              <button onclick="openBookingModal('Norwich Market')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve VIP Booth</button> </div> </div>
 
           <!-- Event 2: Live Karaoke -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-karaoke.jpg" alt="Live Karaoke Night at The Glitch City Center" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+              <img src="assets/event-karaoke.jpg" alt="Live Karaoke Night at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
                 <span class="block text-[9px] font-bold text-[#ff3b94] uppercase">Wed</span>
@@ -839,7 +904,7 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Live &amp; Social</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Live Karaoke Night</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">23 October &bull; 8:00 PM &bull; Grab the mic and take the stage! Sing your favorite classics, indie anthems, and pop hits with drink specials and full crowd energy.</p> </div>
-              <button onclick="openBookingModal('City Center')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Karaoke Booth</button> </div> </div>
+              <button onclick="openBookingModal('Norwich Market')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Karaoke Booth</button> </div> </div>
 
           <!-- Event 3: Premier League & Live Sports -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -855,7 +920,7 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Matchday Vibe</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Premier League Live Sports</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Catch every kick live on our big screens! £4.25 weekend pint specials, fresh Guinness on tap, and electric matchday atmosphere.</p> </div>
-              <button onclick="openBookingModal('City Center')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Matchday Table</button> </div> </div> </div> </div> </section>
+              <button onclick="openBookingModal('Norwich Market')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Book Matchday Table</button> </div> </div> </div> </div> </section>
 
 <!-- SECTION 4: GLITCH 2 GALLERY -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -866,7 +931,7 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#ff3b94] font-bold">Visual Moments</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">City Center Gallery</h3> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Norwich Market Gallery</h3> </div>
           <p class="text-xs text-neutral-400">Click any image to expand view</p> </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
@@ -951,7 +1016,7 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#ff3b94] font-bold">Pub 02 Schedule</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">City Center Opening Hours</h3> </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Norwich Market Opening Hours</h3> </div>
 
             <div class="space-y-3 text-sm text-neutral-300">
               <div class="flex justify-between py-2 border-b border-white/[0.06]">
@@ -972,7 +1037,7 @@
           <div class="lg:col-span-6 bg-[#0c1219] p-8 rounded-2xl border border-white/[0.08] space-y-6">
             <div>
               <span class="text-xs uppercase tracking-widest text-[#ff3b94] font-bold">Travel &amp; Arrival</span>
-              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch City Center</h3> </div>
+              <h3 class="text-2xl font-serif font-bold text-white mt-1">Finding The Glitch Norwich Market</h3> </div>
 
             <div class="space-y-4 text-xs sm:text-sm text-neutral-300">
               <div class="flex items-start gap-3">
@@ -986,7 +1051,7 @@
                 <span class="text-lg">🚗</span>
                 <div>
                   <strong class="text-white block">Parking:</strong>
-                  City Center on-street bays and St Giles multi-storey car park located 200m away.
+                  Norwich Market on-street bays and St Giles multi-storey car park located 200m away.
                 </div> </div>
 
               <div class="flex items-start gap-3">
@@ -997,8 +1062,8 @@
                 </div> </div> </div>
 
             <div class="pt-2 flex gap-3">
-              <button onclick="openDirectionsModal('City Center')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
-              <button onclick="openBookingModal('City Center')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
+              <button onclick="openDirectionsModal('Norwich Market')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
+              <button onclick="openBookingModal('Norwich Market')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
 
 <!-- ==================== "CAT / CTA" SECTION (CALL TO ACTION) ==================== -->
   <section id="cta-section" class="py-20 lg:py-28 relative overflow-hidden bg-gradient-to-b from-[#060a0f] via-[#090f17] to-[#05080c] border-b border-white/[0.08]">
@@ -1023,21 +1088,21 @@
       <!-- 3 CTA Action Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
-        <!-- Card 1: Book City Centre -->
-        <div onclick="openBookingModal('City Centre')" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#5ce1e6]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
+        <!-- Card 1: Book Prince of Wales Rd -->
+        <div onclick="openBookingModal('Prince of Wales Rd')" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#5ce1e6]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
           <div class="space-y-3">
             <span class="px-3 py-1 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] text-[10px] font-extrabold tracking-widest uppercase">Pub 01</span>
-            <h4 class="text-xl font-bold text-white group-hover:text-[#5ce1e6] transition">Book City Centre</h4>
+            <h4 class="text-xl font-bold text-white group-hover:text-[#5ce1e6] transition">Book Prince of Wales Rd</h4>
             <p class="text-xs text-neutral-400 leading-relaxed">Craft beer taproom, smash burgers, and acoustic Friday nights on Prince of Wales Rd. Instant confirmation.</p> </div>
-          <button onclick="event.stopPropagation(); openBookingModal('City Centre')" class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">Reserve at Glitch 1 &rarr;</button> </div>
+          <button onclick="event.stopPropagation(); openBookingModal('Prince of Wales Rd')" class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">Reserve at Glitch 1 &rarr;</button> </div>
 
-        <!-- Card 2: Book City Center -->
-        <div onclick="openBookingModal('City Center')" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#ff3b94]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
+        <!-- Card 2: Book Norwich Market -->
+        <div onclick="openBookingModal('Norwich Market')" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#ff3b94]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
           <div class="space-y-3">
             <span class="px-3 py-1 rounded-full bg-[#ff3b94]/10 text-[#ff3b94] text-[10px] font-extrabold tracking-widest uppercase">Pub 02</span>
-            <h4 class="text-xl font-bold text-white group-hover:text-[#ff3b94] transition">Book City Center</h4>
+            <h4 class="text-xl font-bold text-white group-hover:text-[#ff3b94] transition">Book Norwich Market</h4>
             <p class="text-xs text-neutral-400 leading-relaxed">Cocktail speakeasy, wood-fired pizza, and heated rooftop terrace on St Giles Street.</p> </div>
-          <button onclick="event.stopPropagation(); openBookingModal('City Center')" class="w-full py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">Reserve at Glitch 2 &rarr;</button> </div>
+          <button onclick="event.stopPropagation(); openBookingModal('Norwich Market')" class="w-full py-3 rounded-full bg-[#ff3b94] text-white font-bold text-xs uppercase tracking-wider hover:bg-white hover:text-black transition shadow-md">Reserve at Glitch 2 &rarr;</button> </div>
 
         <!-- Card 3: Private Hire & Events -->
         <div class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-amber-400/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl">
@@ -1090,7 +1155,7 @@
             <div class="footer-location-contacts text-xs space-y-1 mb-3 text-neutral-300">
               <p><a href="mailto:norwich@pubtheglitch.co.uk" class="hover:text-[#5ce1e6] underline transition">✉️ norwich@pubtheglitch.co.uk</a></p>
             </div>
-            <a href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Centre');return false;}">
+            <a href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Prince of Wales Rd');return false;}">
               <span>GET DIRECTIONS</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div>
           <div class="footer-locations-divider" aria-hidden="true"></div>
@@ -1100,7 +1165,7 @@
             <div class="footer-location-contacts text-xs space-y-1 mb-3 text-neutral-300">
               <p><a href="mailto:sg@pubtheglitch.co.uk" class="hover:text-[#ff3b94] underline transition">✉️ sg@pubtheglitch.co.uk</a></p>
             </div>
-            <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('City Center');return false;}">
+            <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Norwich Market');return false;}">
               <span>GET DIRECTIONS</span>
               <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
 
@@ -1108,7 +1173,7 @@
       <div class="footer-social">
         <span class="footer-section-label">FOLLOW THE GLITCH</span>
         <div class="footer-social-links">
-          <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+          <a href="https://www.instagram.com/glitchnorwich?stkn=OG81bmRyNWh4OW9i&amp;utm_source=qr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
@@ -1118,7 +1183,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
             <span>Facebook</span> </a>
-          <a href="https://tiktok.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
+          <a href="https://www.tiktok.com/@theglitchbar?_r=1&amp;_t=ZS-99kItesCAD6" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path> </svg>
             <span>TikTok</span> </a> </div> </div>
@@ -1169,8 +1234,8 @@
             </label>
             <div class="relative">
               <select id="bookingLocation" onchange="selectBookingPub(this.value)" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-4 py-3 text-white font-medium text-xs sm:text-sm focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
-                <option value="City Centre" selected>Pub 01 — City Centre (37 Prince of Wales Rd)</option>
-                <option value="City Center">Pub 02 — City Center (25b St Giles St)</option>
+                <option value="Prince of Wales Rd" selected>Pub 01 — Prince of Wales Rd (37 Prince of Wales Rd)</option>
+                <option value="Norwich Market">Pub 02 — Norwich Market (25b St Giles St)</option>
               </select>
               <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-neutral-400">
                 <svg class="w-4 h-4 text-[#4deeea]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -1181,7 +1246,7 @@
             <div id="bookingVenueContactBox" class="mt-2.5 p-3 rounded-xl bg-[#080d14] border border-white/10 space-y-1.5">
               <div class="flex items-center justify-between text-[11px]">
                 <span class="font-bold uppercase tracking-wider text-neutral-300">Direct Mailbox &amp; Venue Routing</span>
-                <span id="bookingVenueBadge" class="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30">City Centre</span>
+                <span id="bookingVenueBadge" class="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30">Prince of Wales Rd</span>
               </div>
               <p id="bookingTargetAddress" class="text-[11px] text-neutral-400">37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</p>
               <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs pt-0.5">
@@ -1312,7 +1377,7 @@
 
       <div>
         <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Directions &amp; Map</span>
-        <h3 id="directionsPubTitle" class="text-xl font-bold text-white mt-1">Pub 01 &mdash; City Centre</h3>
+        <h3 id="directionsPubTitle" class="text-xl font-bold text-white mt-1">Pub 01 &mdash; Prince of Wales Rd</h3>
         <p id="directionsPubAddress" class="text-neutral-400 text-xs mt-1">37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</p> </div>
 
       <div class="rounded-xl overflow-hidden border border-white/10 bg-[#080d14] p-4 text-xs text-neutral-300 space-y-3">
@@ -1345,8 +1410,8 @@
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
           <select id="hireLocation" onchange="updateHireRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
-            <option value="City Centre">Pub 01 &mdash; City Centre (Craft Taproom)</option>
-            <option value="City Center">Pub 02 &mdash; City Center (Heated Rooftop / Speakeasy)</option>
+            <option value="Prince of Wales Rd">Pub 01 &mdash; Prince of Wales Rd (Craft Taproom)</option>
+            <option value="Norwich Market">Pub 02 &mdash; Norwich Market (Heated Rooftop / Speakeasy)</option>
             <option value="Both">Not Sure / Open to Both</option> </select> 
           <!-- Live Destination Mailbox Notice -->
           <div id="hireMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-200">
@@ -1385,106 +1450,422 @@
               <input type="tel" id="hirePhone" required placeholder="+44 7123 456789" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div> </div>
         <button type="submit" class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">Submit Private Hire Request</button> </form> </div> </div>
 
-<!-- ==================== GALLERY LIGHTBOX MODAL ==================== -->
+<!-- ==================== ENHANCED GALLERY LIGHTBOX MODAL ==================== -->
   <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md" onclick="closeLightbox()" aria-modal="true" role="dialog">
-    <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
-        <span>Close</span> &times;  </button>
-      <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom" class="max-h-[80vh] w-auto rounded-xl border border-white/20 shadow-2xl object-contain" />
-      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p> </div> </div>
+    <div class="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center" onclick="event.stopPropagation()">
+      
+      <!-- Top Bar: Venue Badge, Photo Counter, Close Button -->
+      <div class="w-full flex items-center justify-between pb-3 text-xs sm:text-sm">
+        <span id="lightboxBadge" class="px-3 py-1 rounded-full bg-[#4deeea]/10 border border-[#4deeea]/30 text-[#5ce1e6] font-extrabold uppercase tracking-wider">Pub 01 &bull; Prince of Wales Rd</span>
+        <div class="flex items-center gap-4">
+          <span id="lightboxCounter" class="text-neutral-400 font-mono text-xs">1 / 12</span>
+          <button onclick="closeLightbox()" class="px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-bold transition flex items-center gap-1.5 shadow">
+            <span>Close</span> &times; </button> </div> </div>
+
+      <!-- Main Image Container with Prev/Next Controls -->
+      <div class="relative w-full flex items-center justify-center">
+        <!-- Previous Photo Button -->
+        <button id="lightboxPrevBtn" onclick="navigateLightbox(-1)" class="absolute left-2 sm:-left-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-black/80 hover:bg-white hover:text-black text-white border border-white/20 flex items-center justify-center transition shadow-2xl" aria-label="Previous Photo">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg> </button>
+
+        <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom" class="max-h-[72vh] w-auto max-w-full rounded-xl border border-white/20 shadow-2xl object-contain transition-opacity duration-300" />
+
+        <!-- Next Photo Button -->
+        <button id="lightboxNextBtn" onclick="navigateLightbox(1)" class="absolute right-2 sm:-right-6 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-black/80 hover:bg-white hover:text-black text-white border border-white/20 flex items-center justify-center transition shadow-2xl" aria-label="Next Photo">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg> </button> </div>
+
+      <p id="lightboxCaption" class="mt-3 text-neutral-200 text-xs sm:text-sm font-medium text-center max-w-2xl px-4"></p> </div> </div>
 
 <!-- ==================== JAVASCRIPT CONTROLLER ==================== -->
   <script>
     // State management: 'city-centre' or 'city-center'
     let currentPub = 'city-centre';
 
-    // Switch between Glitch 1 (City Centre) and Glitch 2 (City Center)
-    function switchPub(pubKey, shouldScroll) {
-      currentPub = pubKey;
+    // Glitch 1 Photos Data
+    const PUB1_PHOTOS = [
+      {
+        src: 'assets/pub1-exterior-facade.jpg',
+        title: 'Neon Pub Facade at Night',
+        caption: 'The Glitch Prince of Wales Rd illuminated neon storefront with heated outdoor seating.',
+        category: 'exterior'
+      },
+      {
+        src: 'assets/pub1-taps.jpg',
+        title: '20-Tap Craft Draught Wall & Greenery',
+        caption: 'Our iconic 20-tap independent craft draught line wall surrounded by living greenery & neon.',
+        category: 'taps'
+      },
+      {
+        src: 'assets/pub1-guinness.jpg',
+        title: 'Pours of Chilled Guinness Extra Cold',
+        caption: 'Freshly pulled pints of Guinness Extra Cold on tap with perfect creamy head.',
+        category: 'taps'
+      },
+      {
+        src: 'assets/pub1-sports.jpg',
+        title: 'Live Sports Matchday Arena',
+        caption: 'Packed matchday atmosphere watching live Premier League & Champions League on giant HD displays.',
+        category: 'matchday'
+      },
+      {
+        src: 'assets/pub1-bar.jpg',
+        title: 'Illuminated Premium Spirits Wall',
+        caption: 'Multi-tiered glowing back-bar stocked with small-batch gins, rums, and premium whiskies.',
+        category: 'taps'
+      },
+      {
+        src: 'assets/pub1-exterior-day.jpg',
+        title: 'Daytime Facade & Outdoor Terrace',
+        caption: 'Sunny day view of The Glitch on 37 Prince of Wales Rd with outdoor tables and street seating.',
+        category: 'exterior'
+      },
+      {
+        src: 'assets/pub1-drinks.jpg',
+        title: 'Party Sharer Tray & Lime Shots',
+        caption: 'Weekend celebration platter: Brooklyn Stonewall Inn IPA pints and fresh lime shots on ice.',
+        category: 'taps'
+      },
+      {
+        src: 'assets/pub1-team.jpg',
+        title: 'The Glitch 1 Bar Crew',
+        caption: 'Our passionate, friendly Norwich bar team ready to pour your favorite pints and cocktails.',
+        category: 'matchday'
+      },
+      {
+        src: 'assets/pub1-cider.jpg',
+        title: 'Chilled Draught Pints & Slatted Lounge',
+        caption: 'Cold draught ciders & craft lagers served in the wooden lounge area.',
+        category: 'taps'
+      },
+      {
+        src: 'assets/event-dj-pub1.jpg',
+        title: 'Weekend Late-Night DJ Sessions',
+        caption: 'Weekend DJ decks spinning vinyl, indie classics, and dance beats late into the night till 3:00 AM.',
+        category: 'matchday'
+      },
+      {
+        src: 'assets/pub1-exterior-night.jpg',
+        title: 'Storefront Neon Glow & Weekend Specials',
+        caption: 'Vibrant storefront neon signs and weekend craft specials on Prince of Wales Rd.',
+        category: 'exterior'
+      },
+      {
+        src: 'assets/menu-burger.jpg',
+        title: 'The Glitch Double Smash Burger',
+        caption: 'Two 4oz aged beef patties, double Monterey Jack, smoked bacon & house relish with skin-on fries.',
+        category: 'food'
+      }
+    ];
+
+    let currentLightboxMode = 'pub1';
+    let currentLightboxIndex = 0;
+
+    // Filter Glitch 1 Gallery by Category
+    function filterPub1Gallery(category, clickedBtn) {
+      const items = document.querySelectorAll('.pub1-gallery-item');
+      items.forEach(item => {
+        const itemCat = item.getAttribute('data-category');
+        if (category === 'all' || itemCat === category) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      // Update active filter pill
+      const buttons = document.querySelectorAll('.pub1-filter-btn');
+      buttons.forEach(btn => {
+        btn.className = "pub1-filter-btn px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-white/[0.04] text-neutral-300 hover:text-white hover:bg-white/[0.1] border border-white/10";
+      });
+      if (clickedBtn) {
+        clickedBtn.className = "pub1-filter-btn active px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md";
+      }
+    }
+
+    // Open Lightbox with Pub 1 item index
+    function openPub1Lightbox(index) {
+      currentLightboxMode = 'pub1';
+      currentLightboxIndex = (index + PUB1_PHOTOS.length) % PUB1_PHOTOS.length;
+      updateLightboxDisplay();
+
+      const modal = document.getElementById('lightboxModal');
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function updateLightboxDisplay() {
+      const photo = PUB1_PHOTOS[currentLightboxIndex];
+      if (!photo) return;
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      const counter = document.getElementById('lightboxCounter');
+      const badge = document.getElementById('lightboxBadge');
+      const prevBtn = document.getElementById('lightboxPrevBtn');
+      const nextBtn = document.getElementById('lightboxNextBtn');
+
+      if (img) img.src = photo.src;
+      if (cap) cap.innerHTML = `<strong class="text-white">${photo.title}</strong> &mdash; ${photo.caption}`;
+      if (counter) counter.innerText = `${currentLightboxIndex + 1} / ${PUB1_PHOTOS.length}`;
+      if (badge) {
+        badge.innerText = 'Pub 01 • Prince of Wales Rd';
+        badge.className = 'px-3 py-1 rounded-full bg-[#4deeea]/10 border border-[#4deeea]/30 text-[#5ce1e6] font-extrabold uppercase tracking-wider';
+      }
+      if (prevBtn) prevBtn.style.display = 'flex';
+      if (nextBtn) nextBtn.style.display = 'flex';
+    }
+
+    function navigateLightbox(dir) {
+      if (currentLightboxMode === 'pub1') {
+        currentLightboxIndex = (currentLightboxIndex + dir + PUB1_PHOTOS.length) % PUB1_PHOTOS.length;
+        updateLightboxDisplay();
+      }
+    }
+
+    // Override or enhance global openLightbox for generic clicks
+    window.openLightbox = function (src, caption) {
+      // Check if this image matches any Pub 1 photo
+      const pub1Idx = PUB1_PHOTOS.findIndex(p => p.src === src);
+      if (pub1Idx !== -1) {
+        openPub1Lightbox(pub1Idx);
+        return;
+      }
+
+      currentLightboxMode = 'single';
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      const counter = document.getElementById('lightboxCounter');
+      const badge = document.getElementById('lightboxBadge');
+      const prevBtn = document.getElementById('lightboxPrevBtn');
+      const nextBtn = document.getElementById('lightboxNextBtn');
+
+      if (img) img.src = src;
+      if (cap) cap.innerText = caption || '';
+      if (counter) counter.innerText = '';
+      if (badge) {
+        badge.innerText = src.includes('pub2') ? 'Pub 02 • Norwich Market' : 'The Glitch Visuals';
+        badge.className = src.includes('pub2') 
+          ? 'px-3 py-1 rounded-full bg-[#ff3b94]/10 border border-[#ff3b94]/30 text-[#ff3b94] font-extrabold uppercase tracking-wider'
+          : 'px-3 py-1 rounded-full bg-[#4deeea]/10 border border-[#4deeea]/30 text-[#5ce1e6] font-extrabold uppercase tracking-wider';
+      }
+      if (prevBtn) prevBtn.style.display = 'none';
+      if (nextBtn) nextBtn.style.display = 'none';
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    };
+
+    window.closeLightbox = function () {
+      const modal = document.getElementById('lightboxModal');
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    };
+
+    // Keyboard navigation for Lightbox
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+
+    // Switch between Glitch 1 (Prince of Wales Rd) and Glitch 2 (Norwich Market)
+    window.switchPub = function(pubKey, shouldScroll) {
+      const keyStr = ('' + (pubKey || '')).toLowerCase().trim();
+      const isPub2 = (
+        keyStr === 'city-center' || 
+        keyStr === 'pub2' || 
+        keyStr === '2' || 
+        keyStr === 'pub-2' || 
+        keyStr === 'glitch2' || 
+        keyStr === 'glitch-2' || 
+        keyStr.includes('market') || 
+        keyStr.includes('giles') || 
+        keyStr.includes('nq') || 
+        keyStr.includes('northern')
+      );
+      currentPub = isPub2 ? 'city-center' : 'city-centre';
 
       const cityContent = document.getElementById('pubContentCityCentre');
       const nqContent = document.getElementById('pubContentNorthernQuarter');
       const switchBtnCity = document.getElementById('switchBtnCity');
       const switchBtnNQ = document.getElementById('switchBtnNQ');
       const switcherLabel = document.getElementById('switcherCurrentLabel');
+      const switcherDot = document.getElementById('switcherStatusDot');
 
       const heroCard1 = document.getElementById('heroCard1');
       const heroCard2 = document.getElementById('heroCard2');
       const heroCard1Badge = document.getElementById('heroCard1Badge');
       const heroCard2Badge = document.getElementById('heroCard2Badge');
 
-      if (pubKey === 'city-centre') {
-        // Show City Centre
-        cityContent.classList.remove('hidden');
-        cityContent.classList.add('active');
-        nqContent.classList.add('hidden');
-        nqContent.classList.remove('active');
+      if (!isPub2) {
+        // Show Prince of Wales Rd (Glitch 1)
+        if (cityContent) {
+          cityContent.classList.remove('hidden');
+          cityContent.classList.add('active');
+          cityContent.style.display = 'block';
+        }
+        if (nqContent) {
+          nqContent.classList.add('hidden');
+          nqContent.classList.remove('active');
+          nqContent.style.display = 'none';
+        }
 
-        // Sticky Switcher styling
-        switchBtnCity.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md";
-        switchBtnNQ.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white";
-        switcherLabel.innerText = "Pub 01 — City Centre";
+        // Switcher styling
+        if (switchBtnCity) {
+          switchBtnCity.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#5ce1e6] text-neutral-900 shadow-md flex items-center gap-2";
+          switchBtnCity.setAttribute('aria-selected', 'true');
+        }
+        if (switchBtnNQ) {
+          switchBtnNQ.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white flex items-center gap-2";
+          switchBtnNQ.setAttribute('aria-selected', 'false');
+        }
+        if (switcherLabel) switcherLabel.innerText = "Pub 01 — Prince of Wales Rd";
+        if (switcherDot) {
+          switcherDot.className = "w-2.5 h-2.5 rounded-full bg-[#5ce1e6] animate-pulse";
+        }
 
         // Hero Cards styling
-        heroCard1.classList.add('active-card');
-        heroCard1.classList.remove('opacity-90');
-        heroCard1Badge.classList.remove('hidden');
+        if (heroCard1) {
+          heroCard1.classList.add('active-card');
+          heroCard1.classList.remove('opacity-90');
+        }
+        if (heroCard1Badge) heroCard1Badge.classList.remove('hidden');
 
-        heroCard2.classList.remove('active-card-pink');
-        heroCard2.classList.add('opacity-90');
-        heroCard2Badge.classList.add('hidden');
+        if (heroCard2) {
+          heroCard2.classList.remove('active-card-pink');
+          heroCard2.classList.add('opacity-90');
+        }
+        if (heroCard2Badge) heroCard2Badge.classList.add('hidden');
 
         // Update URL hash smoothly
-        history.replaceState(null, null, '#city-centre');
+        if (window.location.hash !== '#city-centre' && window.location.hash !== '#prince-of-wales-rd') {
+          history.replaceState(null, null, '#prince-of-wales-rd');
+        }
 
         if (shouldScroll) {
-          document.getElementById('stickySwitcher').scrollIntoView({ behavior: 'smooth' });
+          const switcher = document.getElementById('pubSwitcherSection');
+          if (switcher) {
+            const yOffset = -75;
+            const y = switcher.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          }
         }
       } else {
-        // Show City Center
-        nqContent.classList.remove('hidden');
-        nqContent.classList.add('active');
-        cityContent.classList.add('hidden');
-        cityContent.classList.remove('active');
+        // Show Norwich Market (Glitch 2)
+        if (nqContent) {
+          nqContent.classList.remove('hidden');
+          nqContent.classList.add('active');
+          nqContent.style.display = 'block';
+        }
+        if (cityContent) {
+          cityContent.classList.add('hidden');
+          cityContent.classList.remove('active');
+          cityContent.style.display = 'none';
+        }
 
-        // Sticky Switcher styling
-        switchBtnNQ.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#ff3b94] text-white shadow-md";
-        switchBtnCity.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white";
-        switcherLabel.innerText = "Pub 02 — City Center";
+        // Switcher styling
+        if (switchBtnNQ) {
+          switchBtnNQ.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 bg-[#ff3b94] text-white shadow-md flex items-center gap-2";
+          switchBtnNQ.setAttribute('aria-selected', 'true');
+        }
+        if (switchBtnCity) {
+          switchBtnCity.className = "px-5 sm:px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 text-neutral-400 hover:text-white flex items-center gap-2";
+          switchBtnCity.setAttribute('aria-selected', 'false');
+        }
+        if (switcherLabel) switcherLabel.innerText = "Pub 02 — Norwich Market";
+        if (switcherDot) {
+          switcherDot.className = "w-2.5 h-2.5 rounded-full bg-[#ff3b94] animate-pulse";
+        }
 
         // Hero Cards styling
-        heroCard2.classList.add('active-card-pink');
-        heroCard2.classList.remove('opacity-90');
-        heroCard2Badge.classList.remove('hidden');
+        if (heroCard2) {
+          heroCard2.classList.add('active-card-pink');
+          heroCard2.classList.remove('opacity-90');
+        }
+        if (heroCard2Badge) heroCard2Badge.classList.remove('hidden');
 
-        heroCard1.classList.remove('active-card');
-        heroCard1.classList.add('opacity-90');
-        heroCard1Badge.classList.add('hidden');
+        if (heroCard1) {
+          heroCard1.classList.remove('active-card');
+          heroCard1.classList.add('opacity-90');
+        }
+        if (heroCard1Badge) heroCard1Badge.classList.add('hidden');
 
         // Update URL hash smoothly
-        history.replaceState(null, null, '#city-center');
+        if (window.location.hash !== '#city-center' && window.location.hash !== '#norwich-market') {
+          history.replaceState(null, null, '#norwich-market');
+        }
 
         if (shouldScroll) {
-          document.getElementById('stickySwitcher').scrollIntoView({ behavior: 'smooth' });
+          const switcher = document.getElementById('pubSwitcherSection');
+          if (switcher) {
+            const yOffset = -75;
+            const y = switcher.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          }
         }
       }
-    }
+    };
 
     function openBookingForCurrent() {
       if (currentPub === 'city-centre') {
-        openBookingModal('City Centre');
+        openBookingModal('Prince of Wales Rd');
       } else {
-        openBookingModal('City Center');
+        openBookingModal('Norwich Market');
       }
     }
 
-    // Handle deep links via URL hash
-    document.addEventListener('DOMContentLoaded', () => {
+    // Handle deep links via URL hash and hash changes
+    function handleHashNavigation() {
       const hash = (window.location.hash || '').toLowerCase();
-      if (hash.includes('center') || hash.includes('northern') || hash.includes('pub2') || hash.includes('glitch2')) {
-        switchPub('city-center', false);
+      if (
+        hash.includes('center') || 
+        hash.includes('market') || 
+        hash.includes('giles') || 
+        hash.includes('pub2') || 
+        hash.includes('pub-2') || 
+        hash.includes('glitch2') || 
+        hash.includes('glitch-2') ||
+        hash === '#2'
+      ) {
+        window.switchPub('city-center', true);
+      } else if (
+        hash.includes('centre') || 
+        hash.includes('prince') || 
+        hash.includes('wales') || 
+        hash.includes('pub1') || 
+        hash.includes('pub-1') || 
+        hash.includes('glitch1') || 
+        hash.includes('glitch-1') ||
+        hash === '#1'
+      ) {
+        window.switchPub('city-centre', false);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      handleHashNavigation();
+      const hash = (window.location.hash || '').toLowerCase();
+      if (hash && (hash.includes('market') || hash.includes('giles') || hash.includes('center') || hash.includes('pub2') || hash.includes('pub-2'))) {
+        setTimeout(() => {
+          const switcher = document.getElementById('pubSwitcherSection');
+          if (switcher) {
+            const yOffset = -75;
+            const y = switcher.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          }
+        }, 150);
       }
     });
+    window.addEventListener('hashchange', handleHashNavigation);
   </script>
   <script src="assets/app.js"></script>
 

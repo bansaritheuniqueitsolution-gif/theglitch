@@ -22,8 +22,8 @@
   const PUB_CONFIG = {
     pub1: {
       id: 'pub1',
-      name: 'Pub 01 — City Centre',
-      shortName: 'City Centre',
+      name: 'Pub 01 — Prince of Wales Rd',
+      shortName: 'Prince of Wales Rd',
       address: '37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom',
       email: 'norwich@pubtheglitch.co.uk',
       phone: '+44 1603 621456',
@@ -33,8 +33,8 @@
     },
     pub2: {
       id: 'pub2',
-      name: 'Pub 02 — City Center',
-      shortName: 'City Center',
+      name: 'Pub 02 — Norwich Market',
+      shortName: 'Norwich Market',
       address: '25b St Giles St, Norwich NR2 1JN, United Kingdom',
       email: 'sg@pubtheglitch.co.uk',
       phone: '+44 1603 630123',
@@ -48,7 +48,7 @@
 
   function getPubConfig(locationVal) {
     const loc = (locationVal || '').toLowerCase();
-    if (loc.includes('center') || loc.includes('northern') || loc.includes('giles') || loc.includes('2')) {
+    if (loc.includes('market') || loc.includes('norwich') || loc.includes('center') || loc.includes('northern') || loc.includes('giles') || loc.includes('2')) {
       return PUB_CONFIG.pub2;
     }
     return PUB_CONFIG.pub1;
@@ -56,7 +56,8 @@
 
   // Interactive Pub Selector (Visual Tabs & Dropdown sync)
   window.selectBookingPub = function (pubKey) {
-    const targetKey = (pubKey === 'pub2' || pubKey === 'City Center' || (pubKey && pubKey.toLowerCase().includes('center'))) ? 'pub2' : 'pub1';
+    const loc = (pubKey || '').toLowerCase();
+    const targetKey = (loc === 'pub2' || loc.includes('market') || loc.includes('norwich') || loc.includes('center') || loc.includes('giles') || loc === '2') ? 'pub2' : 'pub1';
     activeBookingPubKey = targetKey;
     const config = PUB_CONFIG[targetKey];
 
@@ -596,8 +597,9 @@ ${data.notes ? `Special Notes: ${data.notes}` : ''}
     const parking = document.getElementById('directionsParking');
     const mapLink = document.getElementById('googleMapsLink');
 
-    const isPub2 = pub && (pub.toLowerCase().includes('center') || pub.toLowerCase().includes('northern') || pub.toLowerCase().includes('giles') || pub.includes('2'));
-    if (title) title.innerText = isPub2 ? 'Pub 02 — City Center' : 'Pub 01 — City Centre';
+    const loc = (pub || '').toLowerCase();
+    const isPub2 = pub && (loc.includes('market') || loc.includes('norwich') || loc.includes('center') || loc.includes('northern') || loc.includes('giles') || pub.includes('2'));
+    if (title) title.innerText = isPub2 ? 'Pub 02 — Norwich Market' : 'Pub 01 — Prince of Wales Rd';
     if (addr) addr.innerText = isPub2 ? '25b St Giles St, Norwich NR2 1JN, United Kingdom' : '37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom';
     if (transit) transit.innerText = isPub2 ? 'St Giles Street (1 min walk), Norwich Market (3 min walk)' : 'Norwich Railway Station (6 min walk), Prince of Wales Rd (1 min walk)';
     if (parking) parking.innerText = isPub2 ? 'St Giles Multi-Storey car park & on-street bays' : 'Rose Lane Car Park & on-street parking';
@@ -783,12 +785,12 @@ ${data.notes ? `Special Notes: ${data.notes}` : ''}
     const emailInput = document.getElementById('hireEmail') || (form ? form.querySelector('input[type="email"]') : null);
     const phoneInput = document.getElementById('hirePhone') || (form ? form.querySelector('input[type="tel"]') : null);
 
-    const locVal = select ? select.value : 'City Centre';
+    const locVal = select ? select.value : 'Prince of Wales Rd';
     let targetEmail = 'norwich@pubtheglitch.co.uk';
-    let pubName = 'Pub 01 — City Centre';
-    if (locVal.toLowerCase().includes('center') || locVal.toLowerCase().includes('2')) {
+    let pubName = 'Pub 01 — Prince of Wales Rd';
+    if (locVal.toLowerCase().includes('market') || locVal.toLowerCase().includes('center') || locVal.toLowerCase().includes('2')) {
       targetEmail = 'sg@pubtheglitch.co.uk';
-      pubName = 'Pub 02 — City Center';
+      pubName = 'Pub 02 — Norwich Market';
     } else if (locVal.toLowerCase().includes('both')) {
       targetEmail = 'norwich@pubtheglitch.co.uk, sg@pubtheglitch.co.uk';
       pubName = 'Both Glitch Locations';
