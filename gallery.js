@@ -53,7 +53,7 @@
       locationColor: 'cyan',
       title: 'The Perfect Pint of Guinness',
       subtitle: 'Creamy cold pour with shamrock head on rustic timber counter',
-      category: 'FOOD & DRINKS',
+      category: 'MOCKTAILS & DRINKS',
       image: 'assets/pub1-guinness.jpg',
       spanClass: 'col-span-4 row-span-1',
       alt: 'Freshly poured pint of Guinness with shamrock at The Glitch 1'
@@ -92,7 +92,7 @@
       locationColor: 'cyan',
       title: 'Fresh Pours & Signature Spirits',
       subtitle: 'Chilled pints, IPAs and cocktails lined up along the bar',
-      category: 'FOOD & DRINKS',
+      category: 'MOCKTAILS & DRINKS',
       image: 'assets/pub1-drinks.jpg',
       spanClass: 'col-span-6 row-span-2',
       alt: 'Selection of pints and spirit drinks lined up on the bar at The Glitch 1'
@@ -118,7 +118,7 @@
       locationColor: 'cyan',
       title: 'Chilled Craft Ciders & Bottles',
       subtitle: 'Crisp refreshment under warm amber back-lighting',
-      category: 'FOOD & DRINKS',
+      category: 'MOCKTAILS & DRINKS',
       image: 'assets/pub1-cider.jpg',
       spanClass: 'col-span-6 row-span-1',
       alt: 'Cold craft cider pints and bottles at The Glitch 1'
