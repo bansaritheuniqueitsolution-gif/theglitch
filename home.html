@@ -56,6 +56,7 @@
       }
     }
   </script>
+
 </head>
 
 <body class="bg-[#060a0f] text-neutral-200 font-sans antialiased selection:bg-[#4deeea]/20 selection:text-[#5ce1e6]">
@@ -118,6 +119,8 @@
         <a href="menu.html" class="glitch-nav-link hover:text-white transition duration-200">Food &amp; Drinks</a>
         <a href="gallery.html" class="glitch-nav-link hover:text-white transition duration-200">Gallery</a>
         <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a> </nav>
+
+        
 
       <!-- Right Action & Mobile Button -->
       <div class="glitch-header-actions flex items-center gap-3">
@@ -268,29 +271,31 @@
                     <span>04:00 PM – 11:00 PM</span> </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Thurs</span>
-                    <span>04:00 PM – 12:30 AM</span> </div>
+                    <span>04:00 PM – 12:30 AM</span> </div> 
                   <div class="flex justify-between gap-2">
-                    <span class="text-neutral-400">Fri – Sat</span>
+                    <span class="text-neutral-400">Fri - Sat</span>
                     <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span> </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Sun</span>
-                    <span>Holiday</span> </div> </div> </div> </div>
+                    <span>Holiday</span> </div></div> </div> </div>
 
-            <!-- Bottom Action buttons -->
-            <div class="flex flex-wrap items-center gap-3 pt-6 mt-6 border-t border-white/[0.08]">
-              <a href="our-pubs.html#prince-of-wales-rd" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition duration-200">
+          <!-- Bottom Action Buttons -->
+          <div class="px-6 py-4 sm:px-8 bg-white/[0.02] border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <a href="our-pubs.html#prince-of-wales-rd" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition shadow-md">
                 <span>Explore Pub</span>
                 <span>&rarr;</span> </a>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
-                <svg class="w-3.5 h-3.5 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                <span>Book a Table</span> </button> </div> </div> </article>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition">
+                <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                <span>Book a Table</span> </button> </div> </div> </div> </article>
 
-        <!-- PUB 02: NORWICH MARKET -->
-        <article class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden hover:border-white/[0.22] transition-all duration-300 flex flex-col group hover:shadow-2xl hover:shadow-black/50">
+        <!-- ==================== LOCATION 02 CARD ==================== -->
+        <div class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-300 flex flex-col group hover:border-[#ff2a85]/50 shadow-xl">
           <div class="relative h-64 sm:h-72 overflow-hidden">
             <img src="assets/pub2-golden-bar.jpg" alt="The Glitch Norwich Market Curved Golden Bar &amp; Bohemian Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div> </div>
 
+          <!-- Card Body -->
           <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between">
             <!-- Top Card Grid: Left Details + Right Opening Hours -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start">
@@ -388,7 +393,254 @@
             <div class="mt-4 pt-4 border-t border-white/10 w-full z-10">
               <p class="font-script text-2xl text-neutral-200 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">Eat &middot; Drink &middot; Belong</p> </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== "OPENING HOURS" & "WHAT'S ON" SECTION ==================== -->
+  <!-- ==================== "COMING SOON TO OUR PUBS" SECTION ==================== -->
+  <section id="coming-soon" class="py-20 lg:py-28 border-b border-white/[0.08] relative bg-[#070b10] overflow-hidden">
+    <!-- Glowing ambient backdrop lights -->
+    <div class="absolute top-1/4 -left-20 w-80 h-80 bg-[#ff2a85]/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 right-10 w-96 h-96 bg-[#4deeea]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header & Controls -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2.5 mb-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
+            <span>New Attractions &amp; Events</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Coming Soon to Our Pubs</h2>
+          <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-2xl">
+            We are constantly elevating your pub experience! Check out the exciting new food, games, and live entertainment arriving soon across our Norwich venues.
+          </p>
+        </div>
+
+        <!-- Venue Filter Tabs -->
+        <div class="flex flex-wrap items-center gap-2 bg-[#0c1219] p-1.5 rounded-full border border-white/10 shrink-0">
+          <button type="button" onclick="filterComingSoon('all', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition duration-200 bg-white text-black border border-white">
+            All Features (5)
+          </button>
+          <button type="button" onclick="filterComingSoon('pub1', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
+            Pub 01 (4)
+          </button>
+          <button type="button" onclick="filterComingSoon('pub2', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
+            Pub 02 (1)
+          </button>
+        </div>
+      </div>
+
+      <!-- 5 Coming Soon Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
+        <!-- CARD 1: Sunday Roast (Pub 2) -->
+        <article data-pub="pub2" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#ff3b94]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#ff3b94]/10 hover:-translate-y-1">
+          <div class="relative h-56 sm:h-64 overflow-hidden">
+            <img src="assets/event-roast.jpg" alt="Sunday Roast with slow cooked meats and giant Yorkshires at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
+            
+            <!-- Top Badges -->
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[#ff3b94] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#ff3b94]"></span>
+                <span>Pub 02 &bull; Norwich Market</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                SOON
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#ff3b94] font-semibold mb-1">
+                <span>🍖 Gastronomy</span>
+                <span>&bull;</span>
+                <span>Pub 02 Exclusive</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#ff3b94] transition duration-200">Sunday Roast</h3>
+              <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Traditional British Sunday Roast featuring prime roasted meats, golden roast potatoes, giant homemade Yorkshire puddings, seasonal greens, and rich craft bone-marrow gravy.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 02</span>
+              <button onclick="openBookingModal('Norwich Market')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#ff3b94]/15 hover:bg-[#ff3b94] text-[#ff3b94] hover:text-white font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Register Interest</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 2: Live Music Night (Pub 1) -->
+        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
+          <div class="relative h-56 sm:h-64 overflow-hidden">
+            <img src="assets/event-music.jpg" alt="Live Music Night acoustic singer at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
+            
+            <!-- Top Badges -->
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
+                <span>Pub 01 &bull; Prince of Wales Rd</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                SOON
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
+                <span>🎸 Live Entertainment</span>
+                <span>&bull;</span>
+                <span>Pub 01 Showcase</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Live Music Night</h3>
+              <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Norwich's finest indie vocalists, acoustic guitarists, and soulful live session bands performing on stage paired with after-work pint specials.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 01</span>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Register Interest</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 3: Pool Table (Pub 1) -->
+        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
+          <div class="relative h-56 sm:h-64 overflow-hidden">
+            <img src="assets/pool-table.jpg" alt="Tournament Pool Table with blue felt at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
+            
+            <!-- Top Badges -->
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
+                <span>Pub 01 &bull; Prince of Wales Rd</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                SOON
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
+                <span>🎱 Pub Games</span>
+                <span>&bull;</span>
+                <span>Pub 01 Showcase</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Pool Table</h3>
+              <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Brand new professional tournament pool table coming to Pub 01! Rack up the balls, challenge your mates, and enjoy friendly competition alongside cold craft pints.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 01</span>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Register Interest</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 4: Dart Game (Pub 1) -->
+        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
+          <div class="relative h-56 sm:h-64 overflow-hidden">
+            <img src="assets/dart-game.jpg" alt="Professional Pub Dartboard with brass darts at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
+            
+            <!-- Top Badges -->
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
+                <span>Pub 01 &bull; Prince of Wales Rd</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                SOON
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
+                <span>🎯 Pub Games</span>
+                <span>&bull;</span>
+                <span>Pub 01 Showcase</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Dart Game</h3>
+              <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Dedicated pub darts lane with professional Winmau Blade 6 dartboards, brass darts, and scoreboards. Perfect for casual matches or weekend pub leagues.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 01</span>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Register Interest</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- CARD 5: Private Party Room (Pub 1) -->
+        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+          <div class="relative h-56 sm:h-64 overflow-hidden">
+            <img src="assets/party-room.jpg" alt="Exclusive Private Party Function Room at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
+            
+            <!-- Top Badges -->
+            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
+              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
+                <span>Pub 01 &bull; Prince of Wales Rd</span>
+              </span>
+              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                SOON
+              </span>
+            </div>
+          </div>
+
+          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+            <div>
+              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
+                <span>🎉 Private Hire</span>
+                <span>&bull;</span>
+                <span>Pub 01 Showcase</span>
+              </div>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Private Party Room</h3>
+              <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
+                Exclusive private function suite featuring a private bar, customizable LED mood lighting, surround sound audio system, and plush leather booth seating for up to 60 guests.
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 01</span>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Enquire Private Room</span>
+                <span>&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== "OPENING HOURS" & "WHAT'S ON" SECTION ==================== -->
   <section id="events" class="py-20 lg:py-28 border-b border-white/[0.08] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -543,8 +795,8 @@
                   <span class="block text-[9px] font-semibold text-neutral-400 uppercase">Apr</span> </div> </div>
               <div class="p-3.5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200">Sunday Roast</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1">Pub 01 – Prince of Wales Rd</p> </div>
+                  <h4 class="font-bold text-sm text-white group-hover:text-[#ff3b94] transition duration-200">Sunday Roast</h4>
+                  <p class="text-[11px] text-neutral-400 mt-1">Pub 02 – Norwich Market</p> </div>
                 <div class="mt-2 text-[11px] font-medium text-neutral-400">
                   12:00 PM
                 </div> </div> </div>
@@ -851,7 +1103,7 @@
                 <span>Special Requests / Occasion</span>
                 <span class="text-[10px] text-neutral-500 font-normal">Optional</span>
               </label>
-              <input type="text" placeholder="Birthday celebration, dietary needs, booth near window..." id="bookingNotes" name="booking_notes" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+              <input type="text" placeholder="Birthday celebration, dietary needs, booth near window..." id="bookingNotes" name="booking_notes" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
             </div>
           </div>
 
@@ -909,7 +1161,6 @@
 
 <!-- Core Interactive Logic -->
   <script src="assets/app.js"></script>
-
 </body>
 
 </html>

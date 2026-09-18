@@ -950,4 +950,28 @@ Sent via The Glitch Online Inquiry System`;
     }
   };
 
+  // 10. COMING SOON FILTER TABS
+  window.filterComingSoon = function (pubKey, btnElement) {
+    const cards = document.querySelectorAll('.coming-soon-card');
+    const buttons = document.querySelectorAll('.coming-soon-tab');
+
+    buttons.forEach(function (btn) {
+      btn.classList.remove('bg-white', 'text-black', 'border-white');
+      btn.classList.add('bg-white/[0.05]', 'text-neutral-300', 'border-transparent');
+    });
+
+    if (btnElement) {
+      btnElement.classList.remove('bg-white/[0.05]', 'text-neutral-300', 'border-transparent');
+      btnElement.classList.add('bg-white', 'text-black', 'border-white');
+    }
+
+    cards.forEach(function (card) {
+      if (pubKey === 'all' || card.getAttribute('data-pub') === pubKey) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  };
+
 })();
