@@ -220,9 +220,8 @@
                 <span>View Glitch 1</span>
                 <span>&darr;</span> </button>
 
-              <button type="button" onclick="event.stopPropagation(); openBookingModal('Prince of Wales Rd');" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
-                <svg class="w-3.5 h-3.5 text-neutral-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                <span>Book a Table</span> </button> </div> </div> </div>
+              <button type="button" onclick="event.stopPropagation(); openPrivateHireModal();" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+                <span>Private Hire Enquiry</span> </button> </div> </div> </div>
 
 <!-- CARD 02: THE GLITCH - NORWICH MARKET -->
         <div id="heroCard2" class="pub-hero-card bg-[#0c1219] rounded-2xl border border-white/[0.12] overflow-hidden transition-all duration-300 flex flex-col group relative hover:border-[#ff3b94]/60 cursor-pointer shadow-xl opacity-90 hover:opacity-100" onclick="switchPub('city-center', true)">
@@ -345,7 +344,7 @@
           <!-- Drink 2: Neon Cyan Gin Sparkler -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/pub2-artisan-cocktail.jpg" alt="Neon Cyan Gin Sparkler Cocktail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <img src="assets/pub1-craft-cocktail.jpg" alt="Neon Cyan Gin Sparkler Cocktail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
               <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£9.50</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
@@ -374,12 +373,12 @@
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-white/30 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
               <img src="assets/pub1-guinness.jpg" alt="Chilled Pints of Guinness Extra Cold" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">£4.25 Weekend</span> </div>
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#5ce1e6]">Chilled on Tap</span> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Cold Draught</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Chilled Guinness Extra Cold</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Poured fresh on tap alongside Carlsberg Pilsner, Angelo Poretti, and Brooklyn Stonewall Inn IPA with £4.25 weekend specials.</p> </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Poured fresh on tap alongside Carlsberg Pilsner, Angelo Poretti, and Brooklyn Stonewall Inn IPA with weekend draught specials.</p> </div>
               <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Extra Cold on Tap</span>
                 <span class="text-[#5ce1e6] font-semibold">House Best</span> </div> </div> </div> </div> </div> </section>
@@ -433,15 +432,15 @@
 
             <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Vibrant Craft Pub &amp; Matchday Atmosphere.</h3>
 
-            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Step inside 37 Prince of Wales Rd to experience authentic Norwich pub energy. Enjoy fresh cold pints of Guinness Extra Cold on tap, live Premier League and football matchdays on our giant HD screens, vibrant craft pub atmosphere, an illuminated premium spirits bar, and weekend pint specials from £4.25.</p>
+            <p class="text-neutral-300 text-sm sm:text-base leading-relaxed">Step inside 37 Prince of Wales Rd to experience authentic Norwich pub energy. Enjoy fresh cold pints of Guinness Extra Cold on tap, live Premier League and football matchdays on our giant HD screens, vibrant craft pub atmosphere, and an illuminated premium spirits bar.</p>
 
             <!-- 4 Key Features -->
             <div class="space-y-3 pt-2">
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">🍺</span>
                 <div>
-                  <h5 class="text-sm font-bold text-white">Chilled Guinness Extra Cold &amp; £4.25 Specials</h5>
-                  <p class="text-xs text-neutral-400">Freshly pulled pints of Guinness Extra Cold on tap alongside Carlsberg Pilsner, Angelo Poretti, and craft pours with £4.25 weekend pint specials.</p> </div> </div>
+                  <h5 class="text-sm font-bold text-white">Chilled Guinness Extra Cold</h5>
+                  <p class="text-xs text-neutral-400">Freshly pulled pints of Guinness Extra Cold on tap alongside Carlsberg Pilsner, Angelo Poretti, and premium craft pours.</p> </div> </div>
 
               <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/[0.08]">
                 <span class="text-xl mt-0.5">📺</span>
@@ -470,11 +469,11 @@
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
               <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">Live Programming</span> </div>
-            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Prince of Wales Rd Upcoming Events</h3>
-            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">From Friday night acoustic heroes to weekend darts &amp; pool tournaments and live sports.</p> </div>
+            <h3 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Prince of Wales Rd Upcoming Events &amp; Hire</h3>
+            <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">From Friday night acoustic heroes to live sports broadcasts and exclusive venue hire.</p> </div>
 
-          <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
-            <span>Book Table for Next Event</span>
+          <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">
+            <span>Enquire for Private Hire</span>
             <span>&rarr;</span> </button> </div>
 
         <!-- 3 Events Grid -->
@@ -493,22 +492,22 @@
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Live &amp; Acoustic</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">The Glitch Acoustic Showcase</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Norwich's finest indie vocalists, acoustic guitar loops, and soulful covers paired with after-work drink specials.</p> </div>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Front Booth</button> </div> </div>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Norwich's finest indie vocalists, acoustic guitar loops, and soulful covers paired with after-work drink specials. Walk-ins welcome!</p> </div>
+              <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Private Hire Enquiry</button> </div> </div>
 
-          <!-- Event 2: Pool Table & Pub Games (Coming Soon) -->
+          <!-- Event 2: Private Room (Coming Soon) -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/pool-table.jpg" alt="Tournament Pool Table at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+              <img src="assets/party-room.jpg" alt="Private Room Suite at Glitch 1 Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
               <div class="absolute top-3 left-3 bg-amber-500/90 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center text-black leading-none">
                 <span class="block text-[9px] font-black uppercase tracking-wider">SOON</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub Games</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Pool Table &amp; Darts Arena</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon to Pub 01: Professional tournament pool table and Winmau Blade 6 dartboards for friendly matches and weekend pub games.</p> </div>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Register Interest</button> </div> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Private Hire</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Private Room (Coming Soon)</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon to Pub 01: Dedicated VIP private room for birthday celebrations, private lounge gatherings, and small group events.</p> </div>
+              <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Enquire for Private Hire</button> </div> </div>
 
           <!-- Event 3: DJ Night -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -522,7 +521,7 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Club &amp; Beats</span>
                 <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">The Glitch DJ Night</h4>
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon: Live DJs spinning vinyl, dance anthems, and underground beats every weekend with craft pours pouring late.</p> </div>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Join the Guestlist</button> </div> </div> </div> </div> </section>
+              <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Enquire for Private Hire</button> </div> </div> </div> </div> </section>
 
 <!-- SECTION 4: GLITCH 1 GALLERY -->
     <section id="pub1GallerySection" class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -584,14 +583,14 @@
               <h5 class="text-sm font-bold text-white truncate">Matchday Live Sports</h5>
               <p class="text-[11px] text-neutral-300 truncate mt-0.5">Premier League live matches on giant HD screens</p> </div> </div>
 
-          <!-- Photo 5: Tournament Pool Table (Coming Soon) -->
+          <!-- Photo 5: Private Room Suite (Coming Soon) -->
           <div data-category="matchday" onclick="openPub1Lightbox(4)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
-            <img src="assets/pool-table.jpg" alt="Tournament Pool Table at Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/party-room.jpg" alt="Exclusive Private Room at Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
             <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500/90 backdrop-blur-md text-[10px] font-black uppercase tracking-wider text-black">SOON</span>
             <div class="absolute bottom-3 left-3 right-3">
-              <h5 class="text-sm font-bold text-white truncate">Tournament Pool Table</h5>
-              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Professional pool table coming soon to Pub 01</p> </div> </div>
+              <h5 class="text-sm font-bold text-white truncate">Private Room Suite</h5>
+              <p class="text-[11px] text-neutral-300 truncate mt-0.5">VIP function room coming soon to Pub 01</p> </div> </div>
 
           <!-- Photo 6: Pub Darts Arena (Coming Soon) -->
           <div data-category="matchday" onclick="openPub1Lightbox(5)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
@@ -629,17 +628,8 @@
               <h5 class="text-sm font-bold text-white truncate">Illuminated Spirits Wall</h5>
               <p class="text-[11px] text-neutral-300 truncate mt-0.5">Gins, rums, and premium whiskies</p> </div> </div>
 
-          <!-- Photo 10: The Bar Crew -->
-          <div data-category="matchday" onclick="openPub1Lightbox(9)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
-            <img src="assets/pub1-team.jpg" alt="The Friendly Glitch 1 Bar Team" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Our Team</span>
-            <div class="absolute bottom-3 left-3 right-3">
-              <h5 class="text-sm font-bold text-white truncate">The Glitch 1 Bar Crew</h5>
-              <p class="text-[11px] text-neutral-300 truncate mt-0.5">Warm hospitality &amp; honest pub passion</p> </div> </div>
-
           <!-- Photo 11: Storefront by Day -->
-          <div data-category="exterior" onclick="openPub1Lightbox(10)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+          <div data-category="exterior" onclick="openPub1Lightbox(9)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
             <img src="assets/pub1-exterior-day.jpg" alt="Daytime Facade on Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
             <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Exterior</span>
@@ -648,8 +638,8 @@
               <p class="text-[11px] text-neutral-300 truncate mt-0.5">37 Prince of Wales Rd storefront</p> </div> </div>
 
           <!-- Photo 12: Signature Craft Cocktail -->
-          <div data-category="mocktails" onclick="openPub1Lightbox(11)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
-            <img src="assets/pub2-artisan-cocktail.jpg" alt="Signature Neon Cyan Cocktail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div data-category="mocktails" onclick="openPub1Lightbox(10)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
+            <img src="assets/pub1-craft-cocktail.jpg" alt="Signature Neon Cyan Cocktail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
             <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-black/80 backdrop-blur-md border border-white/15 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Craft Cocktails</span>
             <div class="absolute bottom-3 left-3 right-3">
@@ -718,7 +708,7 @@
 
             <div class="pt-2 flex gap-3">
               <button onclick="openDirectionsModal('Prince of Wales Rd')" class="flex-1 py-3 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider transition text-center shadow-md">Open in Google Maps ↗</button>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Book a Table</button> </div> </div> </div> </div> </section> </div>
+              <button onclick="openPrivateHireModal()" class="flex-1 py-3 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs uppercase tracking-wider transition text-center">Private Hire Enquiry</button> </div> </div> </div> </div> </section> </div>
 
 <!-- ========================================================================= -->
   <!-- ==================== VIEW 2: THE GLITCH - NORWICH MARKET =============== -->
@@ -887,21 +877,19 @@
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Party anthems, deep house, and throwback bangers under neon lights. Late night drinks pouring till 1:00 AM.</p> </div>
               <button onclick="openBookingModal('Norwich Market')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve VIP Booth</button> </div> </div>
 
-          <!-- Event 2: Live Karaoke -->
+          <!-- Event 2: Private Karaoke (Coming Soon) -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-karaoke.jpg" alt="Live Karaoke Night at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+              <img src="assets/event-karaoke.jpg" alt="Private Karaoke Suites at The Glitch 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-white/15 leading-none">
-                <span class="block text-[9px] font-bold text-[#ff3b94] uppercase">Wed</span>
-                <span class="block text-base font-extrabold text-white mt-0.5">23</span>
-                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">Oct</span> </div> </div>
+              <div class="absolute top-3 left-3 bg-amber-500/90 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center text-black leading-none">
+                <span class="block text-[9px] font-black uppercase tracking-wider">SOON</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Live &amp; Social</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Live Karaoke Night</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">23 October &bull; 8:00 PM &bull; Grab the mic and take the stage! Sing your favorite classics, indie anthems, and pop hits with drink specials and full crowd energy.</p> </div>
-              <button onclick="openBookingModal('Norwich Market')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Reserve Karaoke Booth</button> </div> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff3b94]">Private Hire</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Private Karaoke (Coming Soon)</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon to Pub 02 (25b St Giles St): Dedicated private karaoke rooms with state-of-the-art sound, thousands of tracks, and private bar service.</p> </div>
+              <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Enquire for Private Hire</button> </div> </div>
 
           <!-- Event 3: Traditional Sunday Roast (Coming Soon) -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -1038,8 +1026,8 @@
               <div class="flex items-start gap-3">
                 <span class="text-lg">🚇</span>
                 <div>
-                  <strong class="text-white block">Metrolink &amp; Buses:</strong>
-                  Shudehill Interchange is a 4-minute walk (300m). Piccadilly Gardens is a 5-minute walk. Multiple bus routes stop directly on St Giles Street.
+                  <strong class="text-white block">Norwich Bus &amp; Rail Services:</strong>
+                  Norwich City Centre bus stops are a 2-minute walk. Norwich Railway Station is a 12-minute walk. Multiple local bus routes stop directly along St Giles Street.
                 </div> </div>
 
               <div class="flex items-start gap-3">
@@ -1083,13 +1071,13 @@
       <!-- 3 CTA Action Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
 
-        <!-- Card 1: Book Prince of Wales Rd -->
-        <div onclick="openBookingModal('Prince of Wales Rd')" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#5ce1e6]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
+        <!-- Card 1: Visit The Glitch 1 -->
+        <div onclick="openPrivateHireModal()" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#5ce1e6]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
           <div class="space-y-3">
-            <span class="px-3 py-1 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] text-[10px] font-extrabold tracking-widest uppercase">Pub 01</span>
-            <h4 class="text-xl font-bold text-white group-hover:text-[#5ce1e6] transition">Book Prince of Wales Rd</h4>
-            <p class="text-xs text-neutral-400 leading-relaxed">Craft beer taproom, signature mocktails, chilled Guinness, and acoustic Friday nights on Prince of Wales Rd. Instant confirmation.</p> </div>
-          <button onclick="event.stopPropagation(); openBookingModal('Prince of Wales Rd')" class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">Reserve at Glitch 1 &rarr;</button> </div>
+            <span class="px-3 py-1 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] text-[10px] font-extrabold tracking-widest uppercase">Pub 01 • Walk-Ins Only</span>
+            <h4 class="text-xl font-bold text-white group-hover:text-[#5ce1e6] transition">Visit Glitch 1 (37 Prince of Wales Rd)</h4>
+            <p class="text-xs text-neutral-400 leading-relaxed">Craft beer taproom, signature mocktails, chilled Guinness, and acoustic Friday nights. General seating operates on a walk-in basis!</p> </div>
+          <button onclick="event.stopPropagation(); openPrivateHireModal()" class="w-full py-3 rounded-full bg-[#5ce1e6] text-neutral-900 font-bold text-xs uppercase tracking-wider hover:bg-white transition shadow-md">Enquire for Private Hire &rarr;</button> </div>
 
         <!-- Card 2: Book Norwich Market -->
         <div onclick="openBookingModal('Norwich Market')" class="bg-[#0c1219] p-7 rounded-2xl border border-white/10 hover:border-[#ff3b94]/60 transition duration-300 flex flex-col justify-between space-y-6 group shadow-xl cursor-pointer">
@@ -1117,89 +1105,156 @@
           <button type="submit" class="px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider shrink-0 transition">Join</button> </form> </div> </div> </section>
 
 <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
+  <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
   <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="footer-top-accent" aria-hidden="true"></div>
+
     <div class="footer-container">
 
-      <!-- SECTION 1 — BRAND STATEMENT -->
-      <div class="footer-brand">
+      <!-- SECTION 1 — BRAND HERO BANNER -->
+      <div class="footer-brand-hero">
         <a href="index.html" class="footer-brand-logo-wrap" aria-label="The Glitch Homepage">
-          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" /> </a>
+          <img src="assets/logo.png" alt="The Glitch Logo" class="footer-logo-img logo-no-bg" />
+        </a>
         <h2 class="footer-brand-title">THE GLITCH</h2>
-        <div class="footer-brand-sub">PUB &bull; RESTAURANT</div>
-        <div class="footer-brand-statement">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</div>
-        <p class="footer-brand-tagline">A place to eat, drink and enjoy the moment.</p> </div>
-
-      <!-- SECTION 2 — NAVIGATION -->
-      <nav class="footer-nav" aria-label="Footer Navigation">
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item"><a href="index.html" class="footer-nav-link">HOME</a></li>
-          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
-          <li class="footer-nav-item"><a href="menu.html" class="footer-nav-link">DRINK &amp; FOOD</a></li>
-          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
-          <li class="footer-nav-item"><a href="gallery.html" class="footer-nav-link">GALLERY</a></li>
-          <li class="footer-nav-sep" aria-hidden="true">&middot;</li>
-          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">CONTACT</a></li> </ul> </nav>
-
-      <!-- SECTION 3 — LOCATIONS -->
-      <div class="footer-locations">
-        <span class="footer-section-label">VISIT THE GLITCH</span>
-        <div class="footer-locations-grid">
-          <div class="footer-location-item">
-            <span class="location-index">LOCATION 01</span>
-            <p class="location-address">37 Prince of Wales Rd<br>Norwich NR1 1BG, United Kingdom</p>
-            <div class="footer-location-contacts text-xs space-y-1 mb-3 text-neutral-300">
-              <p><a href="mailto:norwich@pubtheglitch.co.uk" class="hover:text-[#5ce1e6] underline transition">✉️ norwich@pubtheglitch.co.uk</a></p>
-            </div>
-            <a href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Prince of Wales Rd');return false;}">
-              <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div>
-          <div class="footer-locations-divider" aria-hidden="true"></div>
-          <div class="footer-location-item">
-            <span class="location-index">LOCATION 02</span>
-            <p class="location-address">25b St Giles St<br>Norwich NR2 1JN, United Kingdom</p>
-            <div class="footer-location-contacts text-xs space-y-1 mb-3 text-neutral-300">
-              <p><a href="mailto:sg@pubtheglitch.co.uk" class="hover:text-[#ff3b94] underline transition">✉️ sg@pubtheglitch.co.uk</a></p>
-            </div>
-            <a href="https://maps.google.com/?q=25b+St+Giles+St+Norwich+NR2+1JN" target="_blank" rel="noopener" class="location-direction-link" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Norwich Market');return false;}">
-              <span>GET DIRECTIONS</span>
-              <span class="arrow-icon" aria-hidden="true">&rarr;</span> </a> </div> </div> </div>
-
-      <!-- SECTION 4 — SOCIAL MEDIA -->
-      <div class="footer-social">
-        <span class="footer-section-label">FOLLOW THE GLITCH</span>
-        <div class="footer-social-links">
-          <a href="https://www.instagram.com/glitchnorwich?stkn=OG81bmRyNWh4OW9i&amp;utm_source=qr" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line> </svg>
-            <span>Instagram</span> </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path> </svg>
-            <span>Facebook</span> </a>
-          <a href="https://www.tiktok.com/@theglitchbar?_r=1&amp;_t=ZS-99kItesCAD6" target="_blank" rel="noopener" class="footer-social-link" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path> </svg>
-            <span>TikTok</span> </a> </div> </div>
-
-      <!-- SECTION 5 — PRIMARY CTA -->
-      <div class="footer-cta">
-        <h3 class="footer-cta-title">YOUR TABLE IS WAITING.</h3>
-        <p class="footer-cta-desc">Make your next visit one to remember.</p>
-        <button type="button" class="footer-cta-btn" onclick="openBookingModal()" aria-label="Book a table at The Glitch">
-          <span>BOOK A TABLE</span>
-          <span class="cta-arrow" aria-hidden="true">&rarr;</span> </button> </div>
-
-      <!-- SECTION 6 — BOTTOM BAR -->
-      <div class="footer-bottom">
-        <div class="footer-bottom-left">
-          &copy; 2026 THE GLITCH
+        <div class="footer-brand-sub-badge">
+          <span class="badge-dot"></span> PUB &bull; RESTAURANT &bull; NIGHTLIFE
         </div>
-        <div class="footer-bottom-right">
-          <a href="#" class="legal-link">PRIVACY POLICY</a>
-          <span class="legal-sep" aria-hidden="true">&middot;</span>
-          <a href="#" class="legal-link">TERMS &amp; CONDITIONS</a> </div> </div> </div> </footer>
+        <p class="footer-brand-tagline">GOOD FOOD. GREAT DRINKS. BETTER NIGHTS.</p>
+      </div>
+
+      <!-- SECTION 2 — 4-COLUMN RICH GRID LAYOUT -->
+      <div class="footer-grid">
+
+        <!-- COL 1: ABOUT & LIVE STATUS -->
+        <div class="footer-col footer-col-about">
+          <h3 class="footer-col-heading">ABOUT THE GLITCH</h3>
+          <p class="footer-about-text">
+            Norwich's premier destination for craft cocktails, gourmet comfort food, live acoustics, and unforgettable nights out across two iconic locations.
+          </p>
+          <div class="footer-status-card">
+            <span class="status-pulse-dot"></span>
+            <div class="status-info">
+              <span class="status-title">OPEN DAILY FOR FOOD &amp; DRINKS</span>
+              <span class="status-time">12:00 PM &mdash; 02:00 AM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 2: QUICK LINKS -->
+        <div class="footer-col footer-col-nav">
+          <h3 class="footer-col-heading">EXPLORE</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html" class="footer-link"><span>Home</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
+            <li><a href="menu.html" class="footer-link"><span>Food &amp; Drink Menu</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
+            <li><a href="our-pubs.html" class="footer-link"><span>Our Pubs &amp; Venues</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
+            <li><a href="gallery.html" class="footer-link"><span>Photo Gallery</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
+            <li><a href="contact.html" class="footer-link"><span>Contact &amp; Location</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
+          </ul>
+        </div>
+
+        <!-- COL 3: LOCATIONS -->
+        <div class="footer-col footer-col-locations">
+          <h3 class="footer-col-heading">VISIT OUR PUBS</h3>
+
+          <div class="footer-location-card">
+            <div class="loc-header">
+              <span class="loc-tag">PUB 01 &bull; PRINCE OF WALES</span>
+            </div>
+            <address class="loc-address">
+              37 Prince of Wales Rd, Norwich NR1 1BG
+            </address>
+            <div class="loc-actions">
+              <a href="mailto:norwich@pubtheglitch.co.uk" class="loc-email">✉️ norwich@pubtheglitch.co.uk</a>
+              <button type="button" class="loc-map-btn" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Prince of Wales Rd');return false;}">
+                <span>Map</span> &rarr;
+              </button>
+            </div>
+          </div>
+
+          <div class="footer-location-card">
+            <div class="loc-header">
+              <span class="loc-tag">PUB 02 &bull; ST GILES</span>
+            </div>
+            <address class="loc-address">
+              25b St Giles St, Norwich NR2 1JN
+            </address>
+            <div class="loc-actions">
+              <a href="mailto:sg@pubtheglitch.co.uk" class="loc-email">✉️ sg@pubtheglitch.co.uk</a>
+              <button type="button" class="loc-map-btn" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Norwich Market');return false;}">
+                <span>Map</span> &rarr;
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- COL 4: NEWSLETTER & TABLE RESERVATION CTA CARD -->
+        <div class="footer-col footer-col-newsletter">
+          <h3 class="footer-col-heading">JOIN THE CLUB</h3>
+          
+          <div class="footer-newsletter-card">
+            <div class="footer-newsletter-content">
+              <p class="footer-newsletter-desc">
+                Subscribe for secret menu drops, VIP event invites &amp; exclusive offers.
+              </p>
+              <form class="footer-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('.newsletter-success').classList.remove('hidden'); this.querySelector('.newsletter-input-group').classList.add('hidden');">
+                <div class="newsletter-input-group">
+                  <input type="email" placeholder="Enter your email..." required class="footer-email-input" aria-label="Email address for VIP newsletter" />
+                  <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe">
+                    <span>JOIN</span>
+                  </button>
+                </div>
+                <div class="newsletter-success hidden">
+                  <span>✨ Welcome to The Glitch VIP Club!</span>
+                </div>
+              </form>
+
+              <div class="footer-quick-book-cta">
+                <button type="button" onclick="openBookingModal()" class="footer-book-table-btn">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                  <span>RESERVE A TABLE</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SECTION 3 — SOCIAL CONNECT BANNER -->
+      <div class="footer-social-section">
+        <span class="footer-social-label">CONNECT WITH THE GLITCH</span>
+        <div class="footer-social-badges">
+          <a href="https://www.instagram.com/glitchnorwich?stkn=OG81bmRyNWh4OW9i&amp;utm_source=qr" target="_blank" rel="noopener" class="social-pill-badge instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-pill-badge facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            <span>Facebook</span>
+          </a>
+          <a href="https://www.tiktok.com/@theglitchbar?_r=1&amp;_t=ZS-99kItesCAD6" target="_blank" rel="noopener" class="social-pill-badge tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+            <span>TikTok</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- SECTION 4 — BOTTOM LEGAL & COPYRIGHT BAR -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copyright">
+          &copy; 2026 <strong>THE GLITCH PUB &amp; RESTAURANT</strong>. ALL RIGHTS RESERVED.
+        </div>
+
+        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-back-to-top" aria-label="Back to top of page">
+          <span>TOP</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
+        </button>
+      </div>
+
+    </div>
+  </footer>
 
 <!-- ==================== INTERACTIVE "BOOK A TABLE" MODAL ==================== -->
   <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog" onclick="if(event.target === this) closeBookingModal()">
@@ -1250,6 +1305,33 @@
                   <strong id="bookingTargetEmail" class="font-semibold tracking-wide">norwich@pubtheglitch.co.uk</strong>
                 </a>
               </div>
+            </div>
+
+            <!-- Glitch 1 Walk-In Policy Notice (No Table Booking) -->
+            <div id="glitch1NoTableBookingNotice" class="hidden mt-3 p-3.5 rounded-xl bg-cyan-950/40 border border-[#5ce1e6]/40 text-[#5ce1e6] space-y-1.5">
+              <div class="font-bold text-xs flex items-center gap-2">
+                <span>ℹ️ Walk-Ins Only at The Glitch 1</span>
+              </div>
+              <p class="text-xs text-neutral-300 leading-relaxed">
+                Table booking is not available for <strong>The Glitch 1 (37 Prince of Wales Rd)</strong> as it operates on a walk-in basis for general table seating. Simply drop in anytime!
+              </p>
+              <p class="text-xs text-neutral-300 leading-relaxed">
+                To reserve a table, please select <strong>Pub 02 — Norwich Market</strong> above, or inquire about <strong>Private Hire</strong>.
+              </p>
+            </div>
+
+            <!-- Glitch 2 Deposit Information Box -->
+            <div id="glitch2DepositBox" class="mt-3 p-3.5 rounded-xl bg-[#ff2a85]/10 border border-[#ff2a85]/30 space-y-1.5">
+              <div class="flex items-center justify-between text-xs font-bold text-[#ff4fa8]">
+                <span>💳 Required Deposit: £10 / person</span>
+                <span id="bookingDepositAmount" class="font-mono text-white bg-black/60 px-2 py-0.5 rounded border border-[#ff2a85]/40">£20 (£10 x 2 guests)</span>
+              </div>
+              <p class="text-[11px] text-neutral-300">
+                The minimum deposit of £10 per person is fully <strong>redeemable against your final bill</strong> when you dine.
+              </p>
+              <p class="text-[11px] text-rose-300 font-semibold">
+                ⚠️ <strong>Notice:</strong> Deposits are strictly <strong>non-refundable</strong> if you do not attend your booking.
+              </p>
             </div>
           </div>
 
@@ -1503,9 +1585,9 @@
         category: 'matchday'
       },
       {
-        src: 'assets/pool-table.jpg',
-        title: 'Tournament Pool Table (Coming Soon)',
-        caption: 'Brand new professional tournament pool table coming soon to Pub 01.',
+        src: 'assets/party-room.jpg',
+        title: 'Private Room Suite (Coming Soon)',
+        caption: 'VIP function room coming soon to Pub 01 for private party bookings.',
         category: 'matchday'
       },
       {
@@ -1533,19 +1615,13 @@
         category: 'taps'
       },
       {
-        src: 'assets/pub1-team.jpg',
-        title: 'The Glitch 1 Bar Crew',
-        caption: 'Our passionate, friendly Norwich bar team ready to pour your favorite pints and cocktails.',
-        category: 'matchday'
-      },
-      {
         src: 'assets/pub1-exterior-day.jpg',
         title: 'Storefront by Day',
         caption: 'Sunny day view of The Glitch on 37 Prince of Wales Rd.',
         category: 'exterior'
       },
       {
-        src: 'assets/pub2-artisan-cocktail.jpg',
+        src: 'assets/pub1-craft-cocktail.jpg',
         title: 'Signature Neon Cyan Cocktail',
         caption: 'Empress 1908 indigo gin, blue curaçao, elderflower tonic, lime twist & glowing neon rim.',
         category: 'mocktails'
@@ -1818,10 +1894,14 @@
       }
     }
 
-    // Handle deep links via URL hash and hash changes
+    // Handle deep links via URL query params and hash changes
     function handleHashNavigation() {
       const hash = (window.location.hash || '').toLowerCase();
+      const search = (window.location.search || '').toLowerCase();
       if (
+        search.includes('glitch2') ||
+        search.includes('pub2') ||
+        search.includes('giles') ||
         hash.includes('center') || 
         hash.includes('market') || 
         hash.includes('giles') || 
@@ -1833,6 +1913,9 @@
       ) {
         window.switchPub('city-center', true);
       } else if (
+        search.includes('glitch1') ||
+        search.includes('pub1') ||
+        search.includes('prince') ||
         hash.includes('centre') || 
         hash.includes('prince') || 
         hash.includes('wales') || 

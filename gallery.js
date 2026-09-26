@@ -26,7 +26,7 @@
       locationBadge: 'Pub 1 • Prince of Wales Rd',
       locationColor: 'cyan',
       title: 'Glitch Neon Facade & Weekend Offers',
-      subtitle: '37 Prince of Wales Rd illuminated storefront & £4.25 cold pints',
+      subtitle: '37 Prince of Wales Rd illuminated storefront & fresh draught pints',
       category: 'PUB',
       image: 'assets/pub1-exterior-facade.jpg',
       spanClass: 'col-span-8 row-span-2',
@@ -96,19 +96,6 @@
       image: 'assets/pub1-drinks.jpg',
       spanClass: 'col-span-6 row-span-2',
       alt: 'Selection of pints and spirit drinks lined up on the bar at The Glitch 1'
-    },
-    {
-      id: 107,
-      location: 'glitch1',
-      locationLabel: 'The Glitch 1 — Prince of Wales Rd',
-      locationBadge: 'Pub 1 • Prince of Wales Rd',
-      locationColor: 'cyan',
-      title: 'The Glitch 1 Hospitality Team',
-      subtitle: 'Friendly front-of-house crew ready to serve you at Prince of Wales Rd',
-      category: 'ATMOSPHERE',
-      image: 'assets/pub1-team.jpg',
-      spanClass: 'col-span-6 row-span-2',
-      alt: 'Welcoming bar and service staff smiling at The Glitch 1'
     },
     {
       id: 108,

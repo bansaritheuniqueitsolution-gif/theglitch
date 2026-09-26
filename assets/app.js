@@ -92,6 +92,10 @@
     const venueBadgeEl = document.getElementById('bookingVenueBadge');
     const mailNoticeEl = document.getElementById('bookingMailNotice');
     const form = document.getElementById('bookingForm');
+    const glitch1Notice = document.getElementById('glitch1NoTableBookingNotice');
+    const glitch2DepositBox = document.getElementById('glitch2DepositBox');
+    const submitBtn = document.getElementById('bookingSubmitBtn');
+    const guestsSelect = document.getElementById('bookingGuests');
 
     const config = getPubConfig(select ? select.value : activeBookingPubKey);
 
@@ -121,6 +125,39 @@
     if (form) {
       form.action = `https://formsubmit.co/${config.email}`;
     }
+
+    // Handle Glitch 1 (Walk-ins only, no table booking) vs Glitch 2 (£10/person deposit)
+    if (config.id === 'pub1') {
+      if (glitch1Notice) glitch1Notice.classList.remove('hidden');
+      if (glitch2DepositBox) glitch2DepositBox.classList.add('hidden');
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    } else {
+      if (glitch1Notice) glitch1Notice.classList.add('hidden');
+      if (glitch2DepositBox) glitch2DepositBox.classList.remove('hidden');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+      // Update deposit calculation
+      if (guestsSelect) {
+        window.calculateBookingDeposit();
+      }
+    }
+  };
+
+  window.calculateBookingDeposit = function () {
+    const guestsSelect = document.getElementById('bookingGuests');
+    const depositAmountEl = document.getElementById('bookingDepositAmount');
+    if (!guestsSelect || !depositAmountEl) return;
+    
+    const valStr = guestsSelect.value || '2';
+    const numMatch = valStr.match(/\d+/);
+    const count = numMatch ? parseInt(numMatch[0], 10) : 2;
+    const depositTotal = count * 10;
+    depositAmountEl.textContent = `£${depositTotal} (£10 x ${count} guests)`;
   };
 
   // Helper to show/clear field errors
@@ -272,6 +309,15 @@
         });
       }
     });
+
+    const guestsEl = document.getElementById('bookingGuests');
+    if (guestsEl) {
+      guestsEl.addEventListener('change', function () {
+        if (typeof window.calculateBookingDeposit === 'function') {
+          window.calculateBookingDeposit();
+        }
+      });
+    }
 
     // Delegate click for any element with .open-booking-modal or [data-open-booking]
     document.addEventListener('click', function (e) {
