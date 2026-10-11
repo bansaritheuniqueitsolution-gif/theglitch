@@ -492,10 +492,10 @@
         <!-- Venue Filter Tabs -->
         <div class="flex flex-wrap items-center gap-2 bg-[#0c1219] p-1.5 rounded-full border border-white/10 shrink-0">
           <button type="button" onclick="filterComingSoon('all', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition duration-200 bg-white text-black border border-white">
-            All Features (5)
+            All Features (4)
           </button>
           <button type="button" onclick="filterComingSoon('pub1', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
-            Pub 01 (4)
+            Pub 01 (3)
           </button>
           <button type="button" onclick="filterComingSoon('pub2', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
             Pub 02 (1)
@@ -503,54 +503,55 @@
         </div>
       </div>
 
-      <!-- 5 Coming Soon Cards Grid -->
+      <!-- 4 Coming Soon Cards Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
-        <!-- CARD 1: Sunday Roast (Pub 2) -->
-        <article data-pub="pub2" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#ff3b94]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#ff3b94]/10 hover:-translate-y-1">
+
+        <!-- CARD 2: Live Music Every Weekend (Pub 1 Only) -->
+        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/event-roast.jpg" alt="Sunday Roast with slow cooked meats and giant Yorkshires at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/event-music.jpg" alt="Live Music Every Weekend at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
             
             <!-- Top Badges -->
             <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[#ff3b94] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-[#ff3b94]"></span>
-                <span>Pub 02 &bull; Norwich Market</span>
+              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
+                <span>Pub 01 &bull; Prince of Wales Rd</span>
               </span>
-              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
-                SOON
+              <span class="px-2.5 py-1 rounded-full bg-[#4deeea] text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                EVERY WEEKEND
               </span>
             </div>
           </div>
 
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-[#ff3b94] font-semibold mb-1">
-                <span>🍖 Gastronomy</span>
+              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
+                <span>🎸 Live Music</span>
                 <span>&bull;</span>
-                <span>Pub 02 Exclusive</span>
+                <span>Pub 01 Every Weekend</span>
               </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#ff3b94] transition duration-200">Sunday Roast</h3>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Live Music Every Weekend</h3>
               <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Traditional British Sunday Roast featuring prime roasted meats, golden roast potatoes, giant homemade Yorkshire puddings, seasonal greens, and rich craft bone-marrow gravy.
+                Norwich's finest indie vocalists, acoustic guitarists, and soulful live session bands performing live on stage every Friday &amp; Saturday night at Pub 1 (Prince of Wales Rd)!
               </p>
             </div>
 
             <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
-              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 02</span>
-              <button onclick="openBookingModal('Norwich Market')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#ff3b94]/15 hover:bg-[#ff3b94] text-[#ff3b94] hover:text-white font-bold text-xs uppercase tracking-wider transition duration-200">
-                <span>Register Interest</span>
+              <span class="text-[11px] text-[#5ce1e6] font-bold uppercase tracking-wider">Every Fri &amp; Sat &bull; 8:00 PM</span>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea] hover:bg-white text-black font-bold text-xs uppercase tracking-wider transition duration-200 shadow-md">
+                <span>Book a Table</span>
                 <span>&rarr;</span>
               </button>
             </div>
           </div>
         </article>
 
-        <!-- CARD 2: Live Music Night (Pub 1) -->
+        <!-- CARD 3: Private Karaoke (Pub 1 Only) -->
         <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/event-music.jpg" alt="Live Music Night acoustic singer at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/event-karaoke.jpg" alt="Private Karaoke Room at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
             
             <!-- Top Badges -->
@@ -560,47 +561,6 @@
                 <span>Pub 01 &bull; Prince of Wales Rd</span>
               </span>
               <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
-                SOON
-              </span>
-            </div>
-          </div>
-
-          <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
-            <div>
-              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
-                <span>🎸 Live Entertainment</span>
-                <span>&bull;</span>
-                <span>Pub 01 Showcase</span>
-              </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Live Music Night</h3>
-              <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Norwich's finest indie vocalists, acoustic guitarists, and soulful live session bands performing on stage paired with after-work pint specials.
-              </p>
-            </div>
-
-            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
-              <span class="text-[11px] text-neutral-400 font-medium">Coming Soon to Pub 01</span>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
-                <span>Register Interest</span>
-                <span>&rarr;</span>
-              </button>
-            </div>
-          </div>
-        </article>
-
-        <!-- CARD 3: Private Karaoke (Pub 2) -->
-        <article data-pub="pub2" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#ff3b94]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#ff3b94]/10 hover:-translate-y-1">
-          <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/event-karaoke.jpg" alt="Private Karaoke Room at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            
-            <!-- Top Badges -->
-            <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[#ff4fa8] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-[#ff3b94]"></span>
-                <span>Pub 02 &bull; Norwich Market</span>
-              </span>
-              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
                 COMING SOON
               </span>
             </div>
@@ -608,12 +568,12 @@
 
           <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
             <div>
-              <div class="flex items-center gap-2 text-xs text-[#ff3b94] font-semibold mb-1">
+              <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
                 <span>🎤 Private Karaoke</span>
                 <span>&bull;</span>
-                <span>Pub 02 Exclusive</span>
+                <span>Pub 01 Exclusive</span>
               </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#ff3b94] transition duration-200">Private Karaoke</h3>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Private Karaoke</h3>
               <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
                 State-of-the-art private karaoke booth room featuring soundproofing, dual wireless mics, huge song library, and dedicated cocktail server.
               </p>
@@ -621,15 +581,15 @@
 
             <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
               <span class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Coming Soon</span>
-              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#ff3b94]/15 hover:bg-[#ff3b94] text-[#ff3b94] hover:text-white font-bold text-xs uppercase tracking-wider transition duration-200">
-                <span>Enquire Interest</span>
+              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Enquire Private Karaoke</span>
                 <span>&rarr;</span>
               </button>
             </div>
           </div>
         </article>
 
-        <!-- CARD 4: Private Room (Pub 1) -->
+        <!-- CARD 4: Private Room (Pub 1 Only) -->
         <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
             <img src="assets/pub1-bar.jpg" alt="Exclusive Private Room at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
@@ -671,7 +631,7 @@
         </article>
 
         <!-- CARD 5: Whole-Venue Booking (Pub 1 & Pub 2) -->
-        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-amber-400/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+        <article data-pub="both" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-amber-400/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
             <img src="assets/pub2-golden-bar.jpg" alt="Exclusive Whole Venue Booking at The Glitch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
@@ -701,6 +661,12 @@
               </p>
             </div>
 
+            <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <span class="text-[11px] text-amber-300 font-bold uppercase tracking-wider">Pub 01 &amp; Pub 02</span>
+              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400/15 hover:bg-amber-400 text-amber-300 hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+                <span>Enquire Whole Venue</span>
+                <span>&rarr;</span>
+              </button>
             </div>
           </div>
         </article>
@@ -814,78 +780,68 @@
               <span>View All Events</span>
               <span>&rarr;</span> </a> </div>
 
-          <!-- 4 Event Cards Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <!-- 3 Event Cards Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
 
-            <!-- Event 1: Live Music -->
-            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1">
+            <!-- Event 1: Pub 1 Weekend DJ Party (HIGHLIGHTED) -->
+            <div class="bg-[#0c1219] rounded-xl overflow-hidden border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg shadow-[#4deeea]/10 relative cursor-pointer" onclick="openBookingModal('Prince of Wales Rd')">
+              <div class="absolute top-2.5 right-2.5 z-10 bg-[#4deeea] text-black text-[8px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full">
+                Every Weekend
+              </div>
               <div class="relative h-44 sm:h-48 overflow-hidden">
-                <img src="assets/event-music.jpg" alt="Live Music Night acoustic singer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                <img src="assets/event-dj-pub1.jpg" alt="Weekend DJ Party at Glitch 1 Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
+                <!-- Date Badge -->
+                <div class="absolute top-2.5 left-2.5 bg-black/85 backdrop-blur-md rounded-md px-2 py-1 text-center border border-[#5ce1e6]/40 leading-none">
+                  <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">EVERY</span>
+                  <span class="block text-xs font-extrabold text-white">FRI &amp; SAT</span>
+                  <span class="block text-[8px] font-semibold text-neutral-400 uppercase">9PM - 3AM</span> </div> </div>
+              <div class="p-3.5 flex-1 flex flex-col justify-between">
+                <div>
+                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub 01 &middot; Prince of Wales Rd</span>
+                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200 mt-0.5">Weekend DJ Party &amp; Late Bar</h4>
+                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">Live DJs, dance anthems &amp; party bangers late till 3 AM.</p> </div>
+                <div class="mt-3 flex items-center justify-between text-[11px] font-bold text-[#5ce1e6] pt-2 border-t border-white/[0.06]">
+                  <span>Every Fri &amp; Sat &bull; 9 PM</span>
+                  <span>Book Now &rarr;</span> </div> </div> </div>
+
+            <!-- Event 2: Friday Live Acoustic Showcase -->
+            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1 cursor-pointer" onclick="openBookingModal('Prince of Wales Rd')">
+              <div class="relative h-44 sm:h-48 overflow-hidden">
+                <img src="assets/event-music.jpg" alt="Live Acoustic Night at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
                 <!-- Date Badge -->
                 <div class="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md rounded-md px-2 py-1 text-center border border-white/15 leading-none">
-                  <span class="block text-[9px] font-bold text-neutral-400 uppercase">Fri</span>
-                  <span class="block text-sm font-extrabold text-white">25</span>
-                  <span class="block text-[9px] font-semibold text-neutral-400 uppercase">Apr</span> </div> </div>
+                  <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">EVERY</span>
+                  <span class="block text-xs font-extrabold text-white">FRIDAY</span>
+                  <span class="block text-[8px] font-semibold text-neutral-400 uppercase">8:00 PM</span> </div> </div>
               <div class="p-3.5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200">Live Music Night</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1">Pub 01 – Prince of Wales Rd</p> </div>
-                <div class="mt-2 text-[11px] font-medium text-neutral-400">
-                  8:00 PM
-                </div> </div> </div>
+                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-neutral-400">Pub 01 &middot; Prince of Wales Rd</span>
+                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200 mt-0.5">Glitch Acoustic Showcase</h4>
+                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">Norwich indie vocalists &amp; acoustic guitar lounge covers.</p> </div>
+                <div class="mt-3 flex items-center justify-between text-[11px] font-semibold text-neutral-300 pt-2 border-t border-white/[0.06]">
+                  <span>Fridays &bull; 8:00 PM</span>
+                  <span>Walk-ins &rarr;</span> </div> </div> </div>
 
-            <!-- Event 2: DJ Night -->
-            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1">
+            <!-- Event 3: Weekend Boozy Brunch -->
+            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1 cursor-pointer" onclick="openBookingModal('Norwich Market')">
               <div class="relative h-44 sm:h-48 overflow-hidden">
-                <img src="assets/event-dj-pub1.jpg" alt="DJ Night at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-                <!-- Date Badge -->
-                <div class="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md rounded-md px-2.5 py-3 text-center border border-white/15 leading-none flex flex-col justify-center items-center min-w-[42px] min-h-[44px]">
-                  <span class="block text-xs font-black text-white uppercase tracking-wider">Soon</span> </div> </div>
-              <div class="p-3.5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200">DJ Night</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1">Pub 01 – Prince of Wales Rd</p> </div>
-                <div class="mt-2 text-[11px] font-medium text-neutral-400">
-                  9:00 PM
-                </div> </div> </div>
-
-            <!-- Event 3: Sunday Roast -->
-            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1">
-              <div class="relative h-44 sm:h-48 overflow-hidden">
-                <img src="assets/event-roast.jpg" alt="Sunday Roast with Yorkshire pudding and beef" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                <img src="assets/menu-brunch.jpg" alt="Weekend Boozy Brunch at Glitch 2 Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
                 <!-- Date Badge -->
                 <div class="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md rounded-md px-2 py-1 text-center border border-white/15 leading-none">
-                  <span class="block text-[9px] font-bold text-neutral-400 uppercase">Sun</span>
-                  <span class="block text-sm font-extrabold text-white">27</span>
-                  <span class="block text-[9px] font-semibold text-neutral-400 uppercase">Apr</span> </div> </div>
+                  <span class="block text-[9px] font-bold text-[#ff4fa8] uppercase">EVERY</span>
+                  <span class="block text-xs font-extrabold text-white">SAT &amp; SUN</span>
+                  <span class="block text-[8px] font-semibold text-neutral-400 uppercase">11AM - 3PM</span> </div> </div>
               <div class="p-3.5 flex-1 flex flex-col justify-between">
                 <div>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#ff3b94] transition duration-200">Sunday Roast</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1">Pub 02 – Norwich Market</p> </div>
-                <div class="mt-2 text-[11px] font-medium text-neutral-400">
-                  12:00 PM
-                </div> </div> </div>
-
-            <!-- Event 4: Live Karaoke -->
-            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1">
-              <div class="relative h-44 sm:h-48 overflow-hidden">
-                <img src="assets/event-karaoke.jpg" alt="Live Karaoke Night at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
-                <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-                <!-- Date Badge -->
-                <div class="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md rounded-md px-2 py-1 text-center border border-white/15 leading-none">
-                  <span class="block text-[9px] font-bold text-[#ff3b94] uppercase">Fri</span>
-                  <span class="block text-sm font-extrabold text-white">23</span>
-                  <span class="block text-[9px] font-semibold text-neutral-400 uppercase">Oct</span> </div> </div>
-              <div class="p-3.5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#ff3b94] transition duration-200">Live Karaoke</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1">Pub 02 – Norwich Market</p> </div>
-                <div class="mt-2 text-[11px] font-medium text-neutral-400">
-                  Friday, 23 October 2026 &bull; 8:00 PM
-                </div> </div> </div> </div> </div> </div> </div> </section>
+                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#ff4fa8]">Pub 02 &middot; Norwich Market</span>
+                  <h4 class="font-bold text-sm text-white group-hover:text-[#ff4fa8] transition duration-200 mt-0.5">Weekend Boozy Brunch</h4>
+                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">1 Main + 2 Drinks or Bottomless 90 mins flow.</p> </div>
+                <div class="mt-3 flex items-center justify-between text-[11px] font-semibold text-neutral-300 pt-2 border-t border-white/[0.06]">
+                  <span>Sat &amp; Sun &bull; 11 AM</span>
+                  <span>Book Table &rarr;</span> </div> </div> </div> </div> </div> </div> </div> </section>
 
 <!-- ==================== "GALLERY" SECTION ==================== -->
   <section id="gallery" class="py-20 lg:py-28 border-b border-white/[0.08] relative">
@@ -940,9 +896,9 @@
               <img src="assets/pub2-cocktail.jpg" alt="Sunset cocktail" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
 
-            <!-- Photo 7: Food Menu Burger (spans 2 columns) -->
-            <div onclick="openLightbox('assets/menu-burger.jpg', 'Gourmet Burger & Fries at Glitch 2')" class="col-span-3 sm:col-span-2 h-32 sm:h-44 rounded-lg overflow-hidden border border-white/[0.08] group cursor-pointer relative">
-              <img src="assets/menu-burger.jpg" alt="Gourmet Burger with Fries" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
+            <!-- Photo 7: Pub 2 Authentic Masala Feast Spread (spans 2 columns) -->
+            <div onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Pub 02 Authentic Masala Curry Feast Spread')" class="col-span-3 sm:col-span-2 h-32 sm:h-44 rounded-lg overflow-hidden border border-[#ff3b94]/40 group cursor-pointer relative shadow-lg shadow-[#ff3b94]/10">
+              <img src="assets/pub2-indian-feast.jpg" alt="Pub 02 Authentic Masala Curry Feast Spread" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div> </div> </div> </div> </div> </section>
 
 <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
@@ -973,13 +929,6 @@
           <p class="footer-about-text">
             Norwich's premier destination for craft cocktails, gourmet comfort food, live acoustics, and unforgettable nights out across two iconic locations.
           </p>
-          <div class="footer-status-card">
-            <span class="status-pulse-dot"></span>
-            <div class="status-info">
-              <span class="status-title">OPEN DAILY FOR FOOD &amp; DRINKS</span>
-              <span class="status-time">12:00 PM &mdash; 02:00 AM</span>
-            </div>
-          </div>
         </div>
 
         <!-- COL 2: QUICK LINKS -->
@@ -1320,6 +1269,61 @@
         <span>Close</span> &times;  </button>
       <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom" class="max-h-[80vh] w-auto rounded-xl border border-white/20 shadow-2xl object-contain" />
       <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p> </div> </div>
+
+<!-- ==================== PRIVATE HIRE MODAL ==================== -->
+  <div id="privateHireModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
+    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-5">
+      <button onclick="closePrivateHireModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
+
+      <div>
+        <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Event Enquiries</span>
+        <h3 class="text-xl font-bold text-white mt-1">Private Hire &amp; Celebrations</h3>
+        <p class="text-neutral-400 text-xs mt-1">Book a booth package, semi-private area, or full rooftop takeover.</p> </div>
+
+      <form id="privateHireForm" onsubmit="handlePrivateHireSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+        <div>
+          <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
+          <select id="hireLocation" onchange="updateHireRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
+            <option value="Prince of Wales Rd">Pub 01 &mdash; Prince of Wales Rd (Craft Taproom)</option>
+            <option value="Norwich Market">Pub 02 &mdash; Norwich Market (Heated Rooftop / Speakeasy)</option>
+            <option value="Both">Not Sure / Open to Both</option> </select> 
+          <!-- Live Destination Mailbox Notice -->
+          <div id="hireMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-200">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Enquiry will be sent to: <strong id="hireTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Expected Guests</label>
+            <input type="number" min="10" max="250" placeholder="e.g. 25" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Target Date</label>
+            <input type="date" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div>
+        
+        <!-- Compulsory Contact Details for Private Hire -->
+        <div class="space-y-3 pt-2 border-t border-white/[0.08]">
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <span>Contact Name</span>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
+            </label>
+            <input type="text" id="hireName" required placeholder="e.g. Sam Taylor" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <span>Email Address</span>
+                <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
+              </label>
+              <input type="email" id="hireEmail" required placeholder="sam@example.com" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <span>Phone Number</span>
+                <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
+              </label>
+              <input type="tel" id="hirePhone" required placeholder="+44 7123 456789" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div> </div>
+        <button type="submit" class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">Submit Private Hire Request</button> </form> </div> </div>
 
 <!-- Core Interactive Logic -->
   <script src="assets/app.js"></script>

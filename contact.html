@@ -499,13 +499,6 @@
           <p class="footer-about-text">
             Norwich's premier destination for craft cocktails, gourmet comfort food, live acoustics, and unforgettable nights out across two iconic locations.
           </p>
-          <div class="footer-status-card">
-            <span class="status-pulse-dot"></span>
-            <div class="status-info">
-              <span class="status-title">OPEN DAILY FOR FOOD &amp; DRINKS</span>
-              <span class="status-time">12:00 PM &mdash; 02:00 AM</span>
-            </div>
-          </div>
         </div>
 
         <!-- COL 2: QUICK LINKS -->
@@ -812,6 +805,61 @@
       <div id="bookingSuccessContainer" class="hidden text-center py-2 space-y-4"></div>
     </div>
   </div>
+
+<!-- ==================== PRIVATE HIRE MODAL ==================== -->
+  <div id="privateHireModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
+    <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-5">
+      <button onclick="closePrivateHireModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
+
+      <div>
+        <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Event Enquiries</span>
+        <h3 class="text-xl font-bold text-white mt-1">Private Hire &amp; Celebrations</h3>
+        <p class="text-neutral-400 text-xs mt-1">Book a booth package, semi-private area, or full rooftop takeover.</p> </div>
+
+      <form id="privateHireForm" onsubmit="handlePrivateHireSubmit(event)" class="space-y-4 text-xs sm:text-sm">
+        <div>
+          <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
+          <select id="hireLocation" onchange="updateHireRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
+            <option value="Prince of Wales Rd">Pub 01 &mdash; Prince of Wales Rd (Craft Taproom)</option>
+            <option value="Norwich Market">Pub 02 &mdash; Norwich Market (Heated Rooftop / Speakeasy)</option>
+            <option value="Both">Not Sure / Open to Both</option> </select> 
+          <!-- Live Destination Mailbox Notice -->
+          <div id="hireMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-200">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Enquiry will be sent to: <strong id="hireTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Expected Guests</label>
+            <input type="number" min="10" max="250" placeholder="e.g. 25" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1">Target Date</label>
+            <input type="date" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div>
+        
+        <!-- Compulsory Contact Details for Private Hire -->
+        <div class="space-y-3 pt-2 border-t border-white/[0.08]">
+          <div>
+            <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <span>Contact Name</span>
+              <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
+            </label>
+            <input type="text" id="hireName" required placeholder="e.g. Sam Taylor" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <span>Email Address</span>
+                <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
+              </label>
+              <input type="email" id="hireEmail" required placeholder="sam@example.com" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+            <div>
+              <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <span>Phone Number</span>
+                <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
+              </label>
+              <input type="tel" id="hirePhone" required placeholder="+44 7123 456789" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div> </div>
+        <button type="submit" class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">Submit Private Hire Request</button> </form> </div> </div>
 
   <!-- EmailJS Browser SDK (Official CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

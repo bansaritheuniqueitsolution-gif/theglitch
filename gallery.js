@@ -123,6 +123,19 @@
       spanClass: 'col-span-6 row-span-1',
       alt: 'Daytime street entrance of The Glitch Pub 1 on Prince of Wales Rd'
     },
+    {
+      id: 110,
+      location: 'glitch1',
+      locationLabel: 'The Glitch 1 — Prince of Wales Rd',
+      locationBadge: 'Pub 1 • Prince of Wales Rd',
+      locationColor: 'cyan',
+      title: 'Weekend DJ Party & Club Decks Atmosphere',
+      subtitle: 'Resident & guest DJs spinning vinyl, dance anthems & party bangers every Friday & Saturday night',
+      category: 'ATMOSPHERE',
+      image: 'assets/event-dj-pub1.jpg',
+      spanClass: 'col-span-6 row-span-2',
+      alt: 'Weekend DJ party lights and club atmosphere at Pub 1 Prince of Wales Rd'
+    },
 
     // =======================================================================
     // PUB 2: THE GLITCH 2 — NORWICH MARKET (25b St Giles St, Norwich)
@@ -263,12 +276,12 @@
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
       locationColor: 'pink',
-      title: 'Wood-Fired Neapolitan Pizza',
-      subtitle: 'San Marzano tomatoes, fior di latte mozzarella & hot honey drizzle',
+      title: 'Wood-Fired Neapolitan Pepperoni Pizza',
+      subtitle: 'San Marzano tomato base, melted fior di latte mozzarella & crispy pepperoni',
       category: 'FOOD & DRINKS',
       image: 'assets/menu-pizza.jpg',
       spanClass: 'col-span-6 row-span-1',
-      alt: 'Freshly baked wood-fired pizza at The Glitch 2'
+      alt: 'Freshly baked wood-fired pepperoni pizza at The Glitch 2'
     },
     {
       id: 212,
@@ -276,15 +289,340 @@
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
       locationColor: 'pink',
-      title: 'Signature Gourmet Smash Burger',
-      subtitle: 'Double dry-aged beef, melted smoked cheddar & seasoned fries',
+      title: 'Classic Beef Cheeseburger',
+      subtitle: 'Juicy beef patty, melted cheddar cheese, lettuce, tomato & house burger sauce',
       category: 'FOOD & DRINKS',
       image: 'assets/menu-burger.jpg',
       spanClass: 'col-span-6 row-span-1',
-      alt: 'Gourmet smash burger with fries at The Glitch 2'
+      alt: 'Classic beef cheeseburger on black plate at The Glitch 2'
     },
     {
       id: 213,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Chicken Nuggets & 6 Dipping Sauces',
+      subtitle: 'Golden chicken nuggets surrounded by 6 artisanal sauce pots',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-nuggets.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Gourmet chicken nuggets platter with 6 dipping sauces'
+    },
+    {
+      id: 214,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Salted French Fries',
+      subtitle: 'Hot sea-salted skin-on fries piled high in a ceramic bowl',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-fries.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Bowl of crispy golden french fries at The Glitch'
+    },
+    {
+      id: 215,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'The Glitch Grand Feast Overhead Spread',
+      subtitle: 'Overhead feast of burgers, pizzas, wings, fries, nuggets & dips',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-table-feast.jpg',
+      spanClass: 'col-span-12 row-span-2',
+      alt: 'Full overhead table spread of food items at The Glitch 2'
+    },
+    {
+      id: 216,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Golden Beer-Battered Onion Rings',
+      subtitle: 'Stacked high on dark ceramic plate with pub craft dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-onion-rings.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Beer-battered onion rings at The Glitch 2'
+    },
+    {
+      id: 217,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Pizza, Fries & Tenders Combo Meal',
+      subtitle: 'Wood-fired 9.5" pizza, crispy fries, fried chicken tenders, garlic mayo dip & lemonade drink',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-pizza-combo.jpg',
+      spanClass: 'col-span-12 row-span-2',
+      alt: 'Pizza, fries, tenders and drink combo meal at The Glitch'
+    },
+    {
+      id: 218,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Real Crispy Chicken Burger',
+      subtitle: 'Crispy chicken breast fillet, fresh tomato, onion, lettuce & burger sauce on toasted sesame bun',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-chicken-burger.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Real Crispy Chicken Burger at The Glitch 2'
+    },
+    {
+      id: 219,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Double Beef Cheeseburger',
+      subtitle: 'Double seared beef patties with melted cheddar & fresh salad',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-double-beef-burger.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Double beef cheeseburger on black speckled plate'
+    },
+    {
+      id: 220,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Smoky BBQ Bacon Cheeseburger',
+      subtitle: 'Prime beef patty, crispy bacon, melted cheese & sweet BBQ glaze',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-bacon-cheeseburger.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Smoky BBQ bacon cheeseburger'
+    },
+    {
+      id: 221,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Golden Breaded Chicken Tenders',
+      subtitle: 'Succulent chicken breast tenders with scallions and smokey BBQ dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-tenders.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Crispy chicken tenders with BBQ sauce at The Glitch'
+    },
+    {
+      id: 222,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Chicken Wings with BBQ Sauce',
+      subtitle: 'Tender chicken wings served in black ceramic bowl with BBQ dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-wings-bbq.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Crispy chicken wings with BBQ dip'
+    },
+    {
+      id: 223,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Wings with Buffalo Dip',
+      subtitle: 'Juicy wings paired with zesty buffalo chili dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-wings-buffalo.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Crispy wings with buffalo dip'
+    },
+    {
+      id: 224,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Wings & Creamy Coleslaw',
+      subtitle: 'Crispy roasted wings paired with fresh creamy coleslaw bowl',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-wings-coleslaw.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Chicken wings with coleslaw bowl'
+    },
+    {
+      id: 225,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Wings with Garlic Mayo',
+      subtitle: 'Golden wings with rich garlic mayo dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-wings.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Crispy wings with garlic mayo dip'
+    },
+    {
+      id: 226,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Pepperoni Pizza Combo Tray',
+      subtitle: 'Pepperoni pizza, crispy fries, fried chicken tenders, mayo dip & Pepsi Max',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-pepperoni-pizza-combo.jpg',
+      spanClass: 'col-span-12 row-span-2',
+      alt: 'Pepperoni pizza combo tray meal'
+    },
+    {
+      id: 227,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Woodfired Margherita Pizza',
+      subtitle: 'Tomato base, mozzarella & fresh rocket garnish on baking sheet',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-pizza-margherita.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Woodfired Margherita Pizza'
+    },
+    {
+      id: 228,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Glitch Hot Crispy Fried Chicken',
+      subtitle: 'Spiced crispy fried chicken pieces with spring onion garnish',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-fried-chicken.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Glitch hot crispy fried chicken pieces'
+    },
+    {
+      id: 229,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Garden Supreme Veggie Pizza',
+      subtitle: 'Mushrooms, peppers, sweetcorn, olives & red onion on stone-baked crust',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-pizza-veggie.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Garden supreme veggie pizza'
+    },
+    {
+      id: 230,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'BBQ Chicken & Red Onion Pizza',
+      subtitle: 'Smoky BBQ sauce base, tender chicken strips & sliced red onions',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-pizza-bbq-chicken.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'BBQ chicken and red onion pizza'
+    },
+    {
+      id: 231,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Burger & Fries Combo with Coca-Cola',
+      subtitle: 'Classic burger, french fries, tenders, mayo dip & Coca-Cola can',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-burger-coke-combo.jpg',
+      spanClass: 'col-span-12 row-span-2',
+      alt: 'Burger and fries combo tray with Coca-Cola'
+    },
+    {
+      id: 232,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Crispy Wings with Sweet Chili Dip',
+      subtitle: 'Tender chicken wings served with sweet chili sauce dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-wings-sweetchili.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Chicken wings with sweet chili dip'
+    },
+    {
+      id: 233,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Spicy Pepperoni & Jalapeno Pizza',
+      subtitle: 'Loaded pepperoni slices & spicy green jalapenos on stone-baked crust',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-pizza-spicy-pepperoni.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Spicy pepperoni and jalapeno pizza'
+    },
+    {
+      id: 234,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Melted Cheese Loaded Fries',
+      subtitle: 'Crispy french fries smothered in melted cheese & spring onions with buffalo dip',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-loaded-fries.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Melted cheese loaded fries'
+    },
+    {
+      id: 235,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Glitch Spiced Veggie Burger',
+      subtitle: 'Crispy veggie patty with salad, tomato & sauce on sesame bun',
+      category: 'FOOD & DRINKS',
+      image: 'assets/food-veggie-burger.jpg',
+      spanClass: 'col-span-6 row-span-1',
+      alt: 'Spiced veggie burger'
+    },
+    {
+      id: 236,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Burger Combo Tray with Tenders',
+      subtitle: 'Burger, fries bowl, crispy tenders, mayo dip & Diet Coke can',
+      category: 'FOOD & DRINKS',
+      image: 'assets/menu-burger-combo.jpg',
+      spanClass: 'col-span-12 row-span-2',
+      alt: 'Burger combo tray meal with tenders'
+    },
+    {
+      id: 237,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'Authentic Masala Curry Feast Spread',
+      subtitle: 'Chicken tadka & paneer curries, saffron rice, flaky paratha flatbreads & pakora dips overhead flat-lay',
+      category: 'FOOD & DRINKS',
+      image: 'assets/pub2-indian-feast.jpg',
+      spanClass: 'col-span-12 row-span-2',
+      alt: 'Overhead flat-lay Indian curry feast with chicken tadka, paneer masala, paratha bread, basmati rice and dips at Pub 2'
+    },
+    {
+      id: 238,
       location: 'glitch2',
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
@@ -297,7 +635,7 @@
       alt: 'Ruby red velvet wingback lounge suite and parlor table at The Glitch 2'
     },
     {
-      id: 214,
+      id: 219,
       location: 'glitch2',
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
@@ -494,6 +832,11 @@
       if (venueInfoBadge) {
         venueInfoBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#4deeea] animate-pulse"></span><span>Showing Pub 1 &bull; Prince of Wales Rd</span>';
       }
+      const vBookBtn1 = document.querySelector('.venue-book-btn');
+      if (vBookBtn1) {
+        vBookBtn1.innerHTML = '<span>Private Hire Enquiry</span> &rarr;';
+        vBookBtn1.onclick = function () { window.openPrivateHireModal(); };
+      }
 
     } else if (loc === 'glitch2') {
       // 1. Location Pill
@@ -528,6 +871,11 @@
       if (venueInfoBadge) {
         venueInfoBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85] animate-pulse"></span><span>Showing Pub 2 &bull; Norwich Market</span>';
       }
+      const vBookBtn2 = document.querySelector('.venue-book-btn');
+      if (vBookBtn2) {
+        vBookBtn2.innerHTML = '<span>Book a Table (Pub 2)</span> &rarr;';
+        vBookBtn2.onclick = function () { window.openBookingModal('Norwich Market'); };
+      }
 
     } else {
       // 'all'
@@ -536,6 +884,11 @@
         locBtnAll.setAttribute('aria-selected', 'true');
         const dot = locBtnAll.querySelector('.loc-dot');
         if (dot) dot.classList.add('bg-[#060a0f]');
+      }
+      const vBookBtnAll = document.querySelector('.venue-book-btn');
+      if (vBookBtnAll) {
+        vBookBtnAll.innerHTML = '<span>Book a Table (Pub 2)</span> &rarr;';
+        vBookBtnAll.onclick = function () { window.openBookingModal('Norwich Market'); };
       }
 
       if (heroCardGlitch1) {

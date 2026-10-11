@@ -262,6 +262,8 @@
 
               <!-- Feature Tags -->
               <div class="flex flex-wrap gap-2 pt-2 text-[11px] font-medium text-neutral-300">
+                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍺 Sapporo &amp; Estrella Damm</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍺 Apple Cider 🍺</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🍸 Botanical Mixology</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">✨ Hand-Crafted Gold Bar</span>
                 <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">🎹 Window-Front Piano</span>
@@ -509,19 +511,24 @@
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon to Pub 01: Dedicated VIP private room for birthday celebrations, private lounge gatherings, and small group events.</p> </div>
               <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Enquire for Private Hire</button> </div> </div>
 
-          <!-- Event 3: DJ Night -->
-          <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#5ce1e6]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
+          <!-- Event 3: Weekend DJ Party -->
+          <div class="bg-[#0c1219] rounded-xl overflow-hidden border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg shadow-[#4deeea]/10 relative">
+            <div class="absolute top-3 right-3 z-10 bg-[#4deeea] text-black text-[9px] font-extrabold uppercase tracking-widest px-2.5 py-1 rounded-full shadow-md">
+              Every Weekend
+            </div>
             <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-dj-pub1.jpg" alt="DJ Night at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+              <img src="assets/event-dj-pub1.jpg" alt="The Glitch 1 Weekend DJ Party Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md rounded-lg px-3 py-3 text-center border border-white/15 leading-none flex items-center justify-center min-w-[48px] min-h-[50px]">
-                <span class="block text-sm font-black text-white uppercase tracking-wider">Soon</span> </div> </div>
+              <div class="absolute top-3 left-3 bg-black/85 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center border border-[#4deeea]/40 leading-none">
+                <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">EVERY FRI &amp; SAT</span>
+                <span class="block text-base font-extrabold text-white mt-0.5">9:00</span>
+                <span class="block text-[9px] font-semibold text-neutral-400 uppercase">PM – 3 AM</span> </div> </div>
             <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Club &amp; Beats</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">The Glitch DJ Night</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon: Live DJs spinning vinyl, dance anthems, and underground beats every weekend with craft pours pouring late.</p> </div>
-              <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#5ce1e6] hover:bg-[#5ce1e6]/10 text-xs font-semibold text-white tracking-wide transition text-center">Enquire for Private Hire</button> </div> </div> </div> </div> </section>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Weekly Party &middot; Pub 1</span>
+                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#5ce1e6] transition">Weekend DJ Party &amp; Late Bar</h4>
+                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Join us every Friday &amp; Saturday night at Pub 1 (Prince of Wales Rd)! Live DJs spinning vinyl, dance anthems, house &amp; party bangers late into the night. Drinks pouring till 3 AM!</p> </div>
+              <button onclick="openBookingModal('Prince of Wales Rd')" class="w-full py-2.5 rounded-full border border-[#4deeea] bg-[#4deeea]/15 hover:bg-[#4deeea] text-xs font-bold text-[#5ce1e6] hover:text-black tracking-wide transition text-center shadow-md">Book a Table / Guestlist</button> </div> </div> </div> </div> </section>
 
 <!-- SECTION 4: GLITCH 1 GALLERY -->
     <section id="pub1GallerySection" class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -601,14 +608,7 @@
               <h5 class="text-sm font-bold text-white truncate">Pub Darts Lane</h5>
               <p class="text-[11px] text-neutral-300 truncate mt-0.5">Professional Winmau Blade 6 darts setup</p> </div> </div>
 
-          <!-- Photo 7: Private Party Suite (Coming Soon) -->
-          <div data-category="matchday" onclick="openPub1Lightbox(6)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
-            <img src="assets/party-room.jpg" alt="Exclusive Private Party Room at Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-            <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md bg-amber-500/90 backdrop-blur-md text-[10px] font-black uppercase tracking-wider text-black">SOON</span>
-            <div class="absolute bottom-3 left-3 right-3">
-              <h5 class="text-sm font-bold text-white truncate">Private Party Suite</h5>
-              <p class="text-[11px] text-neutral-300 truncate mt-0.5">VIP function room with private bar setup</p> </div> </div>
+
 
           <!-- Photo 8: Tropical Dragonfruit Mocktail -->
           <div data-category="mocktails" onclick="openPub1Lightbox(7)" class="pub1-gallery-item group relative h-60 rounded-2xl overflow-hidden border border-white/10 cursor-pointer shadow-lg hover:border-[#5ce1e6]/60 transition-all duration-300">
@@ -733,64 +733,93 @@
               <span>View Full Food &amp; Drinks Menu</span>
               <span>&rarr;</span> </a> </div> </div>
 
-        <!-- 4 Highlight Cards with Real Pub 02 Dishes -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          
-          <!-- Dish 1: The Glitch Cheeseburger -->
+        <!-- 6 Highlight Cards with Real Dishes on Pub Tables -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-5">
+
+          <!-- Dish 0: Authentic Masala Curry & Feast Spread -->
+          <div class="bg-[#0c1219] rounded-xl border-2 border-[#ff3b94]/60 overflow-hidden group hover:border-[#ff3b94] transition-all duration-300 flex flex-col hover:-translate-y-1 shadow-lg shadow-[#ff3b94]/10">
+            <div class="relative h-48 overflow-hidden cursor-pointer" onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Authentic Masala Curry &amp; Feast Spread at The Glitch Pub 02')">
+              <img src="assets/pub2-indian-feast.jpg" alt="Authentic Masala Curry &amp; Feast Spread at Pub 02" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;14.50</span>
+              <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-[#ff3b94] text-[9px] font-black text-white uppercase tracking-wider">PUB 02 SPECIAL</span> </div>
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Authentic Indian Feast</span>
+                <h4 class="text-base font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Glitch Masala Feast Spread</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Rich chicken &amp; paneer curries, saffron basmati, hot flaky parathas, crisp pakoras &amp; chutney dips.</p> </div>
+              <div class="flex items-center justify-between text-[11px] text-neutral-300 pt-2 border-t border-white/[0.06]">
+                <span>Curry + Paratha + Rice</span>
+                <span class="text-[#ff3b94] font-semibold">Real Dish</span> </div> </div> </div>
+
+          <!-- Dish 1: Real Beef Cheeseburger -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-burger.jpg" alt="The Glitch Cheeseburger served with fries" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <img src="assets/menu-burger.jpg" alt="Real Beef Cheeseburger at The Glitch" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
               <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;12.99</span> </div>
-            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Triple Beef Patty</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">The Glitch Cheeseburger</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">3 beef patties, melted cheese, lettuce, tomato, onions &amp; glitch burger sauce. Served complete with seasoned fries.</p> </div>
-              <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Real House Special</span>
+                <h4 class="text-base font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">The Glitch Cheeseburger</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Juicy beef patty, melted cheddar cheese, crisp lettuce, tomato, onions &amp; glitch burger sauce.</p> </div>
+              <div class="flex items-center justify-between text-[11px] text-neutral-300 pt-2 border-t border-white/[0.06]">
                 <span>Served with Fries</span>
-                <span class="text-[#ff3b94] font-semibold">House Best</span> </div> </div> </div>
+                <span class="text-[#ff3b94] font-semibold">Real Dish</span> </div> </div> </div>
 
-          <!-- Dish 2: Loaded Gourmet Fries -->
+          <!-- Dish 2: Real Crispy Chicken Burger -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-crispy-chicken-bowl.jpg" alt="Loaded Gourmet Fries at The Glitch" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;7.95</span> </div>
-            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <img src="assets/menu-chicken-burger.jpg" alt="Real Crispy Chicken Burger at The Glitch" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;9.99</span> </div>
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Bar Sharer</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Loaded Cheese &amp; Bacon Fries</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Crispy skin-on fries smothered in warm cheese sauce, crispy bacon bits, scallions, jalapenos &amp; glitch house drizzle.</p> </div>
-              <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Sharer Portion</span>
-                <span class="text-amber-400 font-semibold">Top Seller</span> </div> </div> </div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">Crispy Fillet</span>
+                <h4 class="text-base font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Glitch Chicken Burger</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Crispy chicken fillet with ripe tomato slices, onion rings, lettuce &amp; mayonnaise on sesame bun.</p> </div>
+              <div class="flex items-center justify-between text-[11px] text-neutral-300 pt-2 border-t border-white/[0.06]">
+                <span>Halal Certified</span>
+                <span class="text-amber-400 font-semibold">Real Dish</span> </div> </div> </div>
 
-          <!-- Dish 3: 12 Peri Peri Chicken Wings -->
+          <!-- Dish 3: Chicken Nuggets & 6 Dipping Sauces -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-wings.jpg" alt="12 Peri Peri Chicken Wings" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;9.49</span> </div>
-            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <img src="assets/menu-nuggets.jpg" alt="Chicken Nuggets with 6 Dipping Sauces" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;3.99</span> </div>
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-neutral-400">The Glitch Chicken</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">12 Peri Peri Wings</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">12 succulent wings drenched in spicy Peri Peri sauce. Also available in Korean BBQ, Buffalo, Hot Honey, and Smokey BBQ.</p> </div>
-              <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Choice of 7 Flavors</span>
-                <span class="text-[#ff3b94] font-semibold">Crowd Favorite</span> </div> </div> </div>
+                <h4 class="text-base font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Nuggets &amp; 6 Dips</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Crispy golden chicken nuggets served on slate platter surrounded by 6 dipping sauce ramekins.</p> </div>
+              <div class="flex items-center justify-between text-[11px] text-neutral-300 pt-2 border-t border-white/[0.06]">
+                <span>6 Sauce Dips</span>
+                <span class="text-[#ff3b94] font-semibold">Real Dish</span> </div> </div> </div>
 
-          <!-- Dish 4: Masala Meets Curry Platter -->
+          <!-- Dish 4: Real Onion Rings -->
           <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
             <div class="relative h-48 overflow-hidden">
-              <img src="assets/menu-curry.jpg" alt="Glitch Curry Platter with Naan and Rice" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
-              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;14.50</span> </div>
-            <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+              <img src="assets/menu-onion-rings.jpg" alt="Golden Beer Battered Onion Rings" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;4.99</span> </div>
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
               <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Masala Meets</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Glitch Curry Feast Platter</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Aromatic Chicken Tadka, Paneer Masala (V), or Egg Curry served complete with fragrant basmati rice and warm Naan or Paratha.</p> </div>
-              <div class="flex items-center justify-between text-xs text-neutral-300 pt-2 border-t border-white/[0.06]">
-                <span>Naan or Paratha + Rice</span>
-                <span class="text-emerald-400 font-semibold">Halal &amp; Veg Options</span> </div> </div> </div> </div> </div> </section>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Crispy Bar Snack</span>
+                <h4 class="text-base font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Beer-Battered Onion Rings</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Piled high golden beer-battered onion rings on a dark speckled ceramic plate.</p> </div>
+              <div class="flex items-center justify-between text-[11px] text-neutral-300 pt-2 border-t border-white/[0.06]">
+                <span>Vegetarian (V)</span>
+                <span class="text-emerald-400 font-semibold">Real Dish</span> </div> </div> </div>
+
+          <!-- Dish 5: Pizza, Fries & Tenders Combo Meal -->
+          <div class="bg-[#0c1219] rounded-xl border border-white/[0.08] overflow-hidden group hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col hover:-translate-y-1">
+            <div class="relative h-48 overflow-hidden">
+              <img src="assets/menu-pizza-combo.jpg" alt="Wood fired pizza and tenders combo meal" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" decoding="async" />
+              <span class="absolute top-3 right-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md text-xs font-bold text-[#ff3b94]">&pound;16.95</span> </div>
+            <div class="p-4 flex-1 flex flex-col justify-between space-y-2">
+              <div>
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff3b94]">Full Meal Deal</span>
+                <h4 class="text-base font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Pizza &amp; Tenders Combo</h4>
+                <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Wood-fired pizza, crispy fries bowl, fried tenders, garlic dip &amp; cold lemonade drink.</p> </div>
+              <div class="flex items-center justify-between text-[11px] text-neutral-300 pt-2 border-t border-white/[0.06]">
+                <span>Pizza + Fries + Tenders</span>
+                <span class="text-amber-400 font-semibold">Real Dish</span> </div> </div> </div> </div> </div> </section>
 
 <!-- SECTION 2: GLITCH 2 INTERIOR & ROOFTOP SHOWCASE -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -858,8 +887,8 @@
             <span>Book Table for Next Event</span>
             <span>&rarr;</span> </button> </div>
 
-        <!-- 3 Events Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- 2 Events Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
           <!-- Event 1: Saturday Resident DJ -->
           <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
@@ -891,19 +920,7 @@
                 <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon to Pub 02 (25b St Giles St): Dedicated private karaoke rooms with state-of-the-art sound, thousands of tracks, and private bar service.</p> </div>
               <button onclick="openPrivateHireModal()" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Enquire for Private Hire</button> </div> </div>
 
-          <!-- Event 3: Traditional Sunday Roast (Coming Soon) -->
-          <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-[#ff3b94]/50 transition-all duration-300 flex flex-col group hover:-translate-y-1">
-            <div class="relative h-52 overflow-hidden">
-              <img src="assets/event-roast.jpg" alt="Sunday Roast with slow cooked beef and giant Yorkshires at The Glitch Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-              <div class="absolute top-3 left-3 bg-amber-500/90 backdrop-blur-md rounded-lg px-2.5 py-1.5 text-center text-black leading-none">
-                <span class="block text-[9px] font-black uppercase tracking-wider">SOON</span> </div> </div>
-            <div class="p-5 flex-1 flex flex-col justify-between space-y-4">
-              <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff3b94]">Coming Soon</span>
-                <h4 class="text-lg font-bold text-white mt-1 group-hover:text-[#ff3b94] transition">Traditional Sunday Roast</h4>
-                <p class="text-xs text-neutral-400 mt-2 leading-relaxed">Coming soon to Pub 02: Traditional British Sunday Roast with prime slow-roasted meats, golden roasties, giant Yorkshires, and rich bone-marrow gravy.</p> </div>
-              <button onclick="openBookingModal('Norwich Market')" class="w-full py-2.5 rounded-full border border-white/20 hover:border-[#ff3b94] hover:bg-[#ff3b94]/10 text-xs font-semibold text-white tracking-wide transition text-center">Register Interest</button> </div> </div> </div> </div> </section>
+ </div> </div> </section>
 
 <!-- SECTION 4: GLITCH 2 GALLERY -->
     <section class="py-16 lg:py-24 border-b border-white/[0.08] relative bg-[#080d14]">
@@ -918,6 +935,13 @@
           <p class="text-xs text-neutral-400">Click any image to expand view</p> </div>
 
         <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+          <!-- Photo 0: Authentic Masala Feast Spread -->
+          <div onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Authentic Masala Curry &amp; Feast Spread at The Glitch Norwich Market (Pub 02)')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-[#ff3b94]/40 group cursor-pointer relative col-span-2 sm:col-span-2 shadow-lg">
+            <img src="assets/pub2-indian-feast.jpg" alt="Authentic Masala Feast Spread at The Glitch Pub 02" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition"></div>
+            <div class="absolute top-2 left-2 bg-[#ff3b94] text-white text-[9px] font-extrabold px-2 py-0.5 rounded uppercase tracking-wider shadow">Pub 02 Kitchen</div>
+            <div class="absolute bottom-2 left-2 right-2 bg-black/80 backdrop-blur-sm px-2.5 py-1 rounded text-[11px] text-white font-semibold truncate transition">Authentic Masala Feast Spread</div> </div>
+
           <!-- Photo 1: Golden Bar -->
           <div onclick="openLightbox('assets/pub2-golden-bar.jpg', 'Hand-Crafted Curved Gold Bar Counter &amp; Amber Drop Lights')" class="h-44 sm:h-56 rounded-xl overflow-hidden border border-white/10 group cursor-pointer relative">
             <img src="assets/pub2-golden-bar.jpg" alt="Golden Curved Bar Counter" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
@@ -1099,7 +1123,7 @@
       <div class="mt-14 max-w-3xl mx-auto bg-[#080d14] rounded-2xl border border-white/10 p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl">
         <div class="space-y-1 text-center sm:text-left">
           <h4 class="text-lg font-bold text-white">Join The Glitch VIP Circle</h4>
-          <p class="text-xs text-neutral-400">Receive free welcome cocktail tokens, secret gig invites, and 10% off Sunday roasts.</p> </div>
+          <p class="text-xs text-neutral-400">Receive free welcome cocktail tokens, secret gig invites, and exclusive VIP perks.</p> </div>
         <form onsubmit="handleNewsletterSubmit(event)" class="flex w-full sm:w-auto items-center gap-2">
           <input type="email" required placeholder="Enter your email" class="bg-black/50 border border-white/20 rounded-full px-4 py-2.5 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] w-full sm:w-60" />
           <button type="submit" class="px-5 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs uppercase tracking-wider shrink-0 transition">Join</button> </form> </div> </div> </section>
@@ -1132,13 +1156,6 @@
           <p class="footer-about-text">
             Norwich's premier destination for craft cocktails, gourmet comfort food, live acoustics, and unforgettable nights out across two iconic locations.
           </p>
-          <div class="footer-status-card">
-            <span class="status-pulse-dot"></span>
-            <div class="status-info">
-              <span class="status-title">OPEN DAILY FOR FOOD &amp; DRINKS</span>
-              <span class="status-time">12:00 PM &mdash; 02:00 AM</span>
-            </div>
-          </div>
         </div>
 
         <!-- COL 2: QUICK LINKS -->
@@ -1596,12 +1613,7 @@
         caption: 'Dedicated pub darts lane with professional Winmau Blade 6 dartboards.',
         category: 'matchday'
       },
-      {
-        src: 'assets/party-room.jpg',
-        title: 'Private Party Suite (Coming Soon)',
-        caption: 'Exclusive VIP function room featuring a private bar, customizable LED lighting, and booth seating.',
-        category: 'matchday'
-      },
+
       {
         src: 'assets/menu-mocktails.jpg',
         title: 'Tropical Dragonfruit Mocktail',
@@ -1803,6 +1815,10 @@
         if (switcherDot) {
           switcherDot.className = "w-2.5 h-2.5 rounded-full bg-[#5ce1e6] animate-pulse";
         }
+        const sBookBtn1 = document.getElementById('switcherBookBtn');
+        if (sBookBtn1) {
+          sBookBtn1.innerHTML = '<span>Private Hire Enquiry</span>';
+        }
 
         // Hero Cards styling
         if (heroCard1) {
@@ -1856,6 +1872,10 @@
         if (switcherDot) {
           switcherDot.className = "w-2.5 h-2.5 rounded-full bg-[#ff3b94] animate-pulse";
         }
+        const sBookBtn2 = document.getElementById('switcherBookBtn');
+        if (sBookBtn2) {
+          sBookBtn2.innerHTML = '<svg class="w-3.5 h-3.5 text-neutral-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg><span>Book a Table</span>';
+        }
 
         // Hero Cards styling
         if (heroCard2) {
@@ -1888,7 +1908,7 @@
 
     function openBookingForCurrent() {
       if (currentPub === 'city-centre') {
-        openBookingModal('Prince of Wales Rd');
+        openPrivateHireModal();
       } else {
         openBookingModal('Norwich Market');
       }

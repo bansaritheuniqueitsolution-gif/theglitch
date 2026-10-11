@@ -220,16 +220,16 @@
     try {
       clearAllBookingErrors();
 
-      // Determine target location
+      // Determine target location (Default to Pub 2 since Pub 1 has no Book a Table option)
       if (locationName) {
         const loc = String(locationName).toLowerCase();
-        if (loc.includes('center') || loc.includes('northern') || loc.includes('giles') || loc.includes('2')) {
+        if (loc.includes('center') || loc.includes('northern') || loc.includes('giles') || loc.includes('2') || loc.includes('market')) {
           window.selectBookingPub('pub2');
         } else {
           window.selectBookingPub('pub1');
         }
       } else {
-        window.selectBookingPub(activeBookingPubKey || 'pub1');
+        window.selectBookingPub(activeBookingPubKey || 'pub2');
       }
 
       // Set min date and default date to today or tomorrow
@@ -1012,7 +1012,8 @@ Sent via The Glitch Online Inquiry System`;
     }
 
     cards.forEach(function (card) {
-      if (pubKey === 'all' || card.getAttribute('data-pub') === pubKey) {
+      const cardPub = card.getAttribute('data-pub');
+      if (pubKey === 'all' || cardPub === pubKey || cardPub === 'both') {
         card.style.display = 'flex';
       } else {
         card.style.display = 'none';
