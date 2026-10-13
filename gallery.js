@@ -53,7 +53,7 @@
       locationColor: 'cyan',
       title: 'The Perfect Pint of Guinness',
       subtitle: 'Creamy cold pour with shamrock head on rustic timber counter',
-      category: 'MOCKTAILS & DRINKS',
+      category: 'DRINKS',
       image: 'assets/pub1-guinness.jpg',
       spanClass: 'col-span-4 row-span-1',
       alt: 'Freshly poured pint of Guinness with shamrock at The Glitch 1'
@@ -92,7 +92,7 @@
       locationColor: 'cyan',
       title: 'Fresh Pours & Signature Spirits',
       subtitle: 'Chilled pints, IPAs and cocktails lined up along the bar',
-      category: 'MOCKTAILS & DRINKS',
+      category: 'DRINKS',
       image: 'assets/pub1-drinks.jpg',
       spanClass: 'col-span-6 row-span-2',
       alt: 'Selection of pints and spirit drinks lined up on the bar at The Glitch 1'
@@ -105,7 +105,7 @@
       locationColor: 'cyan',
       title: 'Chilled Craft Ciders & Bottles',
       subtitle: 'Crisp refreshment under warm amber back-lighting',
-      category: 'MOCKTAILS & DRINKS',
+      category: 'DRINKS',
       image: 'assets/pub1-cider.jpg',
       spanClass: 'col-span-6 row-span-1',
       alt: 'Cold craft cider pints and bottles at The Glitch 1'
@@ -256,19 +256,6 @@
       image: 'assets/pub2-candle-vibe.jpg',
       spanClass: 'col-span-4 row-span-1',
       alt: 'Atmospheric candlelit dining table at The Glitch 2'
-    },
-    {
-      id: 210,
-      location: 'glitch2',
-      locationLabel: 'The Glitch 2 — Norwich Market',
-      locationBadge: 'Pub 2 • Norwich Market',
-      locationColor: 'pink',
-      title: 'Heated Rooftop Garden Terrace',
-      subtitle: 'Panoramic skyline views across Norwich historic spires & craft cocktails',
-      category: 'PUB',
-      image: 'assets/pub2-rooftop.jpg',
-      spanClass: 'col-span-4 row-span-1',
-      alt: 'Heated botanical rooftop garden terrace at The Glitch 2'
     },
     {
       id: 211,
@@ -767,12 +754,30 @@
       ? GALLERY_DATA
       : GALLERY_DATA.filter(item => item.location === currentLocation);
 
+    const filterBtnDrinks = document.getElementById('filterBtnDrinks');
+    const filterBtnDrinksLabel = document.getElementById('filterBtnDrinksLabel');
+    if (filterBtnDrinks && filterBtnDrinksLabel) {
+      if (currentLocation === 'glitch1') {
+        filterBtnDrinksLabel.textContent = 'Drinks';
+        filterBtnDrinks.dataset.filter = 'DRINKS';
+      } else if (currentLocation === 'glitch2') {
+        filterBtnDrinksLabel.textContent = 'Food & Drinks';
+        filterBtnDrinks.dataset.filter = 'FOOD & DRINKS';
+      } else {
+        filterBtnDrinksLabel.textContent = 'Food & Drinks';
+        filterBtnDrinks.dataset.filter = 'FOOD_OR_DRINKS';
+      }
+    }
+
     filterButtons.forEach(btn => {
       const cat = btn.dataset.filter;
       const countEl = btn.querySelector('.filter-count');
       if (countEl) {
         if (cat === 'ALL') {
           countEl.textContent = `(${locationSet.length})`;
+        } else if (cat === 'FOOD_OR_DRINKS') {
+          const count = locationSet.filter(item => item.category === 'FOOD & DRINKS' || item.category === 'DRINKS').length;
+          countEl.textContent = `(${count})`;
         } else {
           const count = locationSet.filter(item => item.category === cat).length;
           countEl.textContent = `(${count})`;
@@ -797,6 +802,23 @@
       const dot = btn.querySelector('.loc-dot');
       if (dot) dot.classList.remove('bg-[#060a0f]');
     });
+
+    // Update Featured Experience Sections
+    const exp1Eyebrow = document.getElementById('exp1Eyebrow');
+    const exp1Heading = document.getElementById('exp1Heading');
+    const exp1Desc = document.getElementById('exp1Desc');
+    const exp1Btn = document.getElementById('exp1Btn');
+    const exp1BtnText = document.getElementById('exp1BtnText');
+    const exp1ImgMain = document.getElementById('exp1ImgMain');
+    const exp1ImgSub1 = document.getElementById('exp1ImgSub1');
+    const exp1ImgSub2 = document.getElementById('exp1ImgSub2');
+
+    const exp2Eyebrow = document.getElementById('exp2Eyebrow');
+    const exp2Heading = document.getElementById('exp2Heading');
+    const exp2Desc = document.getElementById('exp2Desc');
+    const exp2ImgMain = document.getElementById('exp2ImgMain');
+    const exp2ImgSub1 = document.getElementById('exp2ImgSub1');
+    const exp2ImgSub2 = document.getElementById('exp2ImgSub2');
 
     // Update Pills, Hero Cards, and Hero Background based on selected location
     if (loc === 'glitch1') {
@@ -838,6 +860,23 @@
         vBookBtn1.onclick = function () { window.openPrivateHireModal(); };
       }
 
+      // 4. Experience Section: 100% Drinks and Bar (Zero Food for Pub 1)
+      if (exp1Eyebrow) exp1Eyebrow.textContent = '🍺 THE CRAFT BAR & DRINKS';
+      if (exp1Heading) exp1Heading.textContent = 'WHERE DRINKS MEET ATMOSPHERE.';
+      if (exp1Desc) exp1Desc.textContent = 'At The Glitch 1 (37 Prince of Wales Rd), our focus is 100% on exceptional drinks. Cold craft draughts on tap, creamy Guinness, crisp ciders, premium spirits, live sports on big screens, and vibrant weekend DJ nightlife. (Food is served exclusively at our Pub 2 St Giles location).';
+      if (exp1Btn) exp1Btn.href = 'menu.html#drinksSection';
+      if (exp1BtnText) exp1BtnText.textContent = 'Explore Drinks Menu';
+      if (exp1ImgMain) exp1ImgMain.src = 'assets/pub1-bar.jpg';
+      if (exp1ImgSub1) exp1ImgSub1.src = 'assets/pub1-drinks.jpg';
+      if (exp1ImgSub2) exp1ImgSub2.src = 'assets/pub1-taps.jpg';
+
+      if (exp2Eyebrow) exp2Eyebrow.textContent = 'THE PUB & NIGHTLIFE';
+      if (exp2Heading) exp2Heading.textContent = 'WHERE THE NIGHT COMES ALIVE.';
+      if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering. From craft draught taps and cold pints to weekend DJ party anthems and live sports, we set the stage for Norwich revelry.';
+      if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
+      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-pub1.jpg';
+      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub1-guinness.jpg';
+
     } else if (loc === 'glitch2') {
       // 1. Location Pill
       if (locBtnGlitch2) {
@@ -877,6 +916,23 @@
         vBookBtn2.onclick = function () { window.openBookingModal('Norwich Market'); };
       }
 
+      // 4. Experience Section: Pub 2 Dining & Speakeasy
+      if (exp1Eyebrow) exp1Eyebrow.textContent = '🍸 THE RESTAURANT & DINING (PUB 02)';
+      if (exp1Heading) exp1Heading.textContent = 'WHERE FOOD MEETS ATMOSPHERE.';
+      if (exp1Desc) exp1Desc.textContent = 'At The Glitch 2 (25b St Giles St), experience artisan dining paired with handcrafted cocktails. Seasonal gourmet pizzas, smash burgers, authentic sharing platters, and our bohemian lounge with bathtub snugs.';
+      if (exp1Btn) exp1Btn.href = 'menu.html';
+      if (exp1BtnText) exp1BtnText.textContent = 'Explore Food Menu';
+      if (exp1ImgMain) exp1ImgMain.src = 'assets/food-grand-feast.jpg';
+      if (exp1ImgSub1) exp1ImgSub1.src = 'assets/menu-burger.jpg';
+      if (exp1ImgSub2) exp1ImgSub2.src = 'assets/pub2-golden-bar.jpg';
+
+      if (exp2Eyebrow) exp2Eyebrow.textContent = 'THE BOHEMIAN SPEAKEASY (PUB 02)';
+      if (exp2Heading) exp2Heading.textContent = 'COCKTAILS, BATHTUB SNUGS & ACOUSTICS.';
+      if (exp2Desc) exp2Desc.textContent = 'Hand-hammered gold bar, clawfoot bathtub snugs, cozy chess corners, and live acoustic piano sets overlooking historic St Giles St.';
+      if (exp2ImgMain) exp2ImgMain.src = 'assets/pub2-golden-bar.jpg';
+      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/pub2-bathtub-snug.jpg';
+      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-piano.jpg';
+
     } else {
       // 'all'
       if (locBtnAll) {
@@ -912,6 +968,23 @@
       if (venueInfoBadge) {
         venueInfoBadge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span><span>Showing All Locations &bull; Both Pubs</span>';
       }
+
+      // Experience Section: Both Pubs Highlighted
+      if (exp1Eyebrow) exp1Eyebrow.textContent = 'TWO UNIQUE NORWICH VENUES';
+      if (exp1Heading) exp1Heading.textContent = 'DRINKS AT PUB 1 • FOOD & DRINKS AT PUB 2.';
+      if (exp1Desc) exp1Desc.textContent = 'Visit Pub 1 on Prince of Wales Rd for pure pub vibes, cold craft draughts, live sports, and weekend DJ sets (Drinks only). Visit Pub 2 on St Giles St for our full kitchen menu, artisan burgers, stone-baked pizzas, bathtub snugs, and cocktails.';
+      if (exp1Btn) exp1Btn.href = 'menu.html';
+      if (exp1BtnText) exp1BtnText.textContent = 'Explore Full Menu';
+      if (exp1ImgMain) exp1ImgMain.src = 'assets/pub1-bar.jpg';
+      if (exp1ImgSub1) exp1ImgSub1.src = 'assets/menu-burger.jpg';
+      if (exp1ImgSub2) exp1ImgSub2.src = 'assets/pub2-golden-bar.jpg';
+
+      if (exp2Eyebrow) exp2Eyebrow.textContent = 'NORWICH REVELRY';
+      if (exp2Heading) exp2Heading.textContent = 'WHERE THE NIGHT COMES ALIVE.';
+      if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering across both of our unique city centre locations.';
+      if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
+      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-pub1.jpg';
+      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-golden-bar.jpg';
     }
 
     // Apply combined Location + Category Filters
@@ -938,6 +1011,8 @@
     // 2. Filter by category
     if (currentCategory === 'ALL') {
       filteredItems = locationFiltered;
+    } else if (currentCategory === 'FOOD_OR_DRINKS') {
+      filteredItems = locationFiltered.filter(item => item.category === 'FOOD & DRINKS' || item.category === 'DRINKS');
     } else {
       filteredItems = locationFiltered.filter(item => item.category === currentCategory);
       // If current category has no matches in this location, reset category to ALL

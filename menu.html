@@ -177,7 +177,7 @@
 
         <!-- Card 1: THE GLITCH 1 (Prince of Wales Rd) -> ONLY COCKTAILS & DRINKS -->
         <div id="heroCardGlitch1" class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#4deeea]/50">
-          <img src="assets/menu-mocktails.jpg" alt="The Glitch 1 Prince of Wales Rd Cocktail Bar" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <img src="assets/pub1-bar.jpg" alt="The Glitch 1 Prince of Wales Rd Illuminated Spirits Bar" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent"></div>
 
           <div class="relative z-10 space-y-3 text-center flex flex-col items-center">
@@ -192,7 +192,7 @@
 
         <!-- Card 2: THE GLITCH 2 (Norwich Market) -> SHOWS ALL ITEMS -->
         <div id="heroCardGlitch2" class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#ff2a85]/50">
-          <img src="assets/menu-brunch.jpg" alt="The Glitch 2 Full Dining and Weekend Brunch" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <img src="assets/food-grand-feast.jpg" alt="The Glitch 2 Full Dining and Weekend Brunch" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent"></div>
 
           <div class="relative z-10 space-y-3 text-center flex flex-col items-center">
@@ -1078,16 +1078,31 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
         <!-- Left Column: Featured Drinks Image LEFT (5 cols) -->
-        <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-mocktails.jpg', 'Signature Mocktails & Cocktails — Fresh Mint Mojito, Passionfruit Martini & Berry Spritz')">
+        <div class="lg:col-span-5 order-2 lg:order-1 flex flex-col items-center gap-4">
+          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/pub1-craft-cocktail.jpg', 'Signature Craft Cocktails at The Glitch — Handcrafted mixology, fresh botanicals &amp; premium spirits')">
             <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-mocktails.jpg" alt="Artisan cocktails and mocktails at The Glitch" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+              <img src="assets/pub1-craft-cocktail.jpg" alt="Artisan craft cocktails and mixology at The Glitch" class="w-full h-80 sm:h-96 lg:h-[400px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
               <div class="absolute bottom-4 inset-x-4 flex justify-center pointer-events-none">
                 <div class="bg-black/85 backdrop-blur-md border border-white/25 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-center shadow-xl max-w-full">
-                  <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider block truncate">Mocktail &amp; Cocktail Bar</span>
+                  <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider block truncate">Craft Cocktail &amp; Mixology Bar</span>
                 </div>
-              </div> </div> </div> </div>
+              </div> </div> </div>
+
+          <!-- 2 Mini Signature Cocktails Previews -->
+          <div class="grid grid-cols-2 gap-3 w-full max-w-md">
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer h-24 sm:h-28" onclick="openLightbox('assets/pub2-artisan-cocktail.jpg', 'Smoked Artisan Old Fashioned &amp; Craft Spirits')">
+              <img src="assets/pub2-artisan-cocktail.jpg" alt="Smoked Old Fashioned Cocktail" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <span class="absolute bottom-2 left-2 right-2 text-[10px] sm:text-xs font-bold text-white truncate">Smoked Old Fashioned</span>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 group cursor-pointer h-24 sm:h-28" onclick="openLightbox('assets/pub2-cocktail.jpg', 'Glitch Sunset Highball &amp; Signature Sips')">
+              <img src="assets/pub2-cocktail.jpg" alt="Glitch Sunset Highball" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"></div>
+              <span class="absolute bottom-2 left-2 right-2 text-[10px] sm:text-xs font-bold text-white truncate">Sunset Highball</span>
+            </div>
+          </div>
+        </div>
 
         <!-- Right Column: Drinks & Mocktails List RIGHT (7 cols) -->
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
@@ -1153,27 +1168,77 @@
               <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Glitch Craft Cocktails</span>
               <span class="text-[11px] text-[#ff3b94] font-bold">Cocktails starting from £8.99</span>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Pornstar Martini</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Espresso Martini</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Fresh Mint Mojito</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Aperol Spritz</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Long Island Iced Tea</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Margarita</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Cosmopolitan</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Old Fashioned</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Whiskey Sour</span> </div>
-              <div class="p-2.5 rounded bg-white/[0.03] border border-white/[0.06]">
-                <span class="text-white font-medium">Negroni</span> </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('PORNSTAR MARTINI', '£9.50', 'Vanilla vodka, passion fruit liqueur, vanilla syrup, fresh lime juice, and a sparkling prosecco shooter.', 'assets/pub1-craft-cocktail.jpg', ['SIGNATURE', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'The UK favourite crowd-pleaser.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#4deeea]"></span>
+                  <span class="text-white font-medium group-hover:text-[#4deeea] transition">Pornstar Martini</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£9.50</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('ESPRESSO MARTINI', '£9.25', 'Freshly pulled espresso shot shaken with premium vodka, Kahlúa coffee liqueur, and dark cane sugar.', 'assets/pub2-artisan-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Rich, velvet crema and energizing kick.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85]"></span>
+                  <span class="text-white font-medium group-hover:text-[#ff2a85] transition">Espresso Martini</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£9.25</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('SMOKED OLD FASHIONED', '£9.50', 'Wood-barrel aged bourbon whiskey, Angostura aromatic bitters, orange peel zest, cold smoked under glass.', 'assets/pub2-artisan-cocktail.jpg', ['CRAFT', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Sophisticated, smoky and warm.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span class="text-white font-medium group-hover:text-amber-300 transition">Smoked Old Fashioned</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£9.50</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('SUNSET HIGHBALL', '£8.99', 'Artisan botanical gin, Aperol, fresh pink grapefruit citrus, and chilled sparkling Mediterranean tonic over carved clear ice.', 'assets/pub2-cocktail.jpg', ['CRAFT', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Vibrant, bittersweet and crisp.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
+                  <span class="text-white font-medium group-hover:text-pink-300 transition">Sunset Highball</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('FRESH MINT RUM MOJITO', '£8.99', 'White rum muddled with fresh mint leaves, lime juice, cane sugar syrup and charged with chilled club soda.', 'assets/pub1-craft-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Classic party refresher.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span class="text-white font-medium group-hover:text-emerald-300 transition">Fresh Mint Mojito</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('APEROL SPRITZ', '£8.99', 'Aperol aperitivo, chilled DOC Prosecco, splash of sparkling soda water, garnished with fresh orange wheel.', 'assets/pub2-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Italian summer essential.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
+                  <span class="text-white font-medium group-hover:text-orange-300 transition">Aperol Spritz</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('CLASSIC MARGARITA', '£8.99', '100% Blue agave tequila, Cointreau orange liqueur, fresh freshly squeezed lime juice with sea salt rim.', 'assets/pub1-craft-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Zesty, sharp and premium.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
+                  <span class="text-white font-medium group-hover:text-lime-300 transition">Margarita</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('LONG ISLAND ICED TEA', '£9.50', 'Vodka, white rum, gin, tequila, triple sec, lemon citrus, and chilled splash of cola.', 'assets/pub2-cocktail.jpg', ['HIGH ABV', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'The heavy hitter classic.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                  <span class="text-white font-medium group-hover:text-red-300 transition">Long Island Iced Tea</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£9.50</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('WHISKEY SOUR', '£9.25', 'Bourbon whiskey shaken vigorous with fresh lemon juice, simple syrup, aromatic bitters and optional egg white foam.', 'assets/pub2-artisan-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Silky and balanced.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span class="text-white font-medium group-hover:text-amber-300 transition">Whiskey Sour</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£9.25</span>
+              </div>
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('NEGRONI', '£9.25', 'Equal parts London Dry Gin, Campari, and Sweet Vermouth, stirred over block ice with expressed orange peel.', 'assets/pub2-artisan-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Bold, bitter, and iconic.')">
+                <div class="flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
+                  <span class="text-white font-medium group-hover:text-rose-400 transition">Negroni</span>
+                </div>
+                <span class="text-neutral-400 group-hover:text-white font-bold">£9.25</span>
+              </div>
             </div>
           </div>
 

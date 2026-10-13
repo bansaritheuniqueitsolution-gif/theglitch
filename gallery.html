@@ -279,8 +279,8 @@
         <button type="button" class="filter-btn" data-filter="PUB" role="tab" aria-selected="false">
           Pub <span class="filter-count"></span>
         </button>
-        <button type="button" class="filter-btn" data-filter="FOOD &amp; DRINKS" role="tab" aria-selected="false">
-          Food &amp; Drinks <span class="filter-count"></span>
+        <button type="button" class="filter-btn" id="filterBtnDrinks" data-filter="DRINKS" role="tab" aria-selected="false">
+          <span id="filterBtnDrinksLabel">Drinks</span> <span class="filter-count"></span>
         </button>
         <button type="button" class="filter-btn" data-filter="ATMOSPHERE" role="tab" aria-selected="false">
           Atmosphere <span class="filter-count"></span>
@@ -297,46 +297,46 @@
   <section class="gallery-section">
     <div class="container">
       <div class="gallery-grid" id="galleryGrid" aria-live="polite">
-        <!-- Rendered dynamically by gallery.js with 18 curated items --> </div> </div> </section>
+        <!-- Rendered dynamically by gallery.js with curated items --> </div> </div> </section>
 
-  <!-- ==================== FEATURED EXPERIENCE 01: THE RESTAURANT ==================== -->
+  <!-- ==================== FEATURED EXPERIENCE 01: CRAFT BAR & DRINKS (PUB 1 DEFAULT) ==================== -->
   <section class="experience-section" id="experienceRestaurant">
     <div class="container">
       <div class="experience-grid">
         
         <!-- Text Column -->
         <div class="experience-text">
-          <span class="eyebrow">THE RESTAURANT</span>
-          <h2 class="experience-heading">WHERE FOOD MEETS ATMOSPHERE.</h2>
-          <p class="experience-desc">From carefully prepared plates to the energy around the table, every detail is part of the experience. Discover seasonal artisan gastronomy made with locally sourced ingredients, crafted for unforgettable evenings.</p>
-          <a href="menu.html" class="btn-primary">
-            <span>Explore the Menu</span>
+          <span class="eyebrow" id="exp1Eyebrow">🍺 THE CRAFT BAR &amp; DRINKS</span>
+          <h2 class="experience-heading" id="exp1Heading">WHERE DRINKS MEET ATMOSPHERE.</h2>
+          <p class="experience-desc" id="exp1Desc">At The Glitch 1 (37 Prince of Wales Rd), our focus is 100% on exceptional drinks. Cold craft draughts on tap, creamy Guinness, crisp ciders, premium spirits, live sports on big screens, and vibrant weekend DJ nightlife. (Food is served exclusively at our Pub 2 St Giles location).</p>
+          <a href="menu.html#drinksSection" class="btn-primary" id="exp1Btn">
+            <span id="exp1BtnText">Explore Drinks Menu</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline> </svg> </a> </div>
 
-        <!-- Media Collage Column -->
+        <!-- Media Collage Column (Pub 1 Bar & Drinks - Zero Food) -->
         <div class="experience-media">
           <div class="experience-featured-img">
-            <img src="assets/gallery-3-plate.jpg" alt="Artisan plated culinary masterpiece" loading="lazy" decoding="async" /> </div>
+            <img id="exp1ImgMain" src="assets/pub1-bar.jpg" alt="Rustic bar counter and optic spirits at The Glitch 1 Prince of Wales Rd" loading="lazy" decoding="async" /> </div>
           <div class="experience-sub-images">
             <div class="experience-sub-img">
-              <img src="assets/menu-burger.jpg" alt="Gourmet smash burger" loading="lazy" decoding="async" /> </div>
+              <img id="exp1ImgSub1" src="assets/pub1-drinks.jpg" alt="Chilled pints and signature spirits on the bar at The Glitch 1" loading="lazy" decoding="async" /> </div>
             <div class="experience-sub-img">
-              <img src="assets/pub2-indian-feast.jpg" alt="Authentic Masala Feast Spread at The Glitch 2" loading="lazy" decoding="async" /> </div> </div> </div> </div> </div> </section>
+              <img id="exp1ImgSub2" src="assets/pub1-taps.jpg" alt="Craft draught beer wall at The Glitch 1" loading="lazy" decoding="async" /> </div> </div> </div> </div> </div> </section>
 
-  <!-- ==================== FEATURED EXPERIENCE 02: THE PUB ==================== -->
+  <!-- ==================== FEATURED EXPERIENCE 02: THE PUB & NIGHTLIFE ==================== -->
   <section class="experience-section" id="experiencePub">
     <div class="container">
       <div class="experience-grid reversed">
         
         <!-- Text Column -->
         <div class="experience-text">
-          <span class="eyebrow">THE PUB</span>
-          <h2 class="experience-heading">WHERE THE NIGHT COMES ALIVE.</h2>
-          <p class="experience-desc">Good drinks, great company and an atmosphere designed for nights worth remembering. From craft beer taps and bespoke cocktail coupes to weekend DJ sets and candlelit corners, we set the stage for Norwich revelry.</p>
-          <button type="button" onclick="openBookingModal()" class="btn-primary open-booking-modal">
-            <span>Book a Table</span>
+          <span class="eyebrow" id="exp2Eyebrow">THE PUB &amp; NIGHTLIFE</span>
+          <h2 class="experience-heading" id="exp2Heading">WHERE THE NIGHT COMES ALIVE.</h2>
+          <p class="experience-desc" id="exp2Desc">Good drinks, great company and an atmosphere designed for nights worth remembering. From craft draught taps and cold pints to weekend DJ party anthems and live sports, we set the stage for Norwich revelry.</p>
+          <button type="button" onclick="openBookingModal()" class="btn-primary open-booking-modal" id="exp2Btn">
+            <span id="exp2BtnText">Book a Table</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline> </svg> </button> </div>
@@ -344,12 +344,12 @@
         <!-- Media Collage Column -->
         <div class="experience-media">
           <div class="experience-featured-img">
-            <img src="assets/pub1-exterior-night.jpg" alt="Nightlife at The Glitch 1 Prince of Wales Rd" loading="lazy" decoding="async" /> </div>
+            <img id="exp2ImgMain" src="assets/pub1-exterior-night.jpg" alt="Nightlife at The Glitch 1 Prince of Wales Rd" loading="lazy" decoding="async" /> </div>
           <div class="experience-sub-images">
             <div class="experience-sub-img">
-              <img src="assets/pub2-golden-bar.jpg" alt="Curved golden bar at The Glitch 2 St Giles" loading="lazy" decoding="async" /> </div>
+              <img id="exp2ImgSub1" src="assets/event-dj-pub1.jpg" alt="Weekend DJ party lights at The Glitch 1" loading="lazy" decoding="async" /> </div>
             <div class="experience-sub-img">
-              <img src="assets/pub1-taps.jpg" alt="Craft draught wall at The Glitch 1" loading="lazy" decoding="async" /> </div> </div> </div> </div> </div> </section>
+              <img id="exp2ImgSub2" src="assets/pub1-guinness.jpg" alt="Freshly poured pint of Guinness at The Glitch 1" loading="lazy" decoding="async" /> </div> </div> </div> </div> </div> </section>> </div> </section>
 
   <!-- ==================== FINAL CALL TO ACTION ==================== -->
   <section class="cta-section">
