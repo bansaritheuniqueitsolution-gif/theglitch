@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Food & Drink Menu — THE GLITCH</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
-  <meta name="description" content="The Glitch official Food & Drink menu. Weekend Brunch, gourmet Glitch burgers, Kinoko truffle rice bowls, chicken wings, authentic Indian curries & rice dishes, signature cocktails and desserts across our locations." />
+  <meta name="description" content="The Glitch official Food &amp; Drink menu. Gourmet Glitch burgers, stone-baked pizzas, chicken wings, authentic Indian curries &amp; rice dishes, signature cocktails and desserts across our locations." />
 
   <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Caveat, Syne -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -192,14 +192,14 @@
 
         <!-- Card 2: THE GLITCH 2 (Norwich Market) -> SHOWS ALL ITEMS -->
         <div id="heroCardGlitch2" class="relative group rounded-2xl overflow-hidden border border-white/[0.12] bg-[#0c1219] shadow-2xl h-84 sm:h-96 flex flex-col justify-end p-8 sm:p-10 transition-all duration-500 hover:border-[#ff2a85]/50">
-          <img src="assets/food-grand-feast.jpg" alt="The Glitch 2 Full Dining and Weekend Brunch" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <img src="assets/food-grand-feast.jpg" alt="The Glitch 2 Full Dining and Drink Menu" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/55 to-transparent"></div>
 
           <div class="relative z-10 space-y-3 text-center flex flex-col items-center">
             <div class="inline-flex items-center gap-2 bg-[#ff2a85]/20 text-[#ff4fa8] border border-[#ff2a85]/40 px-3 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest">
-              <span>🍽 Full Gastro Pub &amp; Brunch Menu</span> </div>
+              <span>🍽 Full Gastro Pub &amp; Dining Menu</span> </div>
             <h2 class="text-3xl sm:text-4xl font-serif font-extrabold text-white tracking-wide uppercase drop-shadow-md">The Glitch 2 &ndash; Dining &amp; Pub</h2>
-            <p class="text-neutral-300 text-xs sm:text-sm max-w-sm">Weekend brunch, gourmet burgers, pizzas, wings, Indian curries, rice dishes &amp; desserts.</p>
+            <p class="text-neutral-300 text-xs sm:text-sm max-w-sm">Gourmet burgers, stone-baked pizzas, wings, Indian curries, rice dishes &amp; desserts.</p>
             <div class="pt-2">
               <button onclick="filterByLocation('glitch2')" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/40 bg-black/60 backdrop-blur-md hover:bg-white text-white hover:text-black font-semibold text-xs tracking-widest uppercase transition duration-300 hover:scale-105 shadow-lg">
                 <span>View All Items (The Glitch 2)</span>
@@ -241,8 +241,7 @@
           <button onclick="filterCategory('desserts')" id="tab-desserts" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">🍰 Desserts</button>
           <button onclick="filterCategory('soft-drinks')" id="tab-soft-drinks" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">🥤 Soft Drinks</button>
           <button onclick="filterCategory('hot-drinks')" id="tab-hot-drinks" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">☕ Hot Drinks</button>
-          <button onclick="filterCategory('drinks')" id="tab-drinks" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">🍸 Cocktails &amp; Mocktails</button>
-          <button onclick="filterCategory('brunch')" id="tab-brunch" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">🥂 Weekend Brunch</button> </div>
+          <button onclick="filterCategory('drinks')" id="tab-drinks" class="category-tab px-4 py-2 rounded-full bg-white/[0.05] hover:bg-white/[0.12] text-neutral-300 hover:text-white border border-white/[0.08] whitespace-nowrap transition duration-200">🍸 Cocktails &amp; Mocktails</button> </div>
 
         <!-- Search Bar -->
         <div class="relative flex-1 sm:w-64">
@@ -262,81 +261,7 @@
   <!-- STRICT ALTERNATING LAYOUT: RIGHT -> LEFT -> RIGHT -> LEFT -> RIGHT -> LEFT -> RIGHT -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 space-y-24">
 
-    <!-- ==================== SECTION 1: WEEKEND BRUNCH PACKAGES (IMAGE ON RIGHT) ==================== -->
-    <section id="section-brunch" class="menu-section scroll-mt-36" data-category="brunch" data-locations="glitch2">
-
-      <!-- Header -->
-      <div class="border-b border-white/10 pb-4 mb-10 flex flex-col sm:flex-row sm:items-end justify-between gap-3">
-        <div>
-          <span class="text-[11px] font-extrabold tracking-[0.25em] text-[#ff2a85] uppercase">Saturday &amp; Sunday &middot; 11AM &ndash; 3PM</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-extrabold text-[#f4ede3] tracking-wide uppercase mt-1">Weekend Brunch</h2> </div>
-        <p class="font-script text-2xl text-neutral-300 -rotate-1">Weekends taste better here!</p> </div>
-
-      <!-- 2-Column Grid: Packages Left, Image RIGHT -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-
-        <!-- Left Column: The 3 Signature Brunch Tiers (7 cols) -->
-        <div class="lg:col-span-7 space-y-5">
-
-          <!-- Package 1: GLITCH BRUNCH -->
-          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-[#4deeea]/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BRUNCH', '', 'Enjoy 1 delicious Main from our brunch menu plus 1 signature Drink of your choice. Great food, great drinks, great vibes.', 'assets/menu-brunch.jpg', ['BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Choose from our burgers, pizzas, curries or wings paired with cold beer or mocktail.')" data-dietary="" data-locations="glitch2">
-            <div class="flex items-baseline justify-between gap-2">
-              <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Tier 01</span>
-                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Brunch</h3> </div>
-              <div class="text-right">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] text-xs font-bold uppercase tracking-wider">Classic Experience</span> </div> </div>
-            <div class="text-xs text-neutral-300 font-bold mt-2 flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#4deeea]"></span>
-              <span>1 MAIN + 1 DRINK</span> </div>
-            <p class="text-xs text-neutral-400 mt-1">Great Food &middot; Great Drinks &middot; Great Vibes</p> </div>
-
-          <!-- Package 2: GLITCH BOOZY BRUNCH (Featured Highlight) -->
-          <div class="bg-[#0c1219] rounded-2xl border-2 border-[#ff2a85] p-6 transition duration-300 group shadow-lg shadow-[#ff2a85]/10 menu-item-row relative overflow-hidden" onclick="openItemModal('GLITCH BOOZY BRUNCH', '', 'Our most popular brunch experience! 1 delicious Main dish plus 2 drinks of your choice including craft cocktails, prosecco, or beer.', 'assets/menu-brunch.jpg', ['POPULAR', 'BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Enjoy 2 cocktails or pints with your favorite burger or pizza.')" data-dietary="" data-locations="glitch2">
-            <div class="absolute top-0 right-0 bg-[#ff2a85] text-white text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-bl-lg">
-              Most Popular
-            </div>
-            <div class="flex items-baseline justify-between gap-2">
-              <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff4fa8]">Tier 02</span>
-                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Boozy Brunch</h3> </div>
-              <div class="text-right">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ff2a85]/20 border border-[#ff2a85]/40 text-[#ff4fa8] text-xs font-bold uppercase tracking-wider">Craft &amp; Cocktails</span> </div> </div>
-            <div class="text-xs text-[#ff4fa8] font-bold mt-2 flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85]"></span>
-              <span>1 MAIN + 2 DRINKS</span> </div>
-            <p class="text-xs text-neutral-400 mt-1">Good Food &middot; Better Vibes &middot; Weekend Feels</p> </div>
-
-          <!-- Package 3: GLITCH BOTTOMLESS BRUNCH -->
-          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-amber-400/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BOTTOMLESS BRUNCH', '', 'The ultimate weekend celebration: 1 Main plus UNLIMITED drinks for 90 whole minutes. Choose from beer, cider, prosecco, or house cocktails.', 'assets/menu-brunch.jpg', ['BOTTOMLESS'], 'Saturday & Sunday | 11AM - 3PM (90 mins)', 'Unlimited drinks flow for 90 minutes. Table booking essential.')" data-dietary="" data-locations="glitch2">
-            <div class="flex items-baseline justify-between gap-2">
-              <div>
-                <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">Tier 03</span>
-                <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Bottomless Brunch</h3> </div>
-              <div class="text-right">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">90 Mins Unlimited</span> </div> </div>
-            <div class="text-xs text-amber-300 font-bold mt-2 flex items-center gap-2">
-              <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-              <span>1 MAIN + UNLIMITED DRINKS (90 MINUTES)</span> </div>
-            <p class="text-xs text-neutral-400 mt-1">Eat &middot; Drink &middot; Party &middot; Groups Welcome</p> </div> </div>
-
-        <!-- Right Column: Featured Image RIGHT (5 cols) -->
-        <div class="lg:col-span-5 flex justify-center">
-          <div class="relative w-full max-w-md group cursor-pointer" onclick="openLightbox('assets/menu-brunch.jpg', 'The Glitch Weekend Brunch Table Feast')">
-            <div class="rounded-3xl overflow-hidden border border-white/15 bg-[#0c1219] shadow-2xl relative">
-              <img src="assets/menu-brunch.jpg" alt="Weekend Brunch Table Feast at The Glitch" class="w-full h-80 sm:h-96 lg:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
-              <div class="absolute bottom-4 inset-x-4 flex justify-center pointer-events-none">
-                <div class="bg-black/85 backdrop-blur-md border border-white/25 px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-center shadow-xl max-w-full">
-                  <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wider block truncate">Weekend Brunch Feast</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== SECTION 2: BURGERS (IMAGE ON LEFT) ==================== -->
+    <!-- ==================== SECTION 1: BURGERS (IMAGE ON LEFT) ==================== -->
     <section id="section-burgers" class="menu-section scroll-mt-36" data-category="burgers" data-locations="glitch2">
 
       <!-- Header -->
@@ -424,7 +349,7 @@
               <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#5ce1e6]/40 transition flex items-center gap-1.5"><span class="text-[#5ce1e6] font-bold">+</span> Peri Peri Seasoning</span>
               <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#5ce1e6]/40 transition flex items-center gap-1.5"><span class="text-[#5ce1e6] font-bold">+</span> Upgrade to Loaded Fries</span> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 3: THE GLITCH CHICKEN & WINGS (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 2: THE GLITCH CHICKEN & WINGS (IMAGE ON RIGHT) ==================== -->
     <section id="section-chicken" class="menu-section scroll-mt-36" data-category="chicken" data-locations="glitch2">
 
       <!-- Header -->
@@ -545,7 +470,7 @@
                 </div>
               </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 4: SIDES & LOADED FRIES (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 3: SIDES & LOADED FRIES (IMAGE ON LEFT) ==================== -->
     <section id="section-sides" class="menu-section scroll-mt-36" data-category="sides" data-locations="glitch2">
 
       <!-- Header -->
@@ -654,7 +579,7 @@
                   <span class="text-[11px] text-neutral-400">Crisp creamy salad</span> </div>
                 <span class="text-[10px] font-bold text-neutral-400 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">House Made</span> </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 5: PIZZA 9.5 INCH (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 4: PIZZA 9.5 INCH (IMAGE ON RIGHT) ==================== -->
     <section id="section-pizzas" class="menu-section scroll-mt-36" data-category="pizzas" data-locations="glitch2">
 
       <!-- Header -->
@@ -761,7 +686,7 @@
                 </div>
               </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 6: MASALA MEETS & RICE DISHES (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 5: MASALA MEETS & RICE DISHES (IMAGE ON LEFT) ==================== -->
     <section id="section-masala" class="menu-section scroll-mt-36" data-category="masala" data-locations="glitch2">
 
       <!-- Header -->
@@ -837,7 +762,7 @@
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5">Paneer, onion, tomato, chilli, vegetables and Indian style spices.</p> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 7: DESSERTS (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 6: DESSERTS (IMAGE ON RIGHT) ==================== -->
     <section id="section-desserts" class="menu-section scroll-mt-36" data-category="desserts" data-locations="glitch2">
 
       <!-- Header -->
@@ -883,7 +808,7 @@
                 </div>
               </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 8: GLITCH SOFT DRINKS & JUICES (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 7: GLITCH SOFT DRINKS & JUICES (IMAGE ON LEFT) ==================== -->
     <section id="section-soft-drinks" class="menu-section scroll-mt-36" data-category="soft-drinks" data-locations="glitch1 glitch2">
 
       <!-- Header -->
@@ -947,7 +872,7 @@
               <div class="p-2 rounded bg-black/40 border border-white/5 text-center font-medium">🍍 Pineapple</div>
               <div class="p-2 rounded bg-black/40 border border-white/5 text-center font-medium">🍒 Cranberry</div> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 9: HOT DRINKS & BARISTA COFFEE (IMAGE ON RIGHT) ==================== -->
+<!-- ==================== SECTION 8: HOT DRINKS & BARISTA COFFEE (IMAGE ON RIGHT) ==================== -->
     <section id="section-hot-drinks" class="menu-section scroll-mt-36" data-category="hot-drinks" data-locations="glitch1 glitch2">
 
       <!-- Header -->
@@ -1024,7 +949,7 @@
                 </div>
               </div> </div> </div> </div> </div> </section>
 
-<!-- ==================== SECTION 10: COCKTAILS & MOCKTAILS (IMAGE ON LEFT) ==================== -->
+<!-- ==================== SECTION 9: COCKTAILS & MOCKTAILS (IMAGE ON LEFT) ==================== -->
     <!-- SHOWN ON BOTH GLITCH 1 (PRINCE OF WALES RD) AND GLITCH 2! -->
     <section id="section-drinks" class="menu-section scroll-mt-36" data-category="drinks" data-locations="glitch1 glitch2">
 
