@@ -167,6 +167,19 @@
     // PUB 2: THE GLITCH 2 — NORWICH MARKET (25b St Giles St, Norwich)
     // =======================================================================
     {
+      id: 200,
+      location: 'glitch2',
+      locationLabel: 'The Glitch 2 — Norwich Market',
+      locationBadge: 'Pub 2 • Norwich Market',
+      locationColor: 'pink',
+      title: 'St Giles Street Twilight Facade & Patio',
+      subtitle: 'Glowing neon sign, cobblestones, outdoor street seating & warm evening pub glow',
+      category: 'PUB',
+      image: 'assets/pub2-exterior-twilight.jpg',
+      spanClass: 'col-span-8 row-span-2',
+      alt: 'Atmospheric twilight exterior facade and outdoor patio of The Glitch 2 on St Giles Street'
+    },
+    {
       id: 201,
       location: 'glitch2',
       locationLabel: 'The Glitch 2 — Norwich Market',
@@ -176,7 +189,7 @@
       subtitle: 'Hand-hammered brass finish with amber drop lights & velvet stools',
       category: 'PUB',
       image: 'assets/pub2-golden-bar.jpg',
-      spanClass: 'col-span-8 row-span-2',
+      spanClass: 'col-span-4 row-span-2',
       alt: 'Atmospheric curved golden bar counter at The Glitch 2 St Giles'
     },
     {
@@ -660,7 +673,7 @@
       }
 
       // 3. Hero Visuals
-      if (heroBgImg) heroBgImg.src = 'assets/pub2-golden-bar.jpg';
+      if (heroBgImg) heroBgImg.src = 'assets/pub2-exterior-twilight.jpg';
       if (heroVenuePill) heroVenuePill.innerHTML = '<span>🍸 Pub 02 &bull; Norwich Market</span>';
       if (heroMainSubtitle) heroMainSubtitle.textContent = 'Now showcasing The Glitch 2 — Norwich Market (25b St Giles St). Curved gold bar, bathtub snugs, chess nook & artisan cocktails.';
       if (venueInfoBadge) {
@@ -740,7 +753,7 @@
       if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering across both of our unique city centre locations.';
       if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
       if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-pub1.jpg';
-      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-golden-bar.jpg';
+      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-exterior-twilight.jpg';
     }
 
     // Apply combined Location + Category Filters
