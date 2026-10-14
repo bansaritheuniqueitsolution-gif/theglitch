@@ -172,12 +172,12 @@
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
       locationColor: 'pink',
-      title: 'St Giles Street Twilight Facade & Patio',
-      subtitle: 'Glowing neon sign, cobblestones, outdoor street seating & warm evening pub glow',
+      title: 'St Giles Street Storefront & Overhead Sign',
+      subtitle: '25b St Giles St storefront, illuminated overhead Glitch signage, window chess nook & happy hour',
       category: 'PUB',
-      image: 'assets/pub2-exterior-twilight.jpg',
+      image: 'assets/pub2-exterior-front.jpg',
       spanClass: 'col-span-8 row-span-2',
-      alt: 'Atmospheric twilight exterior facade and outdoor patio of The Glitch 2 on St Giles Street'
+      alt: 'The Glitch 2 St Giles Street storefront, overhead sign and window display'
     },
     {
       id: 201,
@@ -673,7 +673,7 @@
       }
 
       // 3. Hero Visuals
-      if (heroBgImg) heroBgImg.src = 'assets/pub2-exterior-twilight.jpg';
+      if (heroBgImg) heroBgImg.src = 'assets/pub2-exterior-front.jpg';
       if (heroVenuePill) heroVenuePill.innerHTML = '<span>🍸 Pub 02 &bull; Norwich Market</span>';
       if (heroMainSubtitle) heroMainSubtitle.textContent = 'Now showcasing The Glitch 2 — Norwich Market (25b St Giles St). Curved gold bar, bathtub snugs, chess nook & artisan cocktails.';
       if (venueInfoBadge) {
@@ -753,7 +753,7 @@
       if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering across both of our unique city centre locations.';
       if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
       if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-poster.jpg';
-      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-exterior-twilight.jpg';
+      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-exterior-front.jpg';
     }
 
     // Apply combined Location + Category Filters
