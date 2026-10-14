@@ -155,12 +155,12 @@
       locationLabel: 'The Glitch 1 — Prince of Wales Rd',
       locationBadge: 'Pub 1 • Prince of Wales Rd',
       locationColor: 'cyan',
-      title: 'Weekend DJ Party & Club Decks Atmosphere',
-      subtitle: 'Resident & guest DJs spinning vinyl, dance anthems & party bangers every Friday & Saturday night',
+      title: 'DJ Night — House & UKG with DJ JAS',
+      subtitle: 'DJ JAS live on the decks spinning House & UKG anthems every Friday from 10:00 PM at 37 Prince of Wales Rd',
       category: 'ATMOSPHERE',
-      image: 'assets/event-dj-pub1.jpg',
+      image: 'assets/event-dj-poster.jpg',
       spanClass: 'col-span-6 row-span-2',
-      alt: 'Weekend DJ party lights and club atmosphere at Pub 1 Prince of Wales Rd'
+      alt: 'Glitch 1 DJ Night House & UKG with DJ JAS poster at 37 Prince of Wales Road Norwich'
     },
 
     // =======================================================================
@@ -641,9 +641,9 @@
 
       if (exp2Eyebrow) exp2Eyebrow.textContent = 'THE PUB & NIGHTLIFE';
       if (exp2Heading) exp2Heading.textContent = 'WHERE THE NIGHT COMES ALIVE.';
-      if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering. From craft draught taps and cold pints to weekend DJ party anthems and live sports, we set the stage for Norwich revelry.';
+      if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering. From craft draught taps and cold pints to Friday DJ Night (House & UKG with DJ JAS) and live sports, we set the stage for Norwich revelry.';
       if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
-      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-pub1.jpg';
+      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-poster.jpg';
       if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub1-guinness.jpg';
 
     } else if (loc === 'glitch2') {
@@ -752,7 +752,7 @@
       if (exp2Heading) exp2Heading.textContent = 'WHERE THE NIGHT COMES ALIVE.';
       if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering across both of our unique city centre locations.';
       if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
-      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-pub1.jpg';
+      if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-poster.jpg';
       if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-exterior-twilight.jpg';
     }
 
