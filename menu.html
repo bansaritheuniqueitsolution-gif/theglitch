@@ -214,7 +214,7 @@
         <div class="flex items-center gap-2">
           <span class="text-[11px] font-extrabold uppercase tracking-widest text-neutral-400">Location Filter:</span>
           <div class="inline-flex p-1 rounded-full bg-[#0c1219] border border-white/10 text-xs font-semibold">
-            <button onclick="filterByLocation('all')" id="loc-btn-all" class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-white">All Locations</button>
+            <button onclick="filterByLocation('all')" id="loc-btn-all" class="px-4 py-1.5 rounded-full transition duration-200 bg-[#f4ede3] text-neutral-950 font-bold shadow">All Locations</button>
             <button onclick="filterByLocation('glitch1')" id="loc-btn-glitch1" class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-[#5ce1e6]">🍸 The Glitch 1 (Prince of Wales Rd &middot; Cocktail Menu Only)</button>
             <button onclick="filterByLocation('glitch2')" id="loc-btn-glitch2" class="px-4 py-1.5 rounded-full transition duration-200 text-neutral-300 hover:text-[#ff4fa8]">🍽 The Glitch 2 (All Items)</button>
           </div>
@@ -279,21 +279,20 @@
         <div class="lg:col-span-7 space-y-5">
 
           <!-- Package 1: GLITCH BRUNCH -->
-          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-[#4deeea]/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BRUNCH', '£19.95 per person', 'Enjoy 1 delicious Main from our brunch menu plus 1 signature Drink of your choice. Great food, great drinks, great vibes.', 'assets/menu-brunch.jpg', ['BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Choose from our burgers, pizzas, curries or wings paired with cold beer or mocktail.')" data-dietary="" data-locations="glitch2">
+          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-[#4deeea]/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BRUNCH', '', 'Enjoy 1 delicious Main from our brunch menu plus 1 signature Drink of your choice. Great food, great drinks, great vibes.', 'assets/menu-brunch.jpg', ['BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Choose from our burgers, pizzas, curries or wings paired with cold beer or mocktail.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Tier 01</span>
                 <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Brunch</h3> </div>
               <div class="text-right">
-                <span class="text-2xl font-serif font-extrabold text-[#f4ede3]">£19.95</span>
-                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span> </div> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] text-xs font-bold uppercase tracking-wider">Classic Experience</span> </div> </div>
             <div class="text-xs text-neutral-300 font-bold mt-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-[#4deeea]"></span>
               <span>1 MAIN + 1 DRINK</span> </div>
             <p class="text-xs text-neutral-400 mt-1">Great Food &middot; Great Drinks &middot; Great Vibes</p> </div>
 
           <!-- Package 2: GLITCH BOOZY BRUNCH (Featured Highlight) -->
-          <div class="bg-[#0c1219] rounded-2xl border-2 border-[#ff2a85] p-6 transition duration-300 group shadow-lg shadow-[#ff2a85]/10 menu-item-row relative overflow-hidden" onclick="openItemModal('GLITCH BOOZY BRUNCH', '£26.95 per person', 'Our most popular brunch experience! 1 delicious Main dish plus 2 drinks of your choice including craft cocktails, prosecco, or beer.', 'assets/menu-brunch.jpg', ['POPULAR', 'BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Enjoy 2 cocktails or pints with your favorite burger or pizza.')" data-dietary="" data-locations="glitch2">
+          <div class="bg-[#0c1219] rounded-2xl border-2 border-[#ff2a85] p-6 transition duration-300 group shadow-lg shadow-[#ff2a85]/10 menu-item-row relative overflow-hidden" onclick="openItemModal('GLITCH BOOZY BRUNCH', '', 'Our most popular brunch experience! 1 delicious Main dish plus 2 drinks of your choice including craft cocktails, prosecco, or beer.', 'assets/menu-brunch.jpg', ['POPULAR', 'BRUNCH'], 'Saturday & Sunday | 11AM - 3PM', 'Enjoy 2 cocktails or pints with your favorite burger or pizza.')" data-dietary="" data-locations="glitch2">
             <div class="absolute top-0 right-0 bg-[#ff2a85] text-white text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-bl-lg">
               Most Popular
             </div>
@@ -302,22 +301,20 @@
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff4fa8]">Tier 02</span>
                 <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Boozy Brunch</h3> </div>
               <div class="text-right">
-                <span class="text-2xl font-serif font-extrabold text-[#f4ede3]">£26.95</span>
-                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span> </div> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#ff2a85]/20 border border-[#ff2a85]/40 text-[#ff4fa8] text-xs font-bold uppercase tracking-wider">Craft &amp; Cocktails</span> </div> </div>
             <div class="text-xs text-[#ff4fa8] font-bold mt-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85]"></span>
               <span>1 MAIN + 2 DRINKS</span> </div>
             <p class="text-xs text-neutral-400 mt-1">Good Food &middot; Better Vibes &middot; Weekend Feels</p> </div>
 
           <!-- Package 3: GLITCH BOTTOMLESS BRUNCH -->
-          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-amber-400/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BOTTOMLESS BRUNCH', '£32.95 per person', 'The ultimate weekend celebration: 1 Main plus UNLIMITED drinks for 90 whole minutes. Choose from beer, cider, prosecco, or house cocktails.', 'assets/menu-brunch.jpg', ['BOTTOMLESS'], 'Saturday & Sunday | 11AM - 3PM (90 mins)', 'Unlimited drinks flow for 90 minutes. Table booking essential.')" data-dietary="" data-locations="glitch2">
+          <div class="bg-[#0c1219] rounded-2xl border border-white/10 hover:border-amber-400/50 p-6 transition duration-300 group menu-item-row" onclick="openItemModal('GLITCH BOTTOMLESS BRUNCH', '', 'The ultimate weekend celebration: 1 Main plus UNLIMITED drinks for 90 whole minutes. Choose from beer, cider, prosecco, or house cocktails.', 'assets/menu-brunch.jpg', ['BOTTOMLESS'], 'Saturday & Sunday | 11AM - 3PM (90 mins)', 'Unlimited drinks flow for 90 minutes. Table booking essential.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-amber-300">Tier 03</span>
                 <h3 class="menu-item-title text-xl font-serif font-extrabold text-white uppercase tracking-wider">Glitch Bottomless Brunch</h3> </div>
               <div class="text-right">
-                <span class="text-2xl font-serif font-extrabold text-[#f4ede3]">£32.95</span>
-                <span class="block text-[10px] uppercase text-neutral-400 font-semibold">per person</span> </div> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-xs font-bold uppercase tracking-wider">90 Mins Unlimited</span> </div> </div>
             <div class="text-xs text-amber-300 font-bold mt-2 flex items-center gap-2">
               <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
               <span>1 MAIN + UNLIMITED DRINKS (90 MINUTES)</span> </div>
@@ -368,69 +365,64 @@
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-5">
 
           <!-- 1. The Glitch Cheeseburger -->
-          <div class="menu-item-row group" onclick="openItemModal('THE GLITCH CHEESEBURGER', '£12.99', 'Three juicy beef patties, melted American cheese, crisp lettuce, ripe tomato, red onions, and house glitch burger sauce. Served complete with golden seasoned fries.', 'assets/menu-burger.jpg', ['HOUSE SPECIAL'], 'Served with crispy fries', 'Pairs with craft IPA or refreshing lager.')" data-dietary="" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('THE GLITCH CHEESEBURGER', '', 'Three juicy beef patties, melted American cheese, crisp lettuce, ripe tomato, red onions, and house glitch burger sauce. Served complete with golden seasoned fries.', 'assets/menu-burger.jpg', ['HOUSE SPECIAL'], 'Served with crispy fries', 'Pairs with craft IPA or refreshing lager.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span class="text-xs text-[#5ce1e6] font-bold">★</span>
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">The Glitch Cheeseburger</h3>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-[#4deeea]/15 text-[#5ce1e6] font-extrabold uppercase tracking-wider">Triple Patty</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">12.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <div class="text-[11px] text-[#5ce1e6] font-medium mt-0.5">3 Beef patties, cheese, lettuce, tomato, onions &amp; burger sauce &bull; Served with fries</div>
             <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Our flagship triple-stacked burger feast, seared on the flat-top for maximum crust and melted gooey goodness.</p> </div>
 
           <!-- 2. Double Cheeseburger -->
-          <div class="menu-item-row group" onclick="openItemModal('DOUBLE CHEESEBURGER', '£11.99', 'Two prime beef patties, double melted cheese, crisp lettuce, tomato, sliced red onions, and house glitch burger sauce, served with seasoned fries.', 'assets/food-double-beef-burger.jpg', ['POPULAR'], 'Served with crispy fries', 'Pairs with draft craft beer or chilled cider.')" data-dietary="" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('DOUBLE CHEESEBURGER', '', 'Two prime beef patties, double melted cheese, crisp lettuce, tomato, sliced red onions, and house glitch burger sauce, served with seasoned fries.', 'assets/food-double-beef-burger.jpg', ['POPULAR'], 'Served with crispy fries', 'Pairs with draft craft beer or chilled cider.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Double Cheeseburger</h3>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 font-bold uppercase">Double Patty</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">11.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <div class="text-[11px] text-neutral-400 font-medium mt-0.5">2 Beef patties, cheese, lettuce, tomato, onions &amp; burger sauce &bull; Served with fries</div>
             <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Two smash beef patties layered with cheddar cheese, fresh crunch, and savory burger sauce.</p> </div>
 
           <!-- 3. BBQ Bacon Burger -->
-          <div class="menu-item-row group" onclick="openItemModal('BBQ BACON BURGER', '£10.99', 'Juicy beef patty, smoked crispy bacon, melted cheese, crisp lettuce, ripe tomato, onions, and rich smoky BBQ sauce. Served with fries.', 'assets/food-bacon-cheeseburger.jpg', [], 'Served with crispy fries', 'Pairs with amber ale or bourbon cocktail.')" data-dietary="" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('BBQ BACON BURGER', '', 'Juicy beef patty, smoked crispy bacon, melted cheese, crisp lettuce, ripe tomato, onions, and rich smoky BBQ sauce. Served with fries.', 'assets/food-bacon-cheeseburger.jpg', [], 'Served with crispy fries', 'Pairs with amber ale or bourbon cocktail.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">BBQ Bacon Burger</h3>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-amber-500/15 text-amber-300 font-bold uppercase">Smokey</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">10.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <div class="text-[11px] text-neutral-400 font-medium mt-0.5">Beef patty, crispy bacon, cheese, lettuce, tomato, onions &amp; BBQ sauce &bull; Served with fries</div>
             <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Sweet smoky BBQ sauce meets crispy smoked bacon and juicy seared beef.</p> </div>
 
           <!-- 4. Chicken Burger -->
-          <div class="menu-item-row group" onclick="openItemModal('CHICKEN BURGER', '£9.99', 'Succulent golden chicken breast fillet, fresh lettuce, sliced tomato, onions, creamy mayonnaise, and glitch burger sauce. Served with golden fries.', 'assets/menu-chicken-burger.jpg', ['HALAL'], 'Served with crispy fries', 'Pairs with fresh mojito mocktail or pale ale.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('CHICKEN BURGER', '', 'Succulent golden chicken breast fillet, fresh lettuce, sliced tomato, onions, creamy mayonnaise, and glitch burger sauce. Served with golden fries.', 'assets/menu-chicken-burger.jpg', ['HALAL'], 'Served with crispy fries', 'Pairs with fresh mojito mocktail or pale ale.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Chicken Burger</h3>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-white/10 text-neutral-300 font-bold uppercase">Tender Fillet</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <div class="text-[11px] text-neutral-400 font-medium mt-0.5">Chicken fillet, lettuce, tomato, onions, mayo sauce &amp; burger sauce &bull; Served with fries</div>
             <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Tender chicken fillet fried crisp, crowned with cool mayo and fresh crunch.</p> </div>
 
           <!-- 5. Veg. Burger (V) -->
-          <div class="menu-item-row group" onclick="openItemModal('VEG. BURGER', '£9.99', 'Crispy spiced vegetable patty, crisp lettuce, ripe tomato, sliced onions, creamy mayo sauce, and house burger sauce. Served with golden fries.', 'assets/food-veggie-burger.jpg', ['V'], 'Served with crispy fries', 'Pairs with chilled fruit juice or cider.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('VEG. BURGER', '', 'Crispy spiced vegetable patty, crisp lettuce, ripe tomato, sliced onions, creamy mayo sauce, and house burger sauce. Served with golden fries.', 'assets/food-veggie-burger.jpg', ['V'], 'Served with crispy fries', 'Pairs with chilled fruit juice or cider.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Veg. Burger</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <div class="text-[11px] text-neutral-400 font-medium mt-0.5">Veg patty, lettuce, tomato, onions, mayo sauce &amp; burger sauce &bull; Served with fries</div>
             <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Crispy vegetable patty packed with herbs and spices, nestled on soft toasted bun.</p> </div>
 
           <!-- Burger Add-ons & Upgrades -->
           <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-2">
-            <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold">Upgrade Your Burger</span>
-            <div class="flex flex-wrap items-center gap-2.5 text-xs text-neutral-300">
-              <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Extra Beef Patty &pound;3.50</span>
-              <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Smoked Bacon &pound;1.50</span>
-              <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Upgrade to Peri Peri Fries &pound;1.00</span>
-              <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">+ Upgrade to Loaded Fries &pound;2.00</span> </div> </div> </div> </div> </section>
+            <span class="text-[10px] uppercase tracking-widest text-neutral-400 font-bold">Customize Your Burger</span>
+            <div class="flex flex-wrap items-center gap-2 text-xs text-neutral-200">
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#5ce1e6]/40 transition flex items-center gap-1.5"><span class="text-[#5ce1e6] font-bold">+</span> Extra Beef Patty</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#5ce1e6]/40 transition flex items-center gap-1.5"><span class="text-[#5ce1e6] font-bold">+</span> Crispy Smoked Bacon</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#5ce1e6]/40 transition flex items-center gap-1.5"><span class="text-[#5ce1e6] font-bold">+</span> Peri Peri Seasoning</span>
+              <span class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-[#5ce1e6]/40 transition flex items-center gap-1.5"><span class="text-[#5ce1e6] font-bold">+</span> Upgrade to Loaded Fries</span> </div> </div> </div> </div> </section>
 
 <!-- ==================== SECTION 3: THE GLITCH CHICKEN & WINGS (IMAGE ON RIGHT) ==================== -->
     <section id="section-chicken" class="menu-section scroll-mt-36" data-category="chicken" data-locations="glitch2">
@@ -449,66 +441,59 @@
         <div class="lg:col-span-7 space-y-5">
 
           <!-- 4 Wings -->
-          <div class="menu-item-row group" onclick="openItemModal('4 CHICKEN WINGS', '£4.49', '4 crispy, succulent chicken wings tossed in your favorite signature Glitch glaze.', 'assets/food-wings-bbq.jpg', ['HALAL'], 'Pick from 7 signature flavors', 'Pairs with cold draft craft beer.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('4 CHICKEN WINGS', '', '4 crispy, succulent chicken wings tossed in your favorite signature Glitch glaze.', 'assets/food-wings-bbq.jpg', ['HALAL'], 'Pick from 7 signature flavors', 'Pairs with cold draft craft beer.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">4 Chicken Wings</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">4.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Crispy chicken wings tossed in your choice of 7 signature Glitch flavors.</p> </div>
 
           <!-- 6 Wings -->
-          <div class="menu-item-row group" onclick="openItemModal('6 CHICKEN WINGS', '£5.49', '6 crispy, juicy chicken wings tossed in your favorite signature Glitch glaze.', 'assets/food-wings-buffalo.jpg', ['HALAL'], 'Pick from 7 signature flavors', 'Pairs with chilled cider or IPA.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('6 CHICKEN WINGS', '', '6 crispy, juicy chicken wings tossed in your favorite signature Glitch glaze.', 'assets/food-wings-buffalo.jpg', ['HALAL'], 'Pick from 7 signature flavors', 'Pairs with chilled cider or IPA.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">6 Chicken Wings</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">5.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Generous portion of wings sauced to perfection.</p> </div>
 
           <!-- 12 Wings -->
-          <div class="menu-item-row group" onclick="openItemModal('12 CHICKEN WINGS (FEAST)', '£9.49', '12 crispy chicken wings feast platter. Choose up to 2 glazes for sharing.', 'assets/food-wings-sweetchili.jpg', ['POPULAR', 'HALAL'], 'Sharing Feast &bull; 7 Flavors', 'Great for group sharing with cold pints.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('12 CHICKEN WINGS (FEAST)', '', '12 crispy chicken wings feast platter. Choose up to 2 glazes for sharing.', 'assets/food-wings-sweetchili.jpg', ['POPULAR', 'HALAL'], 'Sharing Feast &bull; 7 Flavors', 'Great for group sharing with cold pints.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span class="text-xs text-[#ff3b94] font-bold">★</span>
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">12 Chicken Wings (Feast)</h3>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-[#ff3b94]/20 text-[#ff3b94] font-extrabold uppercase">Sharer</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Party platter of 12 wings tossed in your favorite signature glaze.</p> </div>
 
           <!-- 12 Peri Peri Chicken Wings -->
-          <div class="menu-item-row group" onclick="openItemModal('12 PERI PERI CHICKEN WINGS', '£9.49', '12 spicy flame-tossed chicken wings basted in zesty, fiery peri-peri garlic chili glaze.', 'assets/food-wings-ketchup.jpg', ['HOT', 'HALAL'], 'Spicy Peri Peri Sauce', 'Pairs with chilled Mexican beer or iced soft drink.')" data-dietary="HOT" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('12 PERI PERI CHICKEN WINGS', '', '12 spicy flame-tossed chicken wings basted in zesty, fiery peri-peri garlic chili glaze.', 'assets/food-wings-ketchup.jpg', ['HOT', 'HALAL'], 'Spicy Peri Peri Sauce', 'Pairs with chilled Mexican beer or iced soft drink.')" data-dietary="HOT" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">12 Peri Peri Chicken Wings</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">🌶 Spicy</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Flame-kissed wings coated in authentic zesty peri-peri glaze with a fiery citrus punch.</p> </div>
 
           <!-- 4 Crispy Hot Wings -->
-          <div class="menu-item-row group" onclick="openItemModal('4 CRISPY HOT WINGS', '£5.99', '4 extra-crispy breaded chicken wings with a fiery seasoning crunch that packs serious heat.', 'assets/food-wings-creamy-dip.jpg', ['HOT', 'HALAL'], 'Fiery Crunchy Coating', 'Pairs with fresh mint mojito or iced Coke.')" data-dietary="HOT" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('4 CRISPY HOT WINGS', '', '4 extra-crispy breaded chicken wings with a fiery seasoning crunch that packs serious heat.', 'assets/food-wings-creamy-dip.jpg', ['HOT', 'HALAL'], 'Fiery Crunchy Coating', 'Pairs with fresh mint mojito or iced Coke.')" data-dietary="HOT" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">4 Crispy Hot Wings</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">Extra Crispy</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">5.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Extra crunchy batter coating infused with red pepper and cayenne chili.</p> </div>
 
           <!-- 6 Chicken Nuggets with BBQ Sauce -->
-          <div class="menu-item-row group" onclick="openItemModal('6 CHICKEN NUGGETS WITH BBQ SAUCE', '£3.99', '6 golden, crispy battered chicken breast nuggets served with a rainbow array of 6 artisanal dipping sauces.', 'assets/menu-nuggets.jpg', ['HALAL'], 'Includes 6 Dipping Sauces', 'Great snack or burger companion.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('6 CHICKEN NUGGETS WITH BBQ SAUCE', '', '6 golden, crispy battered chicken breast nuggets served with a rainbow array of 6 artisanal dipping sauces.', 'assets/menu-nuggets.jpg', ['HALAL'], 'Includes 6 Dipping Sauces', 'Great snack or burger companion.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">6 Chicken Nuggets with BBQ Sauce</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">3.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Crispy bite-sized chicken breast nuggets paired with signature dipping sauces.</p> </div>
 
           <!-- 6 Chicken Strippers with BBQ Sauce -->
-          <div class="menu-item-row group" onclick="openItemModal('6 CHICKEN STRIPPERS WITH BBQ SAUCE', '£3.99', '6 tender, lightly battered whole chicken breast strips fried to a crisp golden brown, served with scallions and BBQ dip.', 'assets/menu-tenders.jpg', ['HALAL'], 'Includes Smokey BBQ Dip', 'Pairs with seasoned fries and dips.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('6 CHICKEN STRIPPERS WITH BBQ SAUCE', '', '6 tender, lightly battered whole chicken breast strips fried to a crisp golden brown, served with scallions and BBQ dip.', 'assets/menu-tenders.jpg', ['HALAL'], 'Includes Smokey BBQ Dip', 'Pairs with seasoned fries and dips.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">6 Chicken Strippers with BBQ Sauce</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">3.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Juicy breaded chicken breast tenders served with signature sweet BBQ sauce.</p> </div>
 
           <!-- Glitch Flavors & Dips Selector Panel -->
@@ -526,27 +511,27 @@
 
             <div class="pt-3 border-t border-white/[0.08]">
               <div class="flex items-center justify-between mb-2">
-                <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold">Extra Dips</span>
-                <span class="text-xs font-bold text-white">&pound;1.00 each</span> </div>
-              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-neutral-300">
-                <div class="p-2 rounded bg-black/40 border border-white/5 flex items-center justify-between">
-                  <span>Tomato Sauce</span>
-                  <span class="text-neutral-400">&pound;1</span> </div>
-                <div class="p-2 rounded bg-black/40 border border-white/5 flex items-center justify-between">
-                  <span>Garlic Mayo</span>
-                  <span class="text-neutral-400">&pound;1</span> </div>
-                <div class="p-2 rounded bg-black/40 border border-white/5 flex items-center justify-between">
-                  <span>BBQ Sauce</span>
-                  <span class="text-neutral-400">&pound;1</span> </div>
-                <div class="p-2 rounded bg-black/40 border border-white/5 flex items-center justify-between">
-                  <span>Mayo Sauce</span>
-                  <span class="text-neutral-400">&pound;1</span> </div>
-                <div class="p-2 rounded bg-black/40 border border-white/5 flex items-center justify-between">
-                  <span>Peri Peri Sauce</span>
-                  <span class="text-neutral-400">&pound;1</span> </div>
-                <div class="p-2 rounded bg-black/40 border border-white/5 flex items-center justify-between">
-                  <span>Hot Honey Sauce</span>
-                  <span class="text-neutral-400">&pound;1</span> </div> </div> </div> </div> </div>
+                <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold">Signature House Dips</span>
+                <span class="text-[11px] text-neutral-400">Pair with your wings &amp; sides</span> </div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-neutral-200">
+                <div class="p-2.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-[#5ce1e6]/30 transition flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#5ce1e6]"></span>
+                  <span>Garlic Aioli Dip</span> </div>
+                <div class="p-2.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-[#ff2a85]/30 transition flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85]"></span>
+                  <span>Smokey BBQ Dip</span> </div>
+                <div class="p-2.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-amber-400/30 transition flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+                  <span>Hot Honey Glaze</span> </div>
+                <div class="p-2.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-rose-400/30 transition flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+                  <span>Peri Peri Chili Dip</span> </div>
+                <div class="p-2.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-emerald-400/30 transition flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  <span>Creamy Mayo Dip</span> </div>
+                <div class="p-2.5 rounded-lg bg-white/[0.04] border border-white/10 hover:border-red-400/30 transition flex items-center gap-2">
+                  <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                  <span>Classic Tomato Ketchup</span> </div> </div> </div> </div> </div>
 
         <!-- Right Column: Featured Wings Image RIGHT (5 cols) -->
         <div class="lg:col-span-5 flex justify-center">
@@ -597,80 +582,77 @@
 
             <div class="space-y-3">
               <!-- Loaded Fries -->
-              <div class="menu-item-row group" onclick="openItemModal('LOADED FRIES', '£4.99', 'Golden crispy fries smothered in our warm house liquid cheese sauce.', 'assets/menu-loaded-fries.jpg', ['CHEESY'], 'Available daily', 'Pairs with craft beer.')" data-dietary="V" data-locations="glitch2">
+              <div class="menu-item-row group" onclick="openItemModal('LOADED FRIES', '', 'Golden crispy fries smothered in our warm house liquid cheese sauce.', 'assets/menu-loaded-fries.jpg', ['CHEESY'], 'Available daily', 'Pairs with craft beer.')" data-dietary="V" data-locations="glitch2">
                 <div class="flex items-baseline justify-between gap-2">
                   <h4 class="menu-item-title text-sm sm:text-base font-bold text-white">Loaded Fries</h4>
-                  <div class="dotted-leader hidden sm:block"></div>
-                  <span class="text-sm sm:text-base font-bold text-[#f4ede3] shrink-0">4.99</span> </div>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
                 <p class="text-xs text-neutral-400 mt-0.5">Crispy golden fries smothered in rich, warm house liquid sauce.</p> </div>
 
               <!-- Pepperoni Loaded Fries -->
-              <div class="menu-item-row group" onclick="openItemModal('PEPPERONI LOADED FRIES', '£5.99', 'Crispy fries topped with house liquid cheese sauce and sliced spicy pepperoni.', 'assets/menu-loaded-fries.jpg', ['HOT'], 'Available daily', 'Pairs with cold IPA or Coke.')" data-dietary="" data-locations="glitch2">
+              <div class="menu-item-row group" onclick="openItemModal('PEPPERONI LOADED FRIES', '', 'Crispy fries topped with house liquid cheese sauce and sliced spicy pepperoni.', 'assets/menu-loaded-fries.jpg', ['HOT'], 'Available daily', 'Pairs with cold IPA or Coke.')" data-dietary="" data-locations="glitch2">
                 <div class="flex items-baseline justify-between gap-2">
                   <h4 class="menu-item-title text-sm sm:text-base font-bold text-white">Pepperoni Loaded Fries</h4>
-                  <div class="dotted-leader hidden sm:block"></div>
-                  <span class="text-sm sm:text-base font-bold text-[#f4ede3] shrink-0">5.99</span> </div>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
                 <p class="text-xs text-neutral-400 mt-0.5">Fries with warm liquid sauce, melted cheese and spicy sliced pepperoni.</p> </div>
 
               <!-- Chicken Loaded Fries -->
-              <div class="menu-item-row group" onclick="openItemModal('CHICKEN LOADED FRIES', '£5.49', 'Crispy fries with warm liquid sauce, tender seasoned chicken and sliced fiery jalapeños.', 'assets/menu-loaded-fries.jpg', ['HOT', 'HALAL'], 'Available daily', 'Pairs with fresh draft cider.')" data-dietary="HOT" data-locations="glitch2">
+              <div class="menu-item-row group" onclick="openItemModal('CHICKEN LOADED FRIES', '', 'Crispy fries with warm liquid sauce, tender seasoned chicken and sliced fiery jalapeños.', 'assets/menu-loaded-fries.jpg', ['HOT', 'HALAL'], 'Available daily', 'Pairs with fresh draft cider.')" data-dietary="HOT" data-locations="glitch2">
                 <div class="flex items-baseline justify-between gap-2">
                   <h4 class="menu-item-title text-sm sm:text-base font-bold text-white">Chicken Loaded Fries</h4>
-                  <div class="dotted-leader hidden sm:block"></div>
-                  <span class="text-sm sm:text-base font-bold text-[#f4ede3] shrink-0">5.49</span> </div>
+                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
                 <p class="text-xs text-neutral-400 mt-0.5">Fries with liquid sauce, seasoned chicken breast pieces &amp; sliced spicy jalapeños.</p> </div> </div> </div>
 
           <!-- Classic Sides Grid -->
           <div>
             <h4 class="text-xs uppercase tracking-widest text-neutral-400 font-extrabold mb-3">Crispy &amp; Toasted Sides</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
-              <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition group">
                 <div>
-                  <strong class="text-white block">Crispy Fries</strong>
+                  <strong class="text-white block group-hover:text-[#5ce1e6] transition">Crispy Fries</strong>
                   <span class="text-[11px] text-neutral-400">Lightly sea-salted</span> </div>
-                <span class="text-white font-bold">&pound;2.99</span> </div>
+                <span class="text-[10px] font-bold text-neutral-400 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 group-hover:text-white transition">Classic</span> </div>
 
-              <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition group">
                 <div>
-                  <strong class="text-white block">Large Fries</strong>
+                  <strong class="text-white block group-hover:text-[#5ce1e6] transition">Large Fries</strong>
                   <span class="text-[11px] text-neutral-400">Generous basket</span> </div>
-                <span class="text-white font-bold">&pound;3.49</span> </div>
+                <span class="text-[10px] font-bold text-neutral-400 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10 group-hover:text-white transition">Sharing Basket</span> </div>
 
               <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
                 <div>
                   <strong class="text-white block">Peri Peri Fries</strong>
                   <span class="text-[11px] text-rose-300">Zesty spicy rub</span> </div>
-                <span class="text-white font-bold">&pound;3.99</span> </div>
+                <span class="text-[10px] font-bold text-rose-300 px-2.5 py-0.5 rounded-full bg-rose-500/15 border border-rose-500/25">Spicy Rub</span> </div>
 
-              <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition cursor-pointer group" onclick="openItemModal('BEER-BATTERED ONION RINGS', '£4.99', 'Golden crispy beer-battered onion rings served stacked high on a dark ceramic plate.', 'assets/menu-onion-rings.jpg', ['V'], 'Crispy Beer Battered', 'Great bar side snack.')">
+              <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-[#4deeea]/40 transition cursor-pointer group" onclick="openItemModal('BEER-BATTERED ONION RINGS', '', 'Golden crispy beer-battered onion rings served stacked high on a dark ceramic plate.', 'assets/menu-onion-rings.jpg', ['V'], 'Crispy Beer Battered', 'Great bar side snack.')">
                 <div>
                   <strong class="text-white block group-hover:text-[#4deeea] transition">Onion Rings</strong>
                   <span class="text-[11px] text-neutral-400">Beer-battered crunch</span> </div>
-                <span class="text-white font-bold">&pound;4.99</span> </div>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#4deeea] bg-[#4deeea]/10 group-hover:bg-[#4deeea] group-hover:text-black px-2.5 py-0.5 rounded-full border border-[#4deeea]/20 transition"><span>View</span> &rarr;</span> </div>
 
               <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
                 <div>
                   <strong class="text-white block">Mozzarella Sticks</strong>
                   <span class="text-[11px] text-neutral-400">Breaded mozzarella cheese</span> </div>
-                <span class="text-white font-bold">&pound;4.99</span> </div>
+                <span class="text-[10px] font-bold text-amber-300 px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/25">Melted Cheese</span> </div>
 
               <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
                 <div>
                   <strong class="text-white block">Toasted Garlic Bread</strong>
                   <span class="text-[11px] text-neutral-400">Herb butter crust</span> </div>
-                <span class="text-white font-bold">&pound;2.49</span> </div>
+                <span class="text-[10px] font-bold text-neutral-400 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Herb Butter</span> </div>
 
               <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
                 <div>
                   <strong class="text-white block">Garlic Bread with Cheese</strong>
                   <span class="text-[11px] text-neutral-400">Melted mozzarella topping</span> </div>
-                <span class="text-white font-bold">&pound;2.99</span> </div>
+                <span class="text-[10px] font-bold text-amber-300 px-2.5 py-0.5 rounded-full bg-amber-500/15 border border-amber-500/25">Mozzarella</span> </div>
 
               <div class="flex justify-between items-center p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 transition">
                 <div>
                   <strong class="text-white block">Fresh Coleslaw</strong>
                   <span class="text-[11px] text-neutral-400">Crisp creamy salad</span> </div>
-                <span class="text-white font-bold">&pound;2.00</span> </div> </div> </div> </div> </div> </section>
+                <span class="text-[10px] font-bold text-neutral-400 px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">House Made</span> </div> </div> </div> </div> </div> </section>
 
 <!-- ==================== SECTION 5: PIZZA 9.5 INCH (IMAGE ON RIGHT) ==================== -->
     <section id="section-pizzas" class="menu-section scroll-mt-36" data-category="pizzas" data-locations="glitch2">
@@ -688,79 +670,72 @@
         <div class="lg:col-span-7 space-y-4">
 
           <!-- 1. The Glitch Margherita (V) -->
-          <div class="menu-item-row group" onclick="openItemModal('THE GLITCH MARGHERITA (V)', '£8.99', 'Authentic 9.5 inch pizza with rich tomato sauce, mozzarella cheese, fragrant oregano, fresh basil leaves, and a drizzle of extra virgin olive oil.', 'assets/food-pizza-margherita.jpg', ['V'], '9.5 inch Stone-Baked', 'Pairs with fresh Italian lager or pinot grigio.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('THE GLITCH MARGHERITA (V)', '', 'Authentic 9.5 inch pizza with rich tomato sauce, mozzarella cheese, fragrant oregano, fresh basil leaves, and a drizzle of extra virgin olive oil.', 'assets/food-pizza-margherita.jpg', ['V'], '9.5 inch Stone-Baked', 'Pairs with fresh Italian lager or pinot grigio.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">The Glitch Margherita</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">8.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella cheese, oregano, fresh basil and a drizzle of olive oil.</p> </div>
 
           <!-- 2. Glitchy Pepperoni -->
-          <div class="menu-item-row group" onclick="openItemModal('GLITCHY PEPPERONI', '£9.99', '9.5 inch stone-baked pizza loaded with rich tomato sauce, mozzarella cheese, spicy artisan pepperoni slices, and crushed chili flakes.', 'assets/menu-pizza.jpg', ['POPULAR'], '9.5 inch Stone-Baked', 'Pairs with cold IPA or draft pilsner.')" data-dietary="" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('GLITCHY PEPPERONI', '', '9.5 inch stone-baked pizza loaded with rich tomato sauce, mozzarella cheese, spicy artisan pepperoni slices, and crushed chili flakes.', 'assets/menu-pizza.jpg', ['POPULAR'], '9.5 inch Stone-Baked', 'Pairs with cold IPA or draft pilsner.')" data-dietary="" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <span class="text-xs text-[#ff3b94] font-bold">★</span>
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Glitchy Pepperoni</h3>
                 <span class="text-[9px] px-2 py-0.5 rounded-full bg-[#ff3b94]/20 text-[#ff3b94] font-extrabold uppercase">Top Seller</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella cheese, pepperoni and chili flakes.</p> </div>
 
           <!-- 3. BBQ Chicken Pizza -->
-          <div class="menu-item-row group" onclick="openItemModal('BBQ CHICKEN PIZZA', '£9.99', '9.5 inch pizza with smoky BBQ sauce base, mozzarella cheese, tender chicken breast, sliced red onions, and green bell peppers.', 'assets/food-pizza-bbq-chicken.jpg', ['HALAL'], '9.5 inch Stone-Baked', 'Pairs with craft cider or bourbon cocktail.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('BBQ CHICKEN PIZZA', '', '9.5 inch pizza with smoky BBQ sauce base, mozzarella cheese, tender chicken breast, sliced red onions, and green bell peppers.', 'assets/food-pizza-bbq-chicken.jpg', ['HALAL'], '9.5 inch Stone-Baked', 'Pairs with craft cider or bourbon cocktail.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">BBQ Chicken Pizza</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">BBQ sauce, mozzarella cheese, chicken, red onions, green pepper.</p> </div>
 
           <!-- 4. Hot & Spicy -->
-          <div class="menu-item-row group" onclick="openItemModal('HOT & SPICY PIZZA', '£9.99', '9.5 inch fiery pizza with tomato sauce, mozzarella cheese, spicy pepperoni, crunchy onions, sliced jalapeños, and crushed chili flakes.', 'assets/food-pizza-spicy-pepperoni.jpg', ['HOT'], '9.5 inch Stone-Baked', 'Pairs with chilled Mexican pale ale.')" data-dietary="HOT" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('HOT & SPICY PIZZA', '', '9.5 inch fiery pizza with tomato sauce, mozzarella cheese, spicy pepperoni, crunchy onions, sliced jalapeños, and crushed chili flakes.', 'assets/food-pizza-spicy-pepperoni.jpg', ['HOT'], '9.5 inch Stone-Baked', 'Pairs with chilled Mexican pale ale.')" data-dietary="HOT" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Hot &amp; Spicy</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">🌶 Fiery</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella cheese, pepperoni, onions, jalapeños, chili flakes.</p> </div>
 
           <!-- 5. Glitch Garden Supreme (V) -->
-          <div class="menu-item-row group" onclick="openItemModal('GLITCH GARDEN SUPREME (V)', '£9.99', '9.5 inch vegetarian feast: tomato sauce, mozzarella cheese, bell peppers, sliced red onions, juicy tomato, mushrooms, black olives, and sweetcorn.', 'assets/food-pizza-veggie.jpg', ['V'], '9.5 inch Stone-Baked', 'Pairs with crisp cider or white wine.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('GLITCH GARDEN SUPREME (V)', '', '9.5 inch vegetarian feast: tomato sauce, mozzarella cheese, bell peppers, sliced red onions, juicy tomato, mushrooms, black olives, and sweetcorn.', 'assets/food-pizza-veggie.jpg', ['V'], '9.5 inch Stone-Baked', 'Pairs with crisp cider or white wine.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Glitch Garden Supreme</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">8.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella cheese, peppers, red onions, tomato, mushrooms, olives and sweetcorn.</p> </div>
 
           <!-- 6. Glitch Fire Garden (V) -->
-          <div class="menu-item-row group" onclick="openItemModal('GLITCH FIRE GARDEN', '£9.99', '9.5 inch spicy veggie pizza: tomato sauce, mozzarella cheese, fresh tomato, bell peppers, sliced red onions, fiery jalapeños, and crushed chili flakes.', 'assets/food-pizza-veggie.jpg', ['HOT', 'V'], '9.5 inch Stone-Baked', 'Pairs with craft lager.')" data-dietary="HOT" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('GLITCH FIRE GARDEN', '', '9.5 inch spicy veggie pizza: tomato sauce, mozzarella cheese, fresh tomato, bell peppers, sliced red onions, fiery jalapeños, and crushed chili flakes.', 'assets/food-pizza-veggie.jpg', ['HOT', 'V'], '9.5 inch Stone-Baked', 'Pairs with craft lager.')" data-dietary="HOT" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Glitch Fire Garden</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-rose-500/20 text-rose-300 font-bold">🌶 Spicy Veg</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella cheese, tomato, peppers, red onions, jalapeños, chili flakes.</p> </div>
 
           <!-- 7. Glitch Paneer Blast (V) -->
-          <div class="menu-item-row group" onclick="openItemModal('GLITCH PANEER BLAST', '£9.99', '9.5 inch fusion delight: tomato sauce, mozzarella cheese, spiced tandoori paneer cubes, sliced red onions, fresh tomato, and bell peppers.', 'assets/food-pizza-veggie.jpg', ['V'], '9.5 inch Stone-Baked', 'Pairs with fresh draft beer or highball.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('GLITCH PANEER BLAST', '', '9.5 inch fusion delight: tomato sauce, mozzarella cheese, spiced tandoori paneer cubes, sliced red onions, fresh tomato, and bell peppers.', 'assets/food-pizza-veggie.jpg', ['V'], '9.5 inch Stone-Baked', 'Pairs with fresh draft beer or highball.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Glitch Paneer Blast</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 font-bold">Paneer Special</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">9.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Tomato sauce, mozzarella cheese, paneer cubes, red onions, tomato, peppers.</p> </div>
 
           <!-- Extra Toppings Panel -->
           <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-2.5">
             <div class="flex items-center justify-between">
               <span class="text-[10px] uppercase tracking-widest text-[#ff3b94] font-bold">Customize with Extra Toppings</span>
-              <span class="text-xs font-bold text-white">&pound;1.49 each</span> </div>
+              <span class="text-xs text-neutral-400">Fresh Gourmet Toppings</span> </div>
             <div class="flex flex-wrap gap-2 text-xs text-neutral-300">
               <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">Pepperoni</span>
               <span class="px-2.5 py-1 rounded bg-white/5 border border-white/10">Chicken</span>
@@ -815,23 +790,22 @@
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
 
           <!-- 1. Glitch Curry Platter (Chicken Tadka / Paneer Masala / Egg Curry) -->
-          <div class="p-5 rounded-2xl bg-[#0c1219] border-2 border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition duration-300 menu-item-row relative overflow-hidden" onclick="openItemModal('GLITCH CURRY PLATTER', '£14.50', 'Authentic Indian curry served with fragrant basmati rice and your choice of warm Naan or flaky Paratha. Choose between Chicken Tadka, creamy Paneer Masala (V), or spiced Egg Curry.', 'assets/pub2-indian-feast.jpg', ['HOUSE SPECIAL', 'HALAL'], 'Complete Meal &bull; Rice + Naan or Paratha', 'Pairs perfectly with a cold Indian Pale Ale or draft lager.')" data-dietary="HALAL" data-locations="glitch2">
+          <div class="p-5 rounded-2xl bg-[#0c1219] border-2 border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition duration-300 menu-item-row relative overflow-hidden" onclick="openItemModal('GLITCH CURRY PLATTER', '', 'Authentic Indian curry served with fragrant basmati rice and your choice of warm Naan or flaky Paratha. Choose between Chicken Tadka, creamy Paneer Masala (V), or spiced Egg Curry.', 'assets/pub2-indian-feast.jpg', ['HOUSE SPECIAL', 'HALAL'], 'Complete Meal &bull; Rice + Naan or Paratha', 'Pairs perfectly with a cold Indian Pale Ale or draft lager.')" data-dietary="HALAL" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div>
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Curry Feast Complete Meal</span>
                 <h3 class="menu-item-title text-lg sm:text-xl font-serif font-extrabold text-white uppercase tracking-wider mt-0.5">Glitch Chicken Tadka / Paneer Masala / Egg Curry</h3> </div>
-              <span class="text-xl sm:text-2xl font-serif font-bold text-[#f4ede3] shrink-0">14.50</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 group-hover:bg-[#5ce1e6] group-hover:text-black transition-all duration-200 shrink-0"><span>View Platter</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <div class="text-[11px] text-[#5ce1e6] font-medium mt-1">Curry served with Naan or Paratha and basmati rice</div>
             <p class="text-xs text-neutral-400 mt-1 leading-relaxed">Tender slow-simmered chicken, golden paneer cubes, or boiled eggs cooked in traditional roasted spices, garlic, ginger and tomato gravy.</p> </div>
 
           <!-- 2. Indian Style Omelette -->
-          <div class="menu-item-row group" onclick="openItemModal('INDIAN STYLE OMELETTE', '£5.49', 'Fresh farm eggs whisked with diced red onions, fiery green chillies, fresh coriander, and authentic Indian style spices. Cooked golden.', 'assets/menu-curry.jpg', ['V'], 'Available all day', 'Pairs with English tea or coffee.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('INDIAN STYLE OMELETTE', '', 'Fresh farm eggs whisked with diced red onions, fiery green chillies, fresh coriander, and authentic Indian style spices. Cooked golden.', 'assets/menu-curry.jpg', ['V'], 'Available all day', 'Pairs with English tea or coffee.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Omelette (Indian Style)</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">5.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Egg, onion, green chilli and Indian style spices.</p> </div>
 
           <!-- Fragrant Spiced Rice Dishes Subgroup -->
@@ -839,31 +813,28 @@
             <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Fragrant Wok-Tossed Rice Dishes</span>
 
             <!-- 3. Egg Rice -->
-            <div class="menu-item-row group" onclick="openItemModal('EGG RICE', '£8.49', 'Wok-tossed basmati rice with scrambled egg, onions, ripe tomato, green chillies, seasonal vegetables, and delicate Indian spices.', 'assets/menu-curry.jpg', ['V'], 'Wok-Tossed', 'Pairs with any cold draft beer.')" data-dietary="V" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('EGG RICE', '', 'Wok-tossed basmati rice with scrambled egg, onions, ripe tomato, green chillies, seasonal vegetables, and delicate Indian spices.', 'assets/menu-curry.jpg', ['V'], 'Wok-Tossed', 'Pairs with any cold draft beer.')" data-dietary="V" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <h4 class="menu-item-title text-sm sm:text-base font-bold text-white">Egg Rice</h4>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-sm sm:text-base font-bold text-[#f4ede3] shrink-0">8.49</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5">Egg, onion, tomato, chilli, vegetables and Indian style spices.</p> </div>
 
             <!-- 4. Egg and Chicken Rice -->
-            <div class="menu-item-row group" onclick="openItemModal('EGG AND CHICKEN RICE', '£9.49', 'Fragrant stir-fried basmati rice tossed with spiced chicken, scrambled egg, onion, tomato, green chillies, vegetables, and aromatic Indian spices.', 'assets/menu-curry.jpg', ['HALAL'], 'Wok-Tossed', 'Pairs with draft lager or pale ale.')" data-dietary="HALAL" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('EGG AND CHICKEN RICE', '', 'Fragrant stir-fried basmati rice tossed with spiced chicken, scrambled egg, onion, tomato, green chillies, vegetables, and aromatic Indian spices.', 'assets/menu-curry.jpg', ['HALAL'], 'Wok-Tossed', 'Pairs with draft lager or pale ale.')" data-dietary="HALAL" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <h4 class="menu-item-title text-sm sm:text-base font-bold text-white">Egg &amp; Chicken Rice</h4>
                   <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">Popular</span> </div>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-sm sm:text-base font-bold text-[#f4ede3] shrink-0">9.49</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5">Egg, onion, tomato, chilli, chicken, vegetables and Indian style spices.</p> </div>
 
             <!-- 5. Paneer Rice (V) -->
-            <div class="menu-item-row group" onclick="openItemModal('PANEER RICE', '£8.49', 'Fragrant basmati rice tossed with golden paneer cubes, chopped onion, tomato, green chillies, mixed vegetables, and Indian spices.', 'assets/menu-curry.jpg', ['V'], 'Wok-Tossed', 'Pairs with fresh mint cooler or cider.')" data-dietary="V" data-locations="glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('PANEER RICE', '', 'Fragrant basmati rice tossed with golden paneer cubes, chopped onion, tomato, green chillies, mixed vegetables, and Indian spices.', 'assets/menu-curry.jpg', ['V'], 'Wok-Tossed', 'Pairs with fresh mint cooler or cider.')" data-dietary="V" data-locations="glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <h4 class="menu-item-title text-sm sm:text-base font-bold text-white">Paneer Rice (V)</h4>
                   <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-sm sm:text-base font-bold text-[#f4ede3] shrink-0">8.49</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Dish</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5">Paneer, onion, tomato, chilli, vegetables and Indian style spices.</p> </div> </div> </div> </div> </section>
 
 <!-- ==================== SECTION 7: DESSERTS (IMAGE ON RIGHT) ==================== -->
@@ -883,23 +854,21 @@
         <div class="lg:col-span-7 space-y-5">
 
           <!-- Cheese Cake -->
-          <div class="menu-item-row group" onclick="openItemModal('CHEESE CAKE', '£4.49', 'Velvety New York style baked cheesecake slice set on a buttery crumb crust.', 'assets/menu-dessert.jpg', ['V'], 'Chilled Dessert', 'Pairs with sweet coffee or hot chocolate.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('CHEESE CAKE', '', 'Velvety New York style baked cheesecake slice set on a buttery crumb crust.', 'assets/menu-dessert.jpg', ['V'], 'Chilled Dessert', 'Pairs with sweet coffee or hot chocolate.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Cheese Cake</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-300 font-bold">V</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">4.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Treat</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Creamy, rich baked cheesecake slice with buttery biscuit base.</p> </div>
 
           <!-- Ice Cream -->
-          <div class="menu-item-row group" onclick="openItemModal('ICE CREAM SUNDAE', '£4.99', 'Two generous scoops of creamy Chocolate or Vanilla ice cream, drizzled with rich chocolate or golden caramel syrup, served with a crisp wafer roll.', 'assets/menu-dessert.jpg', ['V'], 'Served with wafer roll', 'Choice of Chocolate or Vanilla &bull; Caramel or Choc syrup.')" data-dietary="V" data-locations="glitch2">
+          <div class="menu-item-row group" onclick="openItemModal('ICE CREAM SUNDAE', '', 'Two generous scoops of creamy Chocolate or Vanilla ice cream, drizzled with rich chocolate or golden caramel syrup, served with a crisp wafer roll.', 'assets/menu-dessert.jpg', ['V'], 'Served with wafer roll', 'Choice of Chocolate or Vanilla &bull; Caramel or Choc syrup.')" data-dietary="V" data-locations="glitch2">
             <div class="flex items-baseline justify-between gap-2">
               <div class="flex items-center gap-2">
                 <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Ice Cream</h3>
                 <span class="text-[9px] px-1.5 py-0.5 rounded bg-white/10 text-neutral-300 font-bold">Chocolate / Vanilla</span> </div>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">4.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Sundae</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Chocolate or Vanilla ice cream with chocolate or caramel syrup, served with wafer roll.</p> </div> </div>
 
         <!-- Right Column: Featured Dessert Image RIGHT (5 cols) -->
@@ -943,35 +912,35 @@
           <div>
             <span class="text-xs uppercase tracking-widest text-[#5ce1e6] font-bold block mb-3">Glitch Soft Drinks</span>
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs">
-              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between">
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 flex items-center justify-between transition">
                 <span class="font-bold text-white">Coke</span>
-                <span class="text-[#f4ede3] font-bold">&pound;1.99</span> </div>
-              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between">
+                <span class="text-[10px] text-neutral-400 font-semibold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Chilled Can</span> </div>
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 flex items-center justify-between transition">
                 <span class="font-bold text-white">Diet Coke</span>
-                <span class="text-[#f4ede3] font-bold">&pound;1.99</span> </div>
-              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between">
+                <span class="text-[10px] text-neutral-400 font-semibold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Chilled Can</span> </div>
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 flex items-center justify-between transition">
                 <span class="font-bold text-white">Fanta</span>
-                <span class="text-[#f4ede3] font-bold">&pound;1.99</span> </div>
-              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between">
+                <span class="text-[10px] text-neutral-400 font-semibold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Chilled Can</span> </div>
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 flex items-center justify-between transition">
                 <span class="font-bold text-white">Sprite</span>
-                <span class="text-[#f4ede3] font-bold">&pound;1.99</span> </div>
-              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between">
+                <span class="text-[10px] text-neutral-400 font-semibold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Chilled Can</span> </div>
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 flex items-center justify-between transition">
                 <span class="font-bold text-white">Dr. Pepper</span>
-                <span class="text-[#f4ede3] font-bold">&pound;1.99</span> </div>
-              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-between">
+                <span class="text-[10px] text-neutral-400 font-semibold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Chilled Can</span> </div>
+              <div class="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] hover:border-white/20 flex items-center justify-between transition">
                 <span class="font-bold text-white">Tango</span>
-                <span class="text-[#f4ede3] font-bold">&pound;1.99</span> </div>
+                <span class="text-[10px] text-neutral-400 font-semibold px-2.5 py-0.5 rounded-full bg-white/5 border border-white/10">Chilled Can</span> </div>
               <div class="p-3 rounded-xl bg-rose-500/10 border border-rose-500/25 flex items-center justify-between col-span-2 sm:col-span-3">
                 <div class="flex items-center gap-2">
                   <span class="font-bold text-rose-300">⚡ Red Bull Energy Drink</span>
-                  <span class="text-[10px] text-neutral-400">Can</span> </div>
-                <span class="text-rose-300 font-bold">&pound;2.49</span> </div> </div> </div>
+                  <span class="text-[10px] text-neutral-400">Vitalizes Body &amp; Mind</span> </div>
+                <span class="text-[10px] font-bold text-rose-300 px-2.5 py-0.5 rounded-full bg-rose-500/20 border border-rose-500/30 uppercase">Energy Boost</span> </div> </div> </div>
 
           <!-- Chilled Fruit Juices -->
           <div class="p-4 rounded-xl bg-white/[0.03] border border-white/[0.08] space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-[11px] uppercase tracking-widest text-[#ff3b94] font-bold">Chilled Fruit Juices</span>
-              <span class="text-xs font-bold text-white">&pound;1.99 each</span> </div>
+              <span class="text-xs text-neutral-400 font-medium">100% Pure &amp; Chilled</span> </div>
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs text-neutral-300">
               <div class="p-2 rounded bg-black/40 border border-white/5 text-center font-medium">🍊 Orange</div>
               <div class="p-2 rounded bg-black/40 border border-white/5 text-center font-medium">🍏 Apple</div>
@@ -996,50 +965,44 @@
           <div class="menu-item-row group">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Classic Tea</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">2.20</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-300 bg-amber-400/10 border border-amber-400/20 shrink-0"><span>English Brew</span></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5">Traditional English Breakfast tea blend served piping hot.</p> </div>
 
           <div class="menu-item-row group">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Americano</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">2.00</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-300 bg-amber-400/10 border border-amber-400/20 shrink-0"><span>Fresh Roast</span></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5">Smooth, freshly brewed black coffee.</p> </div>
 
           <div class="menu-item-row group">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Cappuccino</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">2.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-300 bg-amber-400/10 border border-amber-400/20 shrink-0"><span>Velvet Foam</span></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5">Rich espresso with steamed milk and airy velvet foam.</p> </div>
 
           <div class="menu-item-row group">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Espresso</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">2.00</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-300 bg-amber-400/10 border border-amber-400/20 shrink-0"><span>Single Shot</span></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5">Bold, aromatic single espresso shot.</p> </div>
 
           <div class="menu-item-row group">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Latte</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">2.99</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-300 bg-amber-400/10 border border-amber-400/20 shrink-0"><span>Steamed Milk</span></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5">Smooth espresso balanced with silky steamed milk.</p> </div>
 
           <div class="menu-item-row group">
             <div class="flex items-baseline justify-between gap-2">
               <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Hot Chocolate</h3>
-              <div class="dotted-leader hidden sm:block"></div>
-              <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">3.49</span> </div>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-amber-300 bg-amber-400/10 border border-amber-400/20 shrink-0"><span>Rich Cocoa</span></span> </div>
             <p class="text-xs text-neutral-400 mt-0.5">Classic rich hot chocolate with steamed milk and dusting.</p> </div>
 
           <!-- Syrups Addon Panel -->
           <div class="p-4 rounded-xl bg-amber-400/5 border border-amber-400/20 space-y-2">
             <div class="flex items-center justify-between">
               <span class="text-[11px] uppercase tracking-widest text-amber-300 font-bold">Add Flavour Syrups</span>
-              <span class="text-xs font-bold text-amber-300">+85p</span> </div>
+              <span class="text-xs font-bold text-amber-300">Choice of 7 Syrups</span> </div>
             <div class="flex flex-wrap gap-2 text-xs text-neutral-300">
               <span class="px-2.5 py-1 rounded bg-black/40 border border-white/10">Vanilla</span>
               <span class="px-2.5 py-1 rounded bg-black/40 border border-white/10">Caramel</span>
@@ -1107,12 +1070,12 @@
         <!-- Right Column: Drinks & Mocktails List RIGHT (7 cols) -->
         <div class="lg:col-span-7 order-1 lg:order-2 space-y-6">
 
-          <!-- Cocktails Starting Price Note Banner -->
+          <!-- Cocktails Banner -->
           <div class="p-4 rounded-xl bg-gradient-to-r from-[#ff2a85]/20 via-[#4deeea]/15 to-transparent border border-[#ff2a85]/40 flex items-center justify-between shadow-lg">
             <span class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-              <span>🍸</span> Cocktails starting from £8.99
+              <span>🍸</span> Signature Craft Cocktails &amp; Artisan Mixology
             </span>
-            <span class="text-xs text-[#5ce1e6] font-semibold">Handcrafted Mixology</span>
+            <span class="text-xs text-[#5ce1e6] font-semibold tracking-wider uppercase">Handcrafted Pours</span>
           </div>
 
           <!-- Mocktails (Non-Alcoholic Special - Highlighting Glitch 1 Prince of Wales Rd) -->
@@ -1123,121 +1086,117 @@
               <span class="text-[11px] text-neutral-400">Non-Alcoholic</span> </div>
 
             <!-- Fresh Mint Mojito Mocktail -->
-            <div class="menu-item-row group" onclick="openItemModal('FRESH MINT MOJITO (MOCKTAIL)', '£6.50', 'Fresh muddled lime wedges, fresh garden mint, pure cane sugar, crushed ice, topped with chilled effervescent soda water. (Also available as alcoholic rum cocktail).', 'assets/menu-mocktails.jpg', ['MOCKTAIL', 'POPULAR'], 'Prince of Wales Rd & Norwich Market', 'Ultra refreshing, crisp and aromatic.')" data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('FRESH MINT MOJITO (MOCKTAIL)', '', 'Fresh muddled lime wedges, fresh garden mint, pure cane sugar, crushed ice, topped with chilled effervescent soda water. (Also available as alcoholic rum cocktail).', 'assets/menu-mocktails.jpg', ['MOCKTAIL', 'POPULAR'], 'Prince of Wales Rd & Norwich Market', 'Ultra refreshing, crisp and aromatic.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Fresh Mint Mojito</h3>
                   <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#4deeea]/15 text-[#5ce1e6] font-bold">Mocktail</span> </div>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Drink</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fresh mint, muddled lime, crushed ice, soda. (Alcoholic option available)</p> </div>
 
             <!-- Passionfruit Martini Mocktail -->
-            <div class="menu-item-row group" onclick="openItemModal('PASSIONFRUIT MARTINI (MOCKTAIL)', '£6.95', 'Sweet tropical passionfruit purée, vanilla bean syrup, fresh lime juice, served with a sparkling elderflower shooter. (Also available as vodka cocktail).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'Prince of Wales Rd & Norwich Market', 'Tropical, smooth, and vibrant.')" data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('PASSIONFRUIT MARTINI (MOCKTAIL)', '', 'Sweet tropical passionfruit purée, vanilla bean syrup, fresh lime juice, served with a sparkling elderflower shooter. (Also available as vodka cocktail).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'Prince of Wales Rd & Norwich Market', 'Tropical, smooth, and vibrant.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Passionfruit Martini</h3>
                   <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#ff2a85]/15 text-[#ff4fa8] font-bold">Mocktail</span> </div>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.95</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Drink</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Passionfruit purée, vanilla, lime, sparkling fizz. (Alcoholic option available)</p> </div>
 
             <!-- Virgin Piña Colada -->
-            <div class="menu-item-row group" onclick="openItemModal('VIRGIN PIÑA COLADA', '£6.50', 'Rich coconut cream shaken with fresh golden pineapple juice, crushed ice, and garnished with a caramelized pineapple slice. (Alcoholic option available).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'Prince of Wales Rd & Norwich Market', 'Creamy tropical indulgence.')" data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('VIRGIN PIÑA COLADA', '', 'Rich coconut cream shaken with fresh golden pineapple juice, crushed ice, and garnished with a caramelized pineapple slice. (Alcoholic option available).', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'Prince of Wales Rd & Norwich Market', 'Creamy tropical indulgence.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Piña Colada</h3>
                   <span class="text-[9px] px-1.5 py-0.5 rounded bg-[#4deeea]/15 text-[#5ce1e6] font-bold">Mocktail</span> </div>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Drink</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Coconut cream, pineapple juice, crushed ice. (Alcoholic option available)</p> </div>
 
             <!-- Berry Bliss Spritz -->
-            <div class="menu-item-row group" onclick="openItemModal('BERRY BLISS SPRITZ', '£6.50', 'Muddled seasonal berries, raspberry coulis, fresh lime juice, sparkling Mediterranean tonic, and mint.', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'Prince of Wales Rd & Norwich Market', 'Tart, sweet, and effervescent.')" data-dietary="VG" data-locations="glitch1 glitch2">
+            <div class="menu-item-row group" onclick="openItemModal('BERRY BLISS SPRITZ', '', 'Muddled seasonal berries, raspberry coulis, fresh lime juice, sparkling Mediterranean tonic, and mint.', 'assets/menu-mocktails.jpg', ['MOCKTAIL'], 'Prince of Wales Rd & Norwich Market', 'Tart, sweet, and effervescent.')" data-dietary="VG" data-locations="glitch1 glitch2">
               <div class="flex items-baseline justify-between gap-2">
                 <div class="flex items-center gap-2">
                   <h3 class="menu-item-title text-base sm:text-lg font-serif font-bold text-white uppercase tracking-wider">Berry Bliss Spritz</h3>
                   <span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 font-bold">Mocktail</span> </div>
-                <div class="dotted-leader hidden sm:block"></div>
-                <span class="text-base sm:text-lg font-serif font-bold text-[#f4ede3] shrink-0">6.50</span> </div>
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-[#5ce1e6] bg-[#5ce1e6]/10 border border-[#5ce1e6]/20 group-hover:bg-[#5ce1e6] group-hover:text-black group-hover:border-[#5ce1e6] transition-all duration-200 shrink-0"><span>View Drink</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span> </div>
               <p class="text-xs text-neutral-400 mt-0.5 leading-relaxed">Fresh strawberries, raspberries, cranberry splash, lime, sparkling tonic.</p> </div> </div>
 
           <!-- Classic Cocktails Grid -->
           <div class="pt-4 border-t border-white/10 space-y-3">
             <div class="flex items-center justify-between">
               <span class="text-xs uppercase tracking-widest text-neutral-400 font-bold block">Glitch Craft Cocktails</span>
-              <span class="text-[11px] text-[#ff3b94] font-bold">Cocktails starting from £8.99</span>
+              <span class="text-[11px] text-[#ff3b94] font-bold">Signature Pours</span>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('PORNSTAR MARTINI', '£9.50', 'Vanilla vodka, passion fruit liqueur, vanilla syrup, fresh lime juice, and a sparkling prosecco shooter.', 'assets/pub1-craft-cocktail.jpg', ['SIGNATURE', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'The UK favourite crowd-pleaser.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('PORNSTAR MARTINI', '', 'Vanilla vodka, passion fruit liqueur, vanilla syrup, fresh lime juice, and a sparkling prosecco shooter.', 'assets/pub1-craft-cocktail.jpg', ['SIGNATURE', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'The UK favourite crowd-pleaser.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#4deeea]"></span>
                   <span class="text-white font-medium group-hover:text-[#4deeea] transition">Pornstar Martini</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£9.50</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#4deeea] bg-[#4deeea]/10 group-hover:bg-[#4deeea] group-hover:text-black px-2.5 py-0.5 rounded-full border border-[#4deeea]/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('ESPRESSO MARTINI', '£9.25', 'Freshly pulled espresso shot shaken with premium vodka, Kahlúa coffee liqueur, and dark cane sugar.', 'assets/pub2-artisan-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Rich, velvet crema and energizing kick.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('ESPRESSO MARTINI', '', 'Freshly pulled espresso shot shaken with premium vodka, Kahlúa coffee liqueur, and dark cane sugar.', 'assets/pub2-artisan-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Rich, velvet crema and energizing kick.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-[#ff2a85]"></span>
                   <span class="text-white font-medium group-hover:text-[#ff2a85] transition">Espresso Martini</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£9.25</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-[#ff4fa8] bg-[#ff2a85]/10 group-hover:bg-[#ff2a85] group-hover:text-white px-2.5 py-0.5 rounded-full border border-[#ff2a85]/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('SMOKED OLD FASHIONED', '£9.50', 'Wood-barrel aged bourbon whiskey, Angostura aromatic bitters, orange peel zest, cold smoked under glass.', 'assets/pub2-artisan-cocktail.jpg', ['CRAFT', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Sophisticated, smoky and warm.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('SMOKED OLD FASHIONED', '', 'Wood-barrel aged bourbon whiskey, Angostura aromatic bitters, orange peel zest, cold smoked under glass.', 'assets/pub2-artisan-cocktail.jpg', ['CRAFT', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Sophisticated, smoky and warm.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
                   <span class="text-white font-medium group-hover:text-amber-300 transition">Smoked Old Fashioned</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£9.50</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300 bg-amber-400/10 group-hover:bg-amber-400 group-hover:text-black px-2.5 py-0.5 rounded-full border border-amber-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('SUNSET HIGHBALL', '£8.99', 'Artisan botanical gin, Aperol, fresh pink grapefruit citrus, and chilled sparkling Mediterranean tonic over carved clear ice.', 'assets/pub2-cocktail.jpg', ['CRAFT', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Vibrant, bittersweet and crisp.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('SUNSET HIGHBALL', '', 'Artisan botanical gin, Aperol, fresh pink grapefruit citrus, and chilled sparkling Mediterranean tonic over carved clear ice.', 'assets/pub2-cocktail.jpg', ['CRAFT', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Vibrant, bittersweet and crisp.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-pink-400"></span>
                   <span class="text-white font-medium group-hover:text-pink-300 transition">Sunset Highball</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-pink-300 bg-pink-400/10 group-hover:bg-pink-400 group-hover:text-white px-2.5 py-0.5 rounded-full border border-pink-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('FRESH MINT RUM MOJITO', '£8.99', 'White rum muddled with fresh mint leaves, lime juice, cane sugar syrup and charged with chilled club soda.', 'assets/pub1-craft-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Classic party refresher.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('FRESH MINT RUM MOJITO', '', 'White rum muddled with fresh mint leaves, lime juice, cane sugar syrup and charged with chilled club soda.', 'assets/pub1-craft-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Classic party refresher.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
                   <span class="text-white font-medium group-hover:text-emerald-300 transition">Fresh Mint Mojito</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-emerald-300 bg-emerald-400/10 group-hover:bg-emerald-400 group-hover:text-black px-2.5 py-0.5 rounded-full border border-emerald-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('APEROL SPRITZ', '£8.99', 'Aperol aperitivo, chilled DOC Prosecco, splash of sparkling soda water, garnished with fresh orange wheel.', 'assets/pub2-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Italian summer essential.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('APEROL SPRITZ', '', 'Aperol aperitivo, chilled DOC Prosecco, splash of sparkling soda water, garnished with fresh orange wheel.', 'assets/pub2-cocktail.jpg', ['POPULAR', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Italian summer essential.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-orange-400"></span>
                   <span class="text-white font-medium group-hover:text-orange-300 transition">Aperol Spritz</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-orange-300 bg-orange-400/10 group-hover:bg-orange-400 group-hover:text-black px-2.5 py-0.5 rounded-full border border-orange-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('CLASSIC MARGARITA', '£8.99', '100% Blue agave tequila, Cointreau orange liqueur, fresh freshly squeezed lime juice with sea salt rim.', 'assets/pub1-craft-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Zesty, sharp and premium.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('CLASSIC MARGARITA', '', '100% Blue agave tequila, Cointreau orange liqueur, fresh freshly squeezed lime juice with sea salt rim.', 'assets/pub1-craft-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Zesty, sharp and premium.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-lime-400"></span>
                   <span class="text-white font-medium group-hover:text-lime-300 transition">Margarita</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£8.99</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-lime-300 bg-lime-400/10 group-hover:bg-lime-400 group-hover:text-black px-2.5 py-0.5 rounded-full border border-lime-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('LONG ISLAND ICED TEA', '£9.50', 'Vodka, white rum, gin, tequila, triple sec, lemon citrus, and chilled splash of cola.', 'assets/pub2-cocktail.jpg', ['HIGH ABV', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'The heavy hitter classic.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('LONG ISLAND ICED TEA', '', 'Vodka, white rum, gin, tequila, triple sec, lemon citrus, and chilled splash of cola.', 'assets/pub2-cocktail.jpg', ['HIGH ABV', 'COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'The heavy hitter classic.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
                   <span class="text-white font-medium group-hover:text-red-300 transition">Long Island Iced Tea</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£9.50</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-red-300 bg-red-400/10 group-hover:bg-red-400 group-hover:text-white px-2.5 py-0.5 rounded-full border border-red-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('WHISKEY SOUR', '£9.25', 'Bourbon whiskey shaken vigorous with fresh lemon juice, simple syrup, aromatic bitters and optional egg white foam.', 'assets/pub2-artisan-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Silky and balanced.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#4deeea]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('WHISKEY SOUR', '', 'Bourbon whiskey shaken vigorous with fresh lemon juice, simple syrup, aromatic bitters and optional egg white foam.', 'assets/pub2-artisan-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Silky and balanced.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
                   <span class="text-white font-medium group-hover:text-amber-300 transition">Whiskey Sour</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£9.25</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-amber-300 bg-amber-400/10 group-hover:bg-amber-400 group-hover:text-black px-2.5 py-0.5 rounded-full border border-amber-400/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
-              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('NEGRONI', '£9.25', 'Equal parts London Dry Gin, Campari, and Sweet Vermouth, stirred over block ice with expressed orange peel.', 'assets/pub2-artisan-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Bold, bitter, and iconic.')">
+              <div class="p-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-[#ff2a85]/50 transition duration-300 flex items-center justify-between cursor-pointer group" onclick="openItemModal('NEGRONI', '', 'Equal parts London Dry Gin, Campari, and Sweet Vermouth, stirred over block ice with expressed orange peel.', 'assets/pub2-artisan-cocktail.jpg', ['COCKTAIL'], 'Prince of Wales Rd &amp; Norwich Market', 'Bold, bitter, and iconic.')">
                 <div class="flex items-center gap-2">
                   <span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>
                   <span class="text-white font-medium group-hover:text-rose-400 transition">Negroni</span>
                 </div>
-                <span class="text-neutral-400 group-hover:text-white font-bold">£9.25</span>
+                <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-rose-300 bg-rose-500/10 group-hover:bg-rose-500 group-hover:text-white px-2.5 py-0.5 rounded-full border border-rose-500/25 transition duration-200 shrink-0"><span>Explore</span><svg class="w-3 h-3 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg></span>
               </div>
             </div>
           </div>
@@ -1254,21 +1213,21 @@
               <div class="p-3.5 rounded-xl bg-[#ff2a85]/10 border border-[#ff2a85]/30 space-y-1">
                 <div class="flex items-center justify-between">
                   <h4 class="font-bold text-white text-sm">Sapporo</h4>
-                  <span class="text-xs font-bold text-[#ff4fa8]">Pint / Half</span>
+                  <span class="text-[10px] font-bold text-[#ff4fa8] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#ff2a85]/15 border border-[#ff2a85]/30">Cold On Tap</span>
                 </div>
                 <p class="text-[11px] text-neutral-300">Crisp Japanese premium lager poured extra cold on tap.</p>
               </div>
               <div class="p-3.5 rounded-xl bg-[#ff2a85]/10 border border-[#ff2a85]/30 space-y-1">
                 <div class="flex items-center justify-between">
                   <h4 class="font-bold text-white text-sm">Estrella Damm</h4>
-                  <span class="text-xs font-bold text-[#ff4fa8]">Pint / Half</span>
+                  <span class="text-[10px] font-bold text-[#ff4fa8] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#ff2a85]/15 border border-[#ff2a85]/30">Cold On Tap</span>
                 </div>
                 <p class="text-[11px] text-neutral-300">Authentic Mediterranean lager brewed in Barcelona.</p>
               </div>
               <div class="p-3.5 rounded-xl bg-[#ff2a85]/10 border border-[#ff2a85]/30 space-y-1">
                 <div class="flex items-center justify-between">
                   <h4 class="font-bold text-white text-sm">Apple Cider 🍺</h4>
-                  <span class="text-xs font-bold text-[#ff4fa8]">Pint / Half</span>
+                  <span class="text-[10px] font-bold text-[#ff4fa8] uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#ff2a85]/15 border border-[#ff2a85]/30">Cold On Tap</span>
                 </div>
                 <p class="text-[11px] text-neutral-300">Crisp, refreshing draught apple cider served over ice.</p>
               </div>
@@ -1455,7 +1414,10 @@
           <div>
             <h3 id="modalItemTitle" class="text-2xl font-serif font-extrabold text-white uppercase"></h3>
             <span id="modalItemTiming" class="text-xs text-[#4deeea] font-medium block mt-0.5"></span> </div>
-          <span id="modalItemPrice" class="text-2xl font-serif font-bold text-[#f4ede3] shrink-0"></span> </div>
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#4deeea] animate-pulse"></span>
+            Fresh to Order
+          </span> </div>
 
         <p id="modalItemDesc" class="text-neutral-300 text-sm leading-relaxed"></p>
 
@@ -1701,7 +1663,15 @@
 
       [btnAll, btnG1, btnG2].forEach(btn => {
         if (btn) {
-          btn.classList.remove('bg-[#f4ede3]', 'text-neutral-950', 'font-bold', 'shadow');
+          btn.classList.remove(
+            'bg-[#f4ede3]',
+            'bg-[#4deeea]',
+            'bg-[#ff2a85]',
+            'text-neutral-950',
+            'text-white',
+            'font-bold',
+            'shadow'
+          );
           btn.classList.add('text-neutral-300');
         }
       });
@@ -1755,11 +1725,7 @@
     function filterCategory(cat) {
       // If user is on Glitch 1 (Mocktails only) and clicks a food category, auto-switch to Glitch 2 so they can see it!
       if (currentLocation === 'glitch1' && cat !== 'drinks' && cat !== 'all') {
-        currentLocation = 'glitch2';
-        const btnG1 = document.getElementById('loc-btn-glitch1');
-        const btnG2 = document.getElementById('loc-btn-glitch2');
-        if (btnG1) btnG1.classList.remove('bg-[#4deeea]', 'text-neutral-950', 'font-bold');
-        if (btnG2) btnG2.classList.add('bg-[#ff2a85]', 'text-white', 'font-bold');
+        filterByLocation('glitch2');
       }
 
       currentCategory = cat;
@@ -1899,7 +1865,8 @@
     function openItemModal(title, price, desc, imgSrc, badges, timing, pairing) {
       selectedDishName = title;
       document.getElementById('modalItemTitle').innerText = title;
-      document.getElementById('modalItemPrice').innerText = price;
+      const priceEl = document.getElementById('modalItemPrice');
+      if (priceEl) priceEl.innerText = price || '';
       document.getElementById('modalItemDesc').innerText = desc;
       document.getElementById('modalItemTiming').innerText = timing || '';
       document.getElementById('modalItemPairing').innerText = pairing || 'Enjoy with our freshly poured craft taps.';
@@ -1948,6 +1915,8 @@
         filterByLocation('glitch1');
       } else if (loc === 'glitch2' || loc === 'pub2') {
         filterByLocation('glitch2');
+      } else {
+        filterByLocation('all');
       }
       if (cat === 'drinks' || cat === 'cocktails') {
         filterCategory('drinks');

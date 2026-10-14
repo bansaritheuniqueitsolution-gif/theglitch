@@ -124,6 +124,32 @@
       alt: 'Daytime street entrance of The Glitch Pub 1 on Prince of Wales Rd'
     },
     {
+      id: 107,
+      location: 'glitch1',
+      locationLabel: 'The Glitch 1 — Prince of Wales Rd',
+      locationBadge: 'Pub 1 • Prince of Wales Rd',
+      locationColor: 'cyan',
+      title: 'The Glitch Private Reserve VIP Suite',
+      subtitle: 'Luxury curved leather booths, ambient cyan neon glow & private celebration table',
+      category: 'ATMOSPHERE',
+      image: 'assets/pub1-party-suite.jpg?v=2',
+      spanClass: 'col-span-8 row-span-2',
+      alt: 'The Glitch Private Reserve VIP Party Room & Celebration Suite at Prince of Wales Rd'
+    },
+    {
+      id: 111,
+      location: 'glitch1',
+      locationLabel: 'The Glitch 1 — Prince of Wales Rd',
+      locationBadge: 'Pub 1 • Prince of Wales Rd',
+      locationColor: 'cyan',
+      title: 'Tropical Dragonfruit Mocktail',
+      subtitle: 'Vibrant crushed ice, fresh dragonfruit slice, aromatic mint & zesty lime wedge',
+      category: 'DRINKS',
+      image: 'assets/pub1-dragonfruit-mocktail.jpg?v=2',
+      spanClass: 'col-span-4 row-span-1',
+      alt: 'Signature Tropical Dragonfruit Mocktail in crystal highball glass at The Glitch 1'
+    },
+    {
       id: 110,
       location: 'glitch1',
       locationLabel: 'The Glitch 1 — Prince of Wales Rd',
@@ -696,7 +722,7 @@
 
     items.forEach((item, index) => {
       const card = document.createElement('article');
-      card.className = `gallery-item ${item.spanClass} filtering-in`;
+      card.className = `gallery-item filtering-in`;
       card.dataset.id = item.id;
       card.dataset.location = item.location;
       card.dataset.category = item.category;

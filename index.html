@@ -361,7 +361,7 @@
                 <span>&rarr;</span> </a>
               <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition">
                 <span>Private Hire Enquiry</span> </button> </div>
-            <span class="text-[11px] text-neutral-400 font-medium">Walk-ins only for general tables</span> </div> </div> </article>
+            </div> </div> </article>
 
         <!-- ==================== LOCATION 02 CARD ==================== -->
         <article class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-300 flex flex-col group hover:border-[#ff2a85]/50 shadow-xl">
@@ -595,7 +595,7 @@
         <!-- CARD 4: Party Room (Pub 1 Only) -->
         <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/party-room.jpg" alt="Exclusive VIP Party Room Suite at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/pub1-party-suite.jpg?v=2" alt="Exclusive VIP Party Room Suite at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
             
             <!-- Top Badges -->
@@ -847,62 +847,147 @@
                   <span>Book Table &rarr;</span> </div> </div> </div> </div> </div> </div> </div> </section>
 
 <!-- ==================== "GALLERY" SECTION ==================== -->
-  <section id="gallery" class="py-20 lg:py-28 border-b border-white/[0.08] relative">
+  <!-- ==================== "GALLERY" SECTION ==================== -->
+  <section id="gallery" class="py-20 lg:py-28 border-b border-white/[0.08] relative bg-[#070b10]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-10">
-        <!-- Gallery Text Header -->
-        <div class="lg:col-span-4 space-y-4">
+      <!-- Gallery Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="space-y-3">
           <div class="inline-flex items-center gap-3">
             <span class="w-8 h-[1px] bg-neutral-400"></span>
-            <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">The Glitch in Moments</span> </div>
+            <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">The Glitch in Moments</span>
+          </div>
+          <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Gallery &amp; Atmosphere</h2>
+          <p class="text-neutral-300 text-sm sm:text-base max-w-2xl">Good food. Cold drinks. Great company across Prince of Wales Rd &amp; Norwich Market.</p>
+        </div>
 
-          <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Gallery</h2>
-          <p class="text-neutral-400 text-sm sm:text-base">Good food. Cold drinks. Great company.</p>
+        <div class="flex items-center gap-3">
+          <a href="gallery.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] hover:bg-white/[0.1] text-white text-xs font-semibold tracking-wider uppercase transition duration-200">
+            <span>View Full Gallery (21 Photos)</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
 
-          <div class="pt-2">
-            <a href="gallery.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] hover:bg-white/[0.1] text-white text-xs font-semibold tracking-wider uppercase transition duration-200">
-              <span>View Full Gallery</span>
-              <span>&rarr;</span> </a> </div> </div>
+      <!-- Balanced 8-Photo Editorial Bento Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
 
-        <!-- Gallery Strip Grid (8 cols) -->
-        <div class="lg:col-span-8">
-          <div class="grid grid-cols-3 sm:grid-cols-8 gap-2.5 sm:gap-3">
+        <!-- Photo 1 (Featured Wide / 2 cols): Pub 1 VIP Party Suite -->
+        <div onclick="openLightbox('assets/pub1-party-suite.jpg?v=2', 'The Glitch Private Reserve VIP Party Room &amp; Celebration Suite')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-cyan-500/10">
+          <img src="assets/pub1-party-suite.jpg?v=2" alt="The Glitch Private Reserve VIP Suite at Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Prince of Wales Rd</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#5ce1e6] transition">The Glitch Private Reserve</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">VIP celebration suite &amp; luxury booth lounge</p>
+            </div>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 1: Pub 1 Facade -->
-            <div onclick="openLightbox('assets/pub1-exterior-facade.jpg', 'The Glitch 1 — Prince of Wales Rd Facade')" class="h-32 sm:h-44 rounded-lg overflow-hidden border border-white/[0.08] group cursor-pointer relative">
-              <img src="assets/pub1-exterior-facade.jpg" alt="Glitch 1 Storefront" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
+        <!-- Photo 2: Pub 2 Bathtub Snug -->
+        <div onclick="openLightbox('assets/pub2-bathtub-snug.jpg', 'The Signature Clawfoot Bathtub Snug at Norwich Market')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#ff3b94]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub2-bathtub-snug.jpg" alt="Signature Clawfoot Bathtub Lounge Snug" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub 02 &bull; Norwich Market</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#ff3b94] transition">Bathtub Lounge Snug</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Clawfoot tub &amp; vintage mirror</p>
+            </div>
+            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 2: Pub 1 Taps Wall -->
-            <div onclick="openLightbox('assets/pub1-taps.jpg', 'Glitch 1 Craft Beer Taps')" class="h-32 sm:h-44 rounded-lg overflow-hidden border border-white/[0.08] group cursor-pointer relative">
-              <img src="assets/pub1-taps.jpg" alt="Craft Beer Taps" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
+        <!-- Photo 3: Pub 1 Guinness Pint -->
+        <div onclick="openLightbox('assets/pub1-guinness.jpg', 'Fresh Poured Guinness Extra Cold on Draught')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub1-guinness.jpg" alt="Chilled Pint of Guinness Extra Cold" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Draught</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Guinness Extra Cold</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Creamy head pulled on tap</p>
+            </div>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 3: Pub 1 Guinness Pint -->
-            <div onclick="openLightbox('assets/pub1-guinness.jpg', 'Chilled Pint of Guinness Extra Cold')" class="h-32 sm:h-44 rounded-lg overflow-hidden border border-white/[0.08] group cursor-pointer relative">
-              <img src="assets/pub1-guinness.jpg" alt="Guinness pint" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
+        <!-- Photo 4: Pub 1 Tropical Dragonfruit Mocktail -->
+        <div onclick="openLightbox('assets/pub1-dragonfruit-mocktail.jpg?v=2', 'Signature Tropical Dragonfruit Mocktail')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub1-dragonfruit-mocktail.jpg?v=2" alt="Tropical Dragonfruit Mocktail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Mocktails</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Dragonfruit Mocktail</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Botanical zero-proof elixir</p>
+            </div>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 4: Pub 2 Gold Bar -->
-            <div onclick="openLightbox('assets/pub2-golden-bar.jpg', 'The Glitch 2 Curved Gold Bar')" class="h-32 sm:h-44 rounded-lg overflow-hidden border border-white/[0.08] group cursor-pointer relative">
-              <img src="assets/pub2-golden-bar.jpg" alt="Gold Bar counter" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
+        <!-- Photo 5 (Featured Wide / 2 cols): Pub 2 Gold Bar -->
+        <div onclick="openLightbox('assets/pub2-golden-bar.jpg', 'Hand-Crafted Curved Gold Bar Counter &amp; Amber Lights at Norwich Market')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#ff3b94]/40 hover:border-[#ff3b94] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-pink-500/10">
+          <img src="assets/pub2-golden-bar.jpg" alt="Curved Golden Bar Counter at Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub 02 &bull; Norwich Market</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#ff3b94] transition">Curved Golden Bar</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Artisan mixology, amber pendant lights &amp; speakeasy charm</p>
+            </div>
+            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 5: Pub 2 Bathtub Snug -->
-            <div onclick="openLightbox('assets/pub2-bathtub-snug.jpg', 'Glitch 2 Bathtub Lounge Snug')" class="h-32 sm:h-44 rounded-lg overflow-hidden border border-white/[0.08] group cursor-pointer relative">
-              <img src="assets/pub2-bathtub-snug.jpg" alt="Bathtub snug" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
+        <!-- Photo 6: Pub 1 Neon Storefront -->
+        <div onclick="openLightbox('assets/pub1-exterior-facade.jpg', 'The Glitch 1 Illuminated Storefront by Night')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Prince of Wales Rd Storefront" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Exterior</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Neon Facade by Night</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">37 Prince of Wales Rd</p>
+            </div>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 6: Pub 2 Cocktail -->
-            <div onclick="openLightbox('assets/pub2-cocktail.jpg', 'Signature Artisan Cocktail at Glitch 2')" class="h-32 sm:h-44 rounded-lg overflow-hidden border border-pink-500/30 group cursor-pointer relative shadow-lg shadow-pink-950/40">
-              <img src="assets/pub2-cocktail.jpg" alt="Sunset cocktail" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div>
+        <!-- Photo 7 (Featured Wide / 2 cols): Pub 2 Masala Feast Spread -->
+        <div onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Pub 02 Authentic Masala Curry Feast Spread')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#ff3b94]/40 hover:border-[#ff3b94] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-pink-500/10">
+          <img src="assets/pub2-indian-feast.jpg" alt="Pub 02 Authentic Masala Curry Feast Spread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub 02 &bull; Dining</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#ff3b94] transition">Authentic Masala Feast</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Rich aromatic curries, garlic naan &amp; rice platters</p>
+            </div>
+            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
 
-            <!-- Photo 7: Pub 2 Authentic Masala Feast Spread (spans 2 columns) -->
-            <div onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Pub 02 Authentic Masala Curry Feast Spread')" class="col-span-3 sm:col-span-2 h-32 sm:h-44 rounded-lg overflow-hidden border border-[#ff3b94]/40 group cursor-pointer relative shadow-lg shadow-[#ff3b94]/10">
-              <img src="assets/pub2-indian-feast.jpg" alt="Pub 02 Authentic Masala Curry Feast Spread" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" loading="lazy" decoding="async" />
-              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition duration-300"></div> </div> </div> </div> </div> </div> </section>
+        <!-- Photo 8 (Featured Wide / 2 cols): Pub 1 Weekend DJ Party -->
+        <div onclick="openLightbox('assets/event-dj-pub1.jpg', 'Weekend DJ Party Decks &amp; Nightclub Atmosphere at Pub 1')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-cyan-500/10">
+          <img src="assets/event-dj-pub1.jpg" alt="Weekend DJ Party at The Glitch 1 Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
+          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Late Bar</span>
+          <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
+            <div>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#5ce1e6] transition">Weekend DJ Party &amp; Decks</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Live DJ sessions, dance anthems &amp; vibrant late bar energy</p>
+            </div>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 
 <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
   <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->

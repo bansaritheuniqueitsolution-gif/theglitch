@@ -497,24 +497,52 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   9. EDITORIAL MASONRY GALLERY GRID
+   9. EDITORIAL GALLERY GRID (COMPACT, SMALL & PERFECT)
    -------------------------------------------------------------------------- */
 .gallery-section {
-  padding-bottom: 120px;
+  padding-bottom: 90px;
 }
 
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  grid-auto-rows: 190px;
-  gap: 16px;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  grid-auto-rows: auto !important;
+  gap: 16px !important;
 }
 
-/* Gallery Card */
-.gallery-item {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
+@media (max-width: 1100px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+  }
+}
+
+/* Gallery Card: Small, Compact, Beautiful & Perfect */
+.gallery-grid .gallery-item {
+  position: relative !important;
+  grid-column: span 1 !important;
+  grid-row: span 1 !important;
+  width: 100% !important;
+  aspect-ratio: 4 / 3 !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
   background-color: var(--bg-card);
   cursor: pointer;
   border: 1px solid var(--border-subtle);
@@ -524,17 +552,16 @@ button {
               border-color var(--transition-smooth);
 }
 
-/* Card Column & Row Spans (Compact Photo Layout) */
-.col-span-8,
-.col-span-6,
-.col-span-4,
-.col-span-3 {
-  grid-column: span 1;
-}
-
-.row-span-2,
-.row-span-1 {
-  grid-row: span 1;
+/* Reset any Tailwind column / row spans on gallery items */
+.gallery-grid .gallery-item.col-span-12,
+.gallery-grid .gallery-item.col-span-8,
+.gallery-grid .gallery-item.col-span-6,
+.gallery-grid .gallery-item.col-span-4,
+.gallery-grid .gallery-item.col-span-3,
+.gallery-grid .gallery-item.row-span-2,
+.gallery-grid .gallery-item.row-span-1 {
+  grid-column: span 1 !important;
+  grid-row: span 1 !important;
 }
 
 .gallery-item-image-wrapper {
@@ -549,6 +576,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   transition: transform var(--transition-cinematic), filter var(--transition-cinematic);
 }
 
@@ -558,15 +586,14 @@ button {
   inset: 0;
   background: linear-gradient(to top, 
     rgba(6, 10, 15, 0.95) 0%, 
-    rgba(6, 10, 15, 0.6) 45%, 
-    rgba(6, 10, 15, 0.1) 80%,
+    rgba(6, 10, 15, 0.5) 50%, 
     transparent 100%);
   opacity: 0;
   transition: opacity var(--transition-smooth);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 14px;
+  padding: 12px;
   z-index: 2;
 }
 
