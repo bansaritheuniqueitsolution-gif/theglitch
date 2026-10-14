@@ -130,9 +130,9 @@
       locationBadge: 'Pub 1 • Prince of Wales Rd',
       locationColor: 'cyan',
       title: 'The Glitch Private Reserve VIP Suite',
-      subtitle: 'Luxury curved leather booths, ambient cyan neon glow & private celebration table',
+      subtitle: 'Luxury plush velvet banquettes, THE GLITCH VIP neon glow, champagne service & party celebrations',
       category: 'ATMOSPHERE',
-      image: 'assets/pub1-party-suite.jpg?v=2',
+      image: 'assets/pub1-party-suite.jpg?v=3',
       spanClass: 'col-span-8 row-span-2',
       alt: 'The Glitch Private Reserve VIP Party Room & Celebration Suite at Prince of Wales Rd'
     },
