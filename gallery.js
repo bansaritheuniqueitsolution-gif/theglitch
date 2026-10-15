@@ -156,7 +156,7 @@
       locationBadge: 'Pub 1 • Prince of Wales Rd',
       locationColor: 'cyan',
       title: 'DJ Night — House & UKG with DJ JAS',
-      subtitle: 'DJ JAS live on the decks spinning House & UKG anthems every Friday from 10:00 PM at 37 Prince of Wales Rd',
+      subtitle: 'DJ JAS live on the decks spinning House & UKG anthems on Friday 16 Oct from 10:00 PM at 37 Prince of Wales Rd',
       category: 'ATMOSPHERE',
       image: 'assets/event-dj-poster.jpg',
       spanClass: 'col-span-6 row-span-2',
@@ -172,12 +172,12 @@
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
       locationColor: 'pink',
-      title: 'St Giles Street Storefront & Overhead Sign',
-      subtitle: '25b St Giles St storefront, illuminated overhead Glitch signage, window chess nook & happy hour',
+      title: 'Hand-Crafted Curved Gold Bar & Lounge',
+      subtitle: 'The signature golden bar, glowing amber pendant drops, craft cocktails & St Giles speakeasy vibes',
       category: 'PUB',
-      image: 'assets/pub2-exterior-front.jpg',
+      image: 'assets/pub2-golden-bar.jpg',
       spanClass: 'col-span-8 row-span-2',
-      alt: 'The Glitch 2 St Giles Street storefront, overhead sign and window display'
+      alt: 'Atmospheric curved golden bar counter and speakeasy lounge at The Glitch 2 St Giles'
     },
     {
       id: 201,
@@ -185,12 +185,12 @@
       locationLabel: 'The Glitch 2 — Norwich Market',
       locationBadge: 'Pub 2 • Norwich Market',
       locationColor: 'pink',
-      title: 'Curved Golden Bar Counter',
-      subtitle: 'Hand-hammered brass finish with amber drop lights & velvet stools',
+      title: 'Cocktail Bar & Craft Spirit Shelves',
+      subtitle: 'Illuminated top-shelf spirits, crystal coupe glassware & ambient bar lights',
       category: 'PUB',
-      image: 'assets/pub2-golden-bar.jpg',
+      image: 'assets/pub2-blue-bar.jpg',
       spanClass: 'col-span-4 row-span-2',
-      alt: 'Atmospheric curved golden bar counter at The Glitch 2 St Giles'
+      alt: 'Artisan cocktail station and craft spirits shelf at The Glitch 2'
     },
     {
       id: 202,
@@ -673,7 +673,7 @@
       }
 
       // 3. Hero Visuals
-      if (heroBgImg) heroBgImg.src = 'assets/pub2-exterior-front.jpg';
+      if (heroBgImg) heroBgImg.src = 'assets/pub2-golden-bar.jpg';
       if (heroVenuePill) heroVenuePill.innerHTML = '<span>🍸 Pub 02 &bull; Norwich Market</span>';
       if (heroMainSubtitle) heroMainSubtitle.textContent = 'Now showcasing The Glitch 2 — Norwich Market (25b St Giles St). Curved gold bar, bathtub snugs, chess nook & artisan cocktails.';
       if (venueInfoBadge) {
@@ -753,7 +753,7 @@
       if (exp2Desc) exp2Desc.textContent = 'Good drinks, great company and an atmosphere designed for nights worth remembering across both of our unique city centre locations.';
       if (exp2ImgMain) exp2ImgMain.src = 'assets/pub1-exterior-night.jpg';
       if (exp2ImgSub1) exp2ImgSub1.src = 'assets/event-dj-poster.jpg';
-      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-exterior-front.jpg';
+      if (exp2ImgSub2) exp2ImgSub2.src = 'assets/pub2-golden-bar.jpg';
     }
 
     // Apply combined Location + Category Filters
