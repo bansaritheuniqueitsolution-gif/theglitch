@@ -793,7 +793,7 @@ ${data.notes ? `Special Notes: ${data.notes}` : ''}
     const targetEl = document.getElementById('hireTargetEmail');
     if (!select || !targetEl) return;
     const val = select.value.toLowerCase();
-    if (val.includes('center') || val.includes('northern') || val.includes('giles') || val.includes('2')) {
+    if (val.includes('market') || val.includes('center') || val.includes('northern') || val.includes('giles') || val.includes('2')) {
       targetEl.textContent = 'sg@pubtheglitch.co.uk';
     } else if (val.includes('both')) {
       targetEl.textContent = 'norwich@pubtheglitch.co.uk, sg@pubtheglitch.co.uk';
