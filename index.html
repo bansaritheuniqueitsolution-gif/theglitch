@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE GLITCH — Good Food. Great Drinks. Good Times.</title>
   <link rel="icon" type="image/svg+xml" href="assets/logo-transparent.svg" />
-  <meta name="description" content="The Glitch is your local Norwich pub destination across Prince of Wales Rd and Norwich Market for great food, craft drinks, live music, and unforgettable nights." />
+  <meta name="description"
+    content="The Glitch is your local Norwich pub destination across Prince of Wales Rd and Norwich Market for great food, craft drinks, live music, and unforgettable nights." />
 
   <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Caveat, Syne -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800;900&display=swap"
+    rel="stylesheet" />
 
   <!-- Preload Critical Image & CSS Resources -->
   <link rel="preload" as="image" href="assets/logo.png" />
@@ -64,10 +67,14 @@
 <body class="bg-[#060a0f] text-neutral-200 font-sans antialiased selection:bg-[#4deeea]/20 selection:text-[#5ce1e6]">
 
   <!-- SVG Filter that removes black background from the logo into true transparency -->
-  <svg class="sr-only" aria-hidden="true" width="0" height="0" style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
+  <svg class="sr-only" aria-hidden="true" width="0" height="0"
+    style="position: absolute; width: 0; height: 0; overflow: hidden; pointer-events: none;">
     <defs>
       <filter id="remove-black-bg" color-interpolation-filters="sRGB">
-        <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.85 0.90 0.90 0 -0.06" /> </filter> </defs> </svg>
+        <feColorMatrix type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0.85 0.90 0.90 0 -0.06" />
+      </filter>
+    </defs>
+  </svg>
 
 
   <!-- ==================== GLITCH PAGE PRELOADER & TRANSITION (2 to 3s Auto-Dismiss) ==================== -->
@@ -89,64 +96,90 @@
     </div>
   </div>
   <script>
-    (function () {
-      var loader = document.getElementById('glitchPageLoader');
-      if (!loader) return;
-      var dismissed = false;
-      function dismiss() {
-        if (dismissed) return;
-        dismissed = true;
-        loader.classList.add('loader-hidden');
-        setTimeout(function () {
-          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
-        }, 550);
-      }
-      setTimeout(dismiss, 2200);
-      loader.addEventListener('click', dismiss);
-    })();
+      (function () {
+        var loader = document.getElementById('glitchPageLoader');
+        if (!loader) return;
+        var dismissed = false;
+        function dismiss() {
+          if (dismissed) return;
+          dismissed = true;
+          loader.classList.add('loader-hidden');
+          setTimeout(function () {
+            if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+          }, 550);
+        }
+        setTimeout(dismiss, 2200);
+        loader.addEventListener('click', dismiss);
+      })();
   </script>
 
   <!-- ==================== HEADER / NAVBAR ==================== -->
-  <header class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
-    <div class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+  <header
+    class="glitch-header sticky top-0 z-50 bg-[#05080c]/90 backdrop-blur-md border-b border-white/[0.08] transition duration-300">
+    <div
+      class="glitch-header-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
 
       <!-- Brand Logo -->
-      <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1" aria-label="The Glitch Homepage">
-        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52" class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" /> </a>
+      <a href="index.html" class="glitch-header-logo-link flex items-center gap-3 group shrink-0 py-1"
+        aria-label="The Glitch Homepage">
+        <img src="assets/logo.png" alt="The Glitch Logo" width="140" height="52"
+          class="glitch-header-logo-img h-12 sm:h-14 w-auto max-h-12 sm:max-h-14 object-contain group-hover:scale-105 transition-transform duration-300 logo-no-bg drop-shadow-[0_0_12px_rgba(77,238,234,0.4)]" />
+      </a>
 
       <!-- Desktop Navigation Links -->
       <nav class="glitch-header-nav hidden md:flex items-center gap-7 lg:gap-8 text-sm font-medium text-neutral-300">
-        <a href="index.html" class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Home</a>
+        <a href="index.html"
+          class="glitch-nav-link active text-white font-semibold relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-[#4deeea] after:rounded-full">Home</a>
         <a href="our-pubs.html" class="glitch-nav-link hover:text-white transition duration-200">Our Pubs</a>
         <a href="menu.html" class="glitch-nav-link hover:text-white transition duration-200">Food &amp; Drinks</a>
         <a href="gallery.html" class="glitch-nav-link hover:text-white transition duration-200">Gallery</a>
-        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a> </nav>
+        <a href="contact.html" class="glitch-nav-link hover:text-white transition duration-200">Contact</a>
+      </nav>
 
-        
+
 
       <!-- Right Action & Mobile Button -->
       <div class="glitch-header-actions flex items-center gap-3">
-        <button onclick="openBookingModal()" class="glitch-book-btn inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-xs sm:text-sm font-medium transition duration-200 shadow-sm active:scale-95">
-          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+        <button onclick="openBookingModal()"
+          class="glitch-book-btn inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-5 sm:py-2.5 rounded-full border border-white/20 bg-white/[0.04] hover:bg-white/[0.12] hover:border-white/40 text-white text-xs sm:text-sm font-medium transition duration-200 shadow-sm active:scale-95">
+          <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#4deeea]" width="16" height="16" fill="none" stroke="currentColor"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
           <span>Book a Table</span> </button>
 
         <!-- Mobile Menu Hamburger Button -->
-        <button onclick="toggleMobileMenu()" class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none" aria-label="Toggle Navigation Menu">
-          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg> </button> </div> </div>
+        <button onclick="toggleMobileMenu()"
+          class="glitch-hamburger-btn md:hidden p-2 text-neutral-300 hover:text-white rounded-lg focus:outline-none"
+          aria-label="Toggle Navigation Menu">
+          <svg class="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="navMenuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg> </button>
+      </div>
+    </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobileMenu" class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
+    <div id="mobileMenu"
+      class="glitch-mobile-drawer hidden md:hidden bg-[#070b10] border-b border-white/10 px-6 py-5 space-y-4">
       <a href="index.html" class="glitch-mobile-nav-link active block text-[#4deeea] font-semibold py-1">Home</a>
       <a href="our-pubs.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Our Pubs</a>
-      <a href="menu.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Food &amp; Drinks</a>
+      <a href="menu.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Food &amp;
+        Drinks</a>
       <a href="gallery.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Gallery</a>
       <a href="contact.html" class="glitch-mobile-nav-link block text-neutral-300 hover:text-white py-1">Contact</a>
       <div class="pt-2">
-        <button onclick="openBookingModal(); toggleMobileMenu();" class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
-          <span>Book a Table</span> </button> </div> </div> </header>
+        <button onclick="openBookingModal(); toggleMobileMenu();"
+          class="glitch-mobile-drawer-btn w-full inline-flex justify-center items-center gap-2 px-5 py-3 rounded-full border border-white/20 bg-white/10 text-white font-medium">
+          <span>Book a Table</span> </button>
+      </div>
+    </div>
+  </header>
 
-<!-- ==================== HERO SECTION ==================== -->
-  <section id="hero" class="relative overflow-hidden py-8 sm:py-12 lg:py-14 border-b border-white/[0.08] bg-gradient-to-b from-[#05080c] via-[#080d14] to-[#05080c]">
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero"
+    class="relative overflow-hidden py-8 sm:py-12 lg:py-14 border-b border-white/[0.08] bg-gradient-to-b from-[#05080c] via-[#080d14] to-[#05080c]">
     <!-- Ambient glowing background accents -->
     <div class="absolute -top-32 left-1/4 w-96 h-96 bg-[#ff2a85]/10 rounded-full blur-3xl pointer-events-none"></div>
     <div class="absolute top-1/3 right-10 w-96 h-96 bg-[#4deeea]/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -158,27 +191,31 @@
         <div class="lg:col-span-6 space-y-6">
 
           <!-- Eyebrow label -->
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-extrabold uppercase tracking-widest text-[#5ce1e6]">
+          <div
+            class="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-extrabold uppercase tracking-widest text-[#5ce1e6]">
             <span class="w-2 h-2 rounded-full bg-[#5ce1e6] animate-pulse"></span>
             <span>Welcome to The Glitch &bull; Norwich</span>
           </div>
 
           <!-- Main Bold Editorial Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white leading-[1.08] tracking-tight">
-            GOOD FOOD.<br>
-            GREAT DRINKS.<br>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-serif font-extrabold text-white leading-[1.08] tracking-tight">
+            GOOD DRINKS.<br>
+            GOOD PEOPLE.<br>
             <span class="neon-cyan-text">GOOD TIMES.</span>
           </h1>
 
           <!-- Subheading description -->
           <p class="text-neutral-300 text-sm sm:text-base max-w-lg leading-relaxed">
-            Two distinct Norwich pub venues. Select your destination below to explore menus, photos, and location options:
+            Two distinct Norwich pub venues. Select your destination below to explore menus, photos, and location
+            options:
           </p>
 
           <!-- Dual Venue Selection Cards -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
             <!-- Glitch 1 Card Button -->
-            <a href="our-pubs.html?venue=glitch1" class="group relative p-4 rounded-xl bg-[#0c1219] border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 shadow-lg hover:-translate-y-0.5 flex flex-col justify-between">
+            <a href="our-pubs.html?venue=glitch1"
+              class="group relative p-4 rounded-xl bg-[#0c1219] border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 shadow-lg hover:-translate-y-0.5 flex flex-col justify-between">
               <div class="space-y-1">
                 <div class="flex items-center justify-between">
                   <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub 01</span>
@@ -190,14 +227,16 @@
                   <span>37 Prince of Wales Rd, NR1 1BG</span>
                 </p>
               </div>
-              <div class="mt-3 pt-2 border-t border-white/[0.06] flex items-center justify-between text-[10px] font-semibold text-neutral-300">
+              <div
+                class="mt-3 pt-2 border-t border-white/[0.06] flex items-center justify-between text-[10px] font-semibold text-neutral-300">
                 <span>Walk-Ins Welcome</span>
                 <span class="text-[#5ce1e6]">Explore &rarr;</span>
               </div>
             </a>
 
             <!-- Glitch 2 Card Button -->
-            <a href="our-pubs.html?venue=glitch2" class="group relative p-4 rounded-xl bg-[#0c1219] border border-[#ff2a85]/40 hover:border-[#ff2a85] transition-all duration-300 shadow-lg hover:-translate-y-0.5 flex flex-col justify-between">
+            <a href="our-pubs.html?venue=glitch2"
+              class="group relative p-4 rounded-xl bg-[#0c1219] border border-[#ff2a85]/40 hover:border-[#ff2a85] transition-all duration-300 shadow-lg hover:-translate-y-0.5 flex flex-col justify-between">
               <div class="space-y-1">
                 <div class="flex items-center justify-between">
                   <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff4fa8]">Pub 02</span>
@@ -209,7 +248,8 @@
                   <span>25b St Giles St, NR2 1JN</span>
                 </p>
               </div>
-              <div class="mt-3 pt-2 border-t border-white/[0.06] flex items-center justify-between text-[10px] font-semibold text-neutral-300">
+              <div
+                class="mt-3 pt-2 border-t border-white/[0.06] flex items-center justify-between text-[10px] font-semibold text-neutral-300">
                 <span>Full Food &amp; Bookings</span>
                 <span class="text-[#ff4fa8]">Explore &rarr;</span>
               </div>
@@ -217,7 +257,8 @@
           </div>
 
           <!-- Feature Badges Strip -->
-          <div class="pt-4 flex flex-wrap items-center gap-5 text-xs font-medium text-neutral-300 border-t border-white/[0.08]">
+          <div
+            class="pt-4 flex flex-wrap items-center gap-5 text-xs font-medium text-neutral-300 border-t border-white/[0.08]">
             <div class="flex items-center gap-1.5">
               <span>📍</span>
               <span>2 Norwich Pubs</span>
@@ -241,31 +282,41 @@
         <div class="lg:col-span-6 relative">
           <div class="grid grid-cols-2 gap-3 sm:gap-4 h-[360px] sm:h-[420px] lg:h-[450px]">
             <!-- Glitch 1 Visual Tile -->
-            <a href="our-pubs.html?venue=glitch1" class="group relative rounded-2xl overflow-hidden border border-white/[0.12] hover:border-[#5ce1e6] transition-all duration-500 shadow-2xl bg-[#0a0f16]">
-              <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Exterior on Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="eager" />
+            <a href="our-pubs.html?venue=glitch1"
+              class="group relative rounded-2xl overflow-hidden border border-white/[0.12] hover:border-[#5ce1e6] transition-all duration-500 shadow-2xl bg-[#0a0f16]">
+              <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Exterior on Prince of Wales Rd"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="eager" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-              
-              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-[#5ce1e6]/40 text-[#5ce1e6] px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
+
+              <div
+                class="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-[#5ce1e6]/40 text-[#5ce1e6] px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
                 Glitch 1
               </div>
 
               <div class="absolute bottom-3 left-3 right-3 space-y-0.5">
-                <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-[#5ce1e6] transition truncate">Prince of Wales Rd</h4>
+                <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-[#5ce1e6] transition truncate">
+                  Prince of Wales Rd</h4>
                 <p class="text-[10px] text-neutral-300 truncate">37 Prince of Wales Rd &bull; NR1 1BG</p>
               </div>
             </a>
 
             <!-- Glitch 2 Visual Tile -->
-            <a href="our-pubs.html?venue=glitch2" class="group relative rounded-2xl overflow-hidden border border-white/[0.12] hover:border-[#ff2a85] transition-all duration-500 shadow-2xl bg-[#0a0f16]">
-              <img src="assets/pub2-golden-bar.jpg" alt="The Glitch 2 Norwich Market Curved Golden Bar &amp; Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="eager" />
+            <a href="our-pubs.html?venue=glitch2"
+              class="group relative rounded-2xl overflow-hidden border border-white/[0.12] hover:border-[#ff2a85] transition-all duration-500 shadow-2xl bg-[#0a0f16]">
+              <img src="assets/pub2-golden-bar.jpg" alt="The Glitch 2 Norwich Market Curved Golden Bar &amp; Lounge"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                loading="eager" />
               <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
 
-              <div class="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-[#ff2a85]/40 text-[#ff4fa8] px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
+              <div
+                class="absolute top-3 left-3 bg-black/80 backdrop-blur-md border border-[#ff2a85]/40 text-[#ff4fa8] px-2.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-wider">
                 Glitch 2
               </div>
 
               <div class="absolute bottom-3 left-3 right-3 space-y-0.5">
-                <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-[#ff4fa8] transition truncate">St Giles Street</h4>
+                <h4 class="text-xs sm:text-sm font-bold text-white group-hover:text-[#ff4fa8] transition truncate">St
+                  Giles Street</h4>
                 <p class="text-[10px] text-neutral-300 truncate">25b St Giles St &bull; NR2 1JN</p>
               </div>
             </a>
@@ -276,7 +327,7 @@
     </div>
   </section>
 
-<!-- ==================== "OUR PUBS" SECTION ==================== -->
+  <!-- ==================== "OUR PUBS" SECTION ==================== -->
   <section id="our-pubs" class="py-20 lg:py-28 border-b border-white/[0.08] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -285,24 +336,33 @@
         <div>
           <div class="inline-flex items-center gap-3 mb-2">
             <span class="w-8 h-[1px] bg-neutral-400"></span>
-            <span class="text-xs uppercase tracking-[0.25em] text-neutral-400 font-bold">Choose Your Location</span> </div>
+            <span class="text-xs uppercase tracking-[0.25em] text-neutral-400 font-bold">Choose Your Location</span>
+          </div>
           <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Select A Venue</h2>
-          <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Two distinct Norwich locations with individual offerings and unique atmospheres.</p> </div>
+          <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-xl">Two distinct Norwich locations with individual
+            offerings and unique atmospheres.</p>
+        </div>
 
         <!-- Cursive handwritten script accent -->
         <div class="md:text-right">
           <p class="font-script text-3xl sm:text-4xl text-neutral-300 -rotate-2 select-none leading-none">
-            Different vibes.<br><span class="text-neutral-400">Same great energy.</span> </p> </div> </div>
+            Different vibes.<br><span class="text-neutral-400">Same great energy.</span> </p>
+        </div>
+      </div>
 
       <!-- Two Pub Cards Grid -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
         <!-- PUB 01: PRINCE OF WALES RD -->
-        <article class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden hover:border-[#5ce1e6]/60 transition-all duration-300 flex flex-col group hover:shadow-2xl hover:shadow-black/50">
+        <article
+          class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden hover:border-[#5ce1e6]/60 transition-all duration-300 flex flex-col group hover:shadow-2xl hover:shadow-black/50">
           <div class="relative h-64 sm:h-72 overflow-hidden">
-            <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Prince of Wales Rd Facade" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Prince of Wales Rd Facade"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-[#5ce1e6]/40 text-[#5ce1e6] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+            <div
+              class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-[#5ce1e6]/40 text-[#5ce1e6] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
               The Glitch 1
             </div>
           </div>
@@ -311,27 +371,41 @@
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start">
               <div class="sm:col-span-7 space-y-3">
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub 01</span>
-                <h3 class="text-xl sm:text-2xl font-extrabold text-white uppercase tracking-wide">The Glitch 1 &ndash; Prince of Wales Rd</h3>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white uppercase tracking-wide">The Glitch 1 &ndash;
+                  Prince of Wales Rd</h3>
 
                 <p class="text-xs sm:text-sm text-neutral-200 font-medium flex items-start gap-1.5">
-                  <svg class="w-4 h-4 text-[#5ce1e6] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg>
-                  <span>37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</span> </p>
+                  <svg class="w-4 h-4 text-[#5ce1e6] shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</span>
+                </p>
                 <p class="text-xs text-neutral-400 flex items-center gap-1.5">
                   <span class="text-[#5ce1e6]">✉️</span>
-                  <a href="mailto:norwich@pubtheglitch.co.uk" class="hover:text-white transition">norwich@pubtheglitch.co.uk</a> </p>
+                  <a href="mailto:norwich@pubtheglitch.co.uk"
+                    class="hover:text-white transition">norwich@pubtheglitch.co.uk</a>
+                </p>
 
                 <!-- Amenities chips -->
                 <div class="flex flex-wrap items-center gap-2 pt-1 text-xs font-semibold text-neutral-300">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
                     <span>🍺</span> Craft Taps </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
                     <span>📺</span> Live Sports </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
-                    <span>🍸</span> Signature Mocktails </span> 
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6]">
-                    <span>🚶</span> Walk-Ins Welcome </span> </div> </div>
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
+                    <span>🍸</span> Signature Mocktails </span>
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-[#5ce1e6]/10 border border-[#5ce1e6]/30 text-[#5ce1e6]">
+                    <span>🚶</span> Walk-Ins Welcome </span>
+                </div>
+              </div>
 
               <!-- Right Opening Hours (5 cols) -->
               <div class="sm:col-span-5 sm:pl-4 sm:border-l sm:border-white/[0.08] space-y-2">
@@ -339,36 +413,55 @@
                 <div class="space-y-1.5 text-xs text-neutral-300">
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Mon</span>
-                    <span>Holiday</span> </div>
+                    <span>Holiday</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Tue – Wed</span>
-                    <span>04:00 PM – 11:00 PM</span> </div>
+                    <span>04:00 PM – 11:00 PM</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Thurs</span>
-                    <span>04:00 PM – 12:30 AM</span> </div> 
+                    <span>04:00 PM – 12:30 AM</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Fri - Sat</span>
-                    <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span> </div>
+                    <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Sun</span>
-                    <span>Holiday</span> </div></div> </div> </div>
+                    <span>Holiday</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <!-- Bottom Action Buttons: No Table Booking for Glitch 1 -->
-          <div class="px-6 py-4 sm:px-8 bg-white/[0.02] border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
-            <div class="flex items-center gap-3">
-              <a href="our-pubs.html?venue=glitch1" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#5ce1e6] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition shadow-md">
-                <span>View Glitch 1</span>
-                <span>&rarr;</span> </a>
-              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition">
-                <span>Private Hire Enquiry</span> </button> </div>
-            <span class="text-[11px] text-neutral-400 font-medium">Walk-ins only for general tables</span> </div> </div> </article>
+            <!-- Bottom Action Buttons: No Table Booking for Glitch 1 -->
+            <div
+              class="px-6 py-4 sm:px-8 bg-white/[0.02] border-t border-white/[0.06] flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <a href="our-pubs.html?venue=glitch1"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#5ce1e6] hover:bg-white text-neutral-900 font-bold text-xs tracking-wider uppercase transition shadow-md">
+                  <span>View Glitch 1</span>
+                  <span>&rarr;</span> </a>
+                <button onclick="openPrivateHireModal()"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/20 hover:border-white/40 bg-white/[0.04] hover:bg-white/[0.12] text-white font-semibold text-xs tracking-wider uppercase transition">
+                  <span>Private Hire Enquiry</span> </button>
+              </div>
+              <span class="text-[11px] text-neutral-400 font-medium">Walk-ins only for general tables</span>
+            </div>
+          </div>
+        </article>
 
         <!-- ==================== LOCATION 02 CARD ==================== -->
-        <article class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-300 flex flex-col group hover:border-[#ff2a85]/50 shadow-xl">
+        <article
+          class="bg-[#0c1219] rounded-2xl border border-white/[0.08] overflow-hidden transition-all duration-300 flex flex-col group hover:border-[#ff2a85]/50 shadow-xl">
           <div class="relative h-64 sm:h-72 overflow-hidden">
-            <img src="assets/pub2-golden-bar.jpg" alt="The Glitch 2 Norwich Market Curved Golden Bar &amp; Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/pub2-golden-bar.jpg" alt="The Glitch 2 Norwich Market Curved Golden Bar &amp; Lounge"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            <div class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-[#ff2a85]/40 text-[#ff4fa8] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+            <div
+              class="absolute top-4 left-4 bg-black/80 backdrop-blur-md border border-[#ff2a85]/40 text-[#ff4fa8] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
               The Glitch 2
             </div>
           </div>
@@ -378,25 +471,37 @@
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-start">
               <div class="sm:col-span-7 space-y-3">
                 <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#ff4fa8]">Pub 02</span>
-                <h3 class="text-xl sm:text-2xl font-extrabold text-white uppercase tracking-wide">The Glitch 2 &ndash; Norwich Market</h3>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-white uppercase tracking-wide">The Glitch 2 &ndash;
+                   25B, St.Giles street</h3>
 
                 <p class="text-xs sm:text-sm text-neutral-200 font-medium flex items-start gap-1.5">
-                  <svg class="w-4 h-4 text-[#ff2a85] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /> </svg>
-                  <span>25b St Giles St, Norwich NR2 1JN, United Kingdom</span> </p>
+                  <svg class="w-4 h-4 text-[#ff2a85] shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  <span>25b St Giles St, Norwich NR2 1JN, United Kingdom</span>
+                </p>
                 <p class="text-xs text-neutral-400 flex items-center gap-1.5">
                   <span class="text-[#ff3b94]">✉️</span>
-                  <a href="mailto:sg@pubtheglitch.co.uk" class="hover:text-white transition">sg@pubtheglitch.co.uk</a> </p>
+                  <a href="mailto:sg@pubtheglitch.co.uk" class="hover:text-white transition">sg@pubtheglitch.co.uk</a>
+                </p>
 
                 <!-- Amenities chips -->
                 <div class="flex flex-wrap items-center gap-2 pt-1 text-xs font-semibold text-neutral-300">
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
                     <span>🍽</span> Full Food Menu </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
                     <span>🍸</span> Gold Bar </span>
-                  <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
-                    <span>🛁</span> Bathtub Snug </span> </div> </div>
+                  <span
+                    class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-white/[0.04] border border-white/[0.08]">
+                    <span>🛁</span> Bathtub Snug </span>
+                </div>
+              </div>
 
               <!-- Right Opening Hours (5 cols) -->
               <div class="sm:col-span-5 sm:pl-4 sm:border-l sm:border-white/[0.08] space-y-2">
@@ -404,29 +509,48 @@
                 <div class="space-y-1.5 text-xs text-neutral-300">
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Monday</span>
-                    <span class="text-[#ff3b94] font-semibold">Holiday</span> </div>
+                    <span class="text-[#ff3b94] font-semibold">Holiday</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Tue - Wed</span>
-                    <span>12:00 PM – 09:30 PM</span> </div>
+                    <span>12:00 PM – 09:30 PM</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Thurs - Sat</span>
-                    <span>11:00 AM – 11:00 PM</span> </div>
+                    <span>11:00 AM – 11:00 PM</span>
+                  </div>
                   <div class="flex justify-between gap-2">
                     <span class="text-neutral-400">Sun</span>
-                    <span>12:00 PM – 09:30 PM</span> </div> </div> </div> </div>
+                    <span>12:00 PM – 09:30 PM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <!-- Bottom Action buttons -->
             <div class="flex flex-wrap items-center justify-between gap-4 pt-6 mt-6 border-t border-white/[0.08]">
               <div class="flex items-center gap-3">
-                <a href="our-pubs.html?venue=glitch2" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#ff2a85] hover:bg-white text-white hover:text-black font-bold text-xs tracking-wider uppercase transition duration-200">
+                <a href="our-pubs.html?venue=glitch2"
+                  class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#ff2a85] hover:bg-white text-white hover:text-black font-bold text-xs tracking-wider uppercase transition duration-200">
                   <span>View Glitch 2</span>
                   <span>&rarr;</span> </a>
-                <button onclick="openBookingModal('Norwich Market')" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#ff3b94]/40 bg-[#ff3b94]/10 hover:bg-[#ff3b94] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
-                  <svg class="w-3.5 h-3.5 text-[#ff4fa8]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                  <span>Book a Table</span> </button> </div>
-              <span class="text-[11px] text-neutral-400 font-medium">£10 deposit / person (Redeemable)</span> </div> </div> </article> </div> </div> </section>
+                <button onclick="openBookingModal('Norwich Market')"
+                  class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#ff3b94]/40 bg-[#ff3b94]/10 hover:bg-[#ff3b94] text-white font-semibold text-xs tracking-wider uppercase transition duration-200">
+                  <svg class="w-3.5 h-3.5 text-[#ff4fa8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>Book a Table</span> </button>
+              </div>
+              <span class="text-[11px] text-neutral-400 font-medium">£10 deposit / person (Redeemable)</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-<!-- ==================== "WELCOME TO THE GLITCH" SECTION ==================== -->
+  <!-- ==================== "WELCOME TO THE GLITCH" SECTION ==================== -->
   <section id="about" class="py-20 lg:py-28 border-b border-white/[0.08] relative overflow-hidden bg-[#070b10]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -435,16 +559,22 @@
         <!-- Left Photo: Chilled Craft Cider & Beer (5 cols) -->
         <div class="lg:col-span-5">
           <div class="rounded-2xl overflow-hidden border border-white/[0.1] shadow-2xl relative group">
-            <img src="assets/pub1-cider.jpg" alt="Cold pints of craft beer and cider at The Glitch" class="w-full h-[380px] sm:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div> </div> </div>
+            <img src="assets/pub1-cider.jpg" alt="Cold pints of craft beer and cider at The Glitch"
+              class="w-full h-[380px] sm:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+        </div>
 
         <!-- Center Copy: Where Good Food Meets Great Company (4 cols) -->
         <div class="lg:col-span-4 space-y-6">
           <div class="inline-flex items-center gap-3">
             <span class="w-8 h-[1px] bg-neutral-400"></span>
-            <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">Welcome to The Glitch</span> </div>
+            <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">Welcome to The Glitch</span>
+          </div>
 
-          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Where good food meets great company.</h2>
+          <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white leading-tight">Where good food meets great
+            company.</h2>
 
           <div class="space-y-4 text-neutral-300 text-sm sm:text-base leading-relaxed">
             <p>
@@ -454,24 +584,40 @@
             <p>
               From delicious food and carefully selected drinks to live entertainment and unforgettable events, The
               Glitch brings people together across two unique locations.
-            </p> </div>
+            </p>
+          </div>
 
           <div class="pt-2">
-            <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">Good Food &nbsp;&bull;&nbsp; Great Drinks &nbsp;&bull;&nbsp; Great People</p> </div> </div>
+            <p class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.25em] text-neutral-400">Good Drinks
+              &nbsp;&bull;&nbsp; Good Peoples &nbsp;&bull;&nbsp; Good Times</p>
+          </div>
+        </div>
 
         <!-- Right: Glowing Neon Sign Showcase (3 cols) -->
         <div class="lg:col-span-3 flex justify-center">
-          <div class="neon-sign-box p-6 sm:p-7 rounded-2xl border border-white/[0.1] w-full max-w-sm flex flex-col items-center justify-center text-center relative overflow-hidden shadow-2xl">
+          <div
+            class="neon-sign-box p-6 sm:p-7 rounded-2xl border border-white/[0.1] w-full max-w-sm flex flex-col items-center justify-center text-center relative overflow-hidden shadow-2xl">
             <!-- Neon backdrop glow -->
-            <div class="absolute inset-0 bg-radial from-[#ff2a85]/15 via-transparent to-transparent pointer-events-none"> </div>
+            <div
+              class="absolute inset-0 bg-radial from-[#ff2a85]/15 via-transparent to-transparent pointer-events-none">
+            </div>
 
             <!-- Glowing Official Logo Graphic -->
             <div class="relative w-full max-w-[280px] animate-neon-pulse flex justify-center py-2">
-              <img src="assets/logo.png" alt="The Glitch Neon Sign" class="w-full h-auto object-contain drop-shadow-[0_0_24px_rgba(0,240,255,0.7)] logo-no-bg" /> </div>
+              <img src="assets/logo.png" alt="The Glitch Neon Sign"
+                class="w-full h-auto object-contain drop-shadow-[0_0_24px_rgba(0,240,255,0.7)] logo-no-bg" />
+            </div>
 
             <!-- Cursive Neon Tagline -->
             <div class="mt-4 pt-4 border-t border-white/10 w-full z-10">
-              <p class="font-script text-2xl text-neutral-200 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">Eat &middot; Drink &middot; Belong</p> </div> </div> </div> </div> </div> </section>
+              <p class="font-script text-2xl text-neutral-200 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]">Eat &middot;
+                Drink &middot; Belong</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ==================== "COMING SOON TO OUR PUBS" SECTION ==================== -->
   <section id="coming-soon" class="py-20 lg:py-28 border-b border-white/[0.08] relative bg-[#070b10] overflow-hidden">
@@ -484,25 +630,30 @@
       <!-- Section Header & Controls -->
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
         <div>
-          <div class="inline-flex items-center gap-2.5 mb-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest shadow-inner">
+          <div
+            class="inline-flex items-center gap-2.5 mb-2.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-widest shadow-inner">
             <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
             <span>New Attractions &amp; Events</span>
           </div>
           <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Coming Soon to Our Pubs</h2>
           <p class="text-neutral-400 text-sm sm:text-base mt-2 max-w-2xl">
-            We are constantly elevating your pub experience! Check out the exciting new food, games, and live entertainment arriving soon across our Norwich venues.
+            We are constantly elevating your pub experience! Check out the exciting new food, games, and live
+            entertainment arriving soon across our Norwich venues.
           </p>
         </div>
 
         <!-- Venue Filter Tabs -->
         <div class="flex flex-wrap items-center gap-2 bg-[#0c1219] p-1.5 rounded-full border border-white/10 shrink-0">
-          <button type="button" onclick="filterComingSoon('all', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition duration-200 bg-white text-black border border-white">
+          <button type="button" onclick="filterComingSoon('all', this)"
+            class="coming-soon-tab px-4 py-2 rounded-full text-xs font-bold tracking-wider uppercase transition duration-200 bg-white text-black border border-white">
             All Features (4)
           </button>
-          <button type="button" onclick="filterComingSoon('pub1', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
+          <button type="button" onclick="filterComingSoon('pub1', this)"
+            class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
             Pub 01 (3)
           </button>
-          <button type="button" onclick="filterComingSoon('pub2', this)" class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
+          <button type="button" onclick="filterComingSoon('pub2', this)"
+            class="coming-soon-tab px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition duration-200 bg-white/[0.05] text-neutral-300 hover:text-white border border-transparent hover:border-white/20">
             Pub 02 (1)
           </button>
         </div>
@@ -513,19 +664,25 @@
 
 
         <!-- CARD 2: Live Music Every Weekend (Pub 1 Only) -->
-        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
+        <article data-pub="pub1"
+          class="coming-soon-card bg-[#0c1219] rounded-2xl border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/event-dj-poster.jpg" alt="DJ Night House &amp; UKG with DJ JAS at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/dj-weekend-party.jpg"
+              alt="Weekend DJ Party House &amp; UKG with DJ JAS at The Glitch Prince of Wales Rd"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            
+
             <!-- Top Badges -->
             <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+              <span
+                class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
                 <span>Pub 01 &bull; Prince of Wales Rd</span>
               </span>
-              <span class="px-2.5 py-1 rounded-full bg-[#4deeea] text-black text-[10px] font-black uppercase tracking-widest shadow-md">
-                FRI 16 OCT &bull; 10PM
+              <span
+                class="px-2.5 py-1 rounded-full bg-[#4deeea] text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+                EVERY WEEKEND
               </span>
             </div>
           </div>
@@ -535,15 +692,17 @@
               <div class="flex items-center gap-2 text-xs text-[#5ce1e6] font-semibold mb-1">
                 <span>Pub 01 &middot; Prince of Wales Rd</span>
               </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">DJ Night &ndash; House &amp; UKG with DJ JAS</h3>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Weekend DJ
+                Party &ndash; House &amp; UKG with DJ JAS</h3>
               <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Live DJ sets with DJ JAS spinning high-energy House &amp; UKG party anthems on Friday 16 October 2026 from 10:00 PM till late under neon lights at 37 Prince of Wales Rd!
+                Live DJ sets with DJ JAS spinning high-energy House &amp; UKG party anthems every weekend under neon lights at 37 Prince of Wales Rd!
               </p>
             </div>
 
             <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
-              <span class="text-[11px] text-[#5ce1e6] font-bold uppercase tracking-wider">Friday 16 Oct &bull; 10:00 PM</span>
-              <button onclick="openBookingModal('Prince of Wales Rd')" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea] hover:bg-white text-black font-bold text-xs uppercase tracking-wider transition duration-200 shadow-md">
+              <span class="text-[11px] text-[#5ce1e6] font-bold uppercase tracking-wider">Every Weekend</span>
+              <button onclick="openBookingModal('Prince of Wales Rd')"
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea] hover:bg-white text-black font-bold text-xs uppercase tracking-wider transition duration-200 shadow-md">
                 <span>Book Now</span>
                 <span>&rarr;</span>
               </button>
@@ -552,18 +711,23 @@
         </article>
 
         <!-- CARD 3: Private Karaoke (Pub 1 Only) -->
-        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
+        <article data-pub="pub1"
+          class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/event-karaoke.jpg" alt="Private Karaoke Room at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/event-karaoke.jpg" alt="Private Karaoke Room at The Glitch Prince of Wales Rd"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            
+
             <!-- Top Badges -->
             <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+              <span
+                class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
                 <span>Pub 01 &bull; Prince of Wales Rd</span>
               </span>
-              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+              <span
+                class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
                 COMING SOON
               </span>
             </div>
@@ -576,15 +740,18 @@
                 <span>&bull;</span>
                 <span>Pub 01 Exclusive</span>
               </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Private Karaoke</h3>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">
+                Private Karaoke</h3>
               <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                State-of-the-art private karaoke booth room featuring soundproofing, dual wireless mics, huge song library, and dedicated cocktail server.
+                State-of-the-art private karaoke booth room featuring soundproofing, dual wireless mics, huge song
+                library, and dedicated cocktail server.
               </p>
             </div>
 
             <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
               <span class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Coming Soon</span>
-              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+              <button onclick="openPrivateHireModal()"
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
                 <span>Enquire Private Karaoke</span>
                 <span>&rarr;</span>
               </button>
@@ -593,18 +760,24 @@
         </article>
 
         <!-- CARD 4: Party Room (Pub 1 Only) -->
-        <article data-pub="pub1" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
+        <article data-pub="pub1"
+          class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-[#4deeea]/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-[#4deeea]/10 hover:-translate-y-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/pub1-party-suite.jpg?v=3" alt="Exclusive VIP Party Room Suite at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/pub1-party-suite.jpg?v=3"
+              alt="Exclusive VIP Party Room Suite at The Glitch Prince of Wales Rd"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            
+
             <!-- Top Badges -->
             <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+              <span
+                class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-[#4deeea]/40 text-[#5ce1e6] text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-[#4deeea]"></span>
                 <span>Pub 01 &bull; Prince of Wales Rd</span>
               </span>
-              <span class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+              <span
+                class="px-2.5 py-1 rounded-full bg-amber-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
                 COMING SOON
               </span>
             </div>
@@ -617,15 +790,19 @@
                 <span>&bull;</span>
                 <span>Pub 01 Exclusive</span>
               </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">Party Room</h3>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-[#5ce1e6] transition duration-200">
+                Party Room</h3>
               <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Dedicated VIP party room &amp; celebration suite for birthdays, private functions, stag &amp; hen parties, corporate mixers, and private late-night celebrations. Featuring custom ambient lighting, surround audio &amp; luxury booth seating.
+                Dedicated VIP party room &amp; celebration suite for birthdays, private functions, stag &amp; hen
+                parties, corporate mixers, and private late-night celebrations. Featuring custom ambient lighting,
+                surround audio &amp; luxury booth seating.
               </p>
             </div>
 
             <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
               <span class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Coming Soon</span>
-              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+              <button onclick="openPrivateHireModal()"
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-[#4deeea]/15 hover:bg-[#4deeea] text-[#5ce1e6] hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
                 <span>Enquire Party Room</span>
                 <span>&rarr;</span>
               </button>
@@ -633,19 +810,24 @@
           </div>
         </article>
 
-        <!-- CARD 5: Whole-Venue Booking (Pub 1 & Pub 2) -->
-        <article data-pub="both" class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-amber-400/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+        <!-- CARD 5:Venue Booking (Pub 1 & Pub 2) -->
+        <article data-pub="both"
+          class="coming-soon-card bg-[#0c1219] rounded-2xl border border-white/[0.08] hover:border-amber-400/60 transition-all duration-300 flex flex-col overflow-hidden group hover:shadow-2xl hover:shadow-amber-500/10 hover:-translate-y-1 md:col-span-2 lg:col-span-1">
           <div class="relative h-56 sm:h-64 overflow-hidden">
-            <img src="assets/pub2-golden-bar.jpg" alt="Exclusive Whole Venue Booking at The Glitch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+            <img src="assets/pub2-golden-bar.jpg" alt="Exclusive Venue Booking at The Glitch"
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+              loading="lazy" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
-            
+
             <!-- Top Badges -->
             <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2">
-              <span class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-amber-400/40 text-amber-300 text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
+              <span
+                class="px-3 py-1 rounded-full bg-black/85 backdrop-blur-md border border-amber-400/40 text-amber-300 text-[11px] font-extrabold uppercase tracking-wider shadow-lg flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span>
                 <span>Pub 01 &amp; Pub 02 Available</span>
               </span>
-              <span class="px-2.5 py-1 rounded-full bg-emerald-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
+              <span
+                class="px-2.5 py-1 rounded-full bg-emerald-500/90 backdrop-blur-md text-black text-[10px] font-black uppercase tracking-widest shadow-md">
                 AVAILABLE
               </span>
             </div>
@@ -656,17 +838,20 @@
               <div class="flex items-center gap-2 text-xs text-amber-300 font-semibold mb-1">
                 <span>🏛 Full Takeover</span>
                 <span>&bull;</span>
-                <span>Whole Venue</span>
+                <span> Venue</span>
               </div>
-              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-amber-300 transition duration-200">Whole-Venue Booking</h3>
+              <h3 class="text-2xl font-serif font-bold text-white group-hover:text-amber-300 transition duration-200">
+                Venue Booking</h3>
               <p class="text-neutral-300 text-xs sm:text-sm mt-2 leading-relaxed">
-                Take over the entire venue for your corporate event, birthday bash, or wedding celebration. Full catering, private bar staff, and customized music setups available.
+                Take over the entire venue for your corporate event, birthday bash, or wedding celebration. Full
+                catering, private bar staff, and customized music setups available.
               </p>
             </div>
 
             <div class="pt-3 border-t border-white/[0.08] flex items-center justify-between">
               <span class="text-[11px] text-amber-300 font-bold uppercase tracking-wider">Pub 01 &amp; Pub 02</span>
-              <button onclick="openPrivateHireModal()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400/15 hover:bg-amber-400 text-amber-300 hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
+              <button onclick="openPrivateHireModal()"
+                class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-400/15 hover:bg-amber-400 text-amber-300 hover:text-black font-bold text-xs uppercase tracking-wider transition duration-200">
                 <span>Enquire Whole Venue</span>
                 <span>&rarr;</span>
               </button>
@@ -689,8 +874,10 @@
           <div>
             <div class="inline-flex items-center gap-3 mb-2">
               <span class="w-8 h-[1px] bg-neutral-400"></span>
-              <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">When We're Open</span> </div>
-            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Opening Hours</h2> </div>
+              <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">When We're Open</span>
+            </div>
+            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">Opening Hours</h2>
+          </div>
 
           <!-- Side-by-side pub hours schedules -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
@@ -699,76 +886,111 @@
             <div class="space-y-4">
               <div>
                 <h3 class="text-xs font-bold uppercase tracking-wider text-white">Pub 01 &mdash; Prince of Wales Rd</h3>
-                <p class="text-[11px] text-neutral-400 mt-0.5">37 Prince of Wales Rd &bull; <a href="mailto:norwich@pubtheglitch.co.uk" class="hover:text-white transition">norwich@pubtheglitch.co.uk</a></p> </div>
+                <p class="text-[11px] text-neutral-400 mt-0.5">37 Prince of Wales Rd &bull; <a
+                    href="mailto:norwich@pubtheglitch.co.uk"
+                    class="hover:text-white transition">norwich@pubtheglitch.co.uk</a></p>
+              </div>
 
               <div class="space-y-2 text-xs text-neutral-300">
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Monday</span>
-                  <span>Holiday</span> </div>
+                  <span>Holiday</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Tuesday</span>
-                  <span>04:00 PM – 11:00 PM</span> </div>
+                  <span>04:00 PM – 11:00 PM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Wednesday</span>
-                  <span>04:00 PM – 11:00 PM</span> </div>
+                  <span>04:00 PM – 11:00 PM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Thursday</span>
-                  <span>04:00 PM – 12:30 AM</span> </div>
+                  <span>04:00 PM – 12:30 AM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Friday</span>
-                  <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span> </div>
+                  <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Saturday</span>
-                  <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span> </div>
+                  <span class="text-[#5ce1e6] font-semibold">02:00 PM – 03:00 AM</span>
+                </div>
                 <div class="flex justify-between py-1">
                   <span class="text-neutral-400">Sunday</span>
-                  <span>Holiday</span> </div> </div>
+                  <span>Holiday</span>
+                </div>
+              </div>
 
               <!-- Buttons -->
               <div class="flex items-center gap-2 pt-2">
-                <button onclick="openDirectionsModal('Prince of Wales Rd')" class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
+                <button onclick="openDirectionsModal('Prince of Wales Rd')"
+                  class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
                   <span>Get Directions</span>
                   <span>↗</span> </button>
-                <button onclick="openPrivateHireModal()" class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
-                  <span>Private Hire Enquiry</span> </button> </div> </div>
+                <button onclick="openPrivateHireModal()"
+                  class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
+                  <span>Private Hire Enquiry</span> </button>
+              </div>
+            </div>
 
             <!-- Pub 02 Hours -->
             <div class="space-y-4">
               <div>
                 <h3 class="text-xs font-bold uppercase tracking-wider text-white">Pub 02 &mdash; Norwich Market</h3>
-                <p class="text-[11px] text-neutral-400 mt-0.5">25b St Giles St &bull; <a href="mailto:sg@pubtheglitch.co.uk" class="hover:text-white transition">sg@pubtheglitch.co.uk</a></p> </div>
+                <p class="text-[11px] text-neutral-400 mt-0.5">25b St Giles St &bull; <a
+                    href="mailto:sg@pubtheglitch.co.uk" class="hover:text-white transition">sg@pubtheglitch.co.uk</a>
+                </p>
+              </div>
 
               <div class="space-y-2 text-xs text-neutral-300">
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Monday</span>
-                  <span class="text-[#ff3b94] font-semibold">Holiday</span> </div>
+                  <span class="text-[#ff3b94] font-semibold">Holiday</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Tuesday</span>
-                  <span>12:00 PM – 09:30 PM</span> </div>
+                  <span>12:00 PM – 09:30 PM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Wednesday</span>
-                  <span>12:00 PM – 09:30 PM</span> </div>
+                  <span>12:00 PM – 09:30 PM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Thursday</span>
-                  <span>11:00 AM – 11:00 PM</span> </div>
+                  <span>11:00 AM – 11:00 PM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Friday</span>
-                  <span class="text-[#ff3b94] font-semibold">11:00 AM – 11:00 PM</span> </div>
+                  <span class="text-[#ff3b94] font-semibold">11:00 AM – 11:00 PM</span>
+                </div>
                 <div class="flex justify-between py-1 border-b border-white/[0.06]">
                   <span class="text-neutral-400">Saturday</span>
-                  <span class="text-[#ff3b94] font-semibold">11:00 AM – 11:00 PM</span> </div>
+                  <span class="text-[#ff3b94] font-semibold">11:00 AM – 11:00 PM</span>
+                </div>
                 <div class="flex justify-between py-1">
                   <span class="text-neutral-400">Sunday</span>
-                  <span>12:00 PM – 09:30 PM</span> </div> </div>
+                  <span>12:00 PM – 09:30 PM</span>
+                </div>
+              </div>
 
               <!-- Buttons -->
               <div class="flex items-center gap-2 pt-2">
-                <button onclick="openDirectionsModal('Norwich Market')" class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
+                <button onclick="openDirectionsModal('Norwich Market')"
+                  class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
                   <span>Get Directions</span>
                   <span>↗</span> </button>
-                <button onclick="openBookingModal('Norwich Market')" class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
-                  <svg class="w-3 h-3 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                  <span>Book a Table</span> </button> </div> </div> </div> </div>
+                <button onclick="openBookingModal('Norwich Market')"
+                  class="flex-1 py-2 rounded-full border border-white/20 hover:bg-white/10 text-white text-[11px] font-semibold tracking-wide flex items-center justify-center gap-1 transition">
+                  <svg class="w-3 h-3 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <span>Book a Table</span> </button>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- RIGHT: WHAT'S ON (7 cols) -->
         <div class="lg:col-span-7 space-y-6">
@@ -776,58 +998,97 @@
             <div>
               <div class="inline-flex items-center gap-3 mb-2">
                 <span class="w-8 h-[1px] bg-neutral-400"></span>
-                <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">Upcoming Events</span> </div>
-              <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">What's On</h2> </div>
+                <span class="text-xs uppercase tracking-[0.22em] text-neutral-400 font-bold">Upcoming Events</span>
+              </div>
+              <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white tracking-tight">What's On</h2>
+            </div>
 
-            <a href="#events" class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-neutral-300 hover:text-white px-4 py-2 rounded-full border border-white/20 hover:border-white/40 transition duration-200">
+            <a href="#events"
+              class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-neutral-300 hover:text-white px-4 py-2 rounded-full border border-white/20 hover:border-white/40 transition duration-200">
               <span>View All Events</span>
-              <span>&rarr;</span> </a> </div>
+              <span>&rarr;</span> </a>
+          </div>
 
           <!-- 2 Event Cards Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
 
             <!-- Event 1: Pub 1 Weekend DJ Party (HIGHLIGHTED) -->
-            <div class="bg-[#0c1219] rounded-xl overflow-hidden border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg shadow-[#4deeea]/10 relative cursor-pointer" onclick="openBookingModal('Prince of Wales Rd')">
-              <div class="absolute top-2.5 right-2.5 z-10 bg-[#4deeea] text-black text-[8px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full">
-                Fri 16 Oct &bull; 10PM
+            <div
+              class="bg-[#0c1219] rounded-xl overflow-hidden border-2 border-[#5ce1e6]/60 hover:border-[#5ce1e6] transition-all duration-300 flex flex-col group hover:-translate-y-1 shadow-lg shadow-[#4deeea]/10 relative cursor-pointer"
+              onclick="openBookingModal('Prince of Wales Rd')">
+              <div
+                class="absolute top-2.5 right-2.5 z-10 bg-[#4deeea] text-black text-[8px] font-extrabold uppercase tracking-widest px-2 py-0.5 rounded-full">
+                EVERY WEEKEND
               </div>
               <div class="relative h-48 sm:h-52 overflow-hidden">
-                <img src="assets/event-dj-poster.jpg" alt="DJ Night House &amp; UKG with DJ JAS at Glitch 1 Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                <img src="assets/dj-weekend-party.jpg"
+                  alt="Weekend DJ Party House &amp; UKG with DJ JAS at Glitch 1 Prince of Wales Rd"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
                 <!-- Date Badge -->
-                <div class="absolute top-2.5 left-2.5 bg-black/85 backdrop-blur-md rounded-md px-2 py-1 text-center border border-[#5ce1e6]/40 leading-none">
-                  <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">DATE</span>
-                  <span class="block text-xs font-extrabold text-white">16 OCT</span>
-                </div> </div>
+                <div
+                  class="absolute top-2.5 left-2.5 bg-black/85 backdrop-blur-md rounded-md px-2 py-1 text-center border border-[#5ce1e6]/40 leading-none">
+                  <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">EVERY</span>
+                  <span class="block text-xs font-extrabold text-white">WKND</span>
+                </div>
+              </div>
               <div class="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub 01 &middot; Prince of Wales Rd</span>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200 mt-0.5">DJ Night &ndash; House &amp; UKG (DJ JAS)</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">Live DJ sets with DJ JAS spinning House &amp; UKG party anthems on Friday 16 Oct from 10:00 PM till late.</p> </div>
-                <div class="mt-3 flex items-center justify-between text-[11px] font-bold text-[#5ce1e6] pt-2 border-t border-white/[0.06]">
-                  <span>Friday 16 Oct &bull; 10PM</span>
-                  <span>Book Now &rarr;</span> </div> </div> </div>
+                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-[#5ce1e6]">Pub 01 &middot;
+                    Prince of Wales Rd</span>
+                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200 mt-0.5">Weekend DJ
+                    Party &ndash; House &amp; UKG (DJ JAS)</h4>
+                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">Live DJ sets with DJ JAS spinning House
+                    &amp; UKG party anthems every weekend under neon lights.</p>
+                </div>
+                <div
+                  class="mt-3 flex items-center justify-between text-[11px] font-bold text-[#5ce1e6] pt-2 border-t border-white/[0.06]">
+                  <span>Every Weekend</span>
+                  <span>Book Now &rarr;</span>
+                </div>
+              </div>
+            </div>
 
             <!-- Event 2: Friday Live Acoustic Showcase -->
-            <div class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1 cursor-pointer" onclick="openBookingModal('Prince of Wales Rd')">
+            <div
+              class="bg-[#0c1219] rounded-xl overflow-hidden border border-white/[0.08] hover:border-white/30 transition-all duration-300 flex flex-col group hover:-translate-y-1 cursor-pointer"
+              onclick="openBookingModal('Prince of Wales Rd')">
               <div class="relative h-48 sm:h-52 overflow-hidden">
-                <img src="assets/event-music.jpg" alt="Live Acoustic Night at The Glitch Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async" />
+                <img src="assets/event-music.jpg" alt="Live Acoustic Night at The Glitch Prince of Wales Rd"
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy" decoding="async" />
                 <div class="absolute inset-0 bg-gradient-to-t from-[#0c1219] via-transparent to-transparent"></div>
                 <!-- Date Badge -->
-                <div class="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md rounded-md px-2 py-1 text-center border border-white/15 leading-none">
+                <div
+                  class="absolute top-2.5 left-2.5 bg-black/80 backdrop-blur-md rounded-md px-2 py-1 text-center border border-white/15 leading-none">
                   <span class="block text-[9px] font-bold text-[#5ce1e6] uppercase">LIVE</span>
                   <span class="block text-xs font-extrabold text-white">FRIDAYS</span>
-                </div> </div>
+                </div>
+              </div>
               <div class="p-4 flex-1 flex flex-col justify-between">
                 <div>
-                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-neutral-400">Pub 01 &middot; Prince of Wales Rd</span>
-                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200 mt-0.5">Glitch Acoustic Showcase</h4>
-                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">Norwich indie vocalists &amp; acoustic guitar lounge covers.</p> </div>
-                <div class="mt-3 flex items-center justify-between text-[11px] font-semibold text-neutral-300 pt-2 border-t border-white/[0.06]">
+                  <span class="text-[9px] font-extrabold uppercase tracking-widest text-neutral-400">Pub 01 &middot;
+                    Prince of Wales Rd</span>
+                  <h4 class="font-bold text-sm text-white group-hover:text-[#5ce1e6] transition duration-200 mt-0.5">
+                    Glitch Acoustic Showcase</h4>
+                  <p class="text-[11px] text-neutral-400 mt-1 leading-normal">Norwich indie vocalists &amp; acoustic
+                    guitar lounge covers.</p>
+                </div>
+                <div
+                  class="mt-3 flex items-center justify-between text-[11px] font-semibold text-neutral-300 pt-2 border-t border-white/[0.06]">
                   <span>Fridays &bull; 7:30 PM</span>
-                  <span>Walk-ins &rarr;</span> </div> </div> </div> </div> </div> </div> </div> </section>
+                  <span>Walk-ins &rarr;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- ==================== "GALLERY" SECTION ==================== -->
+  <!-- ==================== "GALLERY" SECTION ==================== -->
   <!-- ==================== "GALLERY" SECTION ==================== -->
   <section id="gallery" class="py-20 lg:py-28 border-b border-white/[0.08] relative bg-[#070b10]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -840,11 +1101,13 @@
             <span class="text-xs uppercase tracking-[0.25em] text-[#5ce1e6] font-bold">The Glitch in Moments</span>
           </div>
           <h2 class="text-4xl sm:text-5xl font-serif font-bold text-white tracking-tight">Gallery &amp; Atmosphere</h2>
-          <p class="text-neutral-300 text-sm sm:text-base max-w-2xl">Good food. Cold drinks. Great company across Prince of Wales Rd &amp; Norwich Market.</p>
+          <p class="text-neutral-300 text-sm sm:text-base max-w-2xl">Good food. Cold drinks. Great company across Prince
+            of Wales Rd &amp; Norwich Market.</p>
         </div>
 
         <div class="flex items-center gap-3">
-          <a href="gallery.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] hover:bg-white/[0.1] text-white text-xs font-semibold tracking-wider uppercase transition duration-200">
+          <a href="gallery.html"
+            class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:border-white/50 bg-white/[0.04] hover:bg-white/[0.1] text-white text-xs font-semibold tracking-wider uppercase transition duration-200">
             <span>View Full Gallery</span>
             <span>&rarr;</span>
           </a>
@@ -855,114 +1118,180 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
 
         <!-- Photo 1 (Featured Wide / 2 cols): Pub 1 Craft Draught Wall -->
-        <div onclick="openLightbox('assets/pub1-taps.jpg', 'Craft Draught Beer Wall &amp; Living Greenery at Prince of Wales Rd')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-cyan-500/10">
-          <img src="assets/pub1-taps.jpg" alt="Craft Draught Beer Taps &amp; Greenery Wall at The Glitch 1 Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div
+          onclick="openLightbox('assets/pub1-taps.jpg', 'Craft Draught Beer Wall &amp; Living Greenery at Prince of Wales Rd')"
+          class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-cyan-500/10">
+          <img src="assets/pub1-taps.jpg"
+            alt="Craft Draught Beer Taps &amp; Greenery Wall at The Glitch 1 Prince of Wales Rd"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Draught Wall</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub
+            01 &bull; Draught Wall</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#5ce1e6] transition">Craft Draught Wall &amp; Taps</h4>
-              <p class="text-xs text-neutral-300 mt-0.5">Chilled Guinness Extra Cold, rotating craft lines &amp; living greenery</p>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#5ce1e6] transition">Craft Draught
+                Wall &amp; Taps</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Chilled Guinness Extra Cold, rotating craft lines &amp; living
+                greenery</p>
             </div>
-            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 2: Pub 2 Bathtub Snug -->
-        <div onclick="openLightbox('assets/pub2-bathtub-snug.jpg', 'The Signature Clawfoot Bathtub Snug at Norwich Market')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#ff3b94]/60 transition-all duration-300 group cursor-pointer shadow-lg">
-          <img src="assets/pub2-bathtub-snug.jpg" alt="Signature Clawfoot Bathtub Lounge Snug" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div
+          onclick="openLightbox('assets/pub2-bathtub-snug.jpg', 'The Signature Clawfoot Bathtub Snug at Norwich Market')"
+          class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#ff3b94]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub2-bathtub-snug.jpg" alt="Signature Clawfoot Bathtub Lounge Snug"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub 02 &bull; Norwich Market</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub
+            02 &bull; Norwich Market</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#ff3b94] transition">Bathtub Lounge Snug</h4>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#ff3b94] transition">Bathtub Lounge
+                Snug</h4>
               <p class="text-xs text-neutral-300 mt-0.5">Clawfoot tub &amp; vintage mirror</p>
             </div>
-            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 3: Pub 1 Guinness Pint -->
-        <div onclick="openLightbox('assets/pub1-guinness.jpg', 'Fresh Poured Guinness Extra Cold on Draught')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
-          <img src="assets/pub1-guinness.jpg" alt="Chilled Pint of Guinness Extra Cold" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div onclick="openLightbox('assets/pub1-guinness.jpg', 'Fresh Poured Guinness Extra Cold on Draught')"
+          class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub1-guinness.jpg" alt="Chilled Pint of Guinness Extra Cold"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Draught</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub
+            01 &bull; Draught</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Guinness Extra Cold</h4>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Guinness Extra
+                Cold</h4>
               <p class="text-xs text-neutral-300 mt-0.5">Creamy head pulled on tap</p>
             </div>
-            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 4: Pub 1 Tropical Dragonfruit Mocktail -->
-        <div onclick="openLightbox('assets/pub1-dragonfruit-mocktail.jpg?v=2', 'Signature Tropical Dragonfruit Mocktail')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
-          <img src="assets/pub1-dragonfruit-mocktail.jpg?v=2" alt="Tropical Dragonfruit Mocktail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div
+          onclick="openLightbox('assets/pub1-dragonfruit-mocktail.jpg?v=2', 'Signature Tropical Dragonfruit Mocktail')"
+          class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub1-dragonfruit-mocktail.jpg?v=2" alt="Tropical Dragonfruit Mocktail"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Mocktails</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub
+            01 &bull; Mocktails</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Dragonfruit Mocktail</h4>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Dragonfruit
+                Mocktail</h4>
               <p class="text-xs text-neutral-300 mt-0.5">Botanical zero-proof elixir</p>
             </div>
-            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 5 (Featured Wide / 2 cols): Pub 2 Gold Bar -->
-        <div onclick="openLightbox('assets/pub2-golden-bar.jpg', 'Hand-Crafted Curved Gold Bar Counter &amp; Amber Lights at Norwich Market')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#ff3b94]/40 hover:border-[#ff3b94] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-pink-500/10">
-          <img src="assets/pub2-golden-bar.jpg" alt="Curved Golden Bar Counter at Norwich Market" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div
+          onclick="openLightbox('assets/pub2-golden-bar.jpg', 'Hand-Crafted Curved Gold Bar Counter &amp; Amber Lights at Norwich Market')"
+          class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#ff3b94]/40 hover:border-[#ff3b94] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-pink-500/10">
+          <img src="assets/pub2-golden-bar.jpg" alt="Curved Golden Bar Counter at Norwich Market"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub 02 &bull; Norwich Market</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub
+            02 &bull; Norwich Market</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#ff3b94] transition">Curved Golden Bar</h4>
-              <p class="text-xs text-neutral-300 mt-0.5">Artisan mixology, amber pendant lights &amp; speakeasy charm</p>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#ff3b94] transition">Curved Golden
+                Bar</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Artisan mixology, amber pendant lights &amp; speakeasy charm
+              </p>
             </div>
-            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 6: Pub 1 Neon Storefront -->
-        <div onclick="openLightbox('assets/pub1-exterior-facade.jpg', 'The Glitch 1 Illuminated Storefront by Night')" class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
-          <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Prince of Wales Rd Storefront" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div onclick="openLightbox('assets/pub1-exterior-facade.jpg', 'The Glitch 1 Illuminated Storefront by Night')"
+          class="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-white/[0.1] hover:border-[#5ce1e6]/60 transition-all duration-300 group cursor-pointer shadow-lg">
+          <img src="assets/pub1-exterior-facade.jpg" alt="The Glitch 1 Prince of Wales Rd Storefront"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; Exterior</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub
+            01 &bull; Exterior</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Neon Facade by Night</h4>
+              <h4 class="text-sm sm:text-base font-bold text-white group-hover:text-[#5ce1e6] transition">Neon Facade by
+                Night</h4>
               <p class="text-xs text-neutral-300 mt-0.5">37 Prince of Wales Rd</p>
             </div>
-            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 7 (Featured Wide / 2 cols): Pub 2 Masala Feast Spread -->
-        <div onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Pub 02 Authentic Masala Curry Feast Spread')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#ff3b94]/40 hover:border-[#ff3b94] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-pink-500/10">
-          <img src="assets/pub2-indian-feast.jpg" alt="Pub 02 Authentic Masala Curry Feast Spread" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div onclick="openLightbox('assets/pub2-indian-feast.jpg', 'Pub 02 Authentic Masala Curry Feast Spread')"
+          class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#ff3b94]/40 hover:border-[#ff3b94] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-pink-500/10">
+          <img src="assets/pub2-indian-feast.jpg" alt="Pub 02 Authentic Masala Curry Feast Spread"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub 02 &bull; Dining</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#ff3b94]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#ff3b94]">Pub
+            02 &bull; Dining</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#ff3b94] transition">Authentic Masala Feast</h4>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#ff3b94] transition">Authentic
+                Masala Feast</h4>
               <p class="text-xs text-neutral-300 mt-0.5">Rich aromatic curries, garlic naan &amp; rice platters</p>
             </div>
-            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#ff3b94] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
         <!-- Photo 8 (Featured Wide / 2 cols): Pub 1 Weekend DJ Party -->
-        <div onclick="openLightbox('assets/event-dj-poster.jpg', 'DJ Night House &amp; UKG with DJ JAS at The Glitch 1 Prince of Wales Rd')" class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-cyan-500/10">
-          <img src="assets/event-dj-poster.jpg" alt="DJ Night House &amp; UKG with DJ JAS at The Glitch 1 Prince of Wales Rd" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out" loading="lazy" decoding="async" />
+        <div
+          onclick="openLightbox('assets/dj-weekend-party.jpg', 'Weekend DJ Party House &amp; UKG with DJ JAS at The Glitch 1 Prince of Wales Rd')"
+          class="sm:col-span-2 relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-[#5ce1e6]/40 hover:border-[#5ce1e6] transition-all duration-300 group cursor-pointer shadow-lg hover:shadow-cyan-500/10">
+          <img src="assets/dj-weekend-party.jpg"
+            alt="Weekend DJ Party House &amp; UKG with DJ JAS at The Glitch 1 Prince of Wales Rd"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+            loading="lazy" decoding="async" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-transparent"></div>
-          <span class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub 01 &bull; DJ Night</span>
+          <span
+            class="absolute top-3.5 left-3.5 px-2.5 py-1 rounded-md bg-black/85 backdrop-blur-md border border-[#5ce1e6]/40 text-[10px] font-extrabold uppercase tracking-wider text-[#5ce1e6]">Pub
+            01 &bull; DJ Party</span>
           <div class="absolute bottom-3.5 left-4 right-4 flex items-end justify-between">
             <div>
-              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#5ce1e6] transition">DJ Night: House &amp; UKG &bull; DJ JAS</h4>
-              <p class="text-xs text-neutral-300 mt-0.5">Live DJ set Friday 16 Oct from 10:00 PM &bull; 37 Prince of Wales Rd</p>
+              <h4 class="text-base sm:text-lg font-bold text-white group-hover:text-[#5ce1e6] transition">Weekend DJ Party:
+                House &amp; UKG &bull; DJ JAS</h4>
+              <p class="text-xs text-neutral-300 mt-0.5">Live DJ sets every weekend &bull; 37 Prince of
+                Wales Rd</p>
             </div>
-            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom ↗</span>
+            <span class="text-xs font-semibold text-[#5ce1e6] shrink-0 ml-2 group-hover:translate-x-0.5 transition">Zoom
+              ↗</span>
           </div>
         </div>
 
@@ -970,7 +1299,7 @@
     </div>
   </section>
 
-<!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
+  <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
   <!-- ==================== PREMIUM EDITORIAL FOOTER ==================== -->
   <footer class="site-footer" id="contact" role="contentinfo">
     <div class="footer-top-accent" aria-hidden="true"></div>
@@ -996,7 +1325,8 @@
         <div class="footer-col footer-col-about">
           <h3 class="footer-col-heading">ABOUT THE GLITCH</h3>
           <p class="footer-about-text">
-            Norwich's premier destination for craft cocktails, gourmet comfort food, live acoustics, and unforgettable nights out across two iconic locations.
+            Norwich's premier destination for craft cocktails, gourmet comfort food, live acoustics, and unforgettable
+            nights out across two iconic locations.
           </p>
         </div>
 
@@ -1004,11 +1334,26 @@
         <div class="footer-col footer-col-nav">
           <h3 class="footer-col-heading">EXPLORE</h3>
           <ul class="footer-links-list">
-            <li><a href="index.html" class="footer-link"><span>Home</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
-            <li><a href="menu.html" class="footer-link"><span>Food &amp; Drink Menu</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
-            <li><a href="our-pubs.html" class="footer-link"><span>Our Pubs &amp; Venues</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
-            <li><a href="gallery.html" class="footer-link"><span>Photo Gallery</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
-            <li><a href="contact.html" class="footer-link"><span>Contact &amp; Location</span> <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a></li>
+            <li><a href="index.html" class="footer-link"><span>Home</span> <svg class="w-3.5 h-3.5" fill="none"
+                  stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg></a></li>
+            <li><a href="menu.html" class="footer-link"><span>Food &amp; Drink Menu</span> <svg class="w-3.5 h-3.5"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg></a></li>
+            <li><a href="our-pubs.html" class="footer-link"><span>Our Pubs &amp; Venues</span> <svg class="w-3.5 h-3.5"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg></a></li>
+            <li><a href="gallery.html" class="footer-link"><span>Photo Gallery</span> <svg class="w-3.5 h-3.5"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg></a></li>
+            <li><a href="contact.html" class="footer-link"><span>Contact &amp; Location</span> <svg class="w-3.5 h-3.5"
+                  fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg></a></li>
           </ul>
         </div>
 
@@ -1025,7 +1370,8 @@
             </address>
             <div class="loc-actions">
               <a href="mailto:norwich@pubtheglitch.co.uk" class="loc-email">✉️ norwich@pubtheglitch.co.uk</a>
-              <button type="button" class="loc-map-btn" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Prince of Wales Rd');return false;}">
+              <button type="button" class="loc-map-btn"
+                onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Prince of Wales Rd');return false;}">
                 <span>Map</span> &rarr;
               </button>
             </div>
@@ -1040,7 +1386,8 @@
             </address>
             <div class="loc-actions">
               <a href="mailto:sg@pubtheglitch.co.uk" class="loc-email">✉️ sg@pubtheglitch.co.uk</a>
-              <button type="button" class="loc-map-btn" onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Norwich Market');return false;}">
+              <button type="button" class="loc-map-btn"
+                onclick="if(typeof openDirectionsModal==='function'){openDirectionsModal('Norwich Market');return false;}">
                 <span>Map</span> &rarr;
               </button>
             </div>
@@ -1050,15 +1397,17 @@
         <!-- COL 4: NEWSLETTER & TABLE RESERVATION CTA CARD -->
         <div class="footer-col footer-col-newsletter">
           <h3 class="footer-col-heading">JOIN THE CLUB</h3>
-          
+
           <div class="footer-newsletter-card">
             <div class="footer-newsletter-content">
               <p class="footer-newsletter-desc">
                 Subscribe for secret menu drops, VIP event invites &amp; exclusive offers.
               </p>
-              <form class="footer-newsletter-form" onsubmit="event.preventDefault(); this.querySelector('.newsletter-success').classList.remove('hidden'); this.querySelector('.newsletter-input-group').classList.add('hidden');">
+              <form class="footer-newsletter-form"
+                onsubmit="event.preventDefault(); this.querySelector('.newsletter-success').classList.remove('hidden'); this.querySelector('.newsletter-input-group').classList.add('hidden');">
                 <div class="newsletter-input-group">
-                  <input type="email" placeholder="Enter your email..." required class="footer-email-input" aria-label="Email address for VIP newsletter" />
+                  <input type="email" placeholder="Enter your email..." required class="footer-email-input"
+                    aria-label="Email address for VIP newsletter" />
                   <button type="submit" class="footer-newsletter-btn" aria-label="Subscribe">
                     <span>JOIN</span>
                   </button>
@@ -1070,7 +1419,10 @@
 
               <div class="footer-quick-book-cta">
                 <button type="button" onclick="openBookingModal()" class="footer-book-table-btn">
-                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
                   <span>RESERVE A TABLE</span>
                 </button>
               </div>
@@ -1085,16 +1437,30 @@
       <div class="footer-social-section">
         <span class="footer-social-label">CONNECT WITH THE GLITCH</span>
         <div class="footer-social-badges">
-          <a href="https://www.instagram.com/glitchnorwich?stkn=OG81bmRyNWh4OW9i&amp;utm_source=qr" target="_blank" rel="noopener" class="social-pill-badge instagram" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <a href="https://www.instagram.com/glitchnorwich?stkn=OG81bmRyNWh4OW9i&amp;utm_source=qr" target="_blank"
+            rel="noopener" class="social-pill-badge instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
             <span>Instagram</span>
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-pill-badge facebook" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-pill-badge facebook"
+            aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
             <span>Facebook</span>
           </a>
-          <a href="https://www.tiktok.com/@theglitchbar?_r=1&amp;_t=ZS-99kItesCAD6" target="_blank" rel="noopener" class="social-pill-badge tiktok" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+          <a href="https://www.tiktok.com/@theglitchbar?_r=1&amp;_t=ZS-99kItesCAD6" target="_blank" rel="noopener"
+            class="social-pill-badge tiktok" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+            </svg>
             <span>TikTok</span>
           </a>
         </div>
@@ -1106,90 +1472,123 @@
           &copy; 2026 <strong>THE GLITCH PUB &amp; RESTAURANT</strong>. ALL RIGHTS RESERVED.
         </div>
 
-        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-back-to-top" aria-label="Back to top of page">
+        <button type="button" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="footer-back-to-top"
+          aria-label="Back to top of page">
           <span>TOP</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
         </button>
       </div>
 
     </div>
   </footer>
 
-<!-- ==================== INTERACTIVE "BOOK A TABLE" MODAL ==================== -->
-  <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300" aria-modal="true" role="dialog" onclick="if(event.target === this) closeBookingModal()">
-    <div class="booking-modal-card bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-5 sm:p-7 relative shadow-2xl space-y-5 max-h-[90vh] max-h-[90dvh] overflow-y-auto">
+  <!-- ==================== INTERACTIVE "BOOK A TABLE" MODAL ==================== -->
+  <div id="bookingModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm transition-opacity duration-300"
+    aria-modal="true" role="dialog" onclick="if(event.target === this) closeBookingModal()">
+    <div
+      class="booking-modal-card bg-[#0e141c] border border-white/20 rounded-2xl max-w-lg w-full p-5 sm:p-7 relative shadow-2xl space-y-5 max-h-[90vh] max-h-[90dvh] overflow-y-auto">
       <!-- Close Button with large touch target -->
-      <button type="button" onclick="closeBookingModal()" class="booking-modal-close-btn" aria-label="Close Booking Modal">
-        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" /></svg>
+      <button type="button" onclick="closeBookingModal()" class="booking-modal-close-btn"
+        aria-label="Close Booking Modal">
+        <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
       </button>
 
       <div id="bookingFormContainer" class="space-y-4 sm:space-y-5">
         <!-- Modal Title -->
         <div class="pr-10">
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30 text-[10px] uppercase tracking-widest font-bold">
+          <div
+            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30 text-[10px] uppercase tracking-widest font-bold">
             <span>●</span> Table Reservation
           </div>
           <h3 class="text-xl sm:text-2xl font-serif font-bold text-white mt-1">Book a Table at The Glitch</h3>
-          <p class="text-neutral-400 text-xs mt-0.5">Select your pub venue, reserve your slot, and send your request directly to our team.</p>
+          <p class="text-neutral-400 text-xs mt-0.5">Select your pub venue, reserve your slot, and send your request
+            directly to our team.</p>
         </div>
 
         <!-- Booking Form -->
         <form id="bookingForm" onsubmit="handleBookingSubmit(event)" novalidate class="space-y-4 text-xs sm:text-sm">
           <!-- Step 1: Select Pub Location (Dropdown) -->
           <div>
-            <label for="bookingLocation" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+            <label for="bookingLocation"
+              class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
               <span>1. Select Pub Venue</span>
               <span class="text-[10px] text-neutral-400 font-normal">Choose location</span>
             </label>
             <div class="relative">
-              <select id="bookingLocation" onchange="selectBookingPub(this.value)" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-4 py-3 text-white font-medium text-xs sm:text-sm focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
+              <select id="bookingLocation" onchange="selectBookingPub(this.value)"
+                class="w-full bg-[#080d14] border border-white/20 rounded-xl px-4 py-3 text-white font-medium text-xs sm:text-sm focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
                 <option value="Prince of Wales Rd" selected>Pub 01 — Prince of Wales Rd (37 Prince of Wales Rd)</option>
                 <option value="Norwich Market">Pub 02 — Norwich Market (25b St Giles St)</option>
               </select>
               <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-neutral-400">
-                <svg class="w-4 h-4 text-[#4deeea]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-4 h-4 text-[#4deeea]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
-            
+
             <!-- Live Selected Pub Contact Box -->
-            <div id="bookingVenueContactBox" class="mt-2.5 p-3 rounded-xl bg-[#080d14] border border-white/10 space-y-1.5">
+            <div id="bookingVenueContactBox"
+              class="mt-2.5 p-3 rounded-xl bg-[#080d14] border border-white/10 space-y-1.5">
               <div class="flex items-center justify-between text-[11px]">
-                <span class="font-bold uppercase tracking-wider text-neutral-300">Direct Mailbox &amp; Venue Routing</span>
-                <span id="bookingVenueBadge" class="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30">Prince of Wales Rd</span>
+                <span class="font-bold uppercase tracking-wider text-neutral-300">Direct Mailbox &amp; Venue
+                  Routing</span>
+                <span id="bookingVenueBadge"
+                  class="text-[10px] px-2.5 py-0.5 rounded-full font-bold bg-[#5ce1e6]/10 text-[#5ce1e6] border border-[#5ce1e6]/30">Prince
+                  of Wales Rd</span>
               </div>
-              <p id="bookingTargetAddress" class="text-[11px] text-neutral-400">37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</p>
+              <p id="bookingTargetAddress" class="text-[11px] text-neutral-400">37 Prince of Wales Rd, Norwich NR1 1BG,
+                United Kingdom</p>
               <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs pt-0.5">
-                <a id="bookingTargetMailLink" href="mailto:norwich@pubtheglitch.co.uk" class="inline-flex items-center gap-1.5 text-[#5ce1e6] hover:underline transition">
-                  <svg class="w-3.5 h-3.5 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                  <strong id="bookingTargetEmail" class="font-semibold tracking-wide">norwich@pubtheglitch.co.uk</strong>
+                <a id="bookingTargetMailLink" href="mailto:norwich@pubtheglitch.co.uk"
+                  class="inline-flex items-center gap-1.5 text-[#5ce1e6] hover:underline transition">
+                  <svg class="w-3.5 h-3.5 text-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <strong id="bookingTargetEmail"
+                    class="font-semibold tracking-wide">norwich@pubtheglitch.co.uk</strong>
                 </a>
               </div>
             </div>
 
             <!-- Glitch 1 Walk-In Policy Notice (No Table Booking) -->
-            <div id="glitch1NoTableBookingNotice" class="hidden mt-3 p-3.5 rounded-xl bg-cyan-950/40 border border-[#5ce1e6]/40 text-[#5ce1e6] space-y-1.5">
+            <div id="glitch1NoTableBookingNotice"
+              class="hidden mt-3 p-3.5 rounded-xl bg-cyan-950/40 border border-[#5ce1e6]/40 text-[#5ce1e6] space-y-1.5">
               <div class="font-bold text-xs flex items-center gap-2">
                 <span>ℹ️ Walk-Ins Only at The Glitch 1</span>
               </div>
               <p class="text-xs text-neutral-300 leading-relaxed">
-                Table booking is not available for <strong>The Glitch 1 (37 Prince of Wales Rd)</strong> as it operates on a walk-in basis for general table seating. Simply drop in anytime!
+                Table booking is not available for <strong>The Glitch 1 (37 Prince of Wales Rd)</strong> as it operates
+                on a walk-in basis for general table seating. Simply drop in anytime!
               </p>
               <p class="text-xs text-neutral-300 leading-relaxed">
-                To reserve a table, please select <strong>Pub 02 — Norwich Market</strong> above, or inquire about <strong>Private Hire</strong>.
+                To reserve a table, please select <strong>Pub 02 — Norwich Market</strong> above, or inquire about
+                <strong>Private Hire</strong>.
               </p>
             </div>
 
             <!-- Glitch 2 Deposit Information Box -->
-            <div id="glitch2DepositBox" class="mt-3 p-3.5 rounded-xl bg-[#ff2a85]/10 border border-[#ff2a85]/30 space-y-1.5">
+            <div id="glitch2DepositBox"
+              class="mt-3 p-3.5 rounded-xl bg-[#ff2a85]/10 border border-[#ff2a85]/30 space-y-1.5">
               <div class="flex items-center justify-between text-xs font-bold text-[#ff4fa8]">
                 <span>💳 Required Deposit: £10 / person</span>
-                <span id="bookingDepositAmount" class="font-mono text-white bg-black/60 px-2 py-0.5 rounded border border-[#ff2a85]/40">£20 (£10 x 2 guests)</span>
+                <span id="bookingDepositAmount"
+                  class="font-mono text-white bg-black/60 px-2 py-0.5 rounded border border-[#ff2a85]/40">£20 (£10 x 2
+                  guests)</span>
               </div>
               <p class="text-[11px] text-neutral-300">
-                The minimum deposit of £10 per person is fully <strong>redeemable against your final bill</strong> when you dine.
+                The minimum deposit of £10 per person is fully <strong>redeemable against your final bill</strong> when
+                you dine.
               </p>
               <p class="text-[11px] text-rose-300 font-semibold">
-                ⚠️ <strong>Notice:</strong> Deposits are strictly <strong>non-refundable</strong> if you do not attend your booking.
+                ⚠️ <strong>Notice:</strong> Deposits are strictly <strong>non-refundable</strong> if you do not attend
+                your booking.
               </p>
             </div>
           </div>
@@ -1203,12 +1602,14 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
                 <label for="bookingDate" class="sr-only">Reservation Date</label>
-                <input type="date" required id="bookingDate" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition" />
+                <input type="date" required id="bookingDate"
+                  class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition" />
                 <span id="bookingDateError" class="booking-error-msg hidden"></span>
               </div>
               <div>
                 <label for="bookingTime" class="sr-only">Reservation Time</label>
-                <select required id="bookingTime" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition">
+                <select required id="bookingTime"
+                  class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition">
                   <option value="" disabled>Select Arrival Time</option>
                   <option value="12:00 PM">12:00 PM — Lunch</option>
                   <option value="1:30 PM">1:30 PM — Afternoon</option>
@@ -1227,12 +1628,14 @@
 
           <!-- Step 3: Party Size (Seating Preference removed) -->
           <div>
-            <label for="bookingGuests" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+            <label for="bookingGuests"
+              class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
               <span>3. Party Size</span>
               <span class="text-[10px] text-neutral-400 font-normal">Number of guests</span>
             </label>
             <div class="relative">
-              <select required id="bookingGuests" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
+              <select required id="bookingGuests"
+                class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white focus:outline-none focus:border-[#4deeea] transition appearance-none cursor-pointer pr-10">
                 <option value="1 Guest">1 Guest</option>
                 <option value="2 Guests" selected>2 Guests</option>
                 <option value="3 Guests">3 Guests</option>
@@ -1243,7 +1646,9 @@
                 <option value="8+ Large Party">8+ Large Party / Event</option>
               </select>
               <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3.5 text-neutral-400">
-                <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                <svg class="w-4 h-4 text-neutral-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
               </div>
             </div>
           </div>
@@ -1251,45 +1656,55 @@
           <!-- Step 4: Customer Contact Details -->
           <div class="space-y-3 pt-2 border-t border-white/[0.08]">
             <div>
-              <label for="bookingName" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <label for="bookingName"
+                class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
                 <span>Full Name</span>
                 <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">* Compulsory</span>
               </label>
-              <input type="text" required placeholder="Alex Mercer" id="bookingName" name="customer_name" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+              <input type="text" required placeholder="Alex Mercer" id="bookingName" name="customer_name"
+                class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
               <span id="bookingNameError" class="booking-error-msg hidden"></span>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <label for="bookingEmail" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <label for="bookingEmail"
+                  class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
                   <span>Email ID</span>
                   <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">* Compulsory</span>
                 </label>
-                <input type="email" required placeholder="alex@example.com" id="bookingEmail" name="customer_email" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+                <input type="email" required placeholder="alex@example.com" id="bookingEmail" name="customer_email"
+                  class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
                 <span id="bookingEmailError" class="booking-error-msg hidden"></span>
               </div>
               <div>
-                <label for="bookingPhone" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+                <label for="bookingPhone"
+                  class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
                   <span>Contact Number</span>
                   <span class="text-[10px] font-bold text-rose-400 uppercase tracking-wider">* Compulsory</span>
                 </label>
-                <input type="tel" required placeholder="+44 7123 456789" id="bookingPhone" name="customer_phone" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+                <input type="tel" required placeholder="+44 7123 456789" id="bookingPhone" name="customer_phone"
+                  class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2.5 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
                 <span id="bookingPhoneError" class="booking-error-msg hidden"></span>
               </div>
             </div>
 
             <div>
-              <label for="bookingNotes" class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
+              <label for="bookingNotes"
+                class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
                 <span>Special Requests / Occasion</span>
                 <span class="text-[10px] text-neutral-500 font-normal">Optional</span>
               </label>
-              <input type="text" placeholder="Birthday celebration, dietary needs, booth near window..." id="bookingNotes" name="booking_notes" class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
+              <input type="text" placeholder="Birthday celebration, dietary needs, booth near window..."
+                id="bookingNotes" name="booking_notes"
+                class="w-full bg-[#080d14] border border-white/20 rounded-xl px-3.5 py-2 text-white placeholder-neutral-500 focus:outline-none focus:border-[#4deeea] transition" />
             </div>
           </div>
 
           <!-- Direct Send Action -->
           <div class="pt-2">
-            <button type="submit" id="bookingSubmitBtn" class="w-full py-3.5 px-6 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg active:scale-95 flex items-center justify-center gap-2">
+            <button type="submit" id="bookingSubmitBtn"
+              class="w-full py-3.5 px-6 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold tracking-wider uppercase text-xs transition duration-200 shadow-lg active:scale-95 flex items-center justify-center gap-2">
               <span>Directly Send Reservation Mail</span>
               <span aria-hidden="true">&rarr;</span>
             </button>
@@ -1305,72 +1720,115 @@
     </div>
   </div>
 
-<!-- ==================== INTERACTIVE "GET DIRECTIONS" MODAL ==================== -->
-  <div id="directionsModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <!-- ==================== INTERACTIVE "GET DIRECTIONS" MODAL ==================== -->
+  <div id="directionsModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+    aria-modal="true" role="dialog">
     <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-5">
-      <button onclick="closeDirectionsModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Directions Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
+      <button onclick="closeDirectionsModal()"
+        class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Directions Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg> </button>
 
       <div>
         <span class="text-xs uppercase tracking-widest text-[#4deeea] font-bold">Directions &amp; Map</span>
         <h3 id="directionsPubTitle" class="text-xl font-bold text-white mt-1">Pub 01 &mdash; Prince of Wales Rd</h3>
-        <p id="directionsPubAddress" class="text-neutral-400 text-xs mt-1">37 Prince of Wales Rd, Norwich NR1 1BG, United Kingdom</p> </div>
+        <p id="directionsPubAddress" class="text-neutral-400 text-xs mt-1">37 Prince of Wales Rd, Norwich NR1 1BG,
+          United Kingdom</p>
+      </div>
 
-      <div class="rounded-xl overflow-hidden border border-white/10 bg-[#080d14] p-4 text-xs text-neutral-300 space-y-3">
+      <div
+        class="rounded-xl overflow-hidden border border-white/10 bg-[#080d14] p-4 text-xs text-neutral-300 space-y-3">
         <div class="flex items-center gap-2 text-white font-semibold">
           <span>🚇 Nearest Station:</span>
-          <span id="directionsTransit" class="text-neutral-300 font-normal">Norwich Railway Station (6 min walk)</span> </div>
+          <span id="directionsTransit" class="text-neutral-300 font-normal">Norwich Railway Station (6 min walk)</span>
+        </div>
         <div class="flex items-center gap-2 text-white font-semibold">
           <span>🚗 Parking:</span>
-          <span id="directionsParking" class="text-neutral-300 font-normal">Rose Lane Car Park nearby</span> </div>
+          <span id="directionsParking" class="text-neutral-300 font-normal">Rose Lane Car Park nearby</span>
+        </div>
         <div class="flex items-center gap-2 text-white font-semibold">
           <span>♿ Accessibility:</span>
-          <span class="text-neutral-300 font-normal">Step-free entrance &amp; accessible seating</span> </div> </div>
+          <span class="text-neutral-300 font-normal">Step-free entrance &amp; accessible seating</span>
+        </div>
+      </div>
 
       <div class="flex gap-3">
-        <a id="googleMapsLink" href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank" rel="noopener" class="flex-1 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs text-center tracking-wider uppercase transition">Open in Google Maps ↗</a>
-        <button onclick="closeDirectionsModal()" class="px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition">Close</button> </div> </div> </div>
+        <a id="googleMapsLink" href="https://maps.google.com/?q=37+Prince+of+Wales+Rd+Norwich+NR1+1BG" target="_blank"
+          rel="noopener"
+          class="flex-1 py-2.5 rounded-full bg-[#f4ede3] hover:bg-white text-neutral-900 font-bold text-xs text-center tracking-wider uppercase transition">Open
+          in Google Maps ↗</a>
+        <button onclick="closeDirectionsModal()"
+          class="px-5 py-2.5 rounded-full border border-white/20 hover:bg-white/10 text-white font-semibold text-xs tracking-wider uppercase transition">Close</button>
+      </div>
+    </div>
+  </div>
 
-<!-- ==================== GALLERY LIGHTBOX MODAL ==================== -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md" onclick="closeLightbox()" aria-modal="true" role="dialog">
+  <!-- ==================== GALLERY LIGHTBOX MODAL ==================== -->
+  <div id="lightboxModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/95 backdrop-blur-md"
+    onclick="closeLightbox()" aria-modal="true" role="dialog">
     <div class="relative max-w-4xl w-full max-h-[90vh] flex flex-col items-center" onclick="event.stopPropagation()">
-      <button onclick="closeLightbox()" class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
-        <span>Close</span> &times;  </button>
-      <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom" class="max-h-[80vh] w-auto rounded-xl border border-white/20 shadow-2xl object-contain" />
-      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p> </div> </div>
+      <button onclick="closeLightbox()"
+        class="absolute -top-10 right-0 text-white hover:text-[#4deeea] transition text-sm font-bold flex items-center gap-1">
+        <span>Close</span> &times; </button>
+      <img id="lightboxImg" src="" alt="The Glitch Gallery Zoom"
+        class="max-h-[80vh] w-auto rounded-xl border border-white/20 shadow-2xl object-contain" />
+      <p id="lightboxCaption" class="mt-3 text-neutral-300 text-sm font-medium text-center"></p>
+    </div>
+  </div>
 
-<!-- ==================== PRIVATE HIRE MODAL ==================== -->
-  <div id="privateHireModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm" aria-modal="true" role="dialog">
+  <!-- ==================== PRIVATE HIRE MODAL ==================== -->
+  <div id="privateHireModal"
+    class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+    aria-modal="true" role="dialog">
     <div class="bg-[#0e141c] border border-white/20 rounded-2xl max-w-md w-full p-6 relative shadow-2xl space-y-5">
-      <button onclick="closePrivateHireModal()" class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Modal">
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg> </button>
+      <button onclick="closePrivateHireModal()"
+        class="absolute top-5 right-5 text-neutral-400 hover:text-white transition" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg> </button>
 
       <div>
         <span class="text-xs uppercase tracking-widest text-amber-400 font-bold">Event Enquiries</span>
         <h3 class="text-xl font-bold text-white mt-1">Private Hire &amp; Celebrations</h3>
-        <p class="text-neutral-400 text-xs mt-1">Book a booth package, celebration suite, or full venue takeover.</p> </div>
+        <p class="text-neutral-400 text-xs mt-1">Book a booth package, celebration suite, or full venue takeover.</p>
+      </div>
 
       <form id="privateHireForm" onsubmit="handlePrivateHireSubmit(event)" class="space-y-4 text-xs sm:text-sm">
         <div>
           <label class="block text-neutral-300 font-semibold mb-1">Preferred Location</label>
-          <select id="hireLocation" onchange="updateHireRecipient()" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
+          <select id="hireLocation" onchange="updateHireRecipient()"
+            class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400">
             <option value="Prince of Wales Rd">Pub 01 &mdash; Prince of Wales Rd (Cocktail &amp; Craft Bar)</option>
             <option value="Norwich Market">Pub 02 &mdash; Norwich Market (Bar &amp; Dining Lounge)</option>
-            <option value="Both">Not Sure / Open to Both</option> </select> 
+            <option value="Both">Not Sure / Open to Both</option>
+          </select>
           <!-- Live Destination Mailbox Notice -->
-          <div id="hireMailNotice" class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-200">
-            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            <span>Enquiry will be sent to: <strong id="hireTargetEmail" class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
+          <div id="hireMailNotice"
+            class="mt-2 text-[11px] px-3 py-1.5 rounded-md bg-amber-400/10 border border-amber-400/30 text-amber-400 flex items-center gap-2 font-medium transition-all duration-200">
+            <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span>Enquiry will be sent to: <strong id="hireTargetEmail"
+                class="underline tracking-wide">norwich@pubtheglitch.co.uk</strong></span>
           </div>
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Expected Guests</label>
-            <input type="number" min="10" max="250" placeholder="e.g. 25" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+            <input type="number" min="10" max="250" placeholder="e.g. 25" required
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
+          </div>
           <div>
             <label class="block text-neutral-300 font-semibold mb-1">Target Date</label>
-            <input type="date" required class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div>
-        
+            <input type="date" required
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
+          </div>
+        </div>
+
         <!-- Compulsory Contact Details for Private Hire -->
         <div class="space-y-3 pt-2 border-t border-white/[0.08]">
           <div>
@@ -1378,23 +1836,36 @@
               <span>Contact Name</span>
               <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
             </label>
-            <input type="text" id="hireName" required placeholder="e.g. Sam Taylor" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+            <input type="text" id="hireName" required placeholder="e.g. Sam Taylor"
+              class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
+          </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div>
               <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
                 <span>Email Address</span>
                 <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
               </label>
-              <input type="email" id="hireEmail" required placeholder="sam@example.com" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div>
+              <input type="email" id="hireEmail" required placeholder="sam@example.com"
+                class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
+            </div>
             <div>
               <label class="block text-neutral-300 font-semibold mb-1 flex items-center justify-between">
                 <span>Phone Number</span>
                 <span class="text-[10px] font-bold text-amber-400 uppercase tracking-wider">* Compulsory</span>
               </label>
-              <input type="tel" id="hirePhone" required placeholder="+44 7123 456789" class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" /> </div> </div> </div>
-        <button type="submit" class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">Submit Private Hire Request</button> </form> </div> </div>
+              <input type="tel" id="hirePhone" required placeholder="+44 7123 456789"
+                class="w-full bg-[#080d14] border border-white/20 rounded-lg px-3 py-2 text-white focus:outline-none focus:border-amber-400" />
+            </div>
+          </div>
+        </div>
+        <button type="submit"
+          class="w-full py-3 rounded-full bg-amber-400 hover:bg-amber-300 text-black font-bold text-xs uppercase tracking-wider transition">Submit
+          Private Hire Request</button>
+      </form>
+    </div>
+  </div>
 
-<!-- Core Interactive Logic -->
+  <!-- Core Interactive Logic -->
   <script src="assets/app.js"></script>
 </body>
 
